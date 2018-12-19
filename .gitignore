@@ -1,0 +1,10 @@
+.DS_Store
+.agignore
+.cache-loader
+tmp/
+*.log
+coverage/
+.nyc_output/
+
+node_modules/
+.idea/

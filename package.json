@@ -1,0 +1,27 @@
+{
+  "name": "ts-libs",
+  "version": "3.2.2",
+  "description": "Typescript libs as scoped modules",
+  "main": "index.js",
+  "scripts": {
+    "modulify": "ts-node tools/modulify-libs.ts"
+  },
+  "keywords": [
+    "typescript",
+    "lib",
+    "module"
+  ],
+  "peerDependencies": {
+    "typescript": "3.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "ts-node": "*",
+    "typescript": "3.2.2"
+  },
+  "files": [
+    "lib/*.d.ts"
+  ],
+  "author": "MrBar42",
+  "license": "Apache-2.0"
+}
