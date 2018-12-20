@@ -1,3 +1,5 @@
+
+export namespace ES2017 {
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -15,16 +17,7 @@ and limitations under the License.
 
 
 
-/// <reference no-default-lib="true"/>
 
 
-/// <reference lib="es2016" />
-/// <reference lib="es2017.object" />
-/// <reference lib="es2017.sharedmemory" />
-/// <reference lib="es2017.string" />
-/// <reference lib="es2017.intl" />
-/// <reference lib="es2017.typedarrays" />
-
-export namespace ES2017 {
 
 }

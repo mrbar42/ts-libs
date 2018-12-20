@@ -1,3 +1,5 @@
+
+export namespace LIB_D.TS {
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -15,14 +17,7 @@ and limitations under the License.
 
 
 
-/// <reference no-default-lib="true"/>
 
 
-/// <reference lib="es5" />
-/// <reference lib="dom" />
-/// <reference lib="webworker.importscripts" />
-/// <reference lib="scripthost" />
-
-export namespace LIB_D.TS {
 
 }

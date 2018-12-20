@@ -1,3 +1,5 @@
+
+export namespace ES2016_ARRAY.INCLUDE {
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -15,9 +17,6 @@ and limitations under the License.
 
 
 
-/// <reference no-default-lib="true"/>
-
-export namespace ES2016_ARRAY.INCLUDE {
   export interface Array<T> {
     /**
      * Determines whether an array includes a certain element, returning true or false as appropriate.

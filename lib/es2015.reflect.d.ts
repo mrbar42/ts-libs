@@ -1,3 +1,5 @@
+
+export namespace ES2015_REFLECT {
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -15,9 +17,6 @@ and limitations under the License.
 
 
 
-/// <reference no-default-lib="true"/>
-
-export namespace ES2015_REFLECT {
   export namespace Reflect {
     function apply(target: Function, thisArgument: any, argumentsList: ArrayLike<any>): any;
     function construct(target: Function, argumentsList: ArrayLike<any>, newTarget?: any): any;

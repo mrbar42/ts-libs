@@ -26,16 +26,14 @@ libs.forEach(lib => {
 
 
     const namespaceDeceleration = `\nexport namespace ${libBaseName} {\n`;
-    const lastRefIndex = newContent.lastIndexOf('/// <ref');
-    if (lastRefIndex === -1) {
-        newContent = `${namespaceDeceleration}${newContent}`;
-    }
-    else {
-        const refEndIndex = newContent.indexOf('\n', lastRefIndex) + 1;
-        newContent = `${newContent.slice(0, refEndIndex)}${namespaceDeceleration}${newContent.slice(refEndIndex)}`
-    }
+    newContent = `${namespaceDeceleration}${newContent}`;
 
     newContent += '\n}';
+
+    newContent = newContent.split('\n').filter(line => {
+        if (/^\s*\/\/\/\s*<ref/.test(line)) return false;
+        return true
+    }).join('\n');
 
     fs.writeFileSync(`${OUTPUT_DIR}/${lib.replace('lib.', '')}`, newContent)
 });

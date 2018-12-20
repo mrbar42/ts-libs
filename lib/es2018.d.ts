@@ -1,3 +1,5 @@
+
+export namespace ES2018 {
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -15,14 +17,7 @@ and limitations under the License.
 
 
 
-/// <reference no-default-lib="true"/>
 
 
-/// <reference lib="es2017" />
-/// <reference lib="es2018.promise" />
-/// <reference lib="es2018.regexp" />
-/// <reference lib="es2018.intl" />
-
-export namespace ES2018 {
 
 }

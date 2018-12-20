@@ -1,3 +1,5 @@
+
+export namespace ES2017_SHAREDMEMORY {
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -15,13 +17,8 @@ and limitations under the License.
 
 
 
-/// <reference no-default-lib="true"/>
 
 
-/// <reference lib="es2015.symbol" />
-/// <reference lib="es2015.symbol.wellknown" />
-
-export namespace ES2017_SHAREDMEMORY {
   export interface SharedArrayBuffer {
     /**
      * Read-only. The length of the ArrayBuffer (in bytes).
