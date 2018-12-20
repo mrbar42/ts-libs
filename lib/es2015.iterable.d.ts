@@ -1,5 +1,3 @@
-
-export namespace ES2015_ITERABLE {
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -204,7 +202,8 @@ and limitations under the License.
      */
     race<T>(values: Iterable<T | PromiseLike<T>>): Promise<T>;
 }
-  export namespace Reflect {
+
+declare namespace Reflect {
     function enumerate(target: object): IterableIterator<any>;
 }
   export interface String {
@@ -449,6 +448,4 @@ and limitations under the License.
      * @param thisArg Value of 'this' used to invoke the mapfn.
      */
     from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Float64Array;
-}
-
 }

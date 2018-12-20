@@ -1,5 +1,3 @@
-
-export namespace ES2018_PROMISE {
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -30,6 +28,4 @@ and limitations under the License.
      * @returns A Promise for the completion of the callback.
      */
     finally(onfinally?: (() => void) | undefined | null): Promise<T>
-}
-
 }

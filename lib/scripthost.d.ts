@@ -1,5 +1,3 @@
-
-export namespace SCRIPTHOST {
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -27,7 +25,7 @@ and limitations under the License.
   export interface ActiveXObject {
     new (s: string): any;
 }
-  export var ActiveXObject: ActiveXObject;
+  export declare type ActiveXObjectGlobal = ActiveXObject;
   export interface ITextWriter {
     Write(s: string): void;
     WriteLine(s: string): void;
@@ -111,7 +109,7 @@ and limitations under the License.
      */
     AtEndOfStream: boolean;
 }
-  export var WScript: {
+  export declare type WScriptGlobal = {
     /**
      * Outputs text to either a message box (under WScript.exe) or the command console window followed by
      * a newline (under CScript.exe).
@@ -218,12 +216,12 @@ and limitations under the License.
 /**
  * WSH is an alias for WScript under Windows Script Host
  */
-  export var WSH: typeof WScript;
+  export declare type WSHGlobal = typeof WScript;
 
 /**
  * Represents an Automation SAFEARRAY
  */
-  export class SafeArray<T = any> {
+declare class SafeArray<T = any> {
     private constructor();
     private SafeArray_typekey: SafeArray<T>;
 }
@@ -260,7 +258,7 @@ and limitations under the License.
     new <T = any>(collection: { Item(index: any): T }): Enumerator<T>;
     new <T = any>(collection: any): Enumerator<T>;
 }
-  export var Enumerator: EnumeratorConstructor;
+  export declare type EnumeratorGlobal = EnumeratorConstructor;
 
 /**
  * Enables reading from a COM safe array, which might have an alternate lower bound, or multiple dimensions.
@@ -298,12 +296,12 @@ and limitations under the License.
   export interface VBArrayConstructor {
     new <T = any>(safeArray: SafeArray<T>): VBArray<T>;
 }
-  export var VBArray: VBArrayConstructor;
+  export declare type VBArrayGlobal = VBArrayConstructor;
 
 /**
  * Automation date (VT_DATE)
  */
-  export class VarDate {
+declare class VarDate {
     private constructor();
     private VarDate_typekey: VarDate;
 }
@@ -312,6 +310,4 @@ and limitations under the License.
 }
   export interface Date {
     getVarDate: () => VarDate;
-}
-
 }

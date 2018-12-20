@@ -1,5 +1,3 @@
-
-export namespace ES2017_SHAREDMEMORY {
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -40,7 +38,7 @@ and limitations under the License.
     readonly prototype: SharedArrayBuffer;
     new (byteLength: number): SharedArrayBuffer;
 }
-  export var SharedArrayBuffer: SharedArrayBufferConstructor;
+  export declare type SharedArrayBufferGlobal = SharedArrayBufferConstructor;
   export interface ArrayBufferTypes {
     SharedArrayBuffer: SharedArrayBuffer;
 }
@@ -129,5 +127,4 @@ and limitations under the License.
 
     readonly [Symbol.toStringTag]: "Atomics";
 }
-  export var Atomics: Atomics;
-}
+  export declare type AtomicsGlobal = Atomics;

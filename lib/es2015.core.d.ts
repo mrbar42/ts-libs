@@ -1,5 +1,3 @@
-
-export namespace ES2015_CORE {
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -496,6 +494,4 @@ and limitations under the License.
      * @param substitutions A set of substitution values.
      */
     raw(template: TemplateStringsArray, ...substitutions: any[]): string;
-}
-
 }

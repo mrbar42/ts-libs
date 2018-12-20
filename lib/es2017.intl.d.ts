@@ -1,5 +1,3 @@
-
-export namespace ES2017_INTL {
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -17,7 +15,9 @@ and limitations under the License.
 
 
 
-  export namespace Intl {
+
+
+declare namespace Intl {
   export type DateTimeFormatPartTypes = "day" | "dayPeriod" | "era" | "hour" | "literal" | "minute" | "month" | "second" | "timeZoneName" | "weekday" | "year";
   export interface DateTimeFormatPart {
         type: DateTimeFormatPartTypes;
@@ -26,6 +26,4 @@ and limitations under the License.
   export interface DateTimeFormat {
         formatToParts(date?: Date | number): DateTimeFormatPart[];
     }
-}
-
 }

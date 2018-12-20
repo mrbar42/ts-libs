@@ -1,5 +1,3 @@
-
-export namespace ES2016_ARRAY.INCLUDE {
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -104,5 +102,4 @@ and limitations under the License.
      * @param fromIndex The position in this array at which to begin searching for searchElement.
      */
     includes(searchElement: number, fromIndex?: number): boolean;
-}
 }

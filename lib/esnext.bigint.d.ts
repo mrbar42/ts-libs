@@ -1,5 +1,3 @@
-
-export namespace ESNEXT_BIGINT {
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -51,7 +49,7 @@ and limitations under the License.
       */
     asUintN(bits: number, int: bigint): bigint;
 }
-  export const BigInt: BigIntConstructor;
+  export declare type BigIntGlobal = BigIntConstructor;
 
 /**
   * A typed array of 64-bit signed integer values. The contents are initialized to 0. If the
@@ -318,7 +316,7 @@ and limitations under the License.
     from(arrayLike: ArrayLike<bigint>): BigInt64Array;
     from<U>(arrayLike: ArrayLike<U>, mapfn: (v: U, k: number) => bigint, thisArg?: any): BigInt64Array;
 }
-  export const BigInt64Array: BigInt64ArrayConstructor;
+  export declare type BigInt64ArrayGlobal = BigInt64ArrayConstructor;
 
 /**
   * A typed array of 64-bit unsigned integer values. The contents are initialized to 0. If the
@@ -585,7 +583,7 @@ and limitations under the License.
     from(arrayLike: ArrayLike<bigint>): BigUint64Array;
     from<U>(arrayLike: ArrayLike<U>, mapfn: (v: U, k: number) => bigint, thisArg?: any): BigUint64Array;
 }
-  export const BigUint64Array: BigUint64ArrayConstructor;
+  export declare type BigUint64ArrayGlobal = BigUint64ArrayConstructor;
   export interface DataView {
     /**
       * Gets the BigInt64 value at the specified byte offset from the start of the view. There is
@@ -618,5 +616,4 @@ and limitations under the License.
       * otherwise a little-endian value should be written.
       */
     setBigUint64(byteOffset: number, value: bigint, littleEndian?: boolean): void;
-}
 }

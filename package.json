@@ -4,7 +4,8 @@
   "description": "Typescript libs as scoped modules",
   "main": "index.js",
   "scripts": {
-    "modulify": "ts-node tools/modulify-libs.ts"
+    "modulify": "ts-node tools/modulify-libs.ts",
+    "test": "bash tests/test.sh"
   },
   "keywords": [
     "typescript",

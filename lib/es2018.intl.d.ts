@@ -1,5 +1,3 @@
-
-export namespace ES2018_INTL {
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -17,7 +15,9 @@ and limitations under the License.
 
 
 
-  export namespace Intl {
+
+
+declare namespace Intl {
   export interface PluralRulesOptions {
         localeMatcher?: 'lookup' | 'best fit';
         type?: 'cardinal' | 'ordinal';
@@ -45,6 +45,4 @@ and limitations under the License.
             options?: PluralRulesOptions,
         ): string[];
     };
-}
-
 }

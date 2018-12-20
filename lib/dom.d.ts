@@ -1,16 +1,14 @@
-
-export namespace DOM {
 /*! *****************************************************************************
-Copyright (c) Microsoft Corporation. All rights reserved. 
+Copyright (c) Microsoft Corporation. All rights reserved.
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
 this file except in compliance with the License. You may obtain a copy of the
-License at http://www.apache.org/licenses/LICENSE-2.0  
- 
+License at http://www.apache.org/licenses/LICENSE-2.0
+
 THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
 KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
-WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE, 
-MERCHANTABLITY OR NON-INFRINGEMENT. 
- 
+WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+MERCHANTABLITY OR NON-INFRINGEMENT.
+
 See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ***************************************************************************** */
@@ -1391,7 +1389,7 @@ and limitations under the License.
      */
     abort(): void;
 }
-  export var AbortController: {
+  export declare type AbortControllerGlobal = {
     prototype: AbortController;
     new(): AbortController;
 };
@@ -1410,7 +1408,7 @@ and limitations under the License.
     removeEventListener<K extends keyof AbortSignalEventMap>(type: K, listener: (this: AbortSignal, ev: AbortSignalEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var AbortSignal: {
+  export declare type AbortSignalGlobal = {
     prototype: AbortSignal;
     new(): AbortSignal;
 };
@@ -1421,7 +1419,7 @@ and limitations under the License.
     readonly startContainer: Node;
     readonly startOffset: number;
 }
-  export var AbstractRange: {
+  export declare type AbstractRangeGlobal = {
     prototype: AbstractRange;
     new(): AbstractRange;
 };
@@ -1452,7 +1450,7 @@ and limitations under the License.
     getFloatFrequencyData(array: Float32Array): void;
     getFloatTimeDomainData(array: Float32Array): void;
 }
-  export var AnalyserNode: {
+  export declare type AnalyserNodeGlobal = {
     prototype: AnalyserNode;
     new(context: BaseAudioContext, options?: AnalyserOptions): AnalyserNode;
 };
@@ -1488,7 +1486,7 @@ and limitations under the License.
     removeEventListener<K extends keyof AnimationEventMap>(type: K, listener: (this: Animation, ev: AnimationEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var Animation: {
+  export declare type AnimationGlobal = {
     prototype: Animation;
     new(effect?: AnimationEffect | null, timeline?: AnimationTimeline | null): Animation;
 };
@@ -1497,7 +1495,7 @@ and limitations under the License.
     getTiming(): EffectTiming;
     updateTiming(timing?: OptionalEffectTiming): void;
 }
-  export var AnimationEffect: {
+  export declare type AnimationEffectGlobal = {
     prototype: AnimationEffect;
     new(): AnimationEffect;
 };
@@ -1506,7 +1504,7 @@ and limitations under the License.
     readonly elapsedTime: number;
     readonly pseudoElement: string;
 }
-  export var AnimationEvent: {
+  export declare type AnimationEventGlobal = {
     prototype: AnimationEvent;
     new(type: string, animationEventInitDict?: AnimationEventInit): AnimationEvent;
 };
@@ -1514,14 +1512,14 @@ and limitations under the License.
     readonly currentTime: number | null;
     readonly timelineTime: number | null;
 }
-  export var AnimationPlaybackEvent: {
+  export declare type AnimationPlaybackEventGlobal = {
     prototype: AnimationPlaybackEvent;
     new(type: string, eventInitDict?: AnimationPlaybackEventInit): AnimationPlaybackEvent;
 };
   export interface AnimationTimeline {
     readonly currentTime: number | null;
 }
-  export var AnimationTimeline: {
+  export declare type AnimationTimelineGlobal = {
     prototype: AnimationTimeline;
     new(): AnimationTimeline;
 };
@@ -1571,7 +1569,7 @@ and limitations under the License.
     removeEventListener<K extends keyof ApplicationCacheEventMap>(type: K, listener: (this: ApplicationCache, ev: ApplicationCacheEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var ApplicationCache: {
+  export declare type ApplicationCacheGlobal = {
     prototype: ApplicationCache;
     new(): ApplicationCache;
     readonly CHECKING: number;
@@ -1590,7 +1588,7 @@ and limitations under the License.
     readonly specified: boolean;
     value: string;
 }
-  export var Attr: {
+  export declare type AttrGlobal = {
     prototype: Attr;
     new(): Attr;
 };
@@ -1603,7 +1601,7 @@ and limitations under the License.
     copyToChannel(source: Float32Array, channelNumber: number, startInChannel?: number): void;
     getChannelData(channel: number): Float32Array;
 }
-  export var AudioBuffer: {
+  export declare type AudioBufferGlobal = {
     prototype: AudioBuffer;
     new(options: AudioBufferOptions): AudioBuffer;
 };
@@ -1620,7 +1618,7 @@ and limitations under the License.
     removeEventListener<K extends keyof AudioScheduledSourceNodeEventMap>(type: K, listener: (this: AudioBufferSourceNode, ev: AudioScheduledSourceNodeEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var AudioBufferSourceNode: {
+  export declare type AudioBufferSourceNodeGlobal = {
     prototype: AudioBufferSourceNode;
     new(context: BaseAudioContext, options?: AudioBufferSourceOptions): AudioBufferSourceNode;
 };
@@ -1639,14 +1637,14 @@ and limitations under the License.
     removeEventListener<K extends keyof BaseAudioContextEventMap>(type: K, listener: (this: AudioContext, ev: BaseAudioContextEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var AudioContext: {
+  export declare type AudioContextGlobal = {
     prototype: AudioContext;
     new(contextOptions?: AudioContextOptions): AudioContext;
 };
   export interface AudioDestinationNode extends AudioNode {
     readonly maxChannelCount: number;
 }
-  export var AudioDestinationNode: {
+  export declare type AudioDestinationNodeGlobal = {
     prototype: AudioDestinationNode;
     new(): AudioDestinationNode;
 };
@@ -1665,7 +1663,7 @@ and limitations under the License.
     /** @deprecated */
     setPosition(x: number, y: number, z: number): void;
 }
-  export var AudioListener: {
+  export declare type AudioListenerGlobal = {
     prototype: AudioListener;
     new(): AudioListener;
 };
@@ -1686,7 +1684,7 @@ and limitations under the License.
     disconnect(destinationParam: AudioParam): void;
     disconnect(destinationParam: AudioParam, output: number): void;
 }
-  export var AudioNode: {
+  export declare type AudioNodeGlobal = {
     prototype: AudioNode;
     new(): AudioNode;
 };
@@ -1704,14 +1702,14 @@ and limitations under the License.
     setValueAtTime(value: number, startTime: number): AudioParam;
     setValueCurveAtTime(values: number[] | Float32Array, startTime: number, duration: number): AudioParam;
 }
-  export var AudioParam: {
+  export declare type AudioParamGlobal = {
     prototype: AudioParam;
     new(): AudioParam;
 };
   export interface AudioParamMap {
     forEach(callbackfn: (value: AudioParam, key: string, parent: AudioParamMap) => void, thisArg?: any): void;
 }
-  export var AudioParamMap: {
+  export declare type AudioParamMapGlobal = {
     prototype: AudioParamMap;
     new(): AudioParamMap;
 };
@@ -1720,7 +1718,7 @@ and limitations under the License.
     readonly outputBuffer: AudioBuffer;
     readonly playbackTime: number;
 }
-  export var AudioProcessingEvent: {
+  export declare type AudioProcessingEventGlobal = {
     prototype: AudioProcessingEvent;
     new(type: string, eventInitDict: AudioProcessingEventInit): AudioProcessingEvent;
 };
@@ -1736,7 +1734,7 @@ and limitations under the License.
     removeEventListener<K extends keyof AudioScheduledSourceNodeEventMap>(type: K, listener: (this: AudioScheduledSourceNode, ev: AudioScheduledSourceNodeEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var AudioScheduledSourceNode: {
+  export declare type AudioScheduledSourceNodeGlobal = {
     prototype: AudioScheduledSourceNode;
     new(): AudioScheduledSourceNode;
 };
@@ -1748,7 +1746,7 @@ and limitations under the License.
     language: string;
     readonly sourceBuffer: SourceBuffer;
 }
-  export var AudioTrack: {
+  export declare type AudioTrackGlobal = {
     prototype: AudioTrack;
     new(): AudioTrack;
 };
@@ -1770,13 +1768,13 @@ and limitations under the License.
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     [index: number]: AudioTrack;
 }
-  export var AudioTrackList: {
+  export declare type AudioTrackListGlobal = {
     prototype: AudioTrackList;
     new(): AudioTrackList;
 };
   export interface AudioWorklet extends Worklet {
 }
-  export var AudioWorklet: {
+  export declare type AudioWorkletGlobal = {
     prototype: AudioWorklet;
     new(): AudioWorklet;
 };
@@ -1792,14 +1790,14 @@ and limitations under the License.
     removeEventListener<K extends keyof AudioWorkletNodeEventMap>(type: K, listener: (this: AudioWorkletNode, ev: AudioWorkletNodeEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var AudioWorkletNode: {
+  export declare type AudioWorkletNodeGlobal = {
     prototype: AudioWorkletNode;
     new(context: BaseAudioContext, name: string, options?: AudioWorkletNodeOptions): AudioWorkletNode;
 };
   export interface BarProp {
     readonly visible: boolean;
 }
-  export var BarProp: {
+  export declare type BarPropGlobal = {
     prototype: BarProp;
     new(): BarProp;
 };
@@ -1839,14 +1837,14 @@ and limitations under the License.
     removeEventListener<K extends keyof BaseAudioContextEventMap>(type: K, listener: (this: BaseAudioContext, ev: BaseAudioContextEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var BaseAudioContext: {
+  export declare type BaseAudioContextGlobal = {
     prototype: BaseAudioContext;
     new(): BaseAudioContext;
 };
   export interface BeforeUnloadEvent extends Event {
     returnValue: any;
 }
-  export var BeforeUnloadEvent: {
+  export declare type BeforeUnloadEventGlobal = {
     prototype: BeforeUnloadEvent;
     new(): BeforeUnloadEvent;
 };
@@ -1866,7 +1864,7 @@ and limitations under the License.
     setLastError(parameters: string): void;
     webPlatformGenericFunction(destination: any, parameters?: string, callbackId?: number): void;
 }
-  export var BhxBrowser: {
+  export declare type BhxBrowserGlobal = {
     prototype: BhxBrowser;
     new(): BhxBrowser;
 };
@@ -1878,7 +1876,7 @@ and limitations under the License.
     type: BiquadFilterType;
     getFrequencyResponse(frequencyHz: Float32Array, magResponse: Float32Array, phaseResponse: Float32Array): void;
 }
-  export var BiquadFilterNode: {
+  export declare type BiquadFilterNodeGlobal = {
     prototype: BiquadFilterNode;
     new(context: BaseAudioContext, options?: BiquadFilterOptions): BiquadFilterNode;
 };
@@ -1887,7 +1885,7 @@ and limitations under the License.
     readonly type: string;
     slice(start?: number, end?: number, contentType?: string): Blob;
 }
-  export var Blob: {
+  export declare type BlobGlobal = {
     prototype: Blob;
     new(blobParts?: BlobPart[], options?: BlobPropertyBag): Blob;
 };
@@ -1924,7 +1922,7 @@ and limitations under the License.
     removeEventListener<K extends keyof BroadcastChannelEventMap>(type: K, listener: (this: BroadcastChannel, ev: BroadcastChannelEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var BroadcastChannel: {
+  export declare type BroadcastChannelGlobal = {
     prototype: BroadcastChannel;
     new(name: string): BroadcastChannel;
 };
@@ -1936,13 +1934,13 @@ and limitations under the License.
     highWaterMark: number;
     size(chunk: ArrayBufferView): number;
 }
-  export var ByteLengthQueuingStrategy: {
+  export declare type ByteLengthQueuingStrategyGlobal = {
     prototype: ByteLengthQueuingStrategy;
     new(options: { highWaterMark: number }): ByteLengthQueuingStrategy;
 };
   export interface CDATASection extends Text {
 }
-  export var CDATASection: {
+  export declare type CDATASectionGlobal = {
     prototype: CDATASection;
     new(): CDATASection;
 };
@@ -1950,18 +1948,18 @@ and limitations under the License.
     escape(value: string): string;
     supports(property: string, value?: string): boolean;
 }
-  export var CSS: CSS;
+  export declare type CSSGlobal = CSS;
   export interface CSSConditionRule extends CSSGroupingRule {
     conditionText: string;
 }
-  export var CSSConditionRule: {
+  export declare type CSSConditionRuleGlobal = {
     prototype: CSSConditionRule;
     new(): CSSConditionRule;
 };
   export interface CSSFontFaceRule extends CSSRule {
     readonly style: CSSStyleDeclaration;
 }
-  export var CSSFontFaceRule: {
+  export declare type CSSFontFaceRuleGlobal = {
     prototype: CSSFontFaceRule;
     new(): CSSFontFaceRule;
 };
@@ -1970,7 +1968,7 @@ and limitations under the License.
     deleteRule(index: number): void;
     insertRule(rule: string, index: number): number;
 }
-  export var CSSGroupingRule: {
+  export declare type CSSGroupingRuleGlobal = {
     prototype: CSSGroupingRule;
     new(): CSSGroupingRule;
 };
@@ -1979,7 +1977,7 @@ and limitations under the License.
     readonly media: MediaList;
     readonly styleSheet: CSSStyleSheet;
 }
-  export var CSSImportRule: {
+  export declare type CSSImportRuleGlobal = {
     prototype: CSSImportRule;
     new(): CSSImportRule;
 };
@@ -1987,7 +1985,7 @@ and limitations under the License.
     keyText: string;
     readonly style: CSSStyleDeclaration;
 }
-  export var CSSKeyframeRule: {
+  export declare type CSSKeyframeRuleGlobal = {
     prototype: CSSKeyframeRule;
     new(): CSSKeyframeRule;
 };
@@ -1998,14 +1996,14 @@ and limitations under the License.
     deleteRule(select: string): void;
     findRule(select: string): CSSKeyframeRule | null;
 }
-  export var CSSKeyframesRule: {
+  export declare type CSSKeyframesRuleGlobal = {
     prototype: CSSKeyframesRule;
     new(): CSSKeyframesRule;
 };
   export interface CSSMediaRule extends CSSConditionRule {
     readonly media: MediaList;
 }
-  export var CSSMediaRule: {
+  export declare type CSSMediaRuleGlobal = {
     prototype: CSSMediaRule;
     new(): CSSMediaRule;
 };
@@ -2013,7 +2011,7 @@ and limitations under the License.
     readonly namespaceURI: string;
     readonly prefix: string;
 }
-  export var CSSNamespaceRule: {
+  export declare type CSSNamespaceRuleGlobal = {
     prototype: CSSNamespaceRule;
     new(): CSSNamespaceRule;
 };
@@ -2023,7 +2021,7 @@ and limitations under the License.
     selectorText: string;
     readonly style: CSSStyleDeclaration;
 }
-  export var CSSPageRule: {
+  export declare type CSSPageRuleGlobal = {
     prototype: CSSPageRule;
     new(): CSSPageRule;
 };
@@ -2045,7 +2043,7 @@ and limitations under the License.
     readonly UNKNOWN_RULE: number;
     readonly VIEWPORT_RULE: number;
 }
-  export var CSSRule: {
+  export declare type CSSRuleGlobal = {
     prototype: CSSRule;
     new(): CSSRule;
     readonly CHARSET_RULE: number;
@@ -2066,7 +2064,7 @@ and limitations under the License.
     item(index: number): CSSRule | null;
     [index: number]: CSSRule;
 }
-  export var CSSRuleList: {
+  export declare type CSSRuleListGlobal = {
     prototype: CSSRuleList;
     new(): CSSRuleList;
 };
@@ -2535,7 +2533,7 @@ and limitations under the License.
     setProperty(propertyName: string, value: string | null, priority?: string | null): void;
     [index: number]: string;
 }
-  export var CSSStyleDeclaration: {
+  export declare type CSSStyleDeclarationGlobal = {
     prototype: CSSStyleDeclaration;
     new(): CSSStyleDeclaration;
 };
@@ -2543,7 +2541,7 @@ and limitations under the License.
     selectorText: string;
     readonly style: CSSStyleDeclaration;
 }
-  export var CSSStyleRule: {
+  export declare type CSSStyleRuleGlobal = {
     prototype: CSSStyleRule;
     new(): CSSStyleRule;
 };
@@ -2578,13 +2576,13 @@ and limitations under the License.
     removeImport(lIndex: number): void;
     removeRule(lIndex: number): void;
 }
-  export var CSSStyleSheet: {
+  export declare type CSSStyleSheetGlobal = {
     prototype: CSSStyleSheet;
     new(): CSSStyleSheet;
 };
   export interface CSSSupportsRule extends CSSConditionRule {
 }
-  export var CSSSupportsRule: {
+  export declare type CSSSupportsRuleGlobal = {
     prototype: CSSSupportsRule;
     new(): CSSSupportsRule;
 };
@@ -2597,7 +2595,7 @@ and limitations under the License.
     matchAll(request?: RequestInfo, options?: CacheQueryOptions): Promise<ReadonlyArray<Response>>;
     put(request: RequestInfo, response: Response): Promise<void>;
 }
-  export var Cache: {
+  export declare type CacheGlobal = {
     prototype: Cache;
     new(): Cache;
 };
@@ -2608,7 +2606,7 @@ and limitations under the License.
     match(request: RequestInfo, options?: CacheQueryOptions): Promise<Response | undefined>;
     open(cacheName: string): Promise<Cache>;
 }
-  export var CacheStorage: {
+  export declare type CacheStorageGlobal = {
     prototype: CacheStorage;
     new(): CacheStorage;
 };
@@ -2654,7 +2652,7 @@ and limitations under the License.
      */
     addColorStop(offset: number, color: string): void;
 }
-  export var CanvasGradient: {
+  export declare type CanvasGradientGlobal = {
     prototype: CanvasGradient;
     new(): CanvasGradient;
 };
@@ -2696,7 +2694,7 @@ and limitations under the License.
      */
     setTransform(transform?: DOMMatrix2DInit): void;
 }
-  export var CanvasPattern: {
+  export declare type CanvasPatternGlobal = {
     prototype: CanvasPattern;
     new(): CanvasPattern;
 };
@@ -2708,7 +2706,7 @@ and limitations under the License.
   export interface CanvasRenderingContext2D extends CanvasState, CanvasTransform, CanvasCompositing, CanvasImageSmoothing, CanvasFillStrokeStyles, CanvasShadowStyles, CanvasFilters, CanvasRect, CanvasDrawPath, CanvasUserInterface, CanvasText, CanvasDrawImage, CanvasImageData, CanvasPathDrawingStyles, CanvasTextDrawingStyles, CanvasPath {
     readonly canvas: HTMLCanvasElement;
 }
-  export var CanvasRenderingContext2D: {
+  export declare type CanvasRenderingContext2DGlobal = {
     prototype: CanvasRenderingContext2D;
     new(): CanvasRenderingContext2D;
 };
@@ -2754,19 +2752,19 @@ and limitations under the License.
     readonly offsetNode: Node;
     getClientRect(): DOMRect | null;
 }
-  export var CaretPosition: {
+  export declare type CaretPositionGlobal = {
     prototype: CaretPosition;
     new(): CaretPosition;
 };
   export interface ChannelMergerNode extends AudioNode {
 }
-  export var ChannelMergerNode: {
+  export declare type ChannelMergerNodeGlobal = {
     prototype: ChannelMergerNode;
     new(context: BaseAudioContext, options?: ChannelMergerOptions): ChannelMergerNode;
 };
   export interface ChannelSplitterNode extends AudioNode {
 }
-  export var ChannelSplitterNode: {
+  export declare type ChannelSplitterNodeGlobal = {
     prototype: ChannelSplitterNode;
     new(context: BaseAudioContext, options?: ChannelSplitterOptions): ChannelSplitterNode;
 };
@@ -2779,7 +2777,7 @@ and limitations under the License.
     replaceData(offset: number, count: number, data: string): void;
     substringData(offset: number, count: number): string;
 }
-  export var CharacterData: {
+  export declare type CharacterDataGlobal = {
     prototype: CharacterData;
     new(): CharacterData;
 };
@@ -2815,7 +2813,7 @@ and limitations under the License.
     top: number;
     readonly width: number;
 }
-  export var ClientRect: {
+  export declare type ClientRectGlobal = {
     prototype: ClientRect;
     new(): ClientRect;
 };
@@ -2824,14 +2822,14 @@ and limitations under the License.
     item(index: number): ClientRect;
     [index: number]: ClientRect;
 }
-  export var ClientRectList: {
+  export declare type ClientRectListGlobal = {
     prototype: ClientRectList;
     new(): ClientRectList;
 };
   export interface ClipboardEvent extends Event {
     readonly clipboardData: DataTransfer;
 }
-  export var ClipboardEvent: {
+  export declare type ClipboardEventGlobal = {
     prototype: ClipboardEvent;
     new(type: string, eventInitDict?: ClipboardEventInit): ClipboardEvent;
 };
@@ -2846,13 +2844,13 @@ and limitations under the License.
     /** @deprecated */
     initCloseEvent(typeArg: string, canBubbleArg: boolean, cancelableArg: boolean, wasCleanArg: boolean, codeArg: number, reasonArg: string): void;
 }
-  export var CloseEvent: {
+  export declare type CloseEventGlobal = {
     prototype: CloseEvent;
     new(type: string, eventInitDict?: CloseEventInit): CloseEvent;
 };
   export interface Comment extends CharacterData {
 }
-  export var Comment: {
+  export declare type CommentGlobal = {
     prototype: Comment;
     new(data?: string): Comment;
 };
@@ -2861,7 +2859,7 @@ and limitations under the License.
     readonly locale: string;
     initCompositionEvent(typeArg: string, canBubbleArg: boolean, cancelableArg: boolean, viewArg: Window, dataArg: string, locale: string): void;
 }
-  export var CompositionEvent: {
+  export declare type CompositionEventGlobal = {
     prototype: CompositionEvent;
     new(typeArg: string, eventInitDict?: CompositionEventInit): CompositionEvent;
 };
@@ -2900,7 +2898,7 @@ and limitations under the License.
     trace(message?: any, ...optionalParams: any[]): void;
     warn(message?: any, ...optionalParams: any[]): void;
 }
-  export var Console: {
+  export declare type ConsoleGlobal = {
     prototype: Console;
     new(): Console;
 };
@@ -2911,7 +2909,7 @@ and limitations under the License.
     removeEventListener<K extends keyof AudioScheduledSourceNodeEventMap>(type: K, listener: (this: ConstantSourceNode, ev: AudioScheduledSourceNodeEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var ConstantSourceNode: {
+  export declare type ConstantSourceNodeGlobal = {
     prototype: ConstantSourceNode;
     new(context: BaseAudioContext, options?: ConstantSourceOptions): ConstantSourceNode;
 };
@@ -2919,7 +2917,7 @@ and limitations under the License.
     buffer: AudioBuffer | null;
     normalize: boolean;
 }
-  export var ConvolverNode: {
+  export declare type ConvolverNodeGlobal = {
     prototype: ConvolverNode;
     new(context: BaseAudioContext, options?: ConvolverOptions): ConvolverNode;
 };
@@ -2936,7 +2934,7 @@ and limitations under the License.
     highWaterMark: number;
     size(chunk: any): 1;
 }
-  export var CountQueuingStrategy: {
+  export declare type CountQueuingStrategyGlobal = {
     prototype: CountQueuingStrategy;
     new(options: { highWaterMark: number }): CountQueuingStrategy;
 };
@@ -2944,7 +2942,7 @@ and limitations under the License.
     readonly subtle: SubtleCrypto;
     getRandomValues<T extends Int8Array | Int16Array | Int32Array | Uint8Array | Uint16Array | Uint32Array | Uint8ClampedArray | Float32Array | Float64Array | DataView | null>(array: T): T;
 }
-  export var Crypto: {
+  export declare type CryptoGlobal = {
     prototype: Crypto;
     new(): Crypto;
 };
@@ -2954,7 +2952,7 @@ and limitations under the License.
     readonly type: KeyType;
     readonly usages: KeyUsage[];
 }
-  export var CryptoKey: {
+  export declare type CryptoKeyGlobal = {
     prototype: CryptoKey;
     new(): CryptoKey;
 };
@@ -2962,7 +2960,7 @@ and limitations under the License.
     privateKey: CryptoKey;
     publicKey: CryptoKey;
 }
-  export var CryptoKeyPair: {
+  export declare type CryptoKeyPairGlobal = {
     prototype: CryptoKeyPair;
     new(): CryptoKeyPair;
 };
@@ -2972,7 +2970,7 @@ and limitations under the License.
     upgrade(root: Node): void;
     whenDefined(name: string): Promise<void>;
 }
-  export var CustomElementRegistry: {
+  export declare type CustomElementRegistryGlobal = {
     prototype: CustomElementRegistry;
     new(): CustomElementRegistry;
 };
@@ -2984,7 +2982,7 @@ and limitations under the License.
     readonly detail: T;
     initCustomEvent(typeArg: string, canBubbleArg: boolean, cancelableArg: boolean, detailArg: T): void;
 }
-  export var CustomEvent: {
+  export declare type CustomEventGlobal = {
     prototype: CustomEvent;
     new<T>(typeArg: string, eventInitDict?: CustomEventInit<T>): CustomEvent<T>;
 };
@@ -2992,7 +2990,7 @@ and limitations under the License.
     readonly name: string;
     toString(): string;
 }
-  export var DOMError: {
+  export declare type DOMErrorGlobal = {
     prototype: DOMError;
     new(): DOMError;
 };
@@ -3026,7 +3024,7 @@ and limitations under the License.
     readonly VALIDATION_ERR: number;
     readonly WRONG_DOCUMENT_ERR: number;
 }
-  export var DOMException: {
+  export declare type DOMExceptionGlobal = {
     prototype: DOMException;
     new(message?: string, name?: string): DOMException;
     readonly ABORT_ERR: number;
@@ -3062,7 +3060,7 @@ and limitations under the License.
     /** @deprecated */
     hasFeature(...args: any[]): true;
 }
-  export var DOMImplementation: {
+  export declare type DOMImplementationGlobal = {
     prototype: DOMImplementation;
     new(): DOMImplementation;
 };
@@ -3105,7 +3103,7 @@ and limitations under the License.
     skewYSelf(sy?: number): DOMMatrix;
     translateSelf(tx?: number, ty?: number, tz?: number): DOMMatrix;
 }
-  export var DOMMatrix: {
+  export declare type DOMMatrixGlobal = {
     prototype: DOMMatrix;
     new(init?: string | number[]): DOMMatrix;
     fromFloat32Array(array32: Float32Array): DOMMatrix;
@@ -3113,9 +3111,9 @@ and limitations under the License.
     fromMatrix(other?: DOMMatrixInit): DOMMatrix;
 };
   export type SVGMatrix = DOMMatrix;
-  export var SVGMatrix: typeof DOMMatrix;
+  export declare type SVGMatrixGlobal = typeof DOMMatrix;
   export type WebKitCSSMatrix = DOMMatrix;
-  export var WebKitCSSMatrix: typeof DOMMatrix;
+  export declare type WebKitCSSMatrixGlobal = typeof DOMMatrix;
   export interface DOMMatrixReadOnly {
     readonly a: number;
     readonly b: number;
@@ -3158,7 +3156,7 @@ and limitations under the License.
     transformPoint(point?: DOMPointInit): DOMPoint;
     translate(tx?: number, ty?: number, tz?: number): DOMMatrix;
 }
-  export var DOMMatrixReadOnly: {
+  export declare type DOMMatrixReadOnlyGlobal = {
     prototype: DOMMatrixReadOnly;
     new(init?: string | number[]): DOMMatrixReadOnly;
     fromFloat32Array(array32: Float32Array): DOMMatrixReadOnly;
@@ -3168,7 +3166,7 @@ and limitations under the License.
   export interface DOMParser {
     parseFromString(str: string, type: SupportedType): Document;
 }
-  export var DOMParser: {
+  export declare type DOMParserGlobal = {
     prototype: DOMParser;
     new(): DOMParser;
 };
@@ -3178,13 +3176,13 @@ and limitations under the License.
     y: number;
     z: number;
 }
-  export var DOMPoint: {
+  export declare type DOMPointGlobal = {
     prototype: DOMPoint;
     new(x?: number, y?: number, z?: number, w?: number): DOMPoint;
     fromPoint(other?: DOMPointInit): DOMPoint;
 };
   export type SVGPoint = DOMPoint;
-  export var SVGPoint: typeof DOMPoint;
+  export declare type SVGPointGlobal = typeof DOMPoint;
   export interface DOMPointReadOnly {
     readonly w: number;
     readonly x: number;
@@ -3193,7 +3191,7 @@ and limitations under the License.
     matrixTransform(matrix?: DOMMatrixInit): DOMPoint;
     toJSON(): any;
 }
-  export var DOMPointReadOnly: {
+  export declare type DOMPointReadOnlyGlobal = {
     prototype: DOMPointReadOnly;
     new(x?: number, y?: number, z?: number, w?: number): DOMPointReadOnly;
     fromPoint(other?: DOMPointInit): DOMPointReadOnly;
@@ -3206,7 +3204,7 @@ and limitations under the License.
     getBounds(): DOMRect;
     toJSON(): any;
 }
-  export var DOMQuad: {
+  export declare type DOMQuadGlobal = {
     prototype: DOMQuad;
     new(p1?: DOMPointInit, p2?: DOMPointInit, p3?: DOMPointInit, p4?: DOMPointInit): DOMQuad;
     fromQuad(other?: DOMQuadInit): DOMQuad;
@@ -3218,19 +3216,19 @@ and limitations under the License.
     x: number;
     y: number;
 }
-  export var DOMRect: {
+  export declare type DOMRectGlobal = {
     prototype: DOMRect;
     new(x?: number, y?: number, width?: number, height?: number): DOMRect;
     fromRect(other?: DOMRectInit): DOMRect;
 };
   export type SVGRect = DOMRect;
-  export var SVGRect: typeof DOMRect;
+  export declare type SVGRectGlobal = typeof DOMRect;
   export interface DOMRectList {
     readonly length: number;
     item(index: number): DOMRect | null;
     [index: number]: DOMRect;
 }
-  export var DOMRectList: {
+  export declare type DOMRectListGlobal = {
     prototype: DOMRectList;
     new(): DOMRectList;
 };
@@ -3245,7 +3243,7 @@ and limitations under the License.
     readonly y: number;
     toJSON(): any;
 }
-  export var DOMRectReadOnly: {
+  export declare type DOMRectReadOnlyGlobal = {
     prototype: DOMRectReadOnly;
     new(x?: number, y?: number, width?: number, height?: number): DOMRectReadOnly;
     fromRect(other?: DOMRectInit): DOMRectReadOnly;
@@ -3253,7 +3251,7 @@ and limitations under the License.
   export interface DOMSettableTokenList extends DOMTokenList {
     value: string;
 }
-  export var DOMSettableTokenList: {
+  export declare type DOMSettableTokenListGlobal = {
     prototype: DOMSettableTokenList;
     new(): DOMSettableTokenList;
 };
@@ -3273,14 +3271,14 @@ and limitations under the License.
     item(index: number): string | null;
     [index: number]: string;
 }
-  export var DOMStringList: {
+  export declare type DOMStringListGlobal = {
     prototype: DOMStringList;
     new(): DOMStringList;
 };
   export interface DOMStringMap {
     [name: string]: string | undefined;
 }
-  export var DOMStringMap: {
+  export declare type DOMStringMapGlobal = {
     prototype: DOMStringMap;
     new(): DOMStringMap;
 };
@@ -3337,7 +3335,7 @@ and limitations under the License.
     forEach(callbackfn: (value: string, key: number, parent: DOMTokenList) => void, thisArg?: any): void;
     [index: number]: string;
 }
-  export var DOMTokenList: {
+  export declare type DOMTokenListGlobal = {
     prototype: DOMTokenList;
     new(): DOMTokenList;
 };
@@ -3348,7 +3346,7 @@ and limitations under the License.
     removeEventListener<K extends keyof TextTrackCueEventMap>(type: K, listener: (this: DataCue, ev: TextTrackCueEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var DataCue: {
+  export declare type DataCueGlobal = {
     prototype: DataCue;
     new(): DataCue;
 };
@@ -3386,7 +3384,7 @@ and limitations under the License.
      */
     setDragImage(image: Element, x: number, y: number): void;
 }
-  export var DataTransfer: {
+  export declare type DataTransferGlobal = {
     prototype: DataTransfer;
     new(): DataTransfer;
 };
@@ -3411,7 +3409,7 @@ and limitations under the License.
     getAsString(callback: FunctionStringCallback | null): void;
     webkitGetAsEntry(): any;
 }
-  export var DataTransferItem: {
+  export declare type DataTransferItemGlobal = {
     prototype: DataTransferItem;
     new(): DataTransferItem;
 };
@@ -3438,7 +3436,7 @@ and limitations under the License.
     remove(index: number): void;
     [name: number]: DataTransferItem;
 }
-  export var DataTransferItemList: {
+  export declare type DataTransferItemListGlobal = {
     prototype: DataTransferItemList;
     new(): DataTransferItemList;
 };
@@ -3449,14 +3447,14 @@ and limitations under the License.
     allow(): void;
     deny(): void;
 }
-  export var DeferredPermissionRequest: {
+  export declare type DeferredPermissionRequestGlobal = {
     prototype: DeferredPermissionRequest;
     new(): DeferredPermissionRequest;
 };
   export interface DelayNode extends AudioNode {
     readonly delayTime: AudioParam;
 }
-  export var DelayNode: {
+  export declare type DelayNodeGlobal = {
     prototype: DelayNode;
     new(context: BaseAudioContext, options?: DelayOptions): DelayNode;
 };
@@ -3465,14 +3463,14 @@ and limitations under the License.
     readonly y: number | null;
     readonly z: number | null;
 }
-  export var DeviceAcceleration: {
+  export declare type DeviceAccelerationGlobal = {
     prototype: DeviceAcceleration;
     new(): DeviceAcceleration;
 };
   export interface DeviceLightEvent extends Event {
     readonly value: number;
 }
-  export var DeviceLightEvent: {
+  export declare type DeviceLightEventGlobal = {
     prototype: DeviceLightEvent;
     new(typeArg: string, eventInitDict?: DeviceLightEventInit): DeviceLightEvent;
 };
@@ -3483,7 +3481,7 @@ and limitations under the License.
     readonly rotationRate: DeviceRotationRate | null;
     initDeviceMotionEvent(type: string, bubbles: boolean, cancelable: boolean, acceleration: DeviceAccelerationDict | null, accelerationIncludingGravity: DeviceAccelerationDict | null, rotationRate: DeviceRotationRateDict | null, interval: number | null): void;
 }
-  export var DeviceMotionEvent: {
+  export declare type DeviceMotionEventGlobal = {
     prototype: DeviceMotionEvent;
     new(typeArg: string, eventInitDict?: DeviceMotionEventInit): DeviceMotionEvent;
 };
@@ -3494,7 +3492,7 @@ and limitations under the License.
     readonly gamma: number | null;
     initDeviceOrientationEvent(type: string, bubbles: boolean, cancelable: boolean, alpha: number | null, beta: number | null, gamma: number | null, absolute: boolean): void;
 }
-  export var DeviceOrientationEvent: {
+  export declare type DeviceOrientationEventGlobal = {
     prototype: DeviceOrientationEvent;
     new(typeArg: string, eventInitDict?: DeviceOrientationEventInit): DeviceOrientationEvent;
 };
@@ -3503,7 +3501,7 @@ and limitations under the License.
     readonly beta: number | null;
     readonly gamma: number | null;
 }
-  export var DeviceRotationRate: {
+  export declare type DeviceRotationRateGlobal = {
     prototype: DeviceRotationRate;
     new(): DeviceRotationRate;
 };
@@ -4071,7 +4069,7 @@ and limitations under the License.
     removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var Document: {
+  export declare type DocumentGlobal = {
     prototype: Document;
     new(): Document;
 };
@@ -4172,7 +4170,7 @@ and limitations under the License.
   export interface DocumentFragment extends Node, NonElementParentNode, ParentNode {
     getElementById(elementId: string): HTMLElement | null;
 }
-  export var DocumentFragment: {
+  export declare type DocumentFragmentGlobal = {
     prototype: DocumentFragment;
     new(): DocumentFragment;
 };
@@ -4191,7 +4189,7 @@ and limitations under the License.
 }
   export interface DocumentTimeline extends AnimationTimeline {
 }
-  export var DocumentTimeline: {
+  export declare type DocumentTimelineGlobal = {
     prototype: DocumentTimeline;
     new(options?: DocumentTimelineOptions): DocumentTimeline;
 };
@@ -4200,7 +4198,7 @@ and limitations under the License.
     readonly publicId: string;
     readonly systemId: string;
 }
-  export var DocumentType: {
+  export declare type DocumentTypeGlobal = {
     prototype: DocumentType;
     new(): DocumentType;
 };
@@ -4210,7 +4208,7 @@ and limitations under the License.
      */
     readonly dataTransfer: DataTransfer | null;
 }
-  export var DragEvent: {
+  export declare type DragEventGlobal = {
     prototype: DragEvent;
     new(type: string, eventInitDict?: DragEventInit): DragEvent;
 };
@@ -4222,7 +4220,7 @@ and limitations under the License.
     readonly release: AudioParam;
     readonly threshold: AudioParam;
 }
-  export var DynamicsCompressorNode: {
+  export declare type DynamicsCompressorNodeGlobal = {
     prototype: DynamicsCompressorNode;
     new(context: BaseAudioContext, options?: DynamicsCompressorOptions): DynamicsCompressorNode;
 };
@@ -4403,7 +4401,7 @@ and limitations under the License.
     removeEventListener<K extends keyof ElementEventMap>(type: K, listener: (this: Element, ev: ElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var Element: {
+  export declare type ElementGlobal = {
     prototype: Element;
     new(): Element;
 };
@@ -4425,7 +4423,7 @@ and limitations under the License.
     readonly lineno: number;
     readonly message: string;
 }
-  export var ErrorEvent: {
+  export declare type ErrorEventGlobal = {
     prototype: ErrorEvent;
     new(type: string, eventInitDict?: ErrorEventInit): ErrorEvent;
 };
@@ -4488,7 +4486,7 @@ and limitations under the License.
     readonly CAPTURING_PHASE: number;
     readonly NONE: number;
 }
-  export var Event: {
+  export declare type EventGlobal = {
     prototype: Event;
     new(type: string, eventInitDict?: EventInit): Event;
     readonly AT_TARGET: number;
@@ -4511,7 +4509,7 @@ and limitations under the License.
     readonly withCredentials: boolean;
     close(): void;
 }
-  export var EventSource: {
+  export declare type EventSourceGlobal = {
     prototype: EventSource;
     new(url: string, eventSourceInitDict?: EventSourceInit): EventSource;
 };
@@ -4540,7 +4538,7 @@ and limitations under the License.
      */
     removeEventListener(type: string, callback: EventListenerOrEventListenerObject | null, options?: EventListenerOptions | boolean): void;
 }
-  export var EventTarget: {
+  export declare type EventTargetGlobal = {
     prototype: EventTarget;
     new(): EventTarget;
 };
@@ -4555,7 +4553,7 @@ and limitations under the License.
     registerGenericPersistentCallbackHandler(callbackHandler: Function): void;
     registerWebRuntimeCallbackHandler(handler: Function): any;
 }
-  export var ExtensionScriptApis: {
+  export declare type ExtensionScriptApisGlobal = {
     prototype: ExtensionScriptApis;
     new(): ExtensionScriptApis;
 };
@@ -4569,7 +4567,7 @@ and limitations under the License.
     readonly lastModified: number;
     readonly name: string;
 }
-  export var File: {
+  export declare type FileGlobal = {
     prototype: File;
     new(fileBits: BlobPart[], fileName: string, options?: FilePropertyBag): File;
 };
@@ -4578,7 +4576,7 @@ and limitations under the License.
     item(index: number): File | null;
     [index: number]: File;
 }
-  export var FileList: {
+  export declare type FileListGlobal = {
     prototype: FileList;
     new(): FileList;
 };
@@ -4613,7 +4611,7 @@ and limitations under the License.
     removeEventListener<K extends keyof FileReaderEventMap>(type: K, listener: (this: FileReader, ev: FileReaderEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var FileReader: {
+  export declare type FileReaderGlobal = {
     prototype: FileReader;
     new(): FileReader;
     readonly DONE: number;
@@ -4624,7 +4622,7 @@ and limitations under the License.
     readonly relatedTarget: EventTarget;
     initFocusEvent(typeArg: string, canBubbleArg: boolean, cancelableArg: boolean, viewArg: Window, detailArg: number, relatedTargetArg: EventTarget): void;
 }
-  export var FocusEvent: {
+  export declare type FocusEventGlobal = {
     prototype: FocusEvent;
     new(typeArg: string, eventInitDict?: FocusEventInit): FocusEvent;
 };
@@ -4636,7 +4634,7 @@ and limitations under the License.
     readonly originWidth: number;
     requestFocus(): void;
 }
-  export var FocusNavigationEvent: {
+  export declare type FocusNavigationEventGlobal = {
     prototype: FocusNavigationEvent;
     new(type: string, eventInitDict?: FocusNavigationEventInit): FocusNavigationEvent;
 };
@@ -4649,14 +4647,14 @@ and limitations under the License.
     set(name: string, value: string | Blob, fileName?: string): void;
     forEach(callbackfn: (value: FormDataEntryValue, key: string, parent: FormData) => void, thisArg?: any): void;
 }
-  export var FormData: {
+  export declare type FormDataGlobal = {
     prototype: FormData;
     new(form?: HTMLFormElement): FormData;
 };
   export interface GainNode extends AudioNode {
     readonly gain: AudioParam;
 }
-  export var GainNode: {
+  export declare type GainNodeGlobal = {
     prototype: GainNode;
     new(context: BaseAudioContext, options?: GainOptions): GainNode;
 };
@@ -4673,7 +4671,7 @@ and limitations under the License.
     readonly pose: GamepadPose | null;
     readonly timestamp: number;
 }
-  export var Gamepad: {
+  export declare type GamepadGlobal = {
     prototype: Gamepad;
     new(): Gamepad;
 };
@@ -4682,14 +4680,14 @@ and limitations under the License.
     readonly touched: boolean;
     readonly value: number;
 }
-  export var GamepadButton: {
+  export declare type GamepadButtonGlobal = {
     prototype: GamepadButton;
     new(): GamepadButton;
 };
   export interface GamepadEvent extends Event {
     readonly gamepad: Gamepad;
 }
-  export var GamepadEvent: {
+  export declare type GamepadEventGlobal = {
     prototype: GamepadEvent;
     new(typeArg: string, eventInitDict?: GamepadEventInit): GamepadEvent;
 };
@@ -4697,7 +4695,7 @@ and limitations under the License.
     readonly type: GamepadHapticActuatorType;
     pulse(value: number, duration: number): Promise<boolean>;
 }
-  export var GamepadHapticActuator: {
+  export declare type GamepadHapticActuatorGlobal = {
     prototype: GamepadHapticActuator;
     new(): GamepadHapticActuator;
 };
@@ -4711,7 +4709,7 @@ and limitations under the License.
     readonly orientation: Float32Array | null;
     readonly position: Float32Array | null;
 }
-  export var GamepadPose: {
+  export declare type GamepadPoseGlobal = {
     prototype: GamepadPose;
     new(): GamepadPose;
 };
@@ -5097,7 +5095,7 @@ and limitations under the License.
     namedItem(name: string): HTMLCollection | Element | null;
     [index: number]: Element;
 }
-  export var HTMLAllCollection: {
+  export declare type HTMLAllCollectionGlobal = {
     prototype: HTMLAllCollection;
     new(): HTMLAllCollection;
 };
@@ -5153,7 +5151,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLAnchorElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLAnchorElement: {
+  export declare type HTMLAnchorElementGlobal = {
     prototype: HTMLAnchorElement;
     new(): HTMLAnchorElement;
 };
@@ -5201,7 +5199,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLAppletElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLAppletElement: {
+  export declare type HTMLAppletElementGlobal = {
     prototype: HTMLAppletElement;
     new(): HTMLAppletElement;
 };
@@ -5237,7 +5235,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLAreaElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLAreaElement: {
+  export declare type HTMLAreaElementGlobal = {
     prototype: HTMLAreaElement;
     new(): HTMLAreaElement;
 };
@@ -5247,7 +5245,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLMediaElementEventMap>(type: K, listener: (this: HTMLAudioElement, ev: HTMLMediaElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLAudioElement: {
+  export declare type HTMLAudioElementGlobal = {
     prototype: HTMLAudioElement;
     new(): HTMLAudioElement;
 };
@@ -5262,7 +5260,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLBRElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLBRElement: {
+  export declare type HTMLBRElementGlobal = {
     prototype: HTMLBRElement;
     new(): HTMLBRElement;
 };
@@ -5280,7 +5278,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLBaseElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLBaseElement: {
+  export declare type HTMLBaseElementGlobal = {
     prototype: HTMLBaseElement;
     new(): HTMLBaseElement;
 };
@@ -5300,7 +5298,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLBaseFontElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLBaseFontElement: {
+  export declare type HTMLBaseFontElementGlobal = {
     prototype: HTMLBaseFontElement;
     new(): HTMLBaseFontElement;
 };
@@ -5330,7 +5328,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLBodyElementEventMap>(type: K, listener: (this: HTMLBodyElement, ev: HTMLBodyElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLBodyElement: {
+  export declare type HTMLBodyElementGlobal = {
     prototype: HTMLBodyElement;
     new(): HTMLBodyElement;
 };
@@ -5404,7 +5402,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLButtonElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLButtonElement: {
+  export declare type HTMLButtonElementGlobal = {
     prototype: HTMLButtonElement;
     new(): HTMLButtonElement;
 };
@@ -5435,7 +5433,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLCanvasElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLCanvasElement: {
+  export declare type HTMLCanvasElementGlobal = {
     prototype: HTMLCanvasElement;
     new(): HTMLCanvasElement;
 };
@@ -5456,7 +5454,7 @@ and limitations under the License.
      */
     namedItem(name: string): Element | null;
 }
-  export var HTMLCollection: {
+  export declare type HTMLCollectionGlobal = {
     prototype: HTMLCollection;
     new(): HTMLCollection;
 };
@@ -5473,7 +5471,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLDListElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLDListElement: {
+  export declare type HTMLDListElementGlobal = {
     prototype: HTMLDListElement;
     new(): HTMLDListElement;
 };
@@ -5484,7 +5482,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLDataElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLDataElement: {
+  export declare type HTMLDataElementGlobal = {
     prototype: HTMLDataElement;
     new(): HTMLDataElement;
 };
@@ -5495,7 +5493,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLDataListElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLDataListElement: {
+  export declare type HTMLDataListElementGlobal = {
     prototype: HTMLDataListElement;
     new(): HTMLDataListElement;
 };
@@ -5506,7 +5504,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLDetailsElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLDetailsElement: {
+  export declare type HTMLDetailsElementGlobal = {
     prototype: HTMLDetailsElement;
     new(): HTMLDetailsElement;
 };
@@ -5521,7 +5519,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLDialogElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLDialogElement: {
+  export declare type HTMLDialogElementGlobal = {
     prototype: HTMLDialogElement;
     new(): HTMLDialogElement;
 };
@@ -5533,7 +5531,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLDirectoryElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLDirectoryElement: {
+  export declare type HTMLDirectoryElementGlobal = {
     prototype: HTMLDirectoryElement;
     new(): HTMLDirectoryElement;
 };
@@ -5548,7 +5546,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLDivElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLDivElement: {
+  export declare type HTMLDivElementGlobal = {
     prototype: HTMLDivElement;
     new(): HTMLDivElement;
 };
@@ -5558,7 +5556,7 @@ and limitations under the License.
     removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: HTMLDocument, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLDocument: {
+  export declare type HTMLDocumentGlobal = {
     prototype: HTMLDocument;
     new(): HTMLDocument;
 };
@@ -5587,7 +5585,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLElement: {
+  export declare type HTMLElementGlobal = {
     prototype: HTMLElement;
     new(): HTMLElement;
 };
@@ -5646,7 +5644,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLEmbedElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLEmbedElement: {
+  export declare type HTMLEmbedElementGlobal = {
     prototype: HTMLEmbedElement;
     new(): HTMLEmbedElement;
 };
@@ -5686,7 +5684,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLFieldSetElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLFieldSetElement: {
+  export declare type HTMLFieldSetElementGlobal = {
     prototype: HTMLFieldSetElement;
     new(): HTMLFieldSetElement;
 };
@@ -5705,7 +5703,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLFontElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLFontElement: {
+  export declare type HTMLFontElementGlobal = {
     prototype: HTMLFontElement;
     new(): HTMLFontElement;
 };
@@ -5715,7 +5713,7 @@ and limitations under the License.
      */
     namedItem(name: string): RadioNodeList | Element | null;
 }
-  export var HTMLFormControlsCollection: {
+  export declare type HTMLFormControlsCollectionGlobal = {
     prototype: HTMLFormControlsCollection;
     new(): HTMLFormControlsCollection;
 };
@@ -5784,7 +5782,7 @@ and limitations under the License.
     [index: number]: Element;
     [name: string]: any;
 }
-  export var HTMLFormElement: {
+  export declare type HTMLFormElementGlobal = {
     prototype: HTMLFormElement;
     new(): HTMLFormElement;
 };
@@ -5844,7 +5842,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLFrameElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLFrameElement: {
+  export declare type HTMLFrameElementGlobal = {
     prototype: HTMLFrameElement;
     new(): HTMLFrameElement;
 };
@@ -5866,7 +5864,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLFrameSetElementEventMap>(type: K, listener: (this: HTMLFrameSetElement, ev: HTMLFrameSetElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLFrameSetElement: {
+  export declare type HTMLFrameSetElementGlobal = {
     prototype: HTMLFrameSetElement;
     new(): HTMLFrameSetElement;
 };
@@ -5895,7 +5893,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLHRElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLHRElement: {
+  export declare type HTMLHRElementGlobal = {
     prototype: HTMLHRElement;
     new(): HTMLHRElement;
 };
@@ -5905,7 +5903,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLHeadElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLHeadElement: {
+  export declare type HTMLHeadElementGlobal = {
     prototype: HTMLHeadElement;
     new(): HTMLHeadElement;
 };
@@ -5920,7 +5918,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLHeadingElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLHeadingElement: {
+  export declare type HTMLHeadingElementGlobal = {
     prototype: HTMLHeadingElement;
     new(): HTMLHeadingElement;
 };
@@ -5935,7 +5933,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLHtmlElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLHtmlElement: {
+  export declare type HTMLHtmlElementGlobal = {
     prototype: HTMLHtmlElement;
     new(): HTMLHtmlElement;
 };
@@ -6020,7 +6018,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLIFrameElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLIFrameElement: {
+  export declare type HTMLIFrameElementGlobal = {
     prototype: HTMLIFrameElement;
     new(): HTMLIFrameElement;
 };
@@ -6107,7 +6105,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLImageElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLImageElement: {
+  export declare type HTMLImageElementGlobal = {
     prototype: HTMLImageElement;
     new(): HTMLImageElement;
 };
@@ -6309,7 +6307,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLInputElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLInputElement: {
+  export declare type HTMLInputElementGlobal = {
     prototype: HTMLInputElement;
     new(): HTMLInputElement;
 };
@@ -6325,7 +6323,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLLIElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLLIElement: {
+  export declare type HTMLLIElementGlobal = {
     prototype: HTMLLIElement;
     new(): HTMLLIElement;
 };
@@ -6344,7 +6342,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLLabelElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLLabelElement: {
+  export declare type HTMLLabelElementGlobal = {
     prototype: HTMLLabelElement;
     new(): HTMLLabelElement;
 };
@@ -6360,7 +6358,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLLegendElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLLegendElement: {
+  export declare type HTMLLegendElementGlobal = {
     prototype: HTMLLegendElement;
     new(): HTMLLegendElement;
 };
@@ -6412,7 +6410,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLLinkElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLLinkElement: {
+  export declare type HTMLLinkElementGlobal = {
     prototype: HTMLLinkElement;
     new(): HTMLLinkElement;
 };
@@ -6422,7 +6420,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLMainElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLMainElement: {
+  export declare type HTMLMainElementGlobal = {
     prototype: HTMLMainElement;
     new(): HTMLMainElement;
 };
@@ -6440,7 +6438,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLMapElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLMapElement: {
+  export declare type HTMLMapElementGlobal = {
     prototype: HTMLMapElement;
     new(): HTMLMapElement;
 };
@@ -6487,7 +6485,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLMarqueeElementEventMap>(type: K, listener: (this: HTMLMarqueeElement, ev: HTMLMarqueeElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLMarqueeElement: {
+  export declare type HTMLMarqueeElementGlobal = {
     prototype: HTMLMarqueeElement;
     new(): HTMLMarqueeElement;
 };
@@ -6671,7 +6669,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLMediaElementEventMap>(type: K, listener: (this: HTMLMediaElement, ev: HTMLMediaElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLMediaElement: {
+  export declare type HTMLMediaElementGlobal = {
     prototype: HTMLMediaElement;
     new(): HTMLMediaElement;
     readonly HAVE_CURRENT_DATA: number;
@@ -6692,7 +6690,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLMenuElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLMenuElement: {
+  export declare type HTMLMenuElementGlobal = {
     prototype: HTMLMenuElement;
     new(): HTMLMenuElement;
 };
@@ -6719,7 +6717,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLMetaElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLMetaElement: {
+  export declare type HTMLMetaElementGlobal = {
     prototype: HTMLMetaElement;
     new(): HTMLMetaElement;
 };
@@ -6736,7 +6734,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLMeterElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLMeterElement: {
+  export declare type HTMLMeterElementGlobal = {
     prototype: HTMLMeterElement;
     new(): HTMLMeterElement;
 };
@@ -6754,7 +6752,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLModElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLModElement: {
+  export declare type HTMLModElementGlobal = {
     prototype: HTMLModElement;
     new(): HTMLModElement;
 };
@@ -6772,7 +6770,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLOListElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLOListElement: {
+  export declare type HTMLOListElementGlobal = {
     prototype: HTMLOListElement;
     new(): HTMLOListElement;
 };
@@ -6893,7 +6891,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLObjectElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLObjectElement: {
+  export declare type HTMLObjectElementGlobal = {
     prototype: HTMLObjectElement;
     new(): HTMLObjectElement;
 };
@@ -6912,7 +6910,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLOptGroupElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLOptGroupElement: {
+  export declare type HTMLOptGroupElementGlobal = {
     prototype: HTMLOptGroupElement;
     new(): HTMLOptGroupElement;
 };
@@ -6951,7 +6949,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLOptionElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLOptionElement: {
+  export declare type HTMLOptionElementGlobal = {
     prototype: HTMLOptionElement;
     new(): HTMLOptionElement;
 };
@@ -6982,7 +6980,7 @@ and limitations under the License.
      */
     remove(index: number): void;
 }
-  export var HTMLOptionsCollection: {
+  export declare type HTMLOptionsCollectionGlobal = {
     prototype: HTMLOptionsCollection;
     new(): HTMLOptionsCollection;
 };
@@ -7012,7 +7010,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLOutputElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLOutputElement: {
+  export declare type HTMLOutputElementGlobal = {
     prototype: HTMLOutputElement;
     new(): HTMLOutputElement;
 };
@@ -7027,7 +7025,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLParagraphElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLParagraphElement: {
+  export declare type HTMLParagraphElementGlobal = {
     prototype: HTMLParagraphElement;
     new(): HTMLParagraphElement;
 };
@@ -7055,7 +7053,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLParamElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLParamElement: {
+  export declare type HTMLParamElementGlobal = {
     prototype: HTMLParamElement;
     new(): HTMLParamElement;
 };
@@ -7065,7 +7063,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLPictureElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLPictureElement: {
+  export declare type HTMLPictureElementGlobal = {
     prototype: HTMLPictureElement;
     new(): HTMLPictureElement;
 };
@@ -7080,7 +7078,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLPreElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLPreElement: {
+  export declare type HTMLPreElementGlobal = {
     prototype: HTMLPreElement;
     new(): HTMLPreElement;
 };
@@ -7103,7 +7101,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLProgressElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLProgressElement: {
+  export declare type HTMLProgressElementGlobal = {
     prototype: HTMLProgressElement;
     new(): HTMLProgressElement;
 };
@@ -7117,7 +7115,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLQuoteElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLQuoteElement: {
+  export declare type HTMLQuoteElementGlobal = {
     prototype: HTMLQuoteElement;
     new(): HTMLQuoteElement;
 };
@@ -7163,7 +7161,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLScriptElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLScriptElement: {
+  export declare type HTMLScriptElementGlobal = {
     prototype: HTMLScriptElement;
     new(): HTMLScriptElement;
 };
@@ -7264,7 +7262,7 @@ and limitations under the License.
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     [name: number]: HTMLOptionElement | HTMLOptGroupElement;
 }
-  export var HTMLSelectElement: {
+  export declare type HTMLSelectElementGlobal = {
     prototype: HTMLSelectElement;
     new(): HTMLSelectElement;
 };
@@ -7277,7 +7275,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLSlotElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLSlotElement: {
+  export declare type HTMLSlotElementGlobal = {
     prototype: HTMLSlotElement;
     new(): HTMLSlotElement;
 };
@@ -7301,7 +7299,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLSourceElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLSourceElement: {
+  export declare type HTMLSourceElementGlobal = {
     prototype: HTMLSourceElement;
     new(): HTMLSourceElement;
 };
@@ -7311,7 +7309,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLSpanElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLSpanElement: {
+  export declare type HTMLSpanElementGlobal = {
     prototype: HTMLSpanElement;
     new(): HTMLSpanElement;
 };
@@ -7330,7 +7328,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLStyleElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLStyleElement: {
+  export declare type HTMLStyleElementGlobal = {
     prototype: HTMLStyleElement;
     new(): HTMLStyleElement;
 };
@@ -7345,7 +7343,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLTableCaptionElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLTableCaptionElement: {
+  export declare type HTMLTableCaptionElementGlobal = {
     prototype: HTMLTableCaptionElement;
     new(): HTMLTableCaptionElement;
 };
@@ -7412,7 +7410,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLTableCellElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLTableCellElement: {
+  export declare type HTMLTableCellElementGlobal = {
     prototype: HTMLTableCellElement;
     new(): HTMLTableCellElement;
 };
@@ -7442,7 +7440,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLTableColElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLTableColElement: {
+  export declare type HTMLTableColElementGlobal = {
     prototype: HTMLTableColElement;
     new(): HTMLTableColElement;
 };
@@ -7452,7 +7450,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLTableDataCellElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLTableDataCellElement: {
+  export declare type HTMLTableDataCellElementGlobal = {
     prototype: HTMLTableDataCellElement;
     new(): HTMLTableDataCellElement;
 };
@@ -7562,7 +7560,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLTableElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLTableElement: {
+  export declare type HTMLTableElementGlobal = {
     prototype: HTMLTableElement;
     new(): HTMLTableElement;
 };
@@ -7573,7 +7571,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLTableHeaderCellElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLTableHeaderCellElement: {
+  export declare type HTMLTableHeaderCellElementGlobal = {
     prototype: HTMLTableHeaderCellElement;
     new(): HTMLTableHeaderCellElement;
 };
@@ -7618,7 +7616,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLTableRowElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLTableRowElement: {
+  export declare type HTMLTableRowElementGlobal = {
     prototype: HTMLTableRowElement;
     new(): HTMLTableRowElement;
 };
@@ -7653,7 +7651,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLTableSectionElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLTableSectionElement: {
+  export declare type HTMLTableSectionElementGlobal = {
     prototype: HTMLTableSectionElement;
     new(): HTMLTableSectionElement;
 };
@@ -7664,7 +7662,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLTemplateElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLTemplateElement: {
+  export declare type HTMLTemplateElementGlobal = {
     prototype: HTMLTemplateElement;
     new(): HTMLTemplateElement;
 };
@@ -7776,7 +7774,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLTextAreaElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLTextAreaElement: {
+  export declare type HTMLTextAreaElementGlobal = {
     prototype: HTMLTextAreaElement;
     new(): HTMLTextAreaElement;
 };
@@ -7787,7 +7785,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLTimeElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLTimeElement: {
+  export declare type HTMLTimeElementGlobal = {
     prototype: HTMLTimeElement;
     new(): HTMLTimeElement;
 };
@@ -7801,7 +7799,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLTitleElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLTitleElement: {
+  export declare type HTMLTitleElementGlobal = {
     prototype: HTMLTitleElement;
     new(): HTMLTitleElement;
 };
@@ -7822,7 +7820,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLTrackElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLTrackElement: {
+  export declare type HTMLTrackElementGlobal = {
     prototype: HTMLTrackElement;
     new(): HTMLTrackElement;
     readonly ERROR: number;
@@ -7840,7 +7838,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLUListElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLUListElement: {
+  export declare type HTMLUListElementGlobal = {
     prototype: HTMLUListElement;
     new(): HTMLUListElement;
 };
@@ -7850,7 +7848,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLUnknownElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLUnknownElement: {
+  export declare type HTMLUnknownElementGlobal = {
     prototype: HTMLUnknownElement;
     new(): HTMLUnknownElement;
 };
@@ -7904,7 +7902,7 @@ and limitations under the License.
     removeEventListener<K extends keyof HTMLVideoElementEventMap>(type: K, listener: (this: HTMLVideoElement, ev: HTMLVideoElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var HTMLVideoElement: {
+  export declare type HTMLVideoElementGlobal = {
     prototype: HTMLVideoElement;
     new(): HTMLVideoElement;
 };
@@ -7912,7 +7910,7 @@ and limitations under the License.
     readonly newURL: string;
     readonly oldURL: string;
 }
-  export var HashChangeEvent: {
+  export declare type HashChangeEventGlobal = {
     prototype: HashChangeEvent;
     new(type: string, eventInitDict?: HashChangeEventInit): HashChangeEvent;
 };
@@ -7924,7 +7922,7 @@ and limitations under the License.
     set(name: string, value: string): void;
     forEach(callbackfn: (value: string, key: string, parent: Headers) => void, thisArg?: any): void;
 }
-  export var Headers: {
+  export declare type HeadersGlobal = {
     prototype: Headers;
     new(init?: HeadersInit): Headers;
 };
@@ -7938,7 +7936,7 @@ and limitations under the License.
     pushState(data: any, title: string, url?: string | null): void;
     replaceState(data: any, title: string, url?: string | null): void;
 }
-  export var History: {
+  export declare type HistoryGlobal = {
     prototype: History;
     new(): History;
 };
@@ -7996,7 +7994,7 @@ and limitations under the License.
      */
     update(value: any): IDBRequest<IDBValidKey>;
 }
-  export var IDBCursor: {
+  export declare type IDBCursorGlobal = {
     prototype: IDBCursor;
     new(): IDBCursor;
 };
@@ -8006,7 +8004,7 @@ and limitations under the License.
      */
     readonly value: any;
 }
-  export var IDBCursorWithValue: {
+  export declare type IDBCursorWithValueGlobal = {
     prototype: IDBCursorWithValue;
     new(): IDBCursorWithValue;
 };
@@ -8057,7 +8055,7 @@ and limitations under the License.
     removeEventListener<K extends keyof IDBDatabaseEventMap>(type: K, listener: (this: IDBDatabase, ev: IDBDatabaseEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var IDBDatabase: {
+  export declare type IDBDatabaseGlobal = {
     prototype: IDBDatabase;
     new(): IDBDatabase;
 };
@@ -8087,7 +8085,7 @@ and limitations under the License.
      */
     open(name: string, version?: number): IDBOpenDBRequest;
 }
-  export var IDBFactory: {
+  export declare type IDBFactoryGlobal = {
     prototype: IDBFactory;
     new(): IDBFactory;
 };
@@ -8145,7 +8143,7 @@ and limitations under the License.
      */
     openKeyCursor(range?: IDBValidKey | IDBKeyRange, direction?: IDBCursorDirection): IDBRequest<IDBCursor | null>;
 }
-  export var IDBIndex: {
+  export declare type IDBIndexGlobal = {
     prototype: IDBIndex;
     new(): IDBIndex;
 };
@@ -8171,7 +8169,7 @@ and limitations under the License.
      */
     includes(key: any): boolean;
 }
-  export var IDBKeyRange: {
+  export declare type IDBKeyRangeGlobal = {
     prototype: IDBKeyRange;
     new(): IDBKeyRange;
     /**
@@ -8293,7 +8291,7 @@ and limitations under the License.
     openKeyCursor(query?: IDBValidKey | IDBKeyRange, direction?: IDBCursorDirection): IDBRequest<IDBCursor | null>;
     put(value: any, key?: IDBValidKey | IDBKeyRange): IDBRequest<IDBValidKey>;
 }
-  export var IDBObjectStore: {
+  export declare type IDBObjectStoreGlobal = {
     prototype: IDBObjectStore;
     new(): IDBObjectStore;
 };
@@ -8309,7 +8307,7 @@ and limitations under the License.
     removeEventListener<K extends keyof IDBOpenDBRequestEventMap>(type: K, listener: (this: IDBOpenDBRequest, ev: IDBOpenDBRequestEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var IDBOpenDBRequest: {
+  export declare type IDBOpenDBRequestGlobal = {
     prototype: IDBOpenDBRequest;
     new(): IDBOpenDBRequest;
 };
@@ -8351,7 +8349,7 @@ and limitations under the License.
     removeEventListener<K extends keyof IDBRequestEventMap>(type: K, listener: (this: IDBRequest<T>, ev: IDBRequestEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var IDBRequest: {
+  export declare type IDBRequestGlobal = {
     prototype: IDBRequest;
     new(): IDBRequest;
 };
@@ -8399,7 +8397,7 @@ and limitations under the License.
     removeEventListener<K extends keyof IDBTransactionEventMap>(type: K, listener: (this: IDBTransaction, ev: IDBTransactionEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var IDBTransaction: {
+  export declare type IDBTransactionGlobal = {
     prototype: IDBTransaction;
     new(): IDBTransaction;
 };
@@ -8407,14 +8405,14 @@ and limitations under the License.
     readonly newVersion: number | null;
     readonly oldVersion: number;
 }
-  export var IDBVersionChangeEvent: {
+  export declare type IDBVersionChangeEventGlobal = {
     prototype: IDBVersionChangeEvent;
     new(type: string, eventInitDict?: IDBVersionChangeEventInit): IDBVersionChangeEvent;
 };
   export interface IIRFilterNode extends AudioNode {
     getFrequencyResponse(frequencyHz: Float32Array, magResponse: Float32Array, phaseResponse: Float32Array): void;
 }
-  export var IIRFilterNode: {
+  export declare type IIRFilterNodeGlobal = {
     prototype: IIRFilterNode;
     new(context: BaseAudioContext, options: IIRFilterOptions): IIRFilterNode;
 };
@@ -8434,7 +8432,7 @@ and limitations under the License.
      */
     close(): void;
 }
-  export var ImageBitmap: {
+  export declare type ImageBitmapGlobal = {
     prototype: ImageBitmap;
     new(): ImageBitmap;
 };
@@ -8458,7 +8456,7 @@ and limitations under the License.
      */
     transferFromImageBitmap(bitmap: ImageBitmap | null): void;
 }
-  export var ImageBitmapRenderingContext: {
+  export declare type ImageBitmapRenderingContextGlobal = {
     prototype: ImageBitmapRenderingContext;
     new(): ImageBitmapRenderingContext;
 };
@@ -8475,7 +8473,7 @@ and limitations under the License.
     readonly height: number;
     readonly width: number;
 }
-  export var ImageData: {
+  export declare type ImageDataGlobal = {
     prototype: ImageData;
     new(width: number, height: number): ImageData;
     new(array: Uint8ClampedArray, width: number, height: number): ImageData;
@@ -8489,7 +8487,7 @@ and limitations under the License.
     takeRecords(): IntersectionObserverEntry[];
     unobserve(target: Element): void;
 }
-  export var IntersectionObserver: {
+  export declare type IntersectionObserverGlobal = {
     prototype: IntersectionObserver;
     new(callback: IntersectionObserverCallback, options?: IntersectionObserverInit): IntersectionObserver;
 };
@@ -8502,7 +8500,7 @@ and limitations under the License.
     readonly target: Element;
     readonly time: number;
 }
-  export var IntersectionObserverEntry: {
+  export declare type IntersectionObserverEntryGlobal = {
     prototype: IntersectionObserverEntry;
     new(intersectionObserverEntryInit: IntersectionObserverEntryInit): IntersectionObserverEntry;
 };
@@ -8533,7 +8531,7 @@ and limitations under the License.
     readonly DOM_KEY_LOCATION_RIGHT: number;
     readonly DOM_KEY_LOCATION_STANDARD: number;
 }
-  export var KeyboardEvent: {
+  export declare type KeyboardEventGlobal = {
     prototype: KeyboardEvent;
     new(typeArg: string, eventInitDict?: KeyboardEventInit): KeyboardEvent;
     readonly DOM_KEY_LOCATION_JOYSTICK: number;
@@ -8550,7 +8548,7 @@ and limitations under the License.
     getKeyframes(): ComputedKeyframe[];
     setKeyframes(keyframes: Keyframe[] | PropertyIndexedKeyframes | null): void;
 }
-  export var KeyframeEffect: {
+  export declare type KeyframeEffectGlobal = {
     prototype: KeyframeEffect;
     new(target: Element | null, keyframes: Keyframe[] | PropertyIndexedKeyframes | null, options?: number | KeyframeEffectOptions): KeyframeEffect;
     new(source: KeyframeEffect): KeyframeEffect;
@@ -8562,7 +8560,7 @@ and limitations under the License.
     readonly label: string;
     readonly state: ListeningState;
 }
-  export var ListeningStateChangedEvent: {
+  export declare type ListeningStateChangedEventGlobal = {
     prototype: ListeningStateChangedEvent;
     new(): ListeningStateChangedEvent;
 };
@@ -8632,7 +8630,7 @@ and limitations under the License.
      */
     replace(url: string): void;
 }
-  export var Location: {
+  export declare type LocationGlobal = {
     prototype: Location;
     new(): Location;
 };
@@ -8640,7 +8638,7 @@ and limitations under the License.
     readonly id: string;
     readonly type: MSCredentialType;
 }
-  export var MSAssertion: {
+  export declare type MSAssertionGlobal = {
     prototype: MSAssertion;
     new(): MSAssertion;
 };
@@ -8648,7 +8646,7 @@ and limitations under the License.
     append(data: any, endings?: string): void;
     getBlob(contentType?: string): Blob;
 }
-  export var MSBlobBuilder: {
+  export declare type MSBlobBuilderGlobal = {
     prototype: MSBlobBuilder;
     new(): MSBlobBuilder;
 };
@@ -8658,7 +8656,7 @@ and limitations under the License.
     readonly publicKey: string;
     readonly transportHints: MSTransportType[];
 }
-  export var MSFIDOCredentialAssertion: {
+  export declare type MSFIDOCredentialAssertionGlobal = {
     prototype: MSFIDOCredentialAssertion;
     new(): MSFIDOCredentialAssertion;
 };
@@ -8667,14 +8665,14 @@ and limitations under the License.
     readonly clientData: string;
     readonly signature: string;
 }
-  export var MSFIDOSignature: {
+  export declare type MSFIDOSignatureGlobal = {
     prototype: MSFIDOSignature;
     new(): MSFIDOSignature;
 };
   export interface MSFIDOSignatureAssertion extends MSAssertion {
     readonly signature: MSFIDOSignature;
 }
-  export var MSFIDOSignatureAssertion: {
+  export declare type MSFIDOSignatureAssertionGlobal = {
     prototype: MSFIDOSignatureAssertion;
     new(): MSFIDOSignatureAssertion;
 };
@@ -8687,7 +8685,7 @@ and limitations under the License.
     addPointer(pointerId: number): void;
     stop(): void;
 }
-  export var MSGesture: {
+  export declare type MSGestureGlobal = {
     prototype: MSGesture;
     new(): MSGesture;
 };
@@ -8716,7 +8714,7 @@ and limitations under the License.
     readonly MSGESTURE_FLAG_INERTIA: number;
     readonly MSGESTURE_FLAG_NONE: number;
 }
-  export var MSGestureEvent: {
+  export declare type MSGestureEventGlobal = {
     prototype: MSGestureEvent;
     new(): MSGestureEvent;
     readonly MSGESTURE_FLAG_BEGIN: number;
@@ -8729,7 +8727,7 @@ and limitations under the License.
     readonly constrictionActive: boolean;
     readonly status: string;
 }
-  export var MSGraphicsTrust: {
+  export declare type MSGraphicsTrustGlobal = {
     prototype: MSGraphicsTrust;
     new(): MSGraphicsTrust;
 };
@@ -8754,7 +8752,7 @@ and limitations under the License.
     removeEventListener<K extends keyof MSInputMethodContextEventMap>(type: K, listener: (this: MSInputMethodContext, ev: MSInputMethodContextEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var MSInputMethodContext: {
+  export declare type MSInputMethodContextGlobal = {
     prototype: MSInputMethodContext;
     new(): MSInputMethodContext;
 };
@@ -8768,7 +8766,7 @@ and limitations under the License.
     readonly MS_MEDIA_KEYERR_SERVICE: number;
     readonly MS_MEDIA_KEYERR_UNKNOWN: number;
 }
-  export var MSMediaKeyError: {
+  export declare type MSMediaKeyErrorGlobal = {
     prototype: MSMediaKeyError;
     new(): MSMediaKeyError;
     readonly MS_MEDIA_KEYERR_CLIENT: number;
@@ -8782,14 +8780,14 @@ and limitations under the License.
     readonly destinationURL: string | null;
     readonly message: Uint8Array;
 }
-  export var MSMediaKeyMessageEvent: {
+  export declare type MSMediaKeyMessageEventGlobal = {
     prototype: MSMediaKeyMessageEvent;
     new(): MSMediaKeyMessageEvent;
 };
   export interface MSMediaKeyNeededEvent extends Event {
     readonly initData: Uint8Array | null;
 }
-  export var MSMediaKeyNeededEvent: {
+  export declare type MSMediaKeyNeededEventGlobal = {
     prototype: MSMediaKeyNeededEvent;
     new(): MSMediaKeyNeededEvent;
 };
@@ -8800,7 +8798,7 @@ and limitations under the License.
     close(): void;
     update(key: Uint8Array): void;
 }
-  export var MSMediaKeySession: {
+  export declare type MSMediaKeySessionGlobal = {
     prototype: MSMediaKeySession;
     new(): MSMediaKeySession;
 };
@@ -8808,7 +8806,7 @@ and limitations under the License.
     readonly keySystem: string;
     createSession(type: string, initData: Uint8Array, cdmData?: Uint8Array | null): MSMediaKeySession;
 }
-  export var MSMediaKeys: {
+  export declare type MSMediaKeysGlobal = {
     prototype: MSMediaKeys;
     new(keySystem: string): MSMediaKeys;
     isTypeSupported(keySystem: string, type?: string | null): boolean;
@@ -8839,7 +8837,7 @@ and limitations under the License.
     getIntermediatePoints(element: Element): void;
     initPointerEvent(typeArg: string, canBubbleArg: boolean, cancelableArg: boolean, viewArg: Window, detailArg: number, screenXArg: number, screenYArg: number, clientXArg: number, clientYArg: number, ctrlKeyArg: boolean, altKeyArg: boolean, shiftKeyArg: boolean, metaKeyArg: boolean, buttonArg: number, relatedTargetArg: EventTarget, offsetXArg: number, offsetYArg: number, widthArg: number, heightArg: number, pressure: number, rotation: number, tiltX: number, tiltY: number, pointerIdArg: number, pointerType: any, hwTimestampArg: number, isPrimary: boolean): void;
 }
-  export var MSPointerEvent: {
+  export declare type MSPointerEventGlobal = {
     prototype: MSPointerEvent;
     new(typeArg: string, eventInitDict?: PointerEventInit): MSPointerEvent;
 };
@@ -8848,7 +8846,7 @@ and limitations under the License.
     msClose(): void;
     msDetachStream(): any;
 }
-  export var MSStream: {
+  export declare type MSStreamGlobal = {
     prototype: MSStream;
     new(): MSStream;
 };
@@ -8858,7 +8856,7 @@ and limitations under the License.
     readonly kind: MediaDeviceKind;
     readonly label: string;
 }
-  export var MediaDeviceInfo: {
+  export declare type MediaDeviceInfoGlobal = {
     prototype: MediaDeviceInfo;
     new(): MediaDeviceInfo;
 };
@@ -8875,14 +8873,14 @@ and limitations under the License.
     removeEventListener<K extends keyof MediaDevicesEventMap>(type: K, listener: (this: MediaDevices, ev: MediaDevicesEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var MediaDevices: {
+  export declare type MediaDevicesGlobal = {
     prototype: MediaDevices;
     new(): MediaDevices;
 };
   export interface MediaElementAudioSourceNode extends AudioNode {
     readonly mediaElement: HTMLMediaElement;
 }
-  export var MediaElementAudioSourceNode: {
+  export declare type MediaElementAudioSourceNodeGlobal = {
     prototype: MediaElementAudioSourceNode;
     new(context: AudioContext, options: MediaElementAudioSourceOptions): MediaElementAudioSourceNode;
 };
@@ -8890,7 +8888,7 @@ and limitations under the License.
     readonly initData: ArrayBuffer | null;
     readonly initDataType: string;
 }
-  export var MediaEncryptedEvent: {
+  export declare type MediaEncryptedEventGlobal = {
     prototype: MediaEncryptedEvent;
     new(type: string, eventInitDict?: MediaEncryptedEventInit): MediaEncryptedEvent;
 };
@@ -8904,7 +8902,7 @@ and limitations under the License.
     readonly MEDIA_ERR_SRC_NOT_SUPPORTED: number;
     readonly MS_MEDIA_ERR_ENCRYPTED: number;
 }
-  export var MediaError: {
+  export declare type MediaErrorGlobal = {
     prototype: MediaError;
     new(): MediaError;
     readonly MEDIA_ERR_ABORTED: number;
@@ -8917,7 +8915,7 @@ and limitations under the License.
     readonly message: ArrayBuffer;
     readonly messageType: MediaKeyMessageType;
 }
-  export var MediaKeyMessageEvent: {
+  export declare type MediaKeyMessageEventGlobal = {
     prototype: MediaKeyMessageEvent;
     new(type: string, eventInitDict?: MediaKeyMessageEventInit): MediaKeyMessageEvent;
 };
@@ -8932,7 +8930,7 @@ and limitations under the License.
     remove(): Promise<void>;
     update(response: Int8Array | Int16Array | Int32Array | Uint8Array | Uint16Array | Uint32Array | Uint8ClampedArray | Float32Array | Float64Array | DataView | ArrayBuffer | null): Promise<void>;
 }
-  export var MediaKeySession: {
+  export declare type MediaKeySessionGlobal = {
     prototype: MediaKeySession;
     new(): MediaKeySession;
 };
@@ -8942,7 +8940,7 @@ and limitations under the License.
     get(keyId: Int8Array | Int16Array | Int32Array | Uint8Array | Uint16Array | Uint32Array | Uint8ClampedArray | Float32Array | Float64Array | DataView | ArrayBuffer | null): MediaKeyStatus;
     has(keyId: Int8Array | Int16Array | Int32Array | Uint8Array | Uint16Array | Uint32Array | Uint8ClampedArray | Float32Array | Float64Array | DataView | ArrayBuffer | null): boolean;
 }
-  export var MediaKeyStatusMap: {
+  export declare type MediaKeyStatusMapGlobal = {
     prototype: MediaKeyStatusMap;
     new(): MediaKeyStatusMap;
 };
@@ -8951,7 +8949,7 @@ and limitations under the License.
     createMediaKeys(): Promise<MediaKeys>;
     getConfiguration(): MediaKeySystemConfiguration;
 }
-  export var MediaKeySystemAccess: {
+  export declare type MediaKeySystemAccessGlobal = {
     prototype: MediaKeySystemAccess;
     new(): MediaKeySystemAccess;
 };
@@ -8959,7 +8957,7 @@ and limitations under the License.
     createSession(sessionType?: MediaKeySessionType): MediaKeySession;
     setServerCertificate(serverCertificate: Int8Array | Int16Array | Int32Array | Uint8Array | Uint16Array | Uint32Array | Uint8ClampedArray | Float32Array | Float64Array | DataView | ArrayBuffer | null): Promise<void>;
 }
-  export var MediaKeys: {
+  export declare type MediaKeysGlobal = {
     prototype: MediaKeys;
     new(): MediaKeys;
 };
@@ -8972,7 +8970,7 @@ and limitations under the License.
     toString(): number;
     [index: number]: string;
 }
-  export var MediaList: {
+  export declare type MediaListGlobal = {
     prototype: MediaList;
     new(): MediaList;
 };
@@ -8992,7 +8990,7 @@ and limitations under the License.
     removeEventListener<K extends keyof MediaQueryListEventMap>(type: K, listener: (this: MediaQueryList, ev: MediaQueryListEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var MediaQueryList: {
+  export declare type MediaQueryListGlobal = {
     prototype: MediaQueryList;
     new(): MediaQueryList;
 };
@@ -9000,7 +8998,7 @@ and limitations under the License.
     readonly matches: boolean;
     readonly media: string;
 }
-  export var MediaQueryListEvent: {
+  export declare type MediaQueryListEventGlobal = {
     prototype: MediaQueryListEvent;
     new(type: string, eventInitDict?: MediaQueryListEventInit): MediaQueryListEvent;
 };
@@ -9013,7 +9011,7 @@ and limitations under the License.
     endOfStream(error?: EndOfStreamError): void;
     removeSourceBuffer(sourceBuffer: SourceBuffer): void;
 }
-  export var MediaSource: {
+  export declare type MediaSourceGlobal = {
     prototype: MediaSource;
     new(): MediaSource;
     isTypeSupported(type: string): boolean;
@@ -9044,7 +9042,7 @@ and limitations under the License.
     removeEventListener<K extends keyof MediaStreamEventMap>(type: K, listener: (this: MediaStream, ev: MediaStreamEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var MediaStream: {
+  export declare type MediaStreamGlobal = {
     prototype: MediaStream;
     new(): MediaStream;
     new(stream: MediaStream): MediaStream;
@@ -9053,14 +9051,14 @@ and limitations under the License.
   export interface MediaStreamAudioDestinationNode extends AudioNode {
     readonly stream: MediaStream;
 }
-  export var MediaStreamAudioDestinationNode: {
+  export declare type MediaStreamAudioDestinationNodeGlobal = {
     prototype: MediaStreamAudioDestinationNode;
     new(context: AudioContext, options?: AudioNodeOptions): MediaStreamAudioDestinationNode;
 };
   export interface MediaStreamAudioSourceNode extends AudioNode {
     readonly mediaStream: MediaStream;
 }
-  export var MediaStreamAudioSourceNode: {
+  export declare type MediaStreamAudioSourceNodeGlobal = {
     prototype: MediaStreamAudioSourceNode;
     new(context: AudioContext, options: MediaStreamAudioSourceOptions): MediaStreamAudioSourceNode;
 };
@@ -9069,21 +9067,21 @@ and limitations under the License.
     readonly message: string | null;
     readonly name: string;
 }
-  export var MediaStreamError: {
+  export declare type MediaStreamErrorGlobal = {
     prototype: MediaStreamError;
     new(): MediaStreamError;
 };
   export interface MediaStreamErrorEvent extends Event {
     readonly error: MediaStreamError | null;
 }
-  export var MediaStreamErrorEvent: {
+  export declare type MediaStreamErrorEventGlobal = {
     prototype: MediaStreamErrorEvent;
     new(typeArg: string, eventInitDict?: MediaStreamErrorEventInit): MediaStreamErrorEvent;
 };
   export interface MediaStreamEvent extends Event {
     readonly stream: MediaStream | null;
 }
-  export var MediaStreamEvent: {
+  export declare type MediaStreamEventGlobal = {
     prototype: MediaStreamEvent;
     new(type: string, eventInitDict: MediaStreamEventInit): MediaStreamEvent;
 };
@@ -9120,20 +9118,20 @@ and limitations under the License.
     removeEventListener<K extends keyof MediaStreamTrackEventMap>(type: K, listener: (this: MediaStreamTrack, ev: MediaStreamTrackEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var MediaStreamTrack: {
+  export declare type MediaStreamTrackGlobal = {
     prototype: MediaStreamTrack;
     new(): MediaStreamTrack;
 };
   export interface MediaStreamTrackAudioSourceNode extends AudioNode {
 }
-  export var MediaStreamTrackAudioSourceNode: {
+  export declare type MediaStreamTrackAudioSourceNodeGlobal = {
     prototype: MediaStreamTrackAudioSourceNode;
     new(context: AudioContext, options: MediaStreamTrackAudioSourceOptions): MediaStreamTrackAudioSourceNode;
 };
   export interface MediaStreamTrackEvent extends Event {
     readonly track: MediaStreamTrack;
 }
-  export var MediaStreamTrackEvent: {
+  export declare type MediaStreamTrackEventGlobal = {
     prototype: MediaStreamTrackEvent;
     new(typeArg: string, eventInitDict?: MediaStreamTrackEventInit): MediaStreamTrackEvent;
 };
@@ -9141,7 +9139,7 @@ and limitations under the License.
     readonly port1: MessagePort;
     readonly port2: MessagePort;
 }
-  export var MessageChannel: {
+  export declare type MessageChannelGlobal = {
     prototype: MessageChannel;
     new(): MessageChannel;
 };
@@ -9172,7 +9170,7 @@ and limitations under the License.
      */
     readonly source: MessageEventSource | null;
 }
-  export var MessageEvent: {
+  export declare type MessageEventGlobal = {
     prototype: MessageEvent;
     new(type: string, eventInitDict?: MessageEventInit): MessageEvent;
 };
@@ -9204,7 +9202,7 @@ and limitations under the License.
     removeEventListener<K extends keyof MessagePortEventMap>(type: K, listener: (this: MessagePort, ev: MessagePortEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var MessagePort: {
+  export declare type MessagePortGlobal = {
     prototype: MessagePort;
     new(): MessagePort;
 };
@@ -9214,7 +9212,7 @@ and limitations under the License.
     readonly suffixes: string;
     readonly type: string;
 }
-  export var MimeType: {
+  export declare type MimeTypeGlobal = {
     prototype: MimeType;
     new(): MimeType;
 };
@@ -9224,7 +9222,7 @@ and limitations under the License.
     namedItem(type: string): Plugin;
     [index: number]: Plugin;
 }
-  export var MimeTypeArray: {
+  export declare type MimeTypeArrayGlobal = {
     prototype: MimeTypeArray;
     new(): MimeTypeArray;
 };
@@ -9259,7 +9257,7 @@ and limitations under the License.
     getModifierState(keyArg: string): boolean;
     initMouseEvent(typeArg: string, canBubbleArg: boolean, cancelableArg: boolean, viewArg: Window, detailArg: number, screenXArg: number, screenYArg: number, clientXArg: number, clientYArg: number, ctrlKeyArg: boolean, altKeyArg: boolean, shiftKeyArg: boolean, metaKeyArg: boolean, buttonArg: number, relatedTargetArg: EventTarget | null): void;
 }
-  export var MouseEvent: {
+  export declare type MouseEventGlobal = {
     prototype: MouseEvent;
     new(typeArg: string, eventInitDict?: MouseEventInit): MouseEvent;
 };
@@ -9274,7 +9272,7 @@ and limitations under the License.
     readonly MODIFICATION: number;
     readonly REMOVAL: number;
 }
-  export var MutationEvent: {
+  export declare type MutationEventGlobal = {
     prototype: MutationEvent;
     new(): MutationEvent;
     readonly ADDITION: number;
@@ -9319,7 +9317,7 @@ and limitations under the License.
      */
     takeRecords(): MutationRecord[];
 }
-  export var MutationObserver: {
+  export declare type MutationObserverGlobal = {
     prototype: MutationObserver;
     new(callback: MutationCallback): MutationObserver;
 };
@@ -9362,7 +9360,7 @@ and limitations under the License.
      */
     readonly type: MutationRecordType;
 }
-  export var MutationRecord: {
+  export declare type MutationRecordGlobal = {
     prototype: MutationRecord;
     new(): MutationRecord;
 };
@@ -9377,7 +9375,7 @@ and limitations under the License.
     setNamedItemNS(attr: Attr): Attr | null;
     [index: number]: Attr;
 }
-  export var NamedNodeMap: {
+  export declare type NamedNodeMapGlobal = {
     prototype: NamedNodeMap;
     new(): NamedNodeMap;
 };
@@ -9387,7 +9385,7 @@ and limitations under the License.
     getState(): Promise<NavigationPreloadState>;
     setHeaderValue(value: string): Promise<void>;
 }
-  export var NavigationPreloadManager: {
+  export declare type NavigationPreloadManagerGlobal = {
     prototype: NavigationPreloadManager;
     new(): NavigationPreloadManager;
 };
@@ -9414,7 +9412,7 @@ and limitations under the License.
     requestMediaKeySystemAccess(keySystem: string, supportedConfigurations: MediaKeySystemConfiguration[]): Promise<MediaKeySystemAccess>;
     vibrate(pattern: number | number[]): boolean;
 }
-  export var Navigator: {
+  export declare type NavigatorGlobal = {
     prototype: Navigator;
     new(): Navigator;
 };
@@ -9579,7 +9577,7 @@ and limitations under the License.
     readonly PROCESSING_INSTRUCTION_NODE: number;
     readonly TEXT_NODE: number;
 }
-  export var Node: {
+  export declare type NodeGlobal = {
     prototype: Node;
     new(): Node;
     readonly ATTRIBUTE_NODE: number;
@@ -9604,7 +9602,7 @@ and limitations under the License.
   export interface NodeFilter {
     acceptNode(node: Node): number;
 }
-  export var NodeFilter: {
+  export declare type NodeFilterGlobal = {
     readonly FILTER_ACCEPT: number;
     readonly FILTER_REJECT: number;
     readonly FILTER_SKIP: number;
@@ -9632,7 +9630,7 @@ and limitations under the License.
     nextNode(): Node | null;
     previousNode(): Node | null;
 }
-  export var NodeIterator: {
+  export declare type NodeIteratorGlobal = {
     prototype: NodeIterator;
     new(): NodeIterator;
 };
@@ -9653,7 +9651,7 @@ and limitations under the License.
     forEach(callbackfn: (value: Node, key: number, parent: NodeList) => void, thisArg?: any): void;
     [index: number]: Node;
 }
-  export var NodeList: {
+  export declare type NodeListGlobal = {
     prototype: NodeList;
     new(): NodeList;
 };
@@ -9726,7 +9724,7 @@ and limitations under the License.
     removeEventListener<K extends keyof NotificationEventMap>(type: K, listener: (this: Notification, ev: NotificationEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var Notification: {
+  export declare type NotificationGlobal = {
     prototype: Notification;
     new(title: string, options?: NotificationOptions): Notification;
     readonly maxActions: number;
@@ -9757,7 +9755,7 @@ and limitations under the License.
   export interface OfflineAudioCompletionEvent extends Event {
     readonly renderedBuffer: AudioBuffer;
 }
-  export var OfflineAudioCompletionEvent: {
+  export declare type OfflineAudioCompletionEventGlobal = {
     prototype: OfflineAudioCompletionEvent;
     new(type: string, eventInitDict: OfflineAudioCompletionEventInit): OfflineAudioCompletionEvent;
 };
@@ -9774,7 +9772,7 @@ and limitations under the License.
     removeEventListener<K extends keyof OfflineAudioContextEventMap>(type: K, listener: (this: OfflineAudioContext, ev: OfflineAudioContextEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var OfflineAudioContext: {
+  export declare type OfflineAudioContextGlobal = {
     prototype: OfflineAudioContext;
     new(contextOptions: OfflineAudioContextOptions): OfflineAudioContext;
     new(numberOfChannels: number, length: number, sampleRate: number): OfflineAudioContext;
@@ -9789,7 +9787,7 @@ and limitations under the License.
     removeEventListener<K extends keyof AudioScheduledSourceNodeEventMap>(type: K, listener: (this: OscillatorNode, ev: AudioScheduledSourceNodeEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var OscillatorNode: {
+  export declare type OscillatorNodeGlobal = {
     prototype: OscillatorNode;
     new(context: BaseAudioContext, options?: OscillatorOptions): OscillatorNode;
 };
@@ -9801,7 +9799,7 @@ and limitations under the License.
     readonly HORIZONTAL: number;
     readonly VERTICAL: number;
 }
-  export var OverflowEvent: {
+  export declare type OverflowEventGlobal = {
     prototype: OverflowEvent;
     new(): OverflowEvent;
     readonly BOTH: number;
@@ -9811,7 +9809,7 @@ and limitations under the License.
   export interface PageTransitionEvent extends Event {
     readonly persisted: boolean;
 }
-  export var PageTransitionEvent: {
+  export declare type PageTransitionEventGlobal = {
     prototype: PageTransitionEvent;
     new(): PageTransitionEvent;
 };
@@ -9835,7 +9833,7 @@ and limitations under the License.
     /** @deprecated */
     setPosition(x: number, y: number, z: number): void;
 }
-  export var PannerNode: {
+  export declare type PannerNodeGlobal = {
     prototype: PannerNode;
     new(context: BaseAudioContext, options?: PannerOptions): PannerNode;
 };
@@ -9885,7 +9883,7 @@ and limitations under the License.
   export interface Path2D extends CanvasPath {
     addPath(path: Path2D, transform?: DOMMatrix2DInit): void;
 }
-  export var Path2D: {
+  export declare type Path2DGlobal = {
     prototype: Path2D;
     new(path?: Path2D | string): Path2D;
 };
@@ -9903,7 +9901,7 @@ and limitations under the License.
     readonly sortingCode: string;
     toJSON(): any;
 }
-  export var PaymentAddress: {
+  export declare type PaymentAddressGlobal = {
     prototype: PaymentAddress;
     new(): PaymentAddress;
 };
@@ -9926,14 +9924,14 @@ and limitations under the License.
     removeEventListener<K extends keyof PaymentRequestEventMap>(type: K, listener: (this: PaymentRequest, ev: PaymentRequestEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var PaymentRequest: {
+  export declare type PaymentRequestGlobal = {
     prototype: PaymentRequest;
     new(methodData: PaymentMethodData[], details: PaymentDetailsInit, options?: PaymentOptions): PaymentRequest;
 };
   export interface PaymentRequestUpdateEvent extends Event {
     updateWith(detailsPromise: Promise<PaymentDetailsUpdate>): void;
 }
-  export var PaymentRequestUpdateEvent: {
+  export declare type PaymentRequestUpdateEventGlobal = {
     prototype: PaymentRequestUpdateEvent;
     new(type: string, eventInitDict?: PaymentRequestUpdateEventInit): PaymentRequestUpdateEvent;
 };
@@ -9949,7 +9947,7 @@ and limitations under the License.
     complete(result?: PaymentComplete): Promise<void>;
     toJSON(): any;
 }
-  export var PaymentResponse: {
+  export declare type PaymentResponseGlobal = {
     prototype: PaymentResponse;
     new(): PaymentResponse;
 };
@@ -9976,7 +9974,7 @@ and limitations under the License.
     repositionWindow(x: number, y: number): void;
     resizeWindow(width: number, height: number): void;
 }
-  export var PerfWidgetExternal: {
+  export declare type PerfWidgetExternalGlobal = {
     prototype: PerfWidgetExternal;
     new(): PerfWidgetExternal;
 };
@@ -10006,7 +10004,7 @@ and limitations under the License.
     removeEventListener<K extends keyof PerformanceEventMap>(type: K, listener: (this: Performance, ev: PerformanceEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var Performance: {
+  export declare type PerformanceGlobal = {
     prototype: Performance;
     new(): Performance;
 };
@@ -10017,19 +10015,19 @@ and limitations under the License.
     readonly startTime: number;
     toJSON(): any;
 }
-  export var PerformanceEntry: {
+  export declare type PerformanceEntryGlobal = {
     prototype: PerformanceEntry;
     new(): PerformanceEntry;
 };
   export interface PerformanceMark extends PerformanceEntry {
 }
-  export var PerformanceMark: {
+  export declare type PerformanceMarkGlobal = {
     prototype: PerformanceMark;
     new(): PerformanceMark;
 };
   export interface PerformanceMeasure extends PerformanceEntry {
 }
-  export var PerformanceMeasure: {
+  export declare type PerformanceMeasureGlobal = {
     prototype: PerformanceMeasure;
     new(): PerformanceMeasure;
 };
@@ -10042,7 +10040,7 @@ and limitations under the License.
     readonly TYPE_RELOAD: number;
     readonly TYPE_RESERVED: number;
 }
-  export var PerformanceNavigation: {
+  export declare type PerformanceNavigationGlobal = {
     prototype: PerformanceNavigation;
     new(): PerformanceNavigation;
     readonly TYPE_BACK_FORWARD: number;
@@ -10063,7 +10061,7 @@ and limitations under the License.
     readonly unloadEventStart: number;
     toJSON(): any;
 }
-  export var PerformanceNavigationTiming: {
+  export declare type PerformanceNavigationTimingGlobal = {
     prototype: PerformanceNavigationTiming;
     new(): PerformanceNavigationTiming;
 };
@@ -10072,7 +10070,7 @@ and limitations under the License.
     observe(options: PerformanceObserverInit): void;
     takeRecords(): PerformanceEntryList;
 }
-  export var PerformanceObserver: {
+  export declare type PerformanceObserverGlobal = {
     prototype: PerformanceObserver;
     new(callback: PerformanceObserverCallback): PerformanceObserver;
 };
@@ -10081,7 +10079,7 @@ and limitations under the License.
     getEntriesByName(name: string, type?: string): PerformanceEntryList;
     getEntriesByType(type: string): PerformanceEntryList;
 }
-  export var PerformanceObserverEntryList: {
+  export declare type PerformanceObserverEntryListGlobal = {
     prototype: PerformanceObserverEntryList;
     new(): PerformanceObserverEntryList;
 };
@@ -10105,7 +10103,7 @@ and limitations under the License.
     readonly workerStart: number;
     toJSON(): any;
 }
-  export var PerformanceResourceTiming: {
+  export declare type PerformanceResourceTimingGlobal = {
     prototype: PerformanceResourceTiming;
     new(): PerformanceResourceTiming;
 };
@@ -10133,13 +10131,13 @@ and limitations under the License.
     readonly unloadEventStart: number;
     toJSON(): any;
 }
-  export var PerformanceTiming: {
+  export declare type PerformanceTimingGlobal = {
     prototype: PerformanceTiming;
     new(): PerformanceTiming;
 };
   export interface PeriodicWave {
 }
-  export var PeriodicWave: {
+  export declare type PeriodicWaveGlobal = {
     prototype: PeriodicWave;
     new(context: BaseAudioContext, options?: PeriodicWaveOptions): PeriodicWave;
 };
@@ -10147,14 +10145,14 @@ and limitations under the License.
     readonly state: MSWebViewPermissionState;
     defer(): void;
 }
-  export var PermissionRequest: {
+  export declare type PermissionRequestGlobal = {
     prototype: PermissionRequest;
     new(): PermissionRequest;
 };
   export interface PermissionRequestedEvent extends Event {
     readonly permissionRequest: PermissionRequest;
 }
-  export var PermissionRequestedEvent: {
+  export declare type PermissionRequestedEventGlobal = {
     prototype: PermissionRequestedEvent;
     new(): PermissionRequestedEvent;
 };
@@ -10168,7 +10166,7 @@ and limitations under the License.
     namedItem(type: string): MimeType;
     [index: number]: MimeType;
 }
-  export var Plugin: {
+  export declare type PluginGlobal = {
     prototype: Plugin;
     new(): Plugin;
 };
@@ -10179,7 +10177,7 @@ and limitations under the License.
     refresh(reload?: boolean): void;
     [index: number]: Plugin;
 }
-  export var PluginArray: {
+  export declare type PluginArrayGlobal = {
     prototype: PluginArray;
     new(): PluginArray;
 };
@@ -10195,14 +10193,14 @@ and limitations under the License.
     readonly twist: number;
     readonly width: number;
 }
-  export var PointerEvent: {
+  export declare type PointerEventGlobal = {
     prototype: PointerEvent;
     new(type: string, eventInitDict?: PointerEventInit): PointerEvent;
 };
   export interface PopStateEvent extends Event {
     readonly state: any;
 }
-  export var PopStateEvent: {
+  export declare type PopStateEventGlobal = {
     prototype: PopStateEvent;
     new(type: string, eventInitDict?: PopStateEventInit): PopStateEvent;
 };
@@ -10220,7 +10218,7 @@ and limitations under the License.
   export interface ProcessingInstruction extends CharacterData {
     readonly target: string;
 }
-  export var ProcessingInstruction: {
+  export declare type ProcessingInstructionGlobal = {
     prototype: ProcessingInstruction;
     new(): ProcessingInstruction;
 };
@@ -10229,7 +10227,7 @@ and limitations under the License.
     readonly loaded: number;
     readonly total: number;
 }
-  export var ProgressEvent: {
+  export declare type ProgressEventGlobal = {
     prototype: ProgressEvent;
     new(type: string, eventInitDict?: ProgressEventInit): ProgressEvent;
 };
@@ -10237,7 +10235,7 @@ and limitations under the License.
     readonly promise: Promise<any>;
     readonly reason: any;
 }
-  export var PromiseRejectionEvent: {
+  export declare type PromiseRejectionEventGlobal = {
     prototype: PromiseRejectionEvent;
     new(type: string, eventInitDict: PromiseRejectionEventInit): PromiseRejectionEvent;
 };
@@ -10246,7 +10244,7 @@ and limitations under the License.
     permissionState(options?: PushSubscriptionOptionsInit): Promise<PushPermissionState>;
     subscribe(options?: PushSubscriptionOptionsInit): Promise<PushSubscription>;
 }
-  export var PushManager: {
+  export declare type PushManagerGlobal = {
     prototype: PushManager;
     new(): PushManager;
     readonly supportedContentEncodings: ReadonlyArray<string>;
@@ -10259,7 +10257,7 @@ and limitations under the License.
     toJSON(): PushSubscriptionJSON;
     unsubscribe(): Promise<boolean>;
 }
-  export var PushSubscription: {
+  export declare type PushSubscriptionGlobal = {
     prototype: PushSubscription;
     new(): PushSubscription;
 };
@@ -10267,7 +10265,7 @@ and limitations under the License.
     readonly applicationServerKey: ArrayBuffer | null;
     readonly userVisibleOnly: boolean;
 }
-  export var PushSubscriptionOptions: {
+  export declare type PushSubscriptionOptionsGlobal = {
     prototype: PushSubscriptionOptions;
     new(): PushSubscriptionOptions;
 };
@@ -10275,7 +10273,7 @@ and limitations under the License.
     readonly expires: number;
     getFingerprints(): RTCDtlsFingerprint[];
 }
-  export var RTCCertificate: {
+  export declare type RTCCertificateGlobal = {
     prototype: RTCCertificate;
     new(): RTCCertificate;
     getSupportedAlgorithms(): AlgorithmIdentifier[];
@@ -10293,14 +10291,14 @@ and limitations under the License.
     removeEventListener<K extends keyof RTCDTMFSenderEventMap>(type: K, listener: (this: RTCDTMFSender, ev: RTCDTMFSenderEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var RTCDTMFSender: {
+  export declare type RTCDTMFSenderGlobal = {
     prototype: RTCDTMFSender;
     new(): RTCDTMFSender;
 };
   export interface RTCDTMFToneChangeEvent extends Event {
     readonly tone: string;
 }
-  export var RTCDTMFToneChangeEvent: {
+  export declare type RTCDTMFToneChangeEventGlobal = {
     prototype: RTCDTMFToneChangeEvent;
     new(type: string, eventInitDict: RTCDTMFToneChangeEventInit): RTCDTMFToneChangeEvent;
 };
@@ -10339,14 +10337,14 @@ and limitations under the License.
     removeEventListener<K extends keyof RTCDataChannelEventMap>(type: K, listener: (this: RTCDataChannel, ev: RTCDataChannelEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var RTCDataChannel: {
+  export declare type RTCDataChannelGlobal = {
     prototype: RTCDataChannel;
     new(): RTCDataChannel;
 };
   export interface RTCDataChannelEvent extends Event {
     readonly channel: RTCDataChannel;
 }
-  export var RTCDataChannelEvent: {
+  export declare type RTCDataChannelEventGlobal = {
     prototype: RTCDataChannelEvent;
     new(type: string, eventInitDict: RTCDataChannelEventInit): RTCDataChannelEvent;
 };
@@ -10365,14 +10363,14 @@ and limitations under the License.
     removeEventListener<K extends keyof RTCDtlsTransportEventMap>(type: K, listener: (this: RTCDtlsTransport, ev: RTCDtlsTransportEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var RTCDtlsTransport: {
+  export declare type RTCDtlsTransportGlobal = {
     prototype: RTCDtlsTransport;
     new(): RTCDtlsTransport;
 };
   export interface RTCDtlsTransportStateChangedEvent extends Event {
     readonly state: RTCDtlsTransportState;
 }
-  export var RTCDtlsTransportStateChangedEvent: {
+  export declare type RTCDtlsTransportStateChangedEventGlobal = {
     prototype: RTCDtlsTransportStateChangedEvent;
     new(): RTCDtlsTransportStateChangedEvent;
 };
@@ -10392,7 +10390,7 @@ and limitations under the License.
     removeEventListener<K extends keyof RTCDtmfSenderEventMap>(type: K, listener: (this: RTCDtmfSender, ev: RTCDtmfSenderEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var RTCDtmfSender: {
+  export declare type RTCDtmfSenderGlobal = {
     prototype: RTCDtmfSender;
     new(sender: RTCRtpSender): RTCDtmfSender;
 };
@@ -10406,14 +10404,14 @@ and limitations under the License.
     sdpLineNumber: number;
     sentAlert: number | null;
 }
-  export var RTCError: {
+  export declare type RTCErrorGlobal = {
     prototype: RTCError;
     new(errorDetail?: string, message?: string): RTCError;
 };
   export interface RTCErrorEvent extends Event {
     readonly error: RTCError | null;
 }
-  export var RTCErrorEvent: {
+  export declare type RTCErrorEventGlobal = {
     prototype: RTCErrorEvent;
     new(type: string, eventInitDict: RTCErrorEventInit): RTCErrorEvent;
 };
@@ -10434,14 +10432,14 @@ and limitations under the License.
     readonly usernameFragment: string | null;
     toJSON(): RTCIceCandidateInit;
 }
-  export var RTCIceCandidate: {
+  export declare type RTCIceCandidateGlobal = {
     prototype: RTCIceCandidate;
     new(candidateInitDict?: RTCIceCandidateInit): RTCIceCandidate;
 };
   export interface RTCIceCandidatePairChangedEvent extends Event {
     readonly pair: RTCIceCandidatePair;
 }
-  export var RTCIceCandidatePairChangedEvent: {
+  export declare type RTCIceCandidatePairChangedEventGlobal = {
     prototype: RTCIceCandidatePairChangedEvent;
     new(): RTCIceCandidatePairChangedEvent;
 };
@@ -10461,14 +10459,14 @@ and limitations under the License.
     removeEventListener<K extends keyof RTCIceGathererEventMap>(type: K, listener: (this: RTCIceGatherer, ev: RTCIceGathererEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var RTCIceGatherer: {
+  export declare type RTCIceGathererGlobal = {
     prototype: RTCIceGatherer;
     new(options: RTCIceGatherOptions): RTCIceGatherer;
 };
   export interface RTCIceGathererEvent extends Event {
     readonly candidate: RTCIceCandidateDictionary | RTCIceCandidateComplete;
 }
-  export var RTCIceGathererEvent: {
+  export declare type RTCIceGathererEventGlobal = {
     prototype: RTCIceGathererEvent;
     new(): RTCIceGathererEvent;
 };
@@ -10495,14 +10493,14 @@ and limitations under the License.
     removeEventListener<K extends keyof RTCIceTransportEventMap>(type: K, listener: (this: RTCIceTransport, ev: RTCIceTransportEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var RTCIceTransport: {
+  export declare type RTCIceTransportGlobal = {
     prototype: RTCIceTransport;
     new(): RTCIceTransport;
 };
   export interface RTCIceTransportStateChangedEvent extends Event {
     readonly state: RTCIceTransportState;
 }
-  export var RTCIceTransportStateChangedEvent: {
+  export declare type RTCIceTransportStateChangedEventGlobal = {
     prototype: RTCIceTransportStateChangedEvent;
     new(): RTCIceTransportStateChangedEvent;
 };
@@ -10510,7 +10508,7 @@ and limitations under the License.
     idp: string;
     name: string;
 }
-  export var RTCIdentityAssertion: {
+  export declare type RTCIdentityAssertionGlobal = {
     prototype: RTCIdentityAssertion;
     new(idp: string, name: string): RTCIdentityAssertion;
 };
@@ -10575,7 +10573,7 @@ and limitations under the License.
     removeEventListener<K extends keyof RTCPeerConnectionEventMap>(type: K, listener: (this: RTCPeerConnection, ev: RTCPeerConnectionEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var RTCPeerConnection: {
+  export declare type RTCPeerConnectionGlobal = {
     prototype: RTCPeerConnection;
     new(configuration?: RTCConfiguration): RTCPeerConnection;
     generateCertificate(keygenAlgorithm: AlgorithmIdentifier): Promise<RTCCertificate>;
@@ -10587,7 +10585,7 @@ and limitations under the License.
     readonly hostCandidate: string;
     readonly url: string;
 }
-  export var RTCPeerConnectionIceErrorEvent: {
+  export declare type RTCPeerConnectionIceErrorEventGlobal = {
     prototype: RTCPeerConnectionIceErrorEvent;
     new(type: string, eventInitDict: RTCPeerConnectionIceErrorEventInit): RTCPeerConnectionIceErrorEvent;
 };
@@ -10595,7 +10593,7 @@ and limitations under the License.
     readonly candidate: RTCIceCandidate | null;
     readonly url: string | null;
 }
-  export var RTCPeerConnectionIceEvent: {
+  export declare type RTCPeerConnectionIceEventGlobal = {
     prototype: RTCPeerConnectionIceEvent;
     new(type: string, eventInitDict?: RTCPeerConnectionIceEventInit): RTCPeerConnectionIceEvent;
 };
@@ -10608,7 +10606,7 @@ and limitations under the License.
     getStats(): Promise<RTCStatsReport>;
     getSynchronizationSources(): RTCRtpSynchronizationSource[];
 }
-  export var RTCRtpReceiver: {
+  export declare type RTCRtpReceiverGlobal = {
     prototype: RTCRtpReceiver;
     new(): RTCRtpReceiver;
     getCapabilities(kind: string): RTCRtpCapabilities | null;
@@ -10624,7 +10622,7 @@ and limitations under the License.
     setParameters(parameters: RTCRtpSendParameters): Promise<void>;
     setStreams(...streams: MediaStream[]): void;
 }
-  export var RTCRtpSender: {
+  export declare type RTCRtpSenderGlobal = {
     prototype: RTCRtpSender;
     new(): RTCRtpSender;
     getCapabilities(kind: string): RTCRtpCapabilities | null;
@@ -10639,7 +10637,7 @@ and limitations under the License.
     setCodecPreferences(codecs: RTCRtpCodecCapability[]): void;
     stop(): void;
 }
-  export var RTCRtpTransceiver: {
+  export declare type RTCRtpTransceiverGlobal = {
     prototype: RTCRtpTransceiver;
     new(): RTCRtpTransceiver;
 };
@@ -10657,7 +10655,7 @@ and limitations under the License.
     removeEventListener<K extends keyof RTCSctpTransportEventMap>(type: K, listener: (this: RTCSctpTransport, ev: RTCSctpTransportEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var RTCSctpTransport: {
+  export declare type RTCSctpTransportGlobal = {
     prototype: RTCSctpTransport;
     new(): RTCSctpTransport;
 };
@@ -10666,7 +10664,7 @@ and limitations under the License.
     readonly type: RTCSdpType;
     toJSON(): any;
 }
-  export var RTCSessionDescription: {
+  export declare type RTCSessionDescriptionGlobal = {
     prototype: RTCSessionDescription;
     new(descriptionInitDict: RTCSessionDescriptionInit): RTCSessionDescription;
 };
@@ -10681,7 +10679,7 @@ and limitations under the License.
     removeEventListener<K extends keyof RTCSrtpSdesTransportEventMap>(type: K, listener: (this: RTCSrtpSdesTransport, ev: RTCSrtpSdesTransportEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var RTCSrtpSdesTransport: {
+  export declare type RTCSrtpSdesTransportGlobal = {
     prototype: RTCSrtpSdesTransport;
     new(transport: RTCIceTransport, encryptParameters: RTCSrtpSdesParameters, decryptParameters: RTCSrtpSdesParameters): RTCSrtpSdesTransport;
     getLocalParameters(): RTCSrtpSdesParameters[];
@@ -10689,14 +10687,14 @@ and limitations under the License.
   export interface RTCSsrcConflictEvent extends Event {
     readonly ssrc: number;
 }
-  export var RTCSsrcConflictEvent: {
+  export declare type RTCSsrcConflictEventGlobal = {
     prototype: RTCSsrcConflictEvent;
     new(): RTCSsrcConflictEvent;
 };
   export interface RTCStatsEvent extends Event {
     readonly report: RTCStatsReport;
 }
-  export var RTCStatsEvent: {
+  export declare type RTCStatsEventGlobal = {
     prototype: RTCStatsEvent;
     new(type: string, eventInitDict: RTCStatsEventInit): RTCStatsEvent;
 };
@@ -10704,14 +10702,14 @@ and limitations under the License.
     getStats(): Promise<RTCStatsReport>;
     msGetStats(): Promise<RTCStatsReport>;
 }
-  export var RTCStatsProvider: {
+  export declare type RTCStatsProviderGlobal = {
     prototype: RTCStatsProvider;
     new(): RTCStatsProvider;
 };
   export interface RTCStatsReport {
     forEach(callbackfn: (value: any, key: string, parent: RTCStatsReport) => void, thisArg?: any): void;
 }
-  export var RTCStatsReport: {
+  export declare type RTCStatsReportGlobal = {
     prototype: RTCStatsReport;
     new(): RTCStatsReport;
 };
@@ -10721,21 +10719,21 @@ and limitations under the License.
     readonly track: MediaStreamTrack;
     readonly transceiver: RTCRtpTransceiver;
 }
-  export var RTCTrackEvent: {
+  export declare type RTCTrackEventGlobal = {
     prototype: RTCTrackEvent;
     new(type: string, eventInitDict: RTCTrackEventInit): RTCTrackEvent;
 };
   export interface RadioNodeList extends NodeList {
     value: string;
 }
-  export var RadioNodeList: {
+  export declare type RadioNodeListGlobal = {
     prototype: RadioNodeList;
     new(): RadioNodeList;
 };
   export interface RandomSource {
     getRandomValues<T extends Int8Array | Uint8ClampedArray | Uint8Array | Int16Array | Uint16Array | Int32Array | Uint32Array>(array: T): T;
 }
-  export var RandomSource: {
+  export declare type RandomSourceGlobal = {
     prototype: RandomSource;
     new(): RandomSource;
 };
@@ -10780,7 +10778,7 @@ and limitations under the License.
     readonly START_TO_END: number;
     readonly START_TO_START: number;
 }
-  export var Range: {
+  export declare type RangeGlobal = {
     prototype: Range;
     new(): Range;
     readonly END_TO_END: number;
@@ -10804,7 +10802,7 @@ and limitations under the License.
     pipeTo(dest: WritableStream<R>, options?: PipeOptions): Promise<void>;
     tee(): [ReadableStream<R>, ReadableStream<R>];
 }
-  export var ReadableStream: {
+  export declare type ReadableStreamGlobal = {
     prototype: ReadableStream;
     new(underlyingSource: UnderlyingByteSource, strategy?: { highWaterMark?: number, size?: undefined }): ReadableStream<Uint8Array>;
     new<R = any>(underlyingSource?: UnderlyingSource<R>, strategy?: QueuingStrategy<R>): ReadableStream<R>;
@@ -10815,7 +10813,7 @@ and limitations under the License.
     read<T extends ArrayBufferView>(view: T): Promise<ReadableStreamReadResult<T>>;
     releaseLock(): void;
 }
-  export var ReadableStreamBYOBReader: {
+  export declare type ReadableStreamBYOBReaderGlobal = {
     prototype: ReadableStreamBYOBReader;
     new(stream: ReadableStream<Uint8Array>): ReadableStreamBYOBReader;
 };
@@ -10845,7 +10843,7 @@ and limitations under the License.
     read(): Promise<ReadableStreamReadResult<R>>;
     releaseLock(): void;
 }
-  export var ReadableStreamReader: {
+  export declare type ReadableStreamReaderGlobal = {
     prototype: ReadableStreamReader;
     new(): ReadableStreamReader;
 };
@@ -10928,7 +10926,7 @@ and limitations under the License.
     readonly url: string;
     clone(): Request;
 }
-  export var Request: {
+  export declare type RequestGlobal = {
     prototype: Request;
     new(input: RequestInfo, init?: RequestInit): Request;
 };
@@ -10943,7 +10941,7 @@ and limitations under the License.
     readonly url: string;
     clone(): Response;
 }
-  export var Response: {
+  export declare type ResponseGlobal = {
     prototype: Response;
     new(body?: BodyInit | null, init?: ResponseInit): Response;
     error(): Response;
@@ -10956,7 +10954,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGAElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGAElement: {
+  export declare type SVGAElementGlobal = {
     prototype: SVGAElement;
     new(): SVGAElement;
 };
@@ -10973,7 +10971,7 @@ and limitations under the License.
     readonly SVG_ANGLETYPE_UNKNOWN: number;
     readonly SVG_ANGLETYPE_UNSPECIFIED: number;
 }
-  export var SVGAngle: {
+  export declare type SVGAngleGlobal = {
     prototype: SVGAngle;
     new(): SVGAngle;
     readonly SVG_ANGLETYPE_DEG: number;
@@ -10988,7 +10986,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGAnimateElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGAnimateElement: {
+  export declare type SVGAnimateElementGlobal = {
     prototype: SVGAnimateElement;
     new(): SVGAnimateElement;
 };
@@ -10998,7 +10996,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGAnimateMotionElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGAnimateMotionElement: {
+  export declare type SVGAnimateMotionElementGlobal = {
     prototype: SVGAnimateMotionElement;
     new(): SVGAnimateMotionElement;
 };
@@ -11008,7 +11006,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGAnimateTransformElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGAnimateTransformElement: {
+  export declare type SVGAnimateTransformElementGlobal = {
     prototype: SVGAnimateTransformElement;
     new(): SVGAnimateTransformElement;
 };
@@ -11016,7 +11014,7 @@ and limitations under the License.
     readonly animVal: SVGAngle;
     readonly baseVal: SVGAngle;
 }
-  export var SVGAnimatedAngle: {
+  export declare type SVGAnimatedAngleGlobal = {
     prototype: SVGAnimatedAngle;
     new(): SVGAnimatedAngle;
 };
@@ -11024,7 +11022,7 @@ and limitations under the License.
     readonly animVal: boolean;
     baseVal: boolean;
 }
-  export var SVGAnimatedBoolean: {
+  export declare type SVGAnimatedBooleanGlobal = {
     prototype: SVGAnimatedBoolean;
     new(): SVGAnimatedBoolean;
 };
@@ -11032,7 +11030,7 @@ and limitations under the License.
     readonly animVal: number;
     baseVal: number;
 }
-  export var SVGAnimatedEnumeration: {
+  export declare type SVGAnimatedEnumerationGlobal = {
     prototype: SVGAnimatedEnumeration;
     new(): SVGAnimatedEnumeration;
 };
@@ -11040,7 +11038,7 @@ and limitations under the License.
     readonly animVal: number;
     baseVal: number;
 }
-  export var SVGAnimatedInteger: {
+  export declare type SVGAnimatedIntegerGlobal = {
     prototype: SVGAnimatedInteger;
     new(): SVGAnimatedInteger;
 };
@@ -11048,7 +11046,7 @@ and limitations under the License.
     readonly animVal: SVGLength;
     readonly baseVal: SVGLength;
 }
-  export var SVGAnimatedLength: {
+  export declare type SVGAnimatedLengthGlobal = {
     prototype: SVGAnimatedLength;
     new(): SVGAnimatedLength;
 };
@@ -11056,7 +11054,7 @@ and limitations under the License.
     readonly animVal: SVGLengthList;
     readonly baseVal: SVGLengthList;
 }
-  export var SVGAnimatedLengthList: {
+  export declare type SVGAnimatedLengthListGlobal = {
     prototype: SVGAnimatedLengthList;
     new(): SVGAnimatedLengthList;
 };
@@ -11064,7 +11062,7 @@ and limitations under the License.
     readonly animVal: number;
     baseVal: number;
 }
-  export var SVGAnimatedNumber: {
+  export declare type SVGAnimatedNumberGlobal = {
     prototype: SVGAnimatedNumber;
     new(): SVGAnimatedNumber;
 };
@@ -11072,7 +11070,7 @@ and limitations under the License.
     readonly animVal: SVGNumberList;
     readonly baseVal: SVGNumberList;
 }
-  export var SVGAnimatedNumberList: {
+  export declare type SVGAnimatedNumberListGlobal = {
     prototype: SVGAnimatedNumberList;
     new(): SVGAnimatedNumberList;
 };
@@ -11084,7 +11082,7 @@ and limitations under the License.
     readonly animVal: SVGPreserveAspectRatio;
     readonly baseVal: SVGPreserveAspectRatio;
 }
-  export var SVGAnimatedPreserveAspectRatio: {
+  export declare type SVGAnimatedPreserveAspectRatioGlobal = {
     prototype: SVGAnimatedPreserveAspectRatio;
     new(): SVGAnimatedPreserveAspectRatio;
 };
@@ -11092,7 +11090,7 @@ and limitations under the License.
     readonly animVal: DOMRectReadOnly;
     readonly baseVal: DOMRect;
 }
-  export var SVGAnimatedRect: {
+  export declare type SVGAnimatedRectGlobal = {
     prototype: SVGAnimatedRect;
     new(): SVGAnimatedRect;
 };
@@ -11100,7 +11098,7 @@ and limitations under the License.
     readonly animVal: string;
     baseVal: string;
 }
-  export var SVGAnimatedString: {
+  export declare type SVGAnimatedStringGlobal = {
     prototype: SVGAnimatedString;
     new(): SVGAnimatedString;
 };
@@ -11108,7 +11106,7 @@ and limitations under the License.
     readonly animVal: SVGTransformList;
     readonly baseVal: SVGTransformList;
 }
-  export var SVGAnimatedTransformList: {
+  export declare type SVGAnimatedTransformListGlobal = {
     prototype: SVGAnimatedTransformList;
     new(): SVGAnimatedTransformList;
 };
@@ -11122,7 +11120,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGAnimationElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGAnimationElement: {
+  export declare type SVGAnimationElementGlobal = {
     prototype: SVGAnimationElement;
     new(): SVGAnimationElement;
 };
@@ -11135,7 +11133,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGCircleElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGCircleElement: {
+  export declare type SVGCircleElementGlobal = {
     prototype: SVGCircleElement;
     new(): SVGCircleElement;
 };
@@ -11146,7 +11144,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGClipPathElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGClipPathElement: {
+  export declare type SVGClipPathElementGlobal = {
     prototype: SVGClipPathElement;
     new(): SVGClipPathElement;
 };
@@ -11169,7 +11167,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGComponentTransferFunctionElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGComponentTransferFunctionElement: {
+  export declare type SVGComponentTransferFunctionElementGlobal = {
     prototype: SVGComponentTransferFunctionElement;
     new(): SVGComponentTransferFunctionElement;
     readonly SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE: number;
@@ -11187,7 +11185,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGCursorElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGCursorElement: {
+  export declare type SVGCursorElementGlobal = {
     prototype: SVGCursorElement;
     new(): SVGCursorElement;
 };
@@ -11197,7 +11195,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGDefsElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGDefsElement: {
+  export declare type SVGDefsElementGlobal = {
     prototype: SVGDefsElement;
     new(): SVGDefsElement;
 };
@@ -11207,7 +11205,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGDescElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGDescElement: {
+  export declare type SVGDescElementGlobal = {
     prototype: SVGDescElement;
     new(): SVGDescElement;
 };
@@ -11223,7 +11221,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGElement: {
+  export declare type SVGElementGlobal = {
     prototype: SVGElement;
     new(): SVGElement;
 };
@@ -11231,7 +11229,7 @@ and limitations under the License.
     readonly correspondingElement: SVGElement;
     readonly correspondingUseElement: SVGUseElement;
 }
-  export var SVGElementInstance: {
+  export declare type SVGElementInstanceGlobal = {
     prototype: SVGElementInstance;
     new(): SVGElementInstance;
 };
@@ -11241,7 +11239,7 @@ and limitations under the License.
     /** @deprecated */
     item(index: number): SVGElementInstance;
 }
-  export var SVGElementInstanceList: {
+  export declare type SVGElementInstanceListGlobal = {
     prototype: SVGElementInstanceList;
     new(): SVGElementInstanceList;
 };
@@ -11255,7 +11253,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGEllipseElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGEllipseElement: {
+  export declare type SVGEllipseElementGlobal = {
     prototype: SVGEllipseElement;
     new(): SVGEllipseElement;
 };
@@ -11285,7 +11283,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFEBlendElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGFEBlendElement: {
+  export declare type SVGFEBlendElementGlobal = {
     prototype: SVGFEBlendElement;
     new(): SVGFEBlendElement;
     readonly SVG_FEBLEND_MODE_COLOR: number;
@@ -11320,7 +11318,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFEColorMatrixElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGFEColorMatrixElement: {
+  export declare type SVGFEColorMatrixElementGlobal = {
     prototype: SVGFEColorMatrixElement;
     new(): SVGFEColorMatrixElement;
     readonly SVG_FECOLORMATRIX_TYPE_HUEROTATE: number;
@@ -11336,7 +11334,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFEComponentTransferElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGFEComponentTransferElement: {
+  export declare type SVGFEComponentTransferElementGlobal = {
     prototype: SVGFEComponentTransferElement;
     new(): SVGFEComponentTransferElement;
 };
@@ -11360,7 +11358,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFECompositeElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGFECompositeElement: {
+  export declare type SVGFECompositeElementGlobal = {
     prototype: SVGFECompositeElement;
     new(): SVGFECompositeElement;
     readonly SVG_FECOMPOSITE_OPERATOR_ARITHMETIC: number;
@@ -11393,7 +11391,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFEConvolveMatrixElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGFEConvolveMatrixElement: {
+  export declare type SVGFEConvolveMatrixElementGlobal = {
     prototype: SVGFEConvolveMatrixElement;
     new(): SVGFEConvolveMatrixElement;
     readonly SVG_EDGEMODE_DUPLICATE: number;
@@ -11412,7 +11410,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFEDiffuseLightingElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGFEDiffuseLightingElement: {
+  export declare type SVGFEDiffuseLightingElementGlobal = {
     prototype: SVGFEDiffuseLightingElement;
     new(): SVGFEDiffuseLightingElement;
 };
@@ -11432,7 +11430,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFEDisplacementMapElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGFEDisplacementMapElement: {
+  export declare type SVGFEDisplacementMapElementGlobal = {
     prototype: SVGFEDisplacementMapElement;
     new(): SVGFEDisplacementMapElement;
     readonly SVG_CHANNEL_A: number;
@@ -11449,7 +11447,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFEDistantLightElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGFEDistantLightElement: {
+  export declare type SVGFEDistantLightElementGlobal = {
     prototype: SVGFEDistantLightElement;
     new(): SVGFEDistantLightElement;
 };
@@ -11459,7 +11457,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFEFloodElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGFEFloodElement: {
+  export declare type SVGFEFloodElementGlobal = {
     prototype: SVGFEFloodElement;
     new(): SVGFEFloodElement;
 };
@@ -11469,7 +11467,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFEFuncAElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGFEFuncAElement: {
+  export declare type SVGFEFuncAElementGlobal = {
     prototype: SVGFEFuncAElement;
     new(): SVGFEFuncAElement;
 };
@@ -11479,7 +11477,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFEFuncBElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGFEFuncBElement: {
+  export declare type SVGFEFuncBElementGlobal = {
     prototype: SVGFEFuncBElement;
     new(): SVGFEFuncBElement;
 };
@@ -11489,7 +11487,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFEFuncGElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGFEFuncGElement: {
+  export declare type SVGFEFuncGElementGlobal = {
     prototype: SVGFEFuncGElement;
     new(): SVGFEFuncGElement;
 };
@@ -11499,7 +11497,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFEFuncRElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGFEFuncRElement: {
+  export declare type SVGFEFuncRElementGlobal = {
     prototype: SVGFEFuncRElement;
     new(): SVGFEFuncRElement;
 };
@@ -11513,7 +11511,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFEGaussianBlurElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGFEGaussianBlurElement: {
+  export declare type SVGFEGaussianBlurElementGlobal = {
     prototype: SVGFEGaussianBlurElement;
     new(): SVGFEGaussianBlurElement;
 };
@@ -11524,7 +11522,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFEImageElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGFEImageElement: {
+  export declare type SVGFEImageElementGlobal = {
     prototype: SVGFEImageElement;
     new(): SVGFEImageElement;
 };
@@ -11534,7 +11532,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFEMergeElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGFEMergeElement: {
+  export declare type SVGFEMergeElementGlobal = {
     prototype: SVGFEMergeElement;
     new(): SVGFEMergeElement;
 };
@@ -11545,7 +11543,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFEMergeNodeElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGFEMergeNodeElement: {
+  export declare type SVGFEMergeNodeElementGlobal = {
     prototype: SVGFEMergeNodeElement;
     new(): SVGFEMergeNodeElement;
 };
@@ -11562,7 +11560,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFEMorphologyElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGFEMorphologyElement: {
+  export declare type SVGFEMorphologyElementGlobal = {
     prototype: SVGFEMorphologyElement;
     new(): SVGFEMorphologyElement;
     readonly SVG_MORPHOLOGY_OPERATOR_DILATE: number;
@@ -11578,7 +11576,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFEOffsetElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGFEOffsetElement: {
+  export declare type SVGFEOffsetElementGlobal = {
     prototype: SVGFEOffsetElement;
     new(): SVGFEOffsetElement;
 };
@@ -11591,7 +11589,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFEPointLightElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGFEPointLightElement: {
+  export declare type SVGFEPointLightElementGlobal = {
     prototype: SVGFEPointLightElement;
     new(): SVGFEPointLightElement;
 };
@@ -11607,7 +11605,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFESpecularLightingElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGFESpecularLightingElement: {
+  export declare type SVGFESpecularLightingElementGlobal = {
     prototype: SVGFESpecularLightingElement;
     new(): SVGFESpecularLightingElement;
 };
@@ -11625,7 +11623,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFESpotLightElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGFESpotLightElement: {
+  export declare type SVGFESpotLightElementGlobal = {
     prototype: SVGFESpotLightElement;
     new(): SVGFESpotLightElement;
 };
@@ -11636,7 +11634,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFETileElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGFETileElement: {
+  export declare type SVGFETileElementGlobal = {
     prototype: SVGFETileElement;
     new(): SVGFETileElement;
 };
@@ -11658,7 +11656,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFETurbulenceElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGFETurbulenceElement: {
+  export declare type SVGFETurbulenceElementGlobal = {
     prototype: SVGFETurbulenceElement;
     new(): SVGFETurbulenceElement;
     readonly SVG_STITCHTYPE_NOSTITCH: number;
@@ -11686,7 +11684,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGFilterElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGFilterElement: {
+  export declare type SVGFilterElementGlobal = {
     prototype: SVGFilterElement;
     new(): SVGFilterElement;
 };
@@ -11711,7 +11709,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGForeignObjectElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGForeignObjectElement: {
+  export declare type SVGForeignObjectElementGlobal = {
     prototype: SVGForeignObjectElement;
     new(): SVGForeignObjectElement;
 };
@@ -11721,7 +11719,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGGElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGGElement: {
+  export declare type SVGGElementGlobal = {
     prototype: SVGGElement;
     new(): SVGGElement;
 };
@@ -11736,7 +11734,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGGeometryElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGGeometryElement: {
+  export declare type SVGGeometryElementGlobal = {
     prototype: SVGGeometryElement;
     new(): SVGGeometryElement;
 };
@@ -11753,7 +11751,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGGradientElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGGradientElement: {
+  export declare type SVGGradientElementGlobal = {
     prototype: SVGGradientElement;
     new(): SVGGradientElement;
     readonly SVG_SPREADMETHOD_PAD: number;
@@ -11771,7 +11769,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGGraphicsElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGGraphicsElement: {
+  export declare type SVGGraphicsElementGlobal = {
     prototype: SVGGraphicsElement;
     new(): SVGGraphicsElement;
 };
@@ -11786,7 +11784,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGImageElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGImageElement: {
+  export declare type SVGImageElementGlobal = {
     prototype: SVGImageElement;
     new(): SVGImageElement;
 };
@@ -11809,7 +11807,7 @@ and limitations under the License.
     readonly SVG_LENGTHTYPE_PX: number;
     readonly SVG_LENGTHTYPE_UNKNOWN: number;
 }
-  export var SVGLength: {
+  export declare type SVGLengthGlobal = {
     prototype: SVGLength;
     new(): SVGLength;
     readonly SVG_LENGTHTYPE_CM: number;
@@ -11836,7 +11834,7 @@ and limitations under the License.
     replaceItem(newItem: SVGLength, index: number): SVGLength;
     [index: number]: SVGLength;
 }
-  export var SVGLengthList: {
+  export declare type SVGLengthListGlobal = {
     prototype: SVGLengthList;
     new(): SVGLengthList;
 };
@@ -11850,7 +11848,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGLineElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGLineElement: {
+  export declare type SVGLineElementGlobal = {
     prototype: SVGLineElement;
     new(): SVGLineElement;
 };
@@ -11864,7 +11862,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGLinearGradientElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGLinearGradientElement: {
+  export declare type SVGLinearGradientElementGlobal = {
     prototype: SVGLinearGradientElement;
     new(): SVGLinearGradientElement;
 };
@@ -11889,7 +11887,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGMarkerElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGMarkerElement: {
+  export declare type SVGMarkerElementGlobal = {
     prototype: SVGMarkerElement;
     new(): SVGMarkerElement;
     readonly SVG_MARKERUNITS_STROKEWIDTH: number;
@@ -11911,7 +11909,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGMaskElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGMaskElement: {
+  export declare type SVGMaskElementGlobal = {
     prototype: SVGMaskElement;
     new(): SVGMaskElement;
 };
@@ -11921,14 +11919,14 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGMetadataElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGMetadataElement: {
+  export declare type SVGMetadataElementGlobal = {
     prototype: SVGMetadataElement;
     new(): SVGMetadataElement;
 };
   export interface SVGNumber {
     value: number;
 }
-  export var SVGNumber: {
+  export declare type SVGNumberGlobal = {
     prototype: SVGNumber;
     new(): SVGNumber;
 };
@@ -11944,7 +11942,7 @@ and limitations under the License.
     replaceItem(newItem: SVGNumber, index: number): SVGNumber;
     [index: number]: SVGNumber;
 }
-  export var SVGNumberList: {
+  export declare type SVGNumberListGlobal = {
     prototype: SVGNumberList;
     new(): SVGNumberList;
 };
@@ -11998,7 +11996,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGPathElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGPathElement: {
+  export declare type SVGPathElementGlobal = {
     prototype: SVGPathElement;
     new(): SVGPathElement;
 };
@@ -12026,7 +12024,7 @@ and limitations under the License.
     readonly PATHSEG_MOVETO_REL: number;
     readonly PATHSEG_UNKNOWN: number;
 }
-  export var SVGPathSeg: {
+  export declare type SVGPathSegGlobal = {
     prototype: SVGPathSeg;
     new(): SVGPathSeg;
     readonly PATHSEG_ARC_ABS: number;
@@ -12059,7 +12057,7 @@ and limitations under the License.
     x: number;
     y: number;
 }
-  export var SVGPathSegArcAbs: {
+  export declare type SVGPathSegArcAbsGlobal = {
     prototype: SVGPathSegArcAbs;
     new(): SVGPathSegArcAbs;
 };
@@ -12072,13 +12070,13 @@ and limitations under the License.
     x: number;
     y: number;
 }
-  export var SVGPathSegArcRel: {
+  export declare type SVGPathSegArcRelGlobal = {
     prototype: SVGPathSegArcRel;
     new(): SVGPathSegArcRel;
 };
   export interface SVGPathSegClosePath extends SVGPathSeg {
 }
-  export var SVGPathSegClosePath: {
+  export declare type SVGPathSegClosePathGlobal = {
     prototype: SVGPathSegClosePath;
     new(): SVGPathSegClosePath;
 };
@@ -12090,7 +12088,7 @@ and limitations under the License.
     y1: number;
     y2: number;
 }
-  export var SVGPathSegCurvetoCubicAbs: {
+  export declare type SVGPathSegCurvetoCubicAbsGlobal = {
     prototype: SVGPathSegCurvetoCubicAbs;
     new(): SVGPathSegCurvetoCubicAbs;
 };
@@ -12102,7 +12100,7 @@ and limitations under the License.
     y1: number;
     y2: number;
 }
-  export var SVGPathSegCurvetoCubicRel: {
+  export declare type SVGPathSegCurvetoCubicRelGlobal = {
     prototype: SVGPathSegCurvetoCubicRel;
     new(): SVGPathSegCurvetoCubicRel;
 };
@@ -12112,7 +12110,7 @@ and limitations under the License.
     y: number;
     y2: number;
 }
-  export var SVGPathSegCurvetoCubicSmoothAbs: {
+  export declare type SVGPathSegCurvetoCubicSmoothAbsGlobal = {
     prototype: SVGPathSegCurvetoCubicSmoothAbs;
     new(): SVGPathSegCurvetoCubicSmoothAbs;
 };
@@ -12122,7 +12120,7 @@ and limitations under the License.
     y: number;
     y2: number;
 }
-  export var SVGPathSegCurvetoCubicSmoothRel: {
+  export declare type SVGPathSegCurvetoCubicSmoothRelGlobal = {
     prototype: SVGPathSegCurvetoCubicSmoothRel;
     new(): SVGPathSegCurvetoCubicSmoothRel;
 };
@@ -12132,7 +12130,7 @@ and limitations under the License.
     y: number;
     y1: number;
 }
-  export var SVGPathSegCurvetoQuadraticAbs: {
+  export declare type SVGPathSegCurvetoQuadraticAbsGlobal = {
     prototype: SVGPathSegCurvetoQuadraticAbs;
     new(): SVGPathSegCurvetoQuadraticAbs;
 };
@@ -12142,7 +12140,7 @@ and limitations under the License.
     y: number;
     y1: number;
 }
-  export var SVGPathSegCurvetoQuadraticRel: {
+  export declare type SVGPathSegCurvetoQuadraticRelGlobal = {
     prototype: SVGPathSegCurvetoQuadraticRel;
     new(): SVGPathSegCurvetoQuadraticRel;
 };
@@ -12150,7 +12148,7 @@ and limitations under the License.
     x: number;
     y: number;
 }
-  export var SVGPathSegCurvetoQuadraticSmoothAbs: {
+  export declare type SVGPathSegCurvetoQuadraticSmoothAbsGlobal = {
     prototype: SVGPathSegCurvetoQuadraticSmoothAbs;
     new(): SVGPathSegCurvetoQuadraticSmoothAbs;
 };
@@ -12158,7 +12156,7 @@ and limitations under the License.
     x: number;
     y: number;
 }
-  export var SVGPathSegCurvetoQuadraticSmoothRel: {
+  export declare type SVGPathSegCurvetoQuadraticSmoothRelGlobal = {
     prototype: SVGPathSegCurvetoQuadraticSmoothRel;
     new(): SVGPathSegCurvetoQuadraticSmoothRel;
 };
@@ -12166,21 +12164,21 @@ and limitations under the License.
     x: number;
     y: number;
 }
-  export var SVGPathSegLinetoAbs: {
+  export declare type SVGPathSegLinetoAbsGlobal = {
     prototype: SVGPathSegLinetoAbs;
     new(): SVGPathSegLinetoAbs;
 };
   export interface SVGPathSegLinetoHorizontalAbs extends SVGPathSeg {
     x: number;
 }
-  export var SVGPathSegLinetoHorizontalAbs: {
+  export declare type SVGPathSegLinetoHorizontalAbsGlobal = {
     prototype: SVGPathSegLinetoHorizontalAbs;
     new(): SVGPathSegLinetoHorizontalAbs;
 };
   export interface SVGPathSegLinetoHorizontalRel extends SVGPathSeg {
     x: number;
 }
-  export var SVGPathSegLinetoHorizontalRel: {
+  export declare type SVGPathSegLinetoHorizontalRelGlobal = {
     prototype: SVGPathSegLinetoHorizontalRel;
     new(): SVGPathSegLinetoHorizontalRel;
 };
@@ -12188,21 +12186,21 @@ and limitations under the License.
     x: number;
     y: number;
 }
-  export var SVGPathSegLinetoRel: {
+  export declare type SVGPathSegLinetoRelGlobal = {
     prototype: SVGPathSegLinetoRel;
     new(): SVGPathSegLinetoRel;
 };
   export interface SVGPathSegLinetoVerticalAbs extends SVGPathSeg {
     y: number;
 }
-  export var SVGPathSegLinetoVerticalAbs: {
+  export declare type SVGPathSegLinetoVerticalAbsGlobal = {
     prototype: SVGPathSegLinetoVerticalAbs;
     new(): SVGPathSegLinetoVerticalAbs;
 };
   export interface SVGPathSegLinetoVerticalRel extends SVGPathSeg {
     y: number;
 }
-  export var SVGPathSegLinetoVerticalRel: {
+  export declare type SVGPathSegLinetoVerticalRelGlobal = {
     prototype: SVGPathSegLinetoVerticalRel;
     new(): SVGPathSegLinetoVerticalRel;
 };
@@ -12216,7 +12214,7 @@ and limitations under the License.
     removeItem(index: number): SVGPathSeg;
     replaceItem(newItem: SVGPathSeg, index: number): SVGPathSeg;
 }
-  export var SVGPathSegList: {
+  export declare type SVGPathSegListGlobal = {
     prototype: SVGPathSegList;
     new(): SVGPathSegList;
 };
@@ -12224,7 +12222,7 @@ and limitations under the License.
     x: number;
     y: number;
 }
-  export var SVGPathSegMovetoAbs: {
+  export declare type SVGPathSegMovetoAbsGlobal = {
     prototype: SVGPathSegMovetoAbs;
     new(): SVGPathSegMovetoAbs;
 };
@@ -12232,7 +12230,7 @@ and limitations under the License.
     x: number;
     y: number;
 }
-  export var SVGPathSegMovetoRel: {
+  export declare type SVGPathSegMovetoRelGlobal = {
     prototype: SVGPathSegMovetoRel;
     new(): SVGPathSegMovetoRel;
 };
@@ -12249,7 +12247,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGPatternElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGPatternElement: {
+  export declare type SVGPatternElementGlobal = {
     prototype: SVGPatternElement;
     new(): SVGPatternElement;
 };
@@ -12263,7 +12261,7 @@ and limitations under the License.
     removeItem(index: number): SVGPoint;
     replaceItem(newItem: SVGPoint, index: number): SVGPoint;
 }
-  export var SVGPointList: {
+  export declare type SVGPointListGlobal = {
     prototype: SVGPointList;
     new(): SVGPointList;
 };
@@ -12273,7 +12271,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGPolygonElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGPolygonElement: {
+  export declare type SVGPolygonElementGlobal = {
     prototype: SVGPolygonElement;
     new(): SVGPolygonElement;
 };
@@ -12283,7 +12281,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGPolylineElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGPolylineElement: {
+  export declare type SVGPolylineElementGlobal = {
     prototype: SVGPolylineElement;
     new(): SVGPolylineElement;
 };
@@ -12305,7 +12303,7 @@ and limitations under the License.
     readonly SVG_PRESERVEASPECTRATIO_XMINYMID: number;
     readonly SVG_PRESERVEASPECTRATIO_XMINYMIN: number;
 }
-  export var SVGPreserveAspectRatio: {
+  export declare type SVGPreserveAspectRatioGlobal = {
     prototype: SVGPreserveAspectRatio;
     new(): SVGPreserveAspectRatio;
     readonly SVG_MEETORSLICE_MEET: number;
@@ -12334,7 +12332,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGRadialGradientElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGRadialGradientElement: {
+  export declare type SVGRadialGradientElementGlobal = {
     prototype: SVGRadialGradientElement;
     new(): SVGRadialGradientElement;
 };
@@ -12350,7 +12348,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGRectElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGRectElement: {
+  export declare type SVGRectElementGlobal = {
     prototype: SVGRectElement;
     new(): SVGRectElement;
 };
@@ -12417,7 +12415,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGSVGElementEventMap>(type: K, listener: (this: SVGSVGElement, ev: SVGSVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGSVGElement: {
+  export declare type SVGSVGElementGlobal = {
     prototype: SVGSVGElement;
     new(): SVGSVGElement;
     readonly SVG_ZOOMANDPAN_DISABLE: number;
@@ -12431,7 +12429,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGScriptElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGScriptElement: {
+  export declare type SVGScriptElementGlobal = {
     prototype: SVGScriptElement;
     new(): SVGScriptElement;
 };
@@ -12442,7 +12440,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGStopElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGStopElement: {
+  export declare type SVGStopElementGlobal = {
     prototype: SVGStopElement;
     new(): SVGStopElement;
 };
@@ -12458,7 +12456,7 @@ and limitations under the License.
     replaceItem(newItem: string, index: number): string;
     [index: number]: string;
 }
-  export var SVGStringList: {
+  export declare type SVGStringListGlobal = {
     prototype: SVGStringList;
     new(): SVGStringList;
 };
@@ -12472,7 +12470,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGStyleElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGStyleElement: {
+  export declare type SVGStyleElementGlobal = {
     prototype: SVGStyleElement;
     new(): SVGStyleElement;
 };
@@ -12482,7 +12480,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGSwitchElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGSwitchElement: {
+  export declare type SVGSwitchElementGlobal = {
     prototype: SVGSwitchElement;
     new(): SVGSwitchElement;
 };
@@ -12492,7 +12490,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGSymbolElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGSymbolElement: {
+  export declare type SVGSymbolElementGlobal = {
     prototype: SVGSymbolElement;
     new(): SVGSymbolElement;
 };
@@ -12502,7 +12500,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGTSpanElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGTSpanElement: {
+  export declare type SVGTSpanElementGlobal = {
     prototype: SVGTSpanElement;
     new(): SVGTSpanElement;
 };
@@ -12530,7 +12528,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGTextContentElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGTextContentElement: {
+  export declare type SVGTextContentElementGlobal = {
     prototype: SVGTextContentElement;
     new(): SVGTextContentElement;
     readonly LENGTHADJUST_SPACING: number;
@@ -12543,7 +12541,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGTextElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGTextElement: {
+  export declare type SVGTextElementGlobal = {
     prototype: SVGTextElement;
     new(): SVGTextElement;
 };
@@ -12562,7 +12560,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGTextPathElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGTextPathElement: {
+  export declare type SVGTextPathElementGlobal = {
     prototype: SVGTextPathElement;
     new(): SVGTextPathElement;
     readonly TEXTPATH_METHODTYPE_ALIGN: number;
@@ -12583,7 +12581,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGTextPositioningElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGTextPositioningElement: {
+  export declare type SVGTextPositioningElementGlobal = {
     prototype: SVGTextPositioningElement;
     new(): SVGTextPositioningElement;
 };
@@ -12593,7 +12591,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGTitleElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGTitleElement: {
+  export declare type SVGTitleElementGlobal = {
     prototype: SVGTitleElement;
     new(): SVGTitleElement;
 };
@@ -12615,7 +12613,7 @@ and limitations under the License.
     readonly SVG_TRANSFORM_TRANSLATE: number;
     readonly SVG_TRANSFORM_UNKNOWN: number;
 }
-  export var SVGTransform: {
+  export declare type SVGTransformGlobal = {
     prototype: SVGTransform;
     new(): SVGTransform;
     readonly SVG_TRANSFORM_MATRIX: number;
@@ -12638,7 +12636,7 @@ and limitations under the License.
     removeItem(index: number): SVGTransform;
     replaceItem(newItem: SVGTransform, index: number): SVGTransform;
 }
-  export var SVGTransformList: {
+  export declare type SVGTransformListGlobal = {
     prototype: SVGTransformList;
     new(): SVGTransformList;
 };
@@ -12650,7 +12648,7 @@ and limitations under the License.
     readonly SVG_UNIT_TYPE_UNKNOWN: number;
     readonly SVG_UNIT_TYPE_USERSPACEONUSE: number;
 }
-  export var SVGUnitTypes: {
+  export declare type SVGUnitTypesGlobal = {
     prototype: SVGUnitTypes;
     new(): SVGUnitTypes;
     readonly SVG_UNIT_TYPE_OBJECTBOUNDINGBOX: number;
@@ -12669,7 +12667,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGUseElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGUseElement: {
+  export declare type SVGUseElementGlobal = {
     prototype: SVGUseElement;
     new(): SVGUseElement;
 };
@@ -12681,7 +12679,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SVGElementEventMap>(type: K, listener: (this: SVGViewElement, ev: SVGElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SVGViewElement: {
+  export declare type SVGViewElementGlobal = {
     prototype: SVGViewElement;
     new(): SVGViewElement;
     readonly SVG_ZOOMANDPAN_DISABLE: number;
@@ -12691,7 +12689,7 @@ and limitations under the License.
   export interface SVGZoomAndPan {
     readonly zoomAndPan: number;
 }
-  export var SVGZoomAndPan: {
+  export declare type SVGZoomAndPanGlobal = {
     readonly SVG_ZOOMANDPAN_DISABLE: number;
     readonly SVG_ZOOMANDPAN_MAGNIFY: number;
     readonly SVG_ZOOMANDPAN_UNKNOWN: number;
@@ -12703,7 +12701,7 @@ and limitations under the License.
     readonly previousTranslate: SVGPoint;
     readonly zoomRectScreen: SVGRect;
 }
-  export var SVGZoomEvent: {
+  export declare type SVGZoomEventGlobal = {
     prototype: SVGZoomEvent;
     new(): SVGZoomEvent;
 };
@@ -12711,7 +12709,7 @@ and limitations under the License.
     readonly id: ArrayBuffer;
     readonly type: ScopedCredentialType;
 }
-  export var ScopedCredential: {
+  export declare type ScopedCredentialGlobal = {
     prototype: ScopedCredential;
     new(): ScopedCredential;
 };
@@ -12719,7 +12717,7 @@ and limitations under the License.
     readonly credential: ScopedCredential;
     readonly publicKey: CryptoKey;
 }
-  export var ScopedCredentialInfo: {
+  export declare type ScopedCredentialInfoGlobal = {
     prototype: ScopedCredentialInfo;
     new(): ScopedCredentialInfo;
 };
@@ -12732,7 +12730,7 @@ and limitations under the License.
     readonly pixelDepth: number;
     readonly width: number;
 }
-  export var Screen: {
+  export declare type ScreenGlobal = {
     prototype: Screen;
     new(): Screen;
 };
@@ -12750,7 +12748,7 @@ and limitations under the License.
     removeEventListener<K extends keyof ScreenOrientationEventMap>(type: K, listener: (this: ScreenOrientation, ev: ScreenOrientationEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var ScreenOrientation: {
+  export declare type ScreenOrientationGlobal = {
     prototype: ScreenOrientation;
     new(): ScreenOrientation;
 };
@@ -12767,7 +12765,7 @@ and limitations under the License.
     removeEventListener<K extends keyof ScriptProcessorNodeEventMap>(type: K, listener: (this: ScriptProcessorNode, ev: ScriptProcessorNodeEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var ScriptProcessorNode: {
+  export declare type ScriptProcessorNodeGlobal = {
     prototype: ScriptProcessorNode;
     new(): ScriptProcessorNode;
 };
@@ -12783,7 +12781,7 @@ and limitations under the License.
     readonly statusCode: number;
     readonly violatedDirective: string;
 }
-  export var SecurityPolicyViolationEvent: {
+  export declare type SecurityPolicyViolationEventGlobal = {
     prototype: SecurityPolicyViolationEvent;
     new(type: string, eventInitDict?: SecurityPolicyViolationEventInit): SecurityPolicyViolationEvent;
 };
@@ -12815,7 +12813,7 @@ and limitations under the License.
     setPosition(parentNode: Node, offset: number): void;
     toString(): string;
 }
-  export var Selection: {
+  export declare type SelectionGlobal = {
     prototype: Selection;
     new(): Selection;
 };
@@ -12823,7 +12821,7 @@ and limitations under the License.
     getCachedFrameMessage(key: string): string;
     postFrameMessage(key: string, data: string): void;
 }
-  export var ServiceUIFrameContext: ServiceUIFrameContext;
+  export declare type ServiceUIFrameContextGlobal = ServiceUIFrameContext;
   export interface ServiceWorkerEventMap extends AbstractWorkerEventMap {
     "statechange": Event;
 }
@@ -12837,7 +12835,7 @@ and limitations under the License.
     removeEventListener<K extends keyof ServiceWorkerEventMap>(type: K, listener: (this: ServiceWorker, ev: ServiceWorkerEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var ServiceWorker: {
+  export declare type ServiceWorkerGlobal = {
     prototype: ServiceWorker;
     new(): ServiceWorker;
 };
@@ -12861,7 +12859,7 @@ and limitations under the License.
     removeEventListener<K extends keyof ServiceWorkerContainerEventMap>(type: K, listener: (this: ServiceWorkerContainer, ev: ServiceWorkerContainerEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var ServiceWorkerContainer: {
+  export declare type ServiceWorkerContainerGlobal = {
     prototype: ServiceWorkerContainer;
     new(): ServiceWorkerContainer;
 };
@@ -12872,7 +12870,7 @@ and limitations under the License.
     readonly ports: ReadonlyArray<MessagePort> | null;
     readonly source: ServiceWorker | MessagePort | null;
 }
-  export var ServiceWorkerMessageEvent: {
+  export declare type ServiceWorkerMessageEventGlobal = {
     prototype: ServiceWorkerMessageEvent;
     new(type: string, eventInitDict?: ServiceWorkerMessageEventInit): ServiceWorkerMessageEvent;
 };
@@ -12898,7 +12896,7 @@ and limitations under the License.
     removeEventListener<K extends keyof ServiceWorkerRegistrationEventMap>(type: K, listener: (this: ServiceWorkerRegistration, ev: ServiceWorkerRegistrationEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var ServiceWorkerRegistration: {
+  export declare type ServiceWorkerRegistrationGlobal = {
     prototype: ServiceWorkerRegistration;
     new(): ServiceWorkerRegistration;
 };
@@ -12929,7 +12927,7 @@ and limitations under the License.
     appendStream(stream: MSStream, maxSize?: number): void;
     remove(start: number, end: number): void;
 }
-  export var SourceBuffer: {
+  export declare type SourceBufferGlobal = {
     prototype: SourceBuffer;
     new(): SourceBuffer;
 };
@@ -12938,7 +12936,7 @@ and limitations under the License.
     item(index: number): SourceBuffer;
     [index: number]: SourceBuffer;
 }
-  export var SourceBufferList: {
+  export declare type SourceBufferListGlobal = {
     prototype: SourceBufferList;
     new(): SourceBufferList;
 };
@@ -12946,7 +12944,7 @@ and limitations under the License.
     src: string;
     weight: number;
 }
-  export var SpeechGrammar: {
+  export declare type SpeechGrammarGlobal = {
     prototype: SpeechGrammar;
     new(): SpeechGrammar;
 };
@@ -12957,7 +12955,7 @@ and limitations under the License.
     item(index: number): SpeechGrammar;
     [index: number]: SpeechGrammar;
 }
-  export var SpeechGrammarList: {
+  export declare type SpeechGrammarListGlobal = {
     prototype: SpeechGrammarList;
     new(): SpeechGrammarList;
 };
@@ -13000,7 +12998,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SpeechRecognitionEventMap>(type: K, listener: (this: SpeechRecognition, ev: SpeechRecognitionEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SpeechRecognition: {
+  export declare type SpeechRecognitionGlobal = {
     prototype: SpeechRecognition;
     new(): SpeechRecognition;
 };
@@ -13008,7 +13006,7 @@ and limitations under the License.
     readonly confidence: number;
     readonly transcript: string;
 }
-  export var SpeechRecognitionAlternative: {
+  export declare type SpeechRecognitionAlternativeGlobal = {
     prototype: SpeechRecognitionAlternative;
     new(): SpeechRecognitionAlternative;
 };
@@ -13016,7 +13014,7 @@ and limitations under the License.
     readonly error: SpeechRecognitionErrorCode;
     readonly message: string;
 }
-  export var SpeechRecognitionError: {
+  export declare type SpeechRecognitionErrorGlobal = {
     prototype: SpeechRecognitionError;
     new(): SpeechRecognitionError;
 };
@@ -13026,7 +13024,7 @@ and limitations under the License.
     readonly resultIndex: number;
     readonly results: SpeechRecognitionResultList;
 }
-  export var SpeechRecognitionEvent: {
+  export declare type SpeechRecognitionEventGlobal = {
     prototype: SpeechRecognitionEvent;
     new(): SpeechRecognitionEvent;
 };
@@ -13036,7 +13034,7 @@ and limitations under the License.
     item(index: number): SpeechRecognitionAlternative;
     [index: number]: SpeechRecognitionAlternative;
 }
-  export var SpeechRecognitionResult: {
+  export declare type SpeechRecognitionResultGlobal = {
     prototype: SpeechRecognitionResult;
     new(): SpeechRecognitionResult;
 };
@@ -13045,7 +13043,7 @@ and limitations under the License.
     item(index: number): SpeechRecognitionResult;
     [index: number]: SpeechRecognitionResult;
 }
-  export var SpeechRecognitionResultList: {
+  export declare type SpeechRecognitionResultListGlobal = {
     prototype: SpeechRecognitionResultList;
     new(): SpeechRecognitionResultList;
 };
@@ -13067,14 +13065,14 @@ and limitations under the License.
     removeEventListener<K extends keyof SpeechSynthesisEventMap>(type: K, listener: (this: SpeechSynthesis, ev: SpeechSynthesisEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SpeechSynthesis: {
+  export declare type SpeechSynthesisGlobal = {
     prototype: SpeechSynthesis;
     new(): SpeechSynthesis;
 };
   export interface SpeechSynthesisErrorEvent extends SpeechSynthesisEvent {
     readonly error: SpeechSynthesisErrorCode;
 }
-  export var SpeechSynthesisErrorEvent: {
+  export declare type SpeechSynthesisErrorEventGlobal = {
     prototype: SpeechSynthesisErrorEvent;
     new(): SpeechSynthesisErrorEvent;
 };
@@ -13084,7 +13082,7 @@ and limitations under the License.
     readonly name: string;
     readonly utterance: SpeechSynthesisUtterance;
 }
-  export var SpeechSynthesisEvent: {
+  export declare type SpeechSynthesisEventGlobal = {
     prototype: SpeechSynthesisEvent;
     new(): SpeechSynthesisEvent;
 };
@@ -13116,7 +13114,7 @@ and limitations under the License.
     removeEventListener<K extends keyof SpeechSynthesisUtteranceEventMap>(type: K, listener: (this: SpeechSynthesisUtterance, ev: SpeechSynthesisUtteranceEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var SpeechSynthesisUtterance: {
+  export declare type SpeechSynthesisUtteranceGlobal = {
     prototype: SpeechSynthesisUtterance;
     new(): SpeechSynthesisUtterance;
     new(text: string): SpeechSynthesisUtterance;
@@ -13128,20 +13126,20 @@ and limitations under the License.
     readonly name: string;
     readonly voiceURI: string;
 }
-  export var SpeechSynthesisVoice: {
+  export declare type SpeechSynthesisVoiceGlobal = {
     prototype: SpeechSynthesisVoice;
     new(): SpeechSynthesisVoice;
 };
   export interface StaticRange extends AbstractRange {
 }
-  export var StaticRange: {
+  export declare type StaticRangeGlobal = {
     prototype: StaticRange;
     new(): StaticRange;
 };
   export interface StereoPannerNode extends AudioNode {
     readonly pan: AudioParam;
 }
-  export var StereoPannerNode: {
+  export declare type StereoPannerNodeGlobal = {
     prototype: StereoPannerNode;
     new(context: BaseAudioContext, options?: StereoPannerOptions): StereoPannerNode;
 };
@@ -13174,7 +13172,7 @@ and limitations under the License.
     setItem(key: string, value: string): void;
     [name: string]: any;
 }
-  export var Storage: {
+  export declare type StorageGlobal = {
     prototype: Storage;
     new(): Storage;
 };
@@ -13200,7 +13198,7 @@ and limitations under the License.
      */
     readonly url: string;
 }
-  export var StorageEvent: {
+  export declare type StorageEventGlobal = {
     prototype: StorageEvent;
     new(type: string, eventInitDict?: StorageEventInit): StorageEvent;
 };
@@ -13209,7 +13207,7 @@ and limitations under the License.
     persist(): Promise<boolean>;
     persisted(): Promise<boolean>;
 }
-  export var StorageManager: {
+  export declare type StorageManagerGlobal = {
     prototype: StorageManager;
     new(): StorageManager;
 };
@@ -13217,7 +13215,7 @@ and limitations under the License.
     readonly type: string;
     matchMedium(mediaquery: string): boolean;
 }
-  export var StyleMedia: {
+  export declare type StyleMediaGlobal = {
     prototype: StyleMedia;
     new(): StyleMedia;
 };
@@ -13230,7 +13228,7 @@ and limitations under the License.
     readonly title: string | null;
     readonly type: string;
 }
-  export var StyleSheet: {
+  export declare type StyleSheetGlobal = {
     prototype: StyleSheet;
     new(): StyleSheet;
 };
@@ -13239,7 +13237,7 @@ and limitations under the License.
     item(index: number): StyleSheet | null;
     [index: number]: StyleSheet;
 }
-  export var StyleSheetList: {
+  export declare type StyleSheetListGlobal = {
     prototype: StyleSheetList;
     new(): StyleSheetList;
 };
@@ -13263,7 +13261,7 @@ and limitations under the License.
     verify(algorithm: string | RsaPssParams | EcdsaParams | AesCmacParams, key: CryptoKey, signature: Int8Array | Int16Array | Int32Array | Uint8Array | Uint16Array | Uint32Array | Uint8ClampedArray | Float32Array | Float64Array | DataView | ArrayBuffer, data: Int8Array | Int16Array | Int32Array | Uint8Array | Uint16Array | Uint32Array | Uint8ClampedArray | Float32Array | Float64Array | DataView | ArrayBuffer): PromiseLike<boolean>;
     wrapKey(format: string, key: CryptoKey, wrappingKey: CryptoKey, wrapAlgorithm: string | Algorithm): PromiseLike<ArrayBuffer>;
 }
-  export var SubtleCrypto: {
+  export declare type SubtleCryptoGlobal = {
     prototype: SubtleCrypto;
     new(): SubtleCrypto;
 };
@@ -13271,7 +13269,7 @@ and limitations under the License.
     getTags(): Promise<string[]>;
     register(tag: string): Promise<void>;
 }
-  export var SyncManager: {
+  export declare type SyncManagerGlobal = {
     prototype: SyncManager;
     new(): SyncManager;
 };
@@ -13286,7 +13284,7 @@ and limitations under the License.
      */
     splitText(offset: number): Text;
 }
-  export var Text: {
+  export declare type TextGlobal = {
     prototype: Text;
     new(data?: string): Text;
 };
@@ -13319,7 +13317,7 @@ and limitations under the License.
      */
     decode(input?: BufferSource, options?: TextDecodeOptions): string;
 }
-  export var TextDecoder: {
+  export declare type TextDecoderGlobal = {
     prototype: TextDecoder;
     new(label?: string, options?: TextDecoderOptions): TextDecoder;
 };
@@ -13333,7 +13331,7 @@ and limitations under the License.
      */
     encode(input?: string): Uint8Array;
 }
-  export var TextEncoder: {
+  export declare type TextEncoderGlobal = {
     prototype: TextEncoder;
     new(): TextEncoder;
 };
@@ -13351,7 +13349,7 @@ and limitations under the License.
     readonly DOM_INPUT_METHOD_UNKNOWN: number;
     readonly DOM_INPUT_METHOD_VOICE: number;
 }
-  export var TextEvent: {
+  export declare type TextEventGlobal = {
     prototype: TextEvent;
     new(): TextEvent;
     readonly DOM_INPUT_METHOD_DROP: number;
@@ -13382,7 +13380,7 @@ and limitations under the License.
     readonly ideographicBaseline: number;
     readonly width: number;
 }
-  export var TextMetrics: {
+  export declare type TextMetricsGlobal = {
     prototype: TextMetrics;
     new(): TextMetrics;
 };
@@ -13417,7 +13415,7 @@ and limitations under the License.
     removeEventListener<K extends keyof TextTrackEventMap>(type: K, listener: (this: TextTrack, ev: TextTrackEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var TextTrack: {
+  export declare type TextTrackGlobal = {
     prototype: TextTrack;
     new(): TextTrack;
     readonly DISABLED: number;
@@ -13447,7 +13445,7 @@ and limitations under the License.
     removeEventListener<K extends keyof TextTrackCueEventMap>(type: K, listener: (this: TextTrackCue, ev: TextTrackCueEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var TextTrackCue: {
+  export declare type TextTrackCueGlobal = {
     prototype: TextTrackCue;
     new(startTime: number, endTime: number, text: string): TextTrackCue;
 };
@@ -13457,7 +13455,7 @@ and limitations under the License.
     item(index: number): TextTrackCue;
     [index: number]: TextTrackCue;
 }
-  export var TextTrackCueList: {
+  export declare type TextTrackCueListGlobal = {
     prototype: TextTrackCueList;
     new(): TextTrackCueList;
 };
@@ -13474,7 +13472,7 @@ and limitations under the License.
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     [index: number]: TextTrack;
 }
-  export var TextTrackList: {
+  export declare type TextTrackListGlobal = {
     prototype: TextTrackList;
     new(): TextTrackList;
 };
@@ -13483,7 +13481,7 @@ and limitations under the License.
     end(index: number): number;
     start(index: number): number;
 }
-  export var TimeRanges: {
+  export declare type TimeRangesGlobal = {
     prototype: TimeRanges;
     new(): TimeRanges;
 };
@@ -13504,7 +13502,7 @@ and limitations under the License.
     readonly target: EventTarget;
     readonly touchType: TouchType;
 }
-  export var Touch: {
+  export declare type TouchGlobal = {
     prototype: Touch;
     new(touchInitDict: TouchInit): Touch;
 };
@@ -13517,7 +13515,7 @@ and limitations under the License.
     readonly targetTouches: TouchList;
     readonly touches: TouchList;
 }
-  export var TouchEvent: {
+  export declare type TouchEventGlobal = {
     prototype: TouchEvent;
     new(type: string, eventInitDict?: TouchEventInit): TouchEvent;
 };
@@ -13526,14 +13524,14 @@ and limitations under the License.
     item(index: number): Touch | null;
     [index: number]: Touch;
 }
-  export var TouchList: {
+  export declare type TouchListGlobal = {
     prototype: TouchList;
     new(): TouchList;
 };
   export interface TrackEvent extends Event {
     readonly track: VideoTrack | AudioTrack | TextTrack | null;
 }
-  export var TrackEvent: {
+  export declare type TrackEventGlobal = {
     prototype: TrackEvent;
     new(typeArg: string, eventInitDict?: TrackEventInit): TrackEvent;
 };
@@ -13541,7 +13539,7 @@ and limitations under the License.
     readonly readable: ReadableStream<O>;
     readonly writable: WritableStream<I>;
 }
-  export var TransformStream: {
+  export declare type TransformStreamGlobal = {
     prototype: TransformStream;
     new<I = any, O = any>(transformer?: Transformer<I, O>, writableStrategy?: QueuingStrategy<I>, readableStrategy?: QueuingStrategy<O>): TransformStream<I, O>;
 };
@@ -13556,7 +13554,7 @@ and limitations under the License.
     readonly propertyName: string;
     readonly pseudoElement: string;
 }
-  export var TransitionEvent: {
+  export declare type TransitionEventGlobal = {
     prototype: TransitionEvent;
     new(type: string, transitionEventInitDict?: TransitionEventInit): TransitionEvent;
 };
@@ -13573,7 +13571,7 @@ and limitations under the License.
     previousNode(): Node | null;
     previousSibling(): Node | null;
 }
-  export var TreeWalker: {
+  export declare type TreeWalkerGlobal = {
     prototype: TreeWalker;
     new(): TreeWalker;
 };
@@ -13582,7 +13580,7 @@ and limitations under the License.
     readonly view: Window;
     initUIEvent(typeArg: string, canBubbleArg: boolean, cancelableArg: boolean, viewArg: Window, detailArg: number): void;
 }
-  export var UIEvent: {
+  export declare type UIEventGlobal = {
     prototype: UIEvent;
     new(typeArg: string, eventInitDict?: UIEventInit): UIEvent;
 };
@@ -13601,14 +13599,14 @@ and limitations under the License.
     username: string;
     toJSON(): string;
 }
-  export var URL: {
+  export declare type URLGlobal = {
     prototype: URL;
     new(url: string, base?: string | URL): URL;
     createObjectURL(object: any): string;
     revokeObjectURL(url: string): void;
 };
   export type webkitURL = URL;
-  export var webkitURL: typeof URL;
+  export declare type webkitURLGlobal = typeof URL;
   export interface URLSearchParams {
     /**
      * Appends a specified key/value pair as a new search parameter.
@@ -13637,7 +13635,7 @@ and limitations under the License.
     sort(): void;
     forEach(callbackfn: (value: string, key: string, parent: URLSearchParams) => void, thisArg?: any): void;
 }
-  export var URLSearchParams: {
+  export declare type URLSearchParamsGlobal = {
     prototype: URLSearchParams;
     new(init?: string[][] | Record<string, string> | string | URLSearchParams): URLSearchParams;
 };
@@ -13662,7 +13660,7 @@ and limitations under the License.
     resetPose(): void;
     submitFrame(pose?: VRPose): void;
 }
-  export var VRDisplay: {
+  export declare type VRDisplayGlobal = {
     prototype: VRDisplay;
     new(): VRDisplay;
 };
@@ -13673,7 +13671,7 @@ and limitations under the License.
     readonly hasPosition: boolean;
     readonly maxLayers: number;
 }
-  export var VRDisplayCapabilities: {
+  export declare type VRDisplayCapabilitiesGlobal = {
     prototype: VRDisplayCapabilities;
     new(): VRDisplayCapabilities;
 };
@@ -13681,7 +13679,7 @@ and limitations under the License.
     readonly display: VRDisplay;
     readonly reason: VRDisplayEventReason | null;
 }
-  export var VRDisplayEvent: {
+  export declare type VRDisplayEventGlobal = {
     prototype: VRDisplayEvent;
     new(type: string, eventInitDict: VRDisplayEventInit): VRDisplayEvent;
 };
@@ -13692,7 +13690,7 @@ and limitations under the License.
     readonly renderHeight: number;
     readonly renderWidth: number;
 }
-  export var VREyeParameters: {
+  export declare type VREyeParametersGlobal = {
     prototype: VREyeParameters;
     new(): VREyeParameters;
 };
@@ -13702,7 +13700,7 @@ and limitations under the License.
     readonly rightDegrees: number;
     readonly upDegrees: number;
 }
-  export var VRFieldOfView: {
+  export declare type VRFieldOfViewGlobal = {
     prototype: VRFieldOfView;
     new(): VRFieldOfView;
 };
@@ -13714,7 +13712,7 @@ and limitations under the License.
     readonly rightViewMatrix: Float32Array;
     readonly timestamp: number;
 }
-  export var VRFrameData: {
+  export declare type VRFrameDataGlobal = {
     prototype: VRFrameData;
     new(): VRFrameData;
 };
@@ -13727,7 +13725,7 @@ and limitations under the License.
     readonly position: Float32Array | null;
     readonly timestamp: number;
 }
-  export var VRPose: {
+  export declare type VRPoseGlobal = {
     prototype: VRPose;
     new(): VRPose;
 };
@@ -13748,7 +13746,7 @@ and limitations under the License.
     removeEventListener<K extends keyof TextTrackCueEventMap>(type: K, listener: (this: VTTCue, ev: TextTrackCueEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var VTTCue: {
+  export declare type VTTCueGlobal = {
     prototype: VTTCue;
     new(startTime: number, endTime: number, text: string): VTTCue;
 };
@@ -13762,7 +13760,7 @@ and limitations under the License.
     viewportAnchorY: number;
     width: number;
 }
-  export var VTTRegion: {
+  export declare type VTTRegionGlobal = {
     prototype: VTTRegion;
     new(): VTTRegion;
 };
@@ -13779,7 +13777,7 @@ and limitations under the License.
     readonly valid: boolean;
     readonly valueMissing: boolean;
 }
-  export var ValidityState: {
+  export declare type ValidityStateGlobal = {
     prototype: ValidityState;
     new(): ValidityState;
 };
@@ -13790,7 +13788,7 @@ and limitations under the License.
     readonly totalFrameDelay: number;
     readonly totalVideoFrames: number;
 }
-  export var VideoPlaybackQuality: {
+  export declare type VideoPlaybackQualityGlobal = {
     prototype: VideoPlaybackQuality;
     new(): VideoPlaybackQuality;
 };
@@ -13802,7 +13800,7 @@ and limitations under the License.
     selected: boolean;
     readonly sourceBuffer: SourceBuffer;
 }
-  export var VideoTrack: {
+  export declare type VideoTrackGlobal = {
     prototype: VideoTrack;
     new(): VideoTrack;
 };
@@ -13825,7 +13823,7 @@ and limitations under the License.
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     [index: number]: VideoTrack;
 }
-  export var VideoTrackList: {
+  export declare type VideoTrackListGlobal = {
     prototype: VideoTrackList;
     new(): VideoTrackList;
 };
@@ -13932,7 +13930,7 @@ and limitations under the License.
     curve: Float32Array | null;
     oversample: OverSampleType;
 }
-  export var WaveShaperNode: {
+  export declare type WaveShaperNodeGlobal = {
     prototype: WaveShaperNode;
     new(context: BaseAudioContext, options?: WaveShaperOptions): WaveShaperNode;
 };
@@ -13940,7 +13938,7 @@ and limitations under the License.
     getAssertion(assertionChallenge: Int8Array | Int16Array | Int32Array | Uint8Array | Uint16Array | Uint32Array | Uint8ClampedArray | Float32Array | Float64Array | DataView | ArrayBuffer | null, options?: AssertionOptions): Promise<WebAuthnAssertion>;
     makeCredential(accountInformation: Account, cryptoParameters: ScopedCredentialParameters[], attestationChallenge: Int8Array | Int16Array | Int32Array | Uint8Array | Uint16Array | Uint32Array | Uint8ClampedArray | Float32Array | Float64Array | DataView | ArrayBuffer | null, options?: ScopedCredentialOptions): Promise<ScopedCredentialInfo>;
 }
-  export var WebAuthentication: {
+  export declare type WebAuthenticationGlobal = {
     prototype: WebAuthentication;
     new(): WebAuthentication;
 };
@@ -13950,7 +13948,7 @@ and limitations under the License.
     readonly credential: ScopedCredential;
     readonly signature: ArrayBuffer;
 }
-  export var WebAuthnAssertion: {
+  export declare type WebAuthnAssertionGlobal = {
     prototype: WebAuthnAssertion;
     new(): WebAuthnAssertion;
 };
@@ -13959,50 +13957,50 @@ and limitations under the License.
     readonly size: GLint;
     readonly type: GLenum;
 }
-  export var WebGLActiveInfo: {
+  export declare type WebGLActiveInfoGlobal = {
     prototype: WebGLActiveInfo;
     new(): WebGLActiveInfo;
 };
   export interface WebGLBuffer extends WebGLObject {
 }
-  export var WebGLBuffer: {
+  export declare type WebGLBufferGlobal = {
     prototype: WebGLBuffer;
     new(): WebGLBuffer;
 };
   export interface WebGLContextEvent extends Event {
     readonly statusMessage: string;
 }
-  export var WebGLContextEvent: {
+  export declare type WebGLContextEventGlobal = {
     prototype: WebGLContextEvent;
     new(type: string, eventInit?: WebGLContextEventInit): WebGLContextEvent;
 };
   export interface WebGLFramebuffer extends WebGLObject {
 }
-  export var WebGLFramebuffer: {
+  export declare type WebGLFramebufferGlobal = {
     prototype: WebGLFramebuffer;
     new(): WebGLFramebuffer;
 };
   export interface WebGLObject {
 }
-  export var WebGLObject: {
+  export declare type WebGLObjectGlobal = {
     prototype: WebGLObject;
     new(): WebGLObject;
 };
   export interface WebGLProgram extends WebGLObject {
 }
-  export var WebGLProgram: {
+  export declare type WebGLProgramGlobal = {
     prototype: WebGLProgram;
     new(): WebGLProgram;
 };
   export interface WebGLRenderbuffer extends WebGLObject {
 }
-  export var WebGLRenderbuffer: {
+  export declare type WebGLRenderbufferGlobal = {
     prototype: WebGLRenderbuffer;
     new(): WebGLRenderbuffer;
 };
   export interface WebGLRenderingContext extends WebGLRenderingContextBase {
 }
-  export var WebGLRenderingContext: {
+  export declare type WebGLRenderingContextGlobal = {
     prototype: WebGLRenderingContext;
     new(): WebGLRenderingContext;
     readonly ACTIVE_ATTRIBUTES: GLenum;
@@ -14766,7 +14764,7 @@ and limitations under the License.
 }
   export interface WebGLShader extends WebGLObject {
 }
-  export var WebGLShader: {
+  export declare type WebGLShaderGlobal = {
     prototype: WebGLShader;
     new(): WebGLShader;
 };
@@ -14775,19 +14773,19 @@ and limitations under the License.
     readonly rangeMax: GLint;
     readonly rangeMin: GLint;
 }
-  export var WebGLShaderPrecisionFormat: {
+  export declare type WebGLShaderPrecisionFormatGlobal = {
     prototype: WebGLShaderPrecisionFormat;
     new(): WebGLShaderPrecisionFormat;
 };
   export interface WebGLTexture extends WebGLObject {
 }
-  export var WebGLTexture: {
+  export declare type WebGLTextureGlobal = {
     prototype: WebGLTexture;
     new(): WebGLTexture;
 };
   export interface WebGLUniformLocation {
 }
-  export var WebGLUniformLocation: {
+  export declare type WebGLUniformLocationGlobal = {
     prototype: WebGLUniformLocation;
     new(): WebGLUniformLocation;
 };
@@ -14797,7 +14795,7 @@ and limitations under the License.
     x: number;
     y: number;
 }
-  export var WebKitPoint: {
+  export declare type WebKitPointGlobal = {
     prototype: WebKitPoint;
     new(x?: number, y?: number): WebKitPoint;
 };
@@ -14829,7 +14827,7 @@ and limitations under the License.
     removeEventListener<K extends keyof WebSocketEventMap>(type: K, listener: (this: WebSocket, ev: WebSocketEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var WebSocket: {
+  export declare type WebSocketGlobal = {
     prototype: WebSocket;
     new(url: string, protocols?: string | string[]): WebSocket;
     readonly CLOSED: number;
@@ -14848,7 +14846,7 @@ and limitations under the License.
     readonly DOM_DELTA_PAGE: number;
     readonly DOM_DELTA_PIXEL: number;
 }
-  export var WheelEvent: {
+  export declare type WheelEventGlobal = {
     prototype: WheelEvent;
     new(typeArg: string, eventInitDict?: WheelEventInit): WheelEvent;
     readonly DOM_DELTA_LINE: number;
@@ -15083,7 +15081,7 @@ and limitations under the License.
     removeEventListener<K extends keyof WindowEventMap>(type: K, listener: (this: Window, ev: WindowEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var Window: {
+  export declare type WindowGlobal = {
     prototype: Window;
     new(): Window;
 };
@@ -15171,14 +15169,14 @@ and limitations under the License.
     removeEventListener<K extends keyof WorkerEventMap>(type: K, listener: (this: Worker, ev: WorkerEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var Worker: {
+  export declare type WorkerGlobal = {
     prototype: Worker;
     new(stringUrl: string, options?: WorkerOptions): Worker;
 };
   export interface Worklet {
     addModule(moduleURL: string, options?: WorkletOptions): Promise<void>;
 }
-  export var Worklet: {
+  export declare type WorkletGlobal = {
     prototype: Worklet;
     new(): Worklet;
 };
@@ -15187,7 +15185,7 @@ and limitations under the License.
     abort(reason?: any): Promise<void>;
     getWriter(): WritableStreamDefaultWriter<W>;
 }
-  export var WritableStream: {
+  export declare type WritableStreamGlobal = {
     prototype: WritableStream;
     new<W = any>(underlyingSink?: UnderlyingSink<W>, strategy?: QueuingStrategy<W>): WritableStream<W>;
 };
@@ -15209,7 +15207,7 @@ and limitations under the License.
     removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: XMLDocument, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var XMLDocument: {
+  export declare type XMLDocumentGlobal = {
     prototype: XMLDocument;
     new(): XMLDocument;
 };
@@ -15316,7 +15314,7 @@ and limitations under the License.
     removeEventListener<K extends keyof XMLHttpRequestEventMap>(type: K, listener: (this: XMLHttpRequest, ev: XMLHttpRequestEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var XMLHttpRequest: {
+  export declare type XMLHttpRequestGlobal = {
     prototype: XMLHttpRequest;
     new(): XMLHttpRequest;
     readonly DONE: number;
@@ -15347,7 +15345,7 @@ and limitations under the License.
     removeEventListener<K extends keyof XMLHttpRequestEventTargetEventMap>(type: K, listener: (this: XMLHttpRequestEventTarget, ev: XMLHttpRequestEventTargetEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var XMLHttpRequestEventTarget: {
+  export declare type XMLHttpRequestEventTargetGlobal = {
     prototype: XMLHttpRequestEventTarget;
     new(): XMLHttpRequestEventTarget;
 };
@@ -15357,14 +15355,14 @@ and limitations under the License.
     removeEventListener<K extends keyof XMLHttpRequestEventTargetEventMap>(type: K, listener: (this: XMLHttpRequestUpload, ev: XMLHttpRequestEventTargetEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var XMLHttpRequestUpload: {
+  export declare type XMLHttpRequestUploadGlobal = {
     prototype: XMLHttpRequestUpload;
     new(): XMLHttpRequestUpload;
 };
   export interface XMLSerializer {
     serializeToString(root: Node): string;
 }
-  export var XMLSerializer: {
+  export declare type XMLSerializerGlobal = {
     prototype: XMLSerializer;
     new(): XMLSerializer;
 };
@@ -15373,21 +15371,21 @@ and limitations under the License.
     createNSResolver(nodeResolver?: Node): XPathNSResolver;
     evaluate(expression: string, contextNode: Node, resolver: XPathNSResolver | ((prefix: string) => string | null) | null, type: number, result: XPathResult | null): XPathResult;
 }
-  export var XPathEvaluator: {
+  export declare type XPathEvaluatorGlobal = {
     prototype: XPathEvaluator;
     new(): XPathEvaluator;
 };
   export interface XPathExpression {
     evaluate(contextNode: Node, type: number, result: XPathResult | null): XPathResult;
 }
-  export var XPathExpression: {
+  export declare type XPathExpressionGlobal = {
     prototype: XPathExpression;
     new(): XPathExpression;
 };
   export interface XPathNSResolver {
     lookupNamespaceURI(prefix: string): string | null;
 }
-  export var XPathNSResolver: {
+  export declare type XPathNSResolverGlobal = {
     prototype: XPathNSResolver;
     new(): XPathNSResolver;
 };
@@ -15412,7 +15410,7 @@ and limitations under the License.
     readonly UNORDERED_NODE_ITERATOR_TYPE: number;
     readonly UNORDERED_NODE_SNAPSHOT_TYPE: number;
 }
-  export var XPathResult: {
+  export declare type XPathResultGlobal = {
     prototype: XPathResult;
     new(): XPathResult;
     readonly ANY_TYPE: number;
@@ -15436,7 +15434,7 @@ and limitations under the License.
     transformToDocument(source: Node): Document;
     transformToFragment(source: Node, document: Document): DocumentFragment;
 }
-  export var XSLTProcessor: {
+  export declare type XSLTProcessorGlobal = {
     prototype: XSLTProcessor;
     new(): XSLTProcessor;
 };
@@ -15446,11 +15444,12 @@ and limitations under the License.
     removeEventListener<K extends keyof RTCPeerConnectionEventMap>(type: K, listener: (this: webkitRTCPeerConnection, ev: RTCPeerConnectionEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var webkitRTCPeerConnection: {
+  export declare type webkitRTCPeerConnectionGlobal = {
     prototype: webkitRTCPeerConnection;
     new(configuration: RTCConfiguration): webkitRTCPeerConnection;
 };
-  export type EventListenerOrEventListenerObject = EventListener | EventListenerObject;
+
+declare type EventListenerOrEventListenerObject = EventListener | EventListenerObject;
   export interface BlobCallback {
     (blob: Blob | null): void;
 }
@@ -15729,453 +15728,454 @@ and limitations under the License.
 
 /** @deprecated Directly use HTMLElementTagNameMap or SVGElementTagNameMap as appropriate, instead. */
   export interface ElementTagNameMap extends HTMLElementTagNameMap, SVGElementTagNameMap { }
-  export var Audio: {
+  export declare type AudioGlobal = {
     new(src?: string): HTMLAudioElement;
 };
-  export var Image: {
+  export declare type ImageGlobal = {
     new(width?: number, height?: number): HTMLImageElement;
 };
-  export var Option: {
+  export declare type OptionGlobal = {
     new(text?: string, value?: string, defaultSelected?: boolean, selected?: boolean): HTMLOptionElement;
 };
-  export var Blob: typeof Blob;
-  export var URL: typeof URL;
-  export var URLSearchParams: typeof URLSearchParams;
-  export var applicationCache: ApplicationCache;
-  export var caches: CacheStorage;
-  export var clientInformation: Navigator;
-  export var closed: boolean;
-  export var crypto: Crypto;
-  export var customElements: CustomElementRegistry;
-  export var defaultStatus: string;
-  export var devicePixelRatio: number;
-  export var doNotTrack: string;
-  export var document: Document;
-  export var event: Event | undefined;
+  export declare type BlobGlobal = typeof Blob;
+  export declare type URLGlobal = typeof URL;
+  export declare type URLSearchParamsGlobal = typeof URLSearchParams;
+  export declare type applicationCacheGlobal = ApplicationCache;
+  export declare type cachesGlobal = CacheStorage;
+  export declare type clientInformationGlobal = Navigator;
+  export declare type closedGlobal = boolean;
+  export declare type cryptoGlobal = Crypto;
+  export declare type customElementsGlobal = CustomElementRegistry;
+  export declare type defaultStatusGlobal = string;
+  export declare type devicePixelRatioGlobal = number;
+  export declare type doNotTrackGlobal = string;
+  export declare type documentGlobal = Document;
+  export declare type eventGlobal = Event | undefined;
 /** @deprecated */
-  export var external: External;
-  export var frameElement: Element;
-  export var frames: Window;
-  export var history: History;
-  export var innerHeight: number;
-  export var innerWidth: number;
-  export var isSecureContext: boolean;
-  export var length: number;
-  export var location: Location;
-  export var locationbar: BarProp;
-  export var menubar: BarProp;
-  export var msContentScript: ExtensionScriptApis;
-  export const name: never;
-  export var navigator: Navigator;
-  export var offscreenBuffering: string | boolean;
-  export var oncompassneedscalibration: ((this: Window, ev: Event) => any) | null;
-  export var ondevicelight: ((this: Window, ev: DeviceLightEvent) => any) | null;
-  export var ondevicemotion: ((this: Window, ev: DeviceMotionEvent) => any) | null;
-  export var ondeviceorientation: ((this: Window, ev: DeviceOrientationEvent) => any) | null;
-  export var onmousewheel: ((this: Window, ev: Event) => any) | null;
-  export var onmsgesturechange: ((this: Window, ev: Event) => any) | null;
-  export var onmsgesturedoubletap: ((this: Window, ev: Event) => any) | null;
-  export var onmsgestureend: ((this: Window, ev: Event) => any) | null;
-  export var onmsgesturehold: ((this: Window, ev: Event) => any) | null;
-  export var onmsgesturestart: ((this: Window, ev: Event) => any) | null;
-  export var onmsgesturetap: ((this: Window, ev: Event) => any) | null;
-  export var onmsinertiastart: ((this: Window, ev: Event) => any) | null;
-  export var onmspointercancel: ((this: Window, ev: Event) => any) | null;
-  export var onmspointerdown: ((this: Window, ev: Event) => any) | null;
-  export var onmspointerenter: ((this: Window, ev: Event) => any) | null;
-  export var onmspointerleave: ((this: Window, ev: Event) => any) | null;
-  export var onmspointermove: ((this: Window, ev: Event) => any) | null;
-  export var onmspointerout: ((this: Window, ev: Event) => any) | null;
-  export var onmspointerover: ((this: Window, ev: Event) => any) | null;
-  export var onmspointerup: ((this: Window, ev: Event) => any) | null;
+  export declare type externalGlobal = External;
+  export declare type frameElementGlobal = Element;
+  export declare type framesGlobal = Window;
+  export declare type historyGlobal = History;
+  export declare type innerHeightGlobal = number;
+  export declare type innerWidthGlobal = number;
+  export declare type isSecureContextGlobal = boolean;
+  export declare type lengthGlobal = number;
+  export declare type locationGlobal = Location;
+  export declare type locationbarGlobal = BarProp;
+  export declare type menubarGlobal = BarProp;
+  export declare type msContentScriptGlobal = ExtensionScriptApis;
+  export declare type nameGlobal = never;
+  export declare type navigatorGlobal = Navigator;
+  export declare type offscreenBufferingGlobal = string | boolean;
+  export declare type oncompassneedscalibrationGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type ondevicelightGlobal = ((this: Window, ev: DeviceLightEvent) => any) | null;
+  export declare type ondevicemotionGlobal = ((this: Window, ev: DeviceMotionEvent) => any) | null;
+  export declare type ondeviceorientationGlobal = ((this: Window, ev: DeviceOrientationEvent) => any) | null;
+  export declare type onmousewheelGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onmsgesturechangeGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onmsgesturedoubletapGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onmsgestureendGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onmsgestureholdGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onmsgesturestartGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onmsgesturetapGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onmsinertiastartGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onmspointercancelGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onmspointerdownGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onmspointerenterGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onmspointerleaveGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onmspointermoveGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onmspointeroutGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onmspointeroverGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onmspointerupGlobal = ((this: Window, ev: Event) => any) | null;
 /** @deprecated */
-  export var onorientationchange: ((this: Window, ev: Event) => any) | null;
-  export var onreadystatechange: ((this: Window, ev: ProgressEvent) => any) | null;
-  export var onvrdisplayactivate: ((this: Window, ev: Event) => any) | null;
-  export var onvrdisplayblur: ((this: Window, ev: Event) => any) | null;
-  export var onvrdisplayconnect: ((this: Window, ev: Event) => any) | null;
-  export var onvrdisplaydeactivate: ((this: Window, ev: Event) => any) | null;
-  export var onvrdisplaydisconnect: ((this: Window, ev: Event) => any) | null;
-  export var onvrdisplayfocus: ((this: Window, ev: Event) => any) | null;
-  export var onvrdisplaypointerrestricted: ((this: Window, ev: Event) => any) | null;
-  export var onvrdisplaypointerunrestricted: ((this: Window, ev: Event) => any) | null;
-  export var onvrdisplaypresentchange: ((this: Window, ev: Event) => any) | null;
-  export var opener: any;
+  export declare type onorientationchangeGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onreadystatechangeGlobal = ((this: Window, ev: ProgressEvent) => any) | null;
+  export declare type onvrdisplayactivateGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onvrdisplayblurGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onvrdisplayconnectGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onvrdisplaydeactivateGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onvrdisplaydisconnectGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onvrdisplayfocusGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onvrdisplaypointerrestrictedGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onvrdisplaypointerunrestrictedGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onvrdisplaypresentchangeGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type openerGlobal = any;
 /** @deprecated */
-  export var orientation: string | number;
-  export var outerHeight: number;
-  export var outerWidth: number;
-  export var pageXOffset: number;
-  export var pageYOffset: number;
-  export var parent: Window;
-  export var performance: Performance;
-  export var personalbar: BarProp;
-  export var screen: Screen;
-  export var screenLeft: number;
-  export var screenTop: number;
-  export var screenX: number;
-  export var screenY: number;
-  export var scrollX: number;
-  export var scrollY: number;
-  export var scrollbars: BarProp;
-  export var self: Window;
-  export var speechSynthesis: SpeechSynthesis;
-  export var status: string;
-  export var statusbar: BarProp;
-  export var styleMedia: StyleMedia;
-  export var toolbar: BarProp;
-  export var top: Window;
-  export var window: Window;
-  export function alert(message?: any): void;
-  export function blur(): void;
-  export function cancelAnimationFrame(handle: number): void;
+  export declare type orientationGlobal = string | number;
+  export declare type outerHeightGlobal = number;
+  export declare type outerWidthGlobal = number;
+  export declare type pageXOffsetGlobal = number;
+  export declare type pageYOffsetGlobal = number;
+  export declare type parentGlobal = Window;
+  export declare type performanceGlobal = Performance;
+  export declare type personalbarGlobal = BarProp;
+  export declare type screenGlobal = Screen;
+  export declare type screenLeftGlobal = number;
+  export declare type screenTopGlobal = number;
+  export declare type screenXGlobal = number;
+  export declare type screenYGlobal = number;
+  export declare type scrollXGlobal = number;
+  export declare type scrollYGlobal = number;
+  export declare type scrollbarsGlobal = BarProp;
+  export declare type selfGlobal = Window;
+  export declare type speechSynthesisGlobal = SpeechSynthesis;
+  export declare type statusGlobal = string;
+  export declare type statusbarGlobal = BarProp;
+  export declare type styleMediaGlobal = StyleMedia;
+  export declare type toolbarGlobal = BarProp;
+  export declare type topGlobal = Window;
+  export declare type windowGlobal = Window;
+  export type alert = (message?: any) =>  void;
+  export type blur = () =>  void;
+  export type cancelAnimationFrame = (handle: number) =>  void;
 /** @deprecated */
-  export function captureEvents(): void;
-  export function close(): void;
-  export function confirm(message?: string): boolean;
-  export function departFocus(navigationReason: NavigationReason, origin: FocusNavigationOrigin): void;
-  export function focus(): void;
-  export function getComputedStyle(elt: Element, pseudoElt?: string | null): CSSStyleDeclaration;
-  export function getMatchedCSSRules(elt: Element, pseudoElt?: string | null): CSSRuleList;
-  export function getSelection(): Selection;
-  export function matchMedia(query: string): MediaQueryList;
-  export function moveBy(x: number, y: number): void;
-  export function moveTo(x: number, y: number): void;
-  export function msWriteProfilerMark(profilerMarkName: string): void;
-  export function open(url?: string, target?: string, features?: string, replace?: boolean): Window | null;
-  export function postMessage(message: any, targetOrigin: string, transfer?: Transferable[]): void;
-  export function print(): void;
-  export function prompt(message?: string, _default?: string): string | null;
+  export type captureEvents = () =>  void;
+  export type close = () =>  void;
+  export type confirm = (message?: string) =>  boolean;
+  export type departFocus = (navigationReason: NavigationReason, origin: FocusNavigationOrigin) =>  void;
+  export type focus = () =>  void;
+  export type getComputedStyle = (elt: Element, pseudoElt?: string | null) =>  CSSStyleDeclaration;
+  export type getMatchedCSSRules = (elt: Element, pseudoElt?: string | null) =>  CSSRuleList;
+  export type getSelection = () =>  Selection;
+  export type matchMedia = (query: string) =>  MediaQueryList;
+  export type moveBy = (x: number, y: number) =>  void;
+  export type moveTo = (x: number, y: number) =>  void;
+  export type msWriteProfilerMark = (profilerMarkName: string) =>  void;
+  export type open = (url?: string, target?: string, features?: string, replace?: boolean) =>  Window | null;
+  export type postMessage = (message: any, targetOrigin: string, transfer?: Transferable[]) =>  void;
+  export type print = () =>  void;
+  export type prompt = (message?: string, _default?: string) =>  string | null;
 /** @deprecated */
-  export function releaseEvents(): void;
-  export function requestAnimationFrame(callback: FrameRequestCallback): number;
-  export function resizeBy(x: number, y: number): void;
-  export function resizeTo(x: number, y: number): void;
-  export function scroll(options?: ScrollToOptions): void;
-  export function scroll(x: number, y: number): void;
-  export function scrollBy(options?: ScrollToOptions): void;
-  export function scrollBy(x: number, y: number): void;
-  export function scrollTo(options?: ScrollToOptions): void;
-  export function scrollTo(x: number, y: number): void;
-  export function stop(): void;
-  export function webkitCancelAnimationFrame(handle: number): void;
-  export function webkitConvertPointFromNodeToPage(node: Node, pt: WebKitPoint): WebKitPoint;
-  export function webkitConvertPointFromPageToNode(node: Node, pt: WebKitPoint): WebKitPoint;
-  export function webkitRequestAnimationFrame(callback: FrameRequestCallback): number;
-  export function toString(): string;
+  export type releaseEvents = () =>  void;
+  export type requestAnimationFrame = (callback: FrameRequestCallback) =>  number;
+  export type resizeBy = (x: number, y: number) =>  void;
+  export type resizeTo = (x: number, y: number) =>  void;
+  export type scroll = (options?: ScrollToOptions) =>  void;
+  export type scroll = (x: number, y: number) =>  void;
+  export type scrollBy = (options?: ScrollToOptions) =>  void;
+  export type scrollBy = (x: number, y: number) =>  void;
+  export type scrollTo = (options?: ScrollToOptions) =>  void;
+  export type scrollTo = (x: number, y: number) =>  void;
+  export type stop = () =>  void;
+  export type webkitCancelAnimationFrame = (handle: number) =>  void;
+  export type webkitConvertPointFromNodeToPage = (node: Node, pt: WebKitPoint) =>  WebKitPoint;
+  export type webkitConvertPointFromPageToNode = (node: Node, pt: WebKitPoint) =>  WebKitPoint;
+  export type webkitRequestAnimationFrame = (callback: FrameRequestCallback) =>  number;
+  export type toString = () =>  string;
 /**
  * Dispatches a synthetic event event to target and returns true
  * if either event's cancelable attribute value is false or its preventDefault() method was not invoked, and false otherwise.
  */
-  export function dispatchEvent(event: Event): boolean;
-  export var sessionStorage: Storage;
-  export var localStorage: Storage;
-  export var console: Console;
+  export type dispatchEvent = (event: Event) =>  boolean;
+  export declare type sessionStorageGlobal = Storage;
+  export declare type localStorageGlobal = Storage;
+  export declare type consoleGlobal = Console;
 /**
  * Fires when the user aborts the download.
  * @param ev The event.
  */
-  export var onabort: ((this: Window, ev: UIEvent) => any) | null;
-  export var onanimationcancel: ((this: Window, ev: AnimationEvent) => any) | null;
-  export var onanimationend: ((this: Window, ev: AnimationEvent) => any) | null;
-  export var onanimationiteration: ((this: Window, ev: AnimationEvent) => any) | null;
-  export var onanimationstart: ((this: Window, ev: AnimationEvent) => any) | null;
-  export var onauxclick: ((this: Window, ev: Event) => any) | null;
+  export declare type onabortGlobal = ((this: Window, ev: UIEvent) => any) | null;
+  export declare type onanimationcancelGlobal = ((this: Window, ev: AnimationEvent) => any) | null;
+  export declare type onanimationendGlobal = ((this: Window, ev: AnimationEvent) => any) | null;
+  export declare type onanimationiterationGlobal = ((this: Window, ev: AnimationEvent) => any) | null;
+  export declare type onanimationstartGlobal = ((this: Window, ev: AnimationEvent) => any) | null;
+  export declare type onauxclickGlobal = ((this: Window, ev: Event) => any) | null;
 /**
  * Fires when the object loses the input focus.
  * @param ev The focus event.
  */
-  export var onblur: ((this: Window, ev: FocusEvent) => any) | null;
-  export var oncancel: ((this: Window, ev: Event) => any) | null;
+  export declare type onblurGlobal = ((this: Window, ev: FocusEvent) => any) | null;
+  export declare type oncancelGlobal = ((this: Window, ev: Event) => any) | null;
 /**
  * Occurs when playback is possible, but would require further buffering.
  * @param ev The event.
  */
-  export var oncanplay: ((this: Window, ev: Event) => any) | null;
-  export var oncanplaythrough: ((this: Window, ev: Event) => any) | null;
+  export declare type oncanplayGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type oncanplaythroughGlobal = ((this: Window, ev: Event) => any) | null;
 /**
  * Fires when the contents of the object or selection have changed.
  * @param ev The event.
  */
-  export var onchange: ((this: Window, ev: Event) => any) | null;
+  export declare type onchangeGlobal = ((this: Window, ev: Event) => any) | null;
 /**
  * Fires when the user clicks the left mouse button on the object
  * @param ev The mouse event.
  */
-  export var onclick: ((this: Window, ev: MouseEvent) => any) | null;
-  export var onclose: ((this: Window, ev: Event) => any) | null;
+  export declare type onclickGlobal = ((this: Window, ev: MouseEvent) => any) | null;
+  export declare type oncloseGlobal = ((this: Window, ev: Event) => any) | null;
 /**
  * Fires when the user clicks the right mouse button in the client area, opening the context menu.
  * @param ev The mouse event.
  */
-  export var oncontextmenu: ((this: Window, ev: MouseEvent) => any) | null;
-  export var oncuechange: ((this: Window, ev: Event) => any) | null;
+  export declare type oncontextmenuGlobal = ((this: Window, ev: MouseEvent) => any) | null;
+  export declare type oncuechangeGlobal = ((this: Window, ev: Event) => any) | null;
 /**
  * Fires when the user double-clicks the object.
  * @param ev The mouse event.
  */
-  export var ondblclick: ((this: Window, ev: MouseEvent) => any) | null;
+  export declare type ondblclickGlobal = ((this: Window, ev: MouseEvent) => any) | null;
 /**
  * Fires on the source object continuously during a drag operation.
  * @param ev The event.
  */
-  export var ondrag: ((this: Window, ev: DragEvent) => any) | null;
+  export declare type ondragGlobal = ((this: Window, ev: DragEvent) => any) | null;
 /**
  * Fires on the source object when the user releases the mouse at the close of a drag operation.
  * @param ev The event.
  */
-  export var ondragend: ((this: Window, ev: DragEvent) => any) | null;
+  export declare type ondragendGlobal = ((this: Window, ev: DragEvent) => any) | null;
 /**
  * Fires on the target element when the user drags the object to a valid drop target.
  * @param ev The drag event.
  */
-  export var ondragenter: ((this: Window, ev: DragEvent) => any) | null;
-  export var ondragexit: ((this: Window, ev: Event) => any) | null;
+  export declare type ondragenterGlobal = ((this: Window, ev: DragEvent) => any) | null;
+  export declare type ondragexitGlobal = ((this: Window, ev: Event) => any) | null;
 /**
  * Fires on the target object when the user moves the mouse out of a valid drop target during a drag operation.
  * @param ev The drag event.
  */
-  export var ondragleave: ((this: Window, ev: DragEvent) => any) | null;
+  export declare type ondragleaveGlobal = ((this: Window, ev: DragEvent) => any) | null;
 /**
  * Fires on the target element continuously while the user drags the object over a valid drop target.
  * @param ev The event.
  */
-  export var ondragover: ((this: Window, ev: DragEvent) => any) | null;
+  export declare type ondragoverGlobal = ((this: Window, ev: DragEvent) => any) | null;
 /**
  * Fires on the source object when the user starts to drag a text selection or selected object.
  * @param ev The event.
  */
-  export var ondragstart: ((this: Window, ev: DragEvent) => any) | null;
-  export var ondrop: ((this: Window, ev: DragEvent) => any) | null;
+  export declare type ondragstartGlobal = ((this: Window, ev: DragEvent) => any) | null;
+  export declare type ondropGlobal = ((this: Window, ev: DragEvent) => any) | null;
 /**
  * Occurs when the duration attribute is updated.
  * @param ev The event.
  */
-  export var ondurationchange: ((this: Window, ev: Event) => any) | null;
+  export declare type ondurationchangeGlobal = ((this: Window, ev: Event) => any) | null;
 /**
  * Occurs when the media element is reset to its initial state.
  * @param ev The event.
  */
-  export var onemptied: ((this: Window, ev: Event) => any) | null;
+  export declare type onemptiedGlobal = ((this: Window, ev: Event) => any) | null;
 /**
  * Occurs when the end of playback is reached.
  * @param ev The event
  */
-  export var onended: ((this: Window, ev: Event) => any) | null;
+  export declare type onendedGlobal = ((this: Window, ev: Event) => any) | null;
 /**
  * Fires when an error occurs during object loading.
  * @param ev The event.
  */
-  export var onerror: ErrorEventHandler;
+  export declare type onerrorGlobal = ErrorEventHandler;
 /**
  * Fires when the object receives focus.
  * @param ev The event.
  */
-  export var onfocus: ((this: Window, ev: FocusEvent) => any) | null;
-  export var ongotpointercapture: ((this: Window, ev: PointerEvent) => any) | null;
-  export var oninput: ((this: Window, ev: Event) => any) | null;
-  export var oninvalid: ((this: Window, ev: Event) => any) | null;
+  export declare type onfocusGlobal = ((this: Window, ev: FocusEvent) => any) | null;
+  export declare type ongotpointercaptureGlobal = ((this: Window, ev: PointerEvent) => any) | null;
+  export declare type oninputGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type oninvalidGlobal = ((this: Window, ev: Event) => any) | null;
 /**
  * Fires when the user presses a key.
  * @param ev The keyboard event
  */
-  export var onkeydown: ((this: Window, ev: KeyboardEvent) => any) | null;
+  export declare type onkeydownGlobal = ((this: Window, ev: KeyboardEvent) => any) | null;
 /**
  * Fires when the user presses an alphanumeric key.
  * @param ev The event.
  */
-  export var onkeypress: ((this: Window, ev: KeyboardEvent) => any) | null;
+  export declare type onkeypressGlobal = ((this: Window, ev: KeyboardEvent) => any) | null;
 /**
  * Fires when the user releases a key.
  * @param ev The keyboard event
  */
-  export var onkeyup: ((this: Window, ev: KeyboardEvent) => any) | null;
+  export declare type onkeyupGlobal = ((this: Window, ev: KeyboardEvent) => any) | null;
 /**
  * Fires immediately after the browser loads the object.
  * @param ev The event.
  */
-  export var onload: ((this: Window, ev: Event) => any) | null;
+  export declare type onloadGlobal = ((this: Window, ev: Event) => any) | null;
 /**
  * Occurs when media data is loaded at the current playback position.
  * @param ev The event.
  */
-  export var onloadeddata: ((this: Window, ev: Event) => any) | null;
+  export declare type onloadeddataGlobal = ((this: Window, ev: Event) => any) | null;
 /**
  * Occurs when the duration and dimensions of the media have been determined.
  * @param ev The event.
  */
-  export var onloadedmetadata: ((this: Window, ev: Event) => any) | null;
-  export var onloadend: ((this: Window, ev: ProgressEvent) => any) | null;
+  export declare type onloadedmetadataGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onloadendGlobal = ((this: Window, ev: ProgressEvent) => any) | null;
 /**
  * Occurs when Internet Explorer begins looking for media data.
  * @param ev The event.
  */
-  export var onloadstart: ((this: Window, ev: Event) => any) | null;
-  export var onlostpointercapture: ((this: Window, ev: PointerEvent) => any) | null;
+  export declare type onloadstartGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onlostpointercaptureGlobal = ((this: Window, ev: PointerEvent) => any) | null;
 /**
  * Fires when the user clicks the object with either mouse button.
  * @param ev The mouse event.
  */
-  export var onmousedown: ((this: Window, ev: MouseEvent) => any) | null;
-  export var onmouseenter: ((this: Window, ev: MouseEvent) => any) | null;
-  export var onmouseleave: ((this: Window, ev: MouseEvent) => any) | null;
+  export declare type onmousedownGlobal = ((this: Window, ev: MouseEvent) => any) | null;
+  export declare type onmouseenterGlobal = ((this: Window, ev: MouseEvent) => any) | null;
+  export declare type onmouseleaveGlobal = ((this: Window, ev: MouseEvent) => any) | null;
 /**
  * Fires when the user moves the mouse over the object.
  * @param ev The mouse event.
  */
-  export var onmousemove: ((this: Window, ev: MouseEvent) => any) | null;
+  export declare type onmousemoveGlobal = ((this: Window, ev: MouseEvent) => any) | null;
 /**
  * Fires when the user moves the mouse pointer outside the boundaries of the object.
  * @param ev The mouse event.
  */
-  export var onmouseout: ((this: Window, ev: MouseEvent) => any) | null;
+  export declare type onmouseoutGlobal = ((this: Window, ev: MouseEvent) => any) | null;
 /**
  * Fires when the user moves the mouse pointer into the object.
  * @param ev The mouse event.
  */
-  export var onmouseover: ((this: Window, ev: MouseEvent) => any) | null;
+  export declare type onmouseoverGlobal = ((this: Window, ev: MouseEvent) => any) | null;
 /**
  * Fires when the user releases a mouse button while the mouse is over the object.
  * @param ev The mouse event.
  */
-  export var onmouseup: ((this: Window, ev: MouseEvent) => any) | null;
+  export declare type onmouseupGlobal = ((this: Window, ev: MouseEvent) => any) | null;
 /**
  * Occurs when playback is paused.
  * @param ev The event.
  */
-  export var onpause: ((this: Window, ev: Event) => any) | null;
+  export declare type onpauseGlobal = ((this: Window, ev: Event) => any) | null;
 /**
  * Occurs when the play method is requested.
  * @param ev The event.
  */
-  export var onplay: ((this: Window, ev: Event) => any) | null;
+  export declare type onplayGlobal = ((this: Window, ev: Event) => any) | null;
 /**
  * Occurs when the audio or video has started playing.
  * @param ev The event.
  */
-  export var onplaying: ((this: Window, ev: Event) => any) | null;
-  export var onpointercancel: ((this: Window, ev: PointerEvent) => any) | null;
-  export var onpointerdown: ((this: Window, ev: PointerEvent) => any) | null;
-  export var onpointerenter: ((this: Window, ev: PointerEvent) => any) | null;
-  export var onpointerleave: ((this: Window, ev: PointerEvent) => any) | null;
-  export var onpointermove: ((this: Window, ev: PointerEvent) => any) | null;
-  export var onpointerout: ((this: Window, ev: PointerEvent) => any) | null;
-  export var onpointerover: ((this: Window, ev: PointerEvent) => any) | null;
-  export var onpointerup: ((this: Window, ev: PointerEvent) => any) | null;
+  export declare type onplayingGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onpointercancelGlobal = ((this: Window, ev: PointerEvent) => any) | null;
+  export declare type onpointerdownGlobal = ((this: Window, ev: PointerEvent) => any) | null;
+  export declare type onpointerenterGlobal = ((this: Window, ev: PointerEvent) => any) | null;
+  export declare type onpointerleaveGlobal = ((this: Window, ev: PointerEvent) => any) | null;
+  export declare type onpointermoveGlobal = ((this: Window, ev: PointerEvent) => any) | null;
+  export declare type onpointeroutGlobal = ((this: Window, ev: PointerEvent) => any) | null;
+  export declare type onpointeroverGlobal = ((this: Window, ev: PointerEvent) => any) | null;
+  export declare type onpointerupGlobal = ((this: Window, ev: PointerEvent) => any) | null;
 /**
  * Occurs to indicate progress while downloading media data.
  * @param ev The event.
  */
-  export var onprogress: ((this: Window, ev: ProgressEvent) => any) | null;
+  export declare type onprogressGlobal = ((this: Window, ev: ProgressEvent) => any) | null;
 /**
  * Occurs when the playback rate is increased or decreased.
  * @param ev The event.
  */
-  export var onratechange: ((this: Window, ev: Event) => any) | null;
+  export declare type onratechangeGlobal = ((this: Window, ev: Event) => any) | null;
 /**
  * Fires when the user resets a form.
  * @param ev The event.
  */
-  export var onreset: ((this: Window, ev: Event) => any) | null;
-  export var onresize: ((this: Window, ev: UIEvent) => any) | null;
+  export declare type onresetGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onresizeGlobal = ((this: Window, ev: UIEvent) => any) | null;
 /**
  * Fires when the user repositions the scroll box in the scroll bar on the object.
  * @param ev The event.
  */
-  export var onscroll: ((this: Window, ev: UIEvent) => any) | null;
-  export var onsecuritypolicyviolation: ((this: Window, ev: SecurityPolicyViolationEvent) => any) | null;
+  export declare type onscrollGlobal = ((this: Window, ev: UIEvent) => any) | null;
+  export declare type onsecuritypolicyviolationGlobal = ((this: Window, ev: SecurityPolicyViolationEvent) => any) | null;
 /**
  * Occurs when the seek operation ends.
  * @param ev The event.
  */
-  export var onseeked: ((this: Window, ev: Event) => any) | null;
+  export declare type onseekedGlobal = ((this: Window, ev: Event) => any) | null;
 /**
  * Occurs when the current playback position is moved.
  * @param ev The event.
  */
-  export var onseeking: ((this: Window, ev: Event) => any) | null;
+  export declare type onseekingGlobal = ((this: Window, ev: Event) => any) | null;
 /**
  * Fires when the current selection changes.
  * @param ev The event.
  */
-  export var onselect: ((this: Window, ev: UIEvent) => any) | null;
+  export declare type onselectGlobal = ((this: Window, ev: UIEvent) => any) | null;
 /**
  * Occurs when the download has stopped.
  * @param ev The event.
  */
-  export var onstalled: ((this: Window, ev: Event) => any) | null;
-  export var onsubmit: ((this: Window, ev: Event) => any) | null;
+  export declare type onstalledGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onsubmitGlobal = ((this: Window, ev: Event) => any) | null;
 /**
  * Occurs if the load operation has been intentionally halted.
  * @param ev The event.
  */
-  export var onsuspend: ((this: Window, ev: Event) => any) | null;
+  export declare type onsuspendGlobal = ((this: Window, ev: Event) => any) | null;
 /**
  * Occurs to indicate the current playback position.
  * @param ev The event.
  */
-  export var ontimeupdate: ((this: Window, ev: Event) => any) | null;
-  export var ontoggle: ((this: Window, ev: Event) => any) | null;
-  export var ontouchcancel: ((this: Window, ev: TouchEvent) => any) | null;
-  export var ontouchend: ((this: Window, ev: TouchEvent) => any) | null;
-  export var ontouchmove: ((this: Window, ev: TouchEvent) => any) | null;
-  export var ontouchstart: ((this: Window, ev: TouchEvent) => any) | null;
-  export var ontransitioncancel: ((this: Window, ev: TransitionEvent) => any) | null;
-  export var ontransitionend: ((this: Window, ev: TransitionEvent) => any) | null;
-  export var ontransitionrun: ((this: Window, ev: TransitionEvent) => any) | null;
-  export var ontransitionstart: ((this: Window, ev: TransitionEvent) => any) | null;
+  export declare type ontimeupdateGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type ontoggleGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type ontouchcancelGlobal = ((this: Window, ev: TouchEvent) => any) | null;
+  export declare type ontouchendGlobal = ((this: Window, ev: TouchEvent) => any) | null;
+  export declare type ontouchmoveGlobal = ((this: Window, ev: TouchEvent) => any) | null;
+  export declare type ontouchstartGlobal = ((this: Window, ev: TouchEvent) => any) | null;
+  export declare type ontransitioncancelGlobal = ((this: Window, ev: TransitionEvent) => any) | null;
+  export declare type ontransitionendGlobal = ((this: Window, ev: TransitionEvent) => any) | null;
+  export declare type ontransitionrunGlobal = ((this: Window, ev: TransitionEvent) => any) | null;
+  export declare type ontransitionstartGlobal = ((this: Window, ev: TransitionEvent) => any) | null;
 /**
  * Occurs when the volume is changed, or playback is muted or unmuted.
  * @param ev The event.
  */
-  export var onvolumechange: ((this: Window, ev: Event) => any) | null;
+  export declare type onvolumechangeGlobal = ((this: Window, ev: Event) => any) | null;
 /**
  * Occurs when playback stops because the next frame of a video resource is not available.
  * @param ev The event.
  */
-  export var onwaiting: ((this: Window, ev: Event) => any) | null;
-  export var onwheel: ((this: Window, ev: WheelEvent) => any) | null;
-  export var indexedDB: IDBFactory;
-  export function atob(encodedString: string): string;
-  export function btoa(rawString: string): string;
-  export function fetch(input: RequestInfo, init?: RequestInit): Promise<Response>;
-  export var caches: CacheStorage;
-  export var crypto: Crypto;
-  export var indexedDB: IDBFactory;
-  export var origin: string;
-  export var performance: Performance;
-  export function atob(data: string): string;
-  export function btoa(data: string): string;
-  export function clearInterval(handle?: number): void;
-  export function clearTimeout(handle?: number): void;
-  export function createImageBitmap(image: ImageBitmapSource): Promise<ImageBitmap>;
-  export function createImageBitmap(image: ImageBitmapSource, sx: number, sy: number, sw: number, sh: number): Promise<ImageBitmap>;
-  export function fetch(input: RequestInfo, init?: RequestInit): Promise<Response>;
-  export function queueMicrotask(callback: Function): void;
-  export function setInterval(handler: TimerHandler, timeout?: number, ...arguments: any[]): number;
-  export function setTimeout(handler: TimerHandler, timeout?: number, ...arguments: any[]): number;
-  export var sessionStorage: Storage;
-  export var localStorage: Storage;
-  export var onafterprint: ((this: Window, ev: Event) => any) | null;
-  export var onbeforeprint: ((this: Window, ev: Event) => any) | null;
-  export var onbeforeunload: ((this: Window, ev: BeforeUnloadEvent) => any) | null;
-  export var onhashchange: ((this: Window, ev: HashChangeEvent) => any) | null;
-  export var onlanguagechange: ((this: Window, ev: Event) => any) | null;
-  export var onmessage: ((this: Window, ev: MessageEvent) => any) | null;
-  export var onmessageerror: ((this: Window, ev: MessageEvent) => any) | null;
-  export var onoffline: ((this: Window, ev: Event) => any) | null;
-  export var ononline: ((this: Window, ev: Event) => any) | null;
-  export var onpagehide: ((this: Window, ev: PageTransitionEvent) => any) | null;
-  export var onpageshow: ((this: Window, ev: PageTransitionEvent) => any) | null;
-  export var onpopstate: ((this: Window, ev: PopStateEvent) => any) | null;
-  export var onrejectionhandled: ((this: Window, ev: Event) => any) | null;
-  export var onstorage: ((this: Window, ev: StorageEvent) => any) | null;
-  export var onunhandledrejection: ((this: Window, ev: PromiseRejectionEvent) => any) | null;
-  export var onunload: ((this: Window, ev: Event) => any) | null;
-  export function addEventListener<K extends keyof WindowEventMap>(type: K, listener: (this: Window, ev: WindowEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
-  export function addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
-  export function removeEventListener<K extends keyof WindowEventMap>(type: K, listener: (this: Window, ev: WindowEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
-  export function removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+  export declare type onwaitingGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onwheelGlobal = ((this: Window, ev: WheelEvent) => any) | null;
+  export declare type indexedDBGlobal = IDBFactory;
+  export type atob = (encodedString: string) =>  string;
+  export type btoa = (rawString: string) =>  string;
+  export type fetch = (input: RequestInfo, init?: RequestInit) =>  Promise<Response>;
+  export declare type cachesGlobal = CacheStorage;
+  export declare type cryptoGlobal = Crypto;
+  export declare type indexedDBGlobal = IDBFactory;
+  export declare type originGlobal = string;
+  export declare type performanceGlobal = Performance;
+  export type atob = (data: string) =>  string;
+  export type btoa = (data: string) =>  string;
+  export type clearInterval = (handle?: number) =>  void;
+  export type clearTimeout = (handle?: number) =>  void;
+  export type createImageBitmap = (image: ImageBitmapSource) =>  Promise<ImageBitmap>;
+  export type createImageBitmap = (image: ImageBitmapSource, sx: number, sy: number, sw: number, sh: number) =>  Promise<ImageBitmap>;
+  export type fetch = (input: RequestInfo, init?: RequestInit) =>  Promise<Response>;
+  export type queueMicrotask = (callback: Function) =>  void;
+  export type setInterval = (handler: TimerHandler, timeout?: number, ...arguments: any[]) =>  number;
+  export type setTimeout = (handler: TimerHandler, timeout?: number, ...arguments: any[]) =>  number;
+  export declare type sessionStorageGlobal = Storage;
+  export declare type localStorageGlobal = Storage;
+  export declare type onafterprintGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onbeforeprintGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onbeforeunloadGlobal = ((this: Window, ev: BeforeUnloadEvent) => any) | null;
+  export declare type onhashchangeGlobal = ((this: Window, ev: HashChangeEvent) => any) | null;
+  export declare type onlanguagechangeGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onmessageGlobal = ((this: Window, ev: MessageEvent) => any) | null;
+  export declare type onmessageerrorGlobal = ((this: Window, ev: MessageEvent) => any) | null;
+  export declare type onofflineGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type ononlineGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onpagehideGlobal = ((this: Window, ev: PageTransitionEvent) => any) | null;
+  export declare type onpageshowGlobal = ((this: Window, ev: PageTransitionEvent) => any) | null;
+  export declare type onpopstateGlobal = ((this: Window, ev: PopStateEvent) => any) | null;
+  export declare type onrejectionhandledGlobal = ((this: Window, ev: Event) => any) | null;
+  export declare type onstorageGlobal = ((this: Window, ev: StorageEvent) => any) | null;
+  export declare type onunhandledrejectionGlobal = ((this: Window, ev: PromiseRejectionEvent) => any) | null;
+  export declare type onunloadGlobal = ((this: Window, ev: Event) => any) | null;
+  export type addEventListener = <K extends keyof WindowEventMap>(type: K, listener: (this: Window, ev: WindowEventMap[K]) => any, options?: boolean | AddEventListenerOptions) =>  void;
+  export type addEventListener = (type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions) =>  void;
+  type removeEventListenerV1 = <K extends keyof WindowEventMap>(type: K, listener: (this: Window, ev: WindowEventMap[K]) => any, options?: boolean | EventListenerOptions) =>  void;
+  type removeEventListenerV2 = (type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions) =>  void;
+export type removeEventListener = removeEventListenerV1 | removeEventListenerV2;
   export type BlobPart = BufferSource | Blob | string;
   export type HeadersInit = Headers | string[][] | Record<string, string>;
   export type BodyInit = Blob | BufferSource | FormData | URLSearchParams | ReadableStream<Uint8Array> | string;
@@ -16353,5 +16353,3 @@ and limitations under the License.
   export type WebGLPowerPreference = "default" | "low-power" | "high-performance";
   export type WorkerType = "classic" | "module";
   export type XMLHttpRequestResponseType = "" | "arraybuffer" | "blob" | "document" | "json" | "text";
-
-}

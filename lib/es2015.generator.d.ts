@@ -1,5 +1,3 @@
-
-export namespace ES2015_GENERATOR {
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -65,6 +63,4 @@ and limitations under the License.
      * A reference to the prototype.
      */
     readonly prototype: GeneratorFunction;
-}
-
 }

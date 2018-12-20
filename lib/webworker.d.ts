@@ -1,5 +1,3 @@
-
-export namespace WEBWORKER {
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -418,7 +416,7 @@ and limitations under the License.
      */
     abort(): void;
 }
-  export var AbortController: {
+  export declare type AbortControllerGlobal = {
     prototype: AbortController;
     new(): AbortController;
 };
@@ -437,7 +435,7 @@ and limitations under the License.
     removeEventListener<K extends keyof AbortSignalEventMap>(type: K, listener: (this: AbortSignal, ev: AbortSignalEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var AbortSignal: {
+  export declare type AbortSignalGlobal = {
     prototype: AbortSignal;
     new(): AbortSignal;
 };
@@ -462,7 +460,7 @@ and limitations under the License.
     readonly type: string;
     slice(start?: number, end?: number, contentType?: string): Blob;
 }
-  export var Blob: {
+  export declare type BlobGlobal = {
     prototype: Blob;
     new(blobParts?: BlobPart[], options?: BlobPropertyBag): Blob;
 };
@@ -499,7 +497,7 @@ and limitations under the License.
     removeEventListener<K extends keyof BroadcastChannelEventMap>(type: K, listener: (this: BroadcastChannel, ev: BroadcastChannelEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var BroadcastChannel: {
+  export declare type BroadcastChannelGlobal = {
     prototype: BroadcastChannel;
     new(name: string): BroadcastChannel;
 };
@@ -511,7 +509,7 @@ and limitations under the License.
     highWaterMark: number;
     size(chunk: ArrayBufferView): number;
 }
-  export var ByteLengthQueuingStrategy: {
+  export declare type ByteLengthQueuingStrategyGlobal = {
     prototype: ByteLengthQueuingStrategy;
     new(options: { highWaterMark: number }): ByteLengthQueuingStrategy;
 };
@@ -524,7 +522,7 @@ and limitations under the License.
     matchAll(request?: RequestInfo, options?: CacheQueryOptions): Promise<ReadonlyArray<Response>>;
     put(request: RequestInfo, response: Response): Promise<void>;
 }
-  export var Cache: {
+  export declare type CacheGlobal = {
     prototype: Cache;
     new(): Cache;
 };
@@ -535,7 +533,7 @@ and limitations under the License.
     match(request: RequestInfo, options?: CacheQueryOptions): Promise<Response | undefined>;
     open(cacheName: string): Promise<Cache>;
 }
-  export var CacheStorage: {
+  export declare type CacheStorageGlobal = {
     prototype: CacheStorage;
     new(): CacheStorage;
 };
@@ -549,7 +547,7 @@ and limitations under the License.
      */
     addColorStop(offset: number, color: string): void;
 }
-  export var CanvasGradient: {
+  export declare type CanvasGradientGlobal = {
     prototype: CanvasGradient;
     new(): CanvasGradient;
 };
@@ -571,7 +569,7 @@ and limitations under the License.
      */
     setTransform(transform?: DOMMatrix2DInit): void;
 }
-  export var CanvasPattern: {
+  export declare type CanvasPatternGlobal = {
     prototype: CanvasPattern;
     new(): CanvasPattern;
 };
@@ -581,7 +579,7 @@ and limitations under the License.
     readonly url: string;
     postMessage(message: any, transfer?: Transferable[]): void;
 }
-  export var Client: {
+  export declare type ClientGlobal = {
     prototype: Client;
     new(): Client;
 };
@@ -591,7 +589,7 @@ and limitations under the License.
     matchAll(options?: ClientQueryOptions): Promise<ReadonlyArray<Client>>;
     openWindow(url: string): Promise<WindowClient | null>;
 }
-  export var Clients: {
+  export declare type ClientsGlobal = {
     prototype: Clients;
     new(): Clients;
 };
@@ -602,7 +600,7 @@ and limitations under the License.
     /** @deprecated */
     initCloseEvent(typeArg: string, canBubbleArg: boolean, cancelableArg: boolean, wasCleanArg: boolean, codeArg: number, reasonArg: string): void;
 }
-  export var CloseEvent: {
+  export declare type CloseEventGlobal = {
     prototype: CloseEvent;
     new(type: string, eventInitDict?: CloseEventInit): CloseEvent;
 };
@@ -641,7 +639,7 @@ and limitations under the License.
     trace(message?: any, ...optionalParams: any[]): void;
     warn(message?: any, ...optionalParams: any[]): void;
 }
-  export var Console: {
+  export declare type ConsoleGlobal = {
     prototype: Console;
     new(): Console;
 };
@@ -649,7 +647,7 @@ and limitations under the License.
     highWaterMark: number;
     size(chunk: any): 1;
 }
-  export var CountQueuingStrategy: {
+  export declare type CountQueuingStrategyGlobal = {
     prototype: CountQueuingStrategy;
     new(options: { highWaterMark: number }): CountQueuingStrategy;
 };
@@ -657,7 +655,7 @@ and limitations under the License.
     readonly subtle: SubtleCrypto;
     getRandomValues<T extends Int8Array | Int16Array | Int32Array | Uint8Array | Uint16Array | Uint32Array | Uint8ClampedArray | Float32Array | Float64Array | DataView | null>(array: T): T;
 }
-  export var Crypto: {
+  export declare type CryptoGlobal = {
     prototype: Crypto;
     new(): Crypto;
 };
@@ -667,7 +665,7 @@ and limitations under the License.
     readonly type: KeyType;
     readonly usages: KeyUsage[];
 }
-  export var CryptoKey: {
+  export declare type CryptoKeyGlobal = {
     prototype: CryptoKey;
     new(): CryptoKey;
 };
@@ -679,7 +677,7 @@ and limitations under the License.
     readonly detail: T;
     initCustomEvent(typeArg: string, canBubbleArg: boolean, cancelableArg: boolean, detailArg: T): void;
 }
-  export var CustomEvent: {
+  export declare type CustomEventGlobal = {
     prototype: CustomEvent;
     new<T>(typeArg: string, eventInitDict?: CustomEventInit<T>): CustomEvent<T>;
 };
@@ -713,7 +711,7 @@ and limitations under the License.
     readonly VALIDATION_ERR: number;
     readonly WRONG_DOCUMENT_ERR: number;
 }
-  export var DOMException: {
+  export declare type DOMExceptionGlobal = {
     prototype: DOMException;
     new(message?: string, name?: string): DOMException;
     readonly ABORT_ERR: number;
@@ -777,7 +775,7 @@ and limitations under the License.
     skewYSelf(sy?: number): DOMMatrix;
     translateSelf(tx?: number, ty?: number, tz?: number): DOMMatrix;
 }
-  export var DOMMatrix: {
+  export declare type DOMMatrixGlobal = {
     prototype: DOMMatrix;
     new(init?: string | number[]): DOMMatrix;
     fromFloat32Array(array32: Float32Array): DOMMatrix;
@@ -826,7 +824,7 @@ and limitations under the License.
     transformPoint(point?: DOMPointInit): DOMPoint;
     translate(tx?: number, ty?: number, tz?: number): DOMMatrix;
 }
-  export var DOMMatrixReadOnly: {
+  export declare type DOMMatrixReadOnlyGlobal = {
     prototype: DOMMatrixReadOnly;
     new(init?: string | number[]): DOMMatrixReadOnly;
     fromFloat32Array(array32: Float32Array): DOMMatrixReadOnly;
@@ -839,7 +837,7 @@ and limitations under the License.
     y: number;
     z: number;
 }
-  export var DOMPoint: {
+  export declare type DOMPointGlobal = {
     prototype: DOMPoint;
     new(x?: number, y?: number, z?: number, w?: number): DOMPoint;
     fromPoint(other?: DOMPointInit): DOMPoint;
@@ -852,7 +850,7 @@ and limitations under the License.
     matrixTransform(matrix?: DOMMatrixInit): DOMPoint;
     toJSON(): any;
 }
-  export var DOMPointReadOnly: {
+  export declare type DOMPointReadOnlyGlobal = {
     prototype: DOMPointReadOnly;
     new(x?: number, y?: number, z?: number, w?: number): DOMPointReadOnly;
     fromPoint(other?: DOMPointInit): DOMPointReadOnly;
@@ -865,7 +863,7 @@ and limitations under the License.
     getBounds(): DOMRect;
     toJSON(): any;
 }
-  export var DOMQuad: {
+  export declare type DOMQuadGlobal = {
     prototype: DOMQuad;
     new(p1?: DOMPointInit, p2?: DOMPointInit, p3?: DOMPointInit, p4?: DOMPointInit): DOMQuad;
     fromQuad(other?: DOMQuadInit): DOMQuad;
@@ -877,7 +875,7 @@ and limitations under the License.
     x: number;
     y: number;
 }
-  export var DOMRect: {
+  export declare type DOMRectGlobal = {
     prototype: DOMRect;
     new(x?: number, y?: number, width?: number, height?: number): DOMRect;
     fromRect(other?: DOMRectInit): DOMRect;
@@ -893,7 +891,7 @@ and limitations under the License.
     readonly y: number;
     toJSON(): any;
 }
-  export var DOMRectReadOnly: {
+  export declare type DOMRectReadOnlyGlobal = {
     prototype: DOMRectReadOnly;
     new(x?: number, y?: number, width?: number, height?: number): DOMRectReadOnly;
     fromRect(other?: DOMRectInit): DOMRectReadOnly;
@@ -914,7 +912,7 @@ and limitations under the License.
     item(index: number): string | null;
     [index: number]: string;
 }
-  export var DOMStringList: {
+  export declare type DOMStringListGlobal = {
     prototype: DOMStringList;
     new(): DOMStringList;
 };
@@ -930,7 +928,7 @@ and limitations under the License.
     removeEventListener<K extends keyof DedicatedWorkerGlobalScopeEventMap>(type: K, listener: (this: DedicatedWorkerGlobalScope, ev: DedicatedWorkerGlobalScopeEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var DedicatedWorkerGlobalScope: {
+  export declare type DedicatedWorkerGlobalScopeGlobal = {
     prototype: DedicatedWorkerGlobalScope;
     new(): DedicatedWorkerGlobalScope;
 };
@@ -974,7 +972,7 @@ and limitations under the License.
     readonly lineno: number;
     readonly message: string;
 }
-  export var ErrorEvent: {
+  export declare type ErrorEventGlobal = {
     prototype: ErrorEvent;
     new(type: string, eventInitDict?: ErrorEventInit): ErrorEvent;
 };
@@ -1035,7 +1033,7 @@ and limitations under the License.
     readonly CAPTURING_PHASE: number;
     readonly NONE: number;
 }
-  export var Event: {
+  export declare type EventGlobal = {
     prototype: Event;
     new(type: string, eventInitDict?: EventInit): Event;
     readonly AT_TARGET: number;
@@ -1058,7 +1056,7 @@ and limitations under the License.
     readonly withCredentials: boolean;
     close(): void;
 }
-  export var EventSource: {
+  export declare type EventSourceGlobal = {
     prototype: EventSource;
     new(url: string, eventSourceInitDict?: EventSourceInit): EventSource;
 };
@@ -1087,14 +1085,14 @@ and limitations under the License.
      */
     removeEventListener(type: string, callback: EventListenerOrEventListenerObject | null, options?: EventListenerOptions | boolean): void;
 }
-  export var EventTarget: {
+  export declare type EventTargetGlobal = {
     prototype: EventTarget;
     new(): EventTarget;
 };
   export interface ExtendableEvent extends Event {
     waitUntil(f: Promise<any>): void;
 }
-  export var ExtendableEvent: {
+  export declare type ExtendableEventGlobal = {
     prototype: ExtendableEvent;
     new(type: string, eventInitDict?: ExtendableEventInit): ExtendableEvent;
 };
@@ -1105,7 +1103,7 @@ and limitations under the License.
     readonly ports: ReadonlyArray<MessagePort>;
     readonly source: Client | ServiceWorker | MessagePort | null;
 }
-  export var ExtendableMessageEvent: {
+  export declare type ExtendableMessageEventGlobal = {
     prototype: ExtendableMessageEvent;
     new(type: string, eventInitDict?: ExtendableMessageEventInit): ExtendableMessageEvent;
 };
@@ -1117,7 +1115,7 @@ and limitations under the License.
     readonly targetClientId: string;
     respondWith(r: Promise<Response>): void;
 }
-  export var FetchEvent: {
+  export declare type FetchEventGlobal = {
     prototype: FetchEvent;
     new(type: string, eventInitDict: FetchEventInit): FetchEvent;
 };
@@ -1125,7 +1123,7 @@ and limitations under the License.
     readonly lastModified: number;
     readonly name: string;
 }
-  export var File: {
+  export declare type FileGlobal = {
     prototype: File;
     new(fileBits: BlobPart[], fileName: string, options?: FilePropertyBag): File;
 };
@@ -1134,7 +1132,7 @@ and limitations under the License.
     item(index: number): File | null;
     [index: number]: File;
 }
-  export var FileList: {
+  export declare type FileListGlobal = {
     prototype: FileList;
     new(): FileList;
 };
@@ -1169,7 +1167,7 @@ and limitations under the License.
     removeEventListener<K extends keyof FileReaderEventMap>(type: K, listener: (this: FileReader, ev: FileReaderEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var FileReader: {
+  export declare type FileReaderGlobal = {
     prototype: FileReader;
     new(): FileReader;
     readonly DONE: number;
@@ -1182,7 +1180,7 @@ and limitations under the License.
     readAsDataURL(blob: Blob): string;
     readAsText(blob: Blob, encoding?: string): string;
 }
-  export var FileReaderSync: {
+  export declare type FileReaderSyncGlobal = {
     prototype: FileReaderSync;
     new(): FileReaderSync;
 };
@@ -1195,7 +1193,7 @@ and limitations under the License.
     set(name: string, value: string | Blob, fileName?: string): void;
     forEach(callbackfn: (value: FormDataEntryValue, key: string, parent: FormData) => void, thisArg?: any): void;
 }
-  export var FormData: {
+  export declare type FormDataGlobal = {
     prototype: FormData;
     new(): FormData;
 };
@@ -1210,7 +1208,7 @@ and limitations under the License.
     set(name: string, value: string): void;
     forEach(callbackfn: (value: string, key: string, parent: Headers) => void, thisArg?: any): void;
 }
-  export var Headers: {
+  export declare type HeadersGlobal = {
     prototype: Headers;
     new(init?: HeadersInit): Headers;
 };
@@ -1268,7 +1266,7 @@ and limitations under the License.
      */
     update(value: any): IDBRequest<IDBValidKey>;
 }
-  export var IDBCursor: {
+  export declare type IDBCursorGlobal = {
     prototype: IDBCursor;
     new(): IDBCursor;
 };
@@ -1278,7 +1276,7 @@ and limitations under the License.
      */
     readonly value: any;
 }
-  export var IDBCursorWithValue: {
+  export declare type IDBCursorWithValueGlobal = {
     prototype: IDBCursorWithValue;
     new(): IDBCursorWithValue;
 };
@@ -1329,7 +1327,7 @@ and limitations under the License.
     removeEventListener<K extends keyof IDBDatabaseEventMap>(type: K, listener: (this: IDBDatabase, ev: IDBDatabaseEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var IDBDatabase: {
+  export declare type IDBDatabaseGlobal = {
     prototype: IDBDatabase;
     new(): IDBDatabase;
 };
@@ -1356,7 +1354,7 @@ and limitations under the License.
      */
     open(name: string, version?: number): IDBOpenDBRequest;
 }
-  export var IDBFactory: {
+  export declare type IDBFactoryGlobal = {
     prototype: IDBFactory;
     new(): IDBFactory;
 };
@@ -1414,7 +1412,7 @@ and limitations under the License.
      */
     openKeyCursor(range?: IDBValidKey | IDBKeyRange, direction?: IDBCursorDirection): IDBRequest<IDBCursor | null>;
 }
-  export var IDBIndex: {
+  export declare type IDBIndexGlobal = {
     prototype: IDBIndex;
     new(): IDBIndex;
 };
@@ -1440,7 +1438,7 @@ and limitations under the License.
      */
     includes(key: any): boolean;
 }
-  export var IDBKeyRange: {
+  export declare type IDBKeyRangeGlobal = {
     prototype: IDBKeyRange;
     new(): IDBKeyRange;
     /**
@@ -1562,7 +1560,7 @@ and limitations under the License.
     openKeyCursor(query?: IDBValidKey | IDBKeyRange, direction?: IDBCursorDirection): IDBRequest<IDBCursor | null>;
     put(value: any, key?: IDBValidKey | IDBKeyRange): IDBRequest<IDBValidKey>;
 }
-  export var IDBObjectStore: {
+  export declare type IDBObjectStoreGlobal = {
     prototype: IDBObjectStore;
     new(): IDBObjectStore;
 };
@@ -1578,7 +1576,7 @@ and limitations under the License.
     removeEventListener<K extends keyof IDBOpenDBRequestEventMap>(type: K, listener: (this: IDBOpenDBRequest, ev: IDBOpenDBRequestEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var IDBOpenDBRequest: {
+  export declare type IDBOpenDBRequestGlobal = {
     prototype: IDBOpenDBRequest;
     new(): IDBOpenDBRequest;
 };
@@ -1620,7 +1618,7 @@ and limitations under the License.
     removeEventListener<K extends keyof IDBRequestEventMap>(type: K, listener: (this: IDBRequest<T>, ev: IDBRequestEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var IDBRequest: {
+  export declare type IDBRequestGlobal = {
     prototype: IDBRequest;
     new(): IDBRequest;
 };
@@ -1668,7 +1666,7 @@ and limitations under the License.
     removeEventListener<K extends keyof IDBTransactionEventMap>(type: K, listener: (this: IDBTransaction, ev: IDBTransactionEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var IDBTransaction: {
+  export declare type IDBTransactionGlobal = {
     prototype: IDBTransaction;
     new(): IDBTransaction;
 };
@@ -1676,7 +1674,7 @@ and limitations under the License.
     readonly newVersion: number | null;
     readonly oldVersion: number;
 }
-  export var IDBVersionChangeEvent: {
+  export declare type IDBVersionChangeEventGlobal = {
     prototype: IDBVersionChangeEvent;
     new(type: string, eventInitDict?: IDBVersionChangeEventInit): IDBVersionChangeEvent;
 };
@@ -1696,7 +1694,7 @@ and limitations under the License.
      */
     close(): void;
 }
-  export var ImageBitmap: {
+  export declare type ImageBitmapGlobal = {
     prototype: ImageBitmap;
     new(): ImageBitmap;
 };
@@ -1721,7 +1719,7 @@ and limitations under the License.
     readonly height: number;
     readonly width: number;
 }
-  export var ImageData: {
+  export declare type ImageDataGlobal = {
     prototype: ImageData;
     new(width: number, height: number): ImageData;
     new(array: Uint8ClampedArray, width: number, height: number): ImageData;
@@ -1730,7 +1728,7 @@ and limitations under the License.
     readonly port1: MessagePort;
     readonly port2: MessagePort;
 }
-  export var MessageChannel: {
+  export declare type MessageChannelGlobal = {
     prototype: MessageChannel;
     new(): MessageChannel;
 };
@@ -1761,7 +1759,7 @@ and limitations under the License.
      */
     readonly source: MessageEventSource | null;
 }
-  export var MessageEvent: {
+  export declare type MessageEventGlobal = {
     prototype: MessageEvent;
     new(type: string, eventInitDict?: MessageEventInit): MessageEvent;
 };
@@ -1793,7 +1791,7 @@ and limitations under the License.
     removeEventListener<K extends keyof MessagePortEventMap>(type: K, listener: (this: MessagePort, ev: MessagePortEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var MessagePort: {
+  export declare type MessagePortGlobal = {
     prototype: MessagePort;
     new(): MessagePort;
 };
@@ -1803,7 +1801,7 @@ and limitations under the License.
     getState(): Promise<NavigationPreloadState>;
     setHeaderValue(value: string): Promise<void>;
 }
-  export var NavigationPreloadManager: {
+  export declare type NavigationPreloadManagerGlobal = {
     prototype: NavigationPreloadManager;
     new(): NavigationPreloadManager;
 };
@@ -1862,7 +1860,7 @@ and limitations under the License.
     removeEventListener<K extends keyof NotificationEventMap>(type: K, listener: (this: Notification, ev: NotificationEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var Notification: {
+  export declare type NotificationGlobal = {
     prototype: Notification;
     new(title: string, options?: NotificationOptions): Notification;
     readonly maxActions: number;
@@ -1872,7 +1870,7 @@ and limitations under the License.
     readonly action: string;
     readonly notification: Notification;
 }
-  export var NotificationEvent: {
+  export declare type NotificationEventGlobal = {
     prototype: NotificationEvent;
     new(type: string, eventInitDict: NotificationEventInit): NotificationEvent;
 };
@@ -1900,7 +1898,7 @@ and limitations under the License.
   export interface Path2D extends CanvasPath {
     addPath(path: Path2D, transform?: DOMMatrix2DInit): void;
 }
-  export var Path2D: {
+  export declare type Path2DGlobal = {
     prototype: Path2D;
     new(path?: Path2D | string): Path2D;
 };
@@ -1926,7 +1924,7 @@ and limitations under the License.
     removeEventListener<K extends keyof PerformanceEventMap>(type: K, listener: (this: Performance, ev: PerformanceEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var Performance: {
+  export declare type PerformanceGlobal = {
     prototype: Performance;
     new(): Performance;
 };
@@ -1937,19 +1935,19 @@ and limitations under the License.
     readonly startTime: number;
     toJSON(): any;
 }
-  export var PerformanceEntry: {
+  export declare type PerformanceEntryGlobal = {
     prototype: PerformanceEntry;
     new(): PerformanceEntry;
 };
   export interface PerformanceMark extends PerformanceEntry {
 }
-  export var PerformanceMark: {
+  export declare type PerformanceMarkGlobal = {
     prototype: PerformanceMark;
     new(): PerformanceMark;
 };
   export interface PerformanceMeasure extends PerformanceEntry {
 }
-  export var PerformanceMeasure: {
+  export declare type PerformanceMeasureGlobal = {
     prototype: PerformanceMeasure;
     new(): PerformanceMeasure;
 };
@@ -1958,7 +1956,7 @@ and limitations under the License.
     observe(options: PerformanceObserverInit): void;
     takeRecords(): PerformanceEntryList;
 }
-  export var PerformanceObserver: {
+  export declare type PerformanceObserverGlobal = {
     prototype: PerformanceObserver;
     new(callback: PerformanceObserverCallback): PerformanceObserver;
 };
@@ -1967,7 +1965,7 @@ and limitations under the License.
     getEntriesByName(name: string, type?: string): PerformanceEntryList;
     getEntriesByType(type: string): PerformanceEntryList;
 }
-  export var PerformanceObserverEntryList: {
+  export declare type PerformanceObserverEntryListGlobal = {
     prototype: PerformanceObserverEntryList;
     new(): PerformanceObserverEntryList;
 };
@@ -1991,7 +1989,7 @@ and limitations under the License.
     readonly workerStart: number;
     toJSON(): any;
 }
-  export var PerformanceResourceTiming: {
+  export declare type PerformanceResourceTimingGlobal = {
     prototype: PerformanceResourceTiming;
     new(): PerformanceResourceTiming;
 };
@@ -2000,7 +1998,7 @@ and limitations under the License.
     readonly loaded: number;
     readonly total: number;
 }
-  export var ProgressEvent: {
+  export declare type ProgressEventGlobal = {
     prototype: ProgressEvent;
     new(type: string, eventInitDict?: ProgressEventInit): ProgressEvent;
 };
@@ -2008,14 +2006,14 @@ and limitations under the License.
     readonly promise: Promise<any>;
     readonly reason: any;
 }
-  export var PromiseRejectionEvent: {
+  export declare type PromiseRejectionEventGlobal = {
     prototype: PromiseRejectionEvent;
     new(type: string, eventInitDict: PromiseRejectionEventInit): PromiseRejectionEvent;
 };
   export interface PushEvent extends ExtendableEvent {
     readonly data: PushMessageData | null;
 }
-  export var PushEvent: {
+  export declare type PushEventGlobal = {
     prototype: PushEvent;
     new(type: string, eventInitDict?: PushEventInit): PushEvent;
 };
@@ -2024,7 +2022,7 @@ and limitations under the License.
     permissionState(options?: PushSubscriptionOptionsInit): Promise<PushPermissionState>;
     subscribe(options?: PushSubscriptionOptionsInit): Promise<PushSubscription>;
 }
-  export var PushManager: {
+  export declare type PushManagerGlobal = {
     prototype: PushManager;
     new(): PushManager;
     readonly supportedContentEncodings: ReadonlyArray<string>;
@@ -2035,7 +2033,7 @@ and limitations under the License.
     json(): any;
     text(): string;
 }
-  export var PushMessageData: {
+  export declare type PushMessageDataGlobal = {
     prototype: PushMessageData;
     new(): PushMessageData;
 };
@@ -2047,7 +2045,7 @@ and limitations under the License.
     toJSON(): PushSubscriptionJSON;
     unsubscribe(): Promise<boolean>;
 }
-  export var PushSubscription: {
+  export declare type PushSubscriptionGlobal = {
     prototype: PushSubscription;
     new(): PushSubscription;
 };
@@ -2055,7 +2053,7 @@ and limitations under the License.
     readonly newSubscription: PushSubscription | null;
     readonly oldSubscription: PushSubscription | null;
 }
-  export var PushSubscriptionChangeEvent: {
+  export declare type PushSubscriptionChangeEventGlobal = {
     prototype: PushSubscriptionChangeEvent;
     new(type: string, eventInitDict?: PushSubscriptionChangeInit): PushSubscriptionChangeEvent;
 };
@@ -2063,7 +2061,7 @@ and limitations under the License.
     readonly applicationServerKey: ArrayBuffer | null;
     readonly userVisibleOnly: boolean;
 }
-  export var PushSubscriptionOptions: {
+  export declare type PushSubscriptionOptionsGlobal = {
     prototype: PushSubscriptionOptions;
     new(): PushSubscriptionOptions;
 };
@@ -2083,7 +2081,7 @@ and limitations under the License.
     pipeTo(dest: WritableStream<R>, options?: PipeOptions): Promise<void>;
     tee(): [ReadableStream<R>, ReadableStream<R>];
 }
-  export var ReadableStream: {
+  export declare type ReadableStreamGlobal = {
     prototype: ReadableStream;
     new(underlyingSource: UnderlyingByteSource, strategy?: { highWaterMark?: number, size?: undefined }): ReadableStream<Uint8Array>;
     new<R = any>(underlyingSource?: UnderlyingSource<R>, strategy?: QueuingStrategy<R>): ReadableStream<R>;
@@ -2094,7 +2092,7 @@ and limitations under the License.
     read<T extends ArrayBufferView>(view: T): Promise<ReadableStreamReadResult<T>>;
     releaseLock(): void;
 }
-  export var ReadableStreamBYOBReader: {
+  export declare type ReadableStreamBYOBReaderGlobal = {
     prototype: ReadableStreamBYOBReader;
     new(stream: ReadableStream<Uint8Array>): ReadableStreamBYOBReader;
 };
@@ -2124,7 +2122,7 @@ and limitations under the License.
     read(): Promise<ReadableStreamReadResult<R>>;
     releaseLock(): void;
 }
-  export var ReadableStreamReader: {
+  export declare type ReadableStreamReaderGlobal = {
     prototype: ReadableStreamReader;
     new(): ReadableStreamReader;
 };
@@ -2207,7 +2205,7 @@ and limitations under the License.
     readonly url: string;
     clone(): Request;
 }
-  export var Request: {
+  export declare type RequestGlobal = {
     prototype: Request;
     new(input: RequestInfo, init?: RequestInit): Request;
 };
@@ -2222,7 +2220,7 @@ and limitations under the License.
     readonly url: string;
     clone(): Response;
 }
-  export var Response: {
+  export declare type ResponseGlobal = {
     prototype: Response;
     new(body?: BodyInit | null, init?: ResponseInit): Response;
     error(): Response;
@@ -2241,7 +2239,7 @@ and limitations under the License.
     removeEventListener<K extends keyof ServiceWorkerEventMap>(type: K, listener: (this: ServiceWorker, ev: ServiceWorkerEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var ServiceWorker: {
+  export declare type ServiceWorkerGlobal = {
     prototype: ServiceWorker;
     new(): ServiceWorker;
 };
@@ -2265,7 +2263,7 @@ and limitations under the License.
     removeEventListener<K extends keyof ServiceWorkerContainerEventMap>(type: K, listener: (this: ServiceWorkerContainer, ev: ServiceWorkerContainerEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var ServiceWorkerContainer: {
+  export declare type ServiceWorkerContainerGlobal = {
     prototype: ServiceWorkerContainer;
     new(): ServiceWorkerContainer;
 };
@@ -2300,7 +2298,7 @@ and limitations under the License.
     removeEventListener<K extends keyof ServiceWorkerGlobalScopeEventMap>(type: K, listener: (this: ServiceWorkerGlobalScope, ev: ServiceWorkerGlobalScopeEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var ServiceWorkerGlobalScope: {
+  export declare type ServiceWorkerGlobalScopeGlobal = {
     prototype: ServiceWorkerGlobalScope;
     new(): ServiceWorkerGlobalScope;
 };
@@ -2326,7 +2324,7 @@ and limitations under the License.
     removeEventListener<K extends keyof ServiceWorkerRegistrationEventMap>(type: K, listener: (this: ServiceWorkerRegistration, ev: ServiceWorkerRegistrationEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var ServiceWorkerRegistration: {
+  export declare type ServiceWorkerRegistrationGlobal = {
     prototype: ServiceWorkerRegistration;
     new(): ServiceWorkerRegistration;
 };
@@ -2334,7 +2332,7 @@ and limitations under the License.
     estimate(): Promise<StorageEstimate>;
     persisted(): Promise<boolean>;
 }
-  export var StorageManager: {
+  export declare type StorageManagerGlobal = {
     prototype: StorageManager;
     new(): StorageManager;
 };
@@ -2358,7 +2356,7 @@ and limitations under the License.
     verify(algorithm: string | RsaPssParams | EcdsaParams | AesCmacParams, key: CryptoKey, signature: Int8Array | Int16Array | Int32Array | Uint8Array | Uint16Array | Uint32Array | Uint8ClampedArray | Float32Array | Float64Array | DataView | ArrayBuffer, data: Int8Array | Int16Array | Int32Array | Uint8Array | Uint16Array | Uint32Array | Uint8ClampedArray | Float32Array | Float64Array | DataView | ArrayBuffer): PromiseLike<boolean>;
     wrapKey(format: string, key: CryptoKey, wrappingKey: CryptoKey, wrapAlgorithm: string | Algorithm): PromiseLike<ArrayBuffer>;
 }
-  export var SubtleCrypto: {
+  export declare type SubtleCryptoGlobal = {
     prototype: SubtleCrypto;
     new(): SubtleCrypto;
 };
@@ -2366,7 +2364,7 @@ and limitations under the License.
     readonly lastChance: boolean;
     readonly tag: string;
 }
-  export var SyncEvent: {
+  export declare type SyncEventGlobal = {
     prototype: SyncEvent;
     new(type: string, init: SyncEventInit): SyncEvent;
 };
@@ -2374,7 +2372,7 @@ and limitations under the License.
     getTags(): Promise<string[]>;
     register(tag: string): Promise<void>;
 }
-  export var SyncManager: {
+  export declare type SyncManagerGlobal = {
     prototype: SyncManager;
     new(): SyncManager;
 };
@@ -2407,7 +2405,7 @@ and limitations under the License.
      */
     decode(input?: BufferSource, options?: TextDecodeOptions): string;
 }
-  export var TextDecoder: {
+  export declare type TextDecoderGlobal = {
     prototype: TextDecoder;
     new(label?: string, options?: TextDecoderOptions): TextDecoder;
 };
@@ -2421,7 +2419,7 @@ and limitations under the License.
      */
     encode(input?: string): Uint8Array;
 }
-  export var TextEncoder: {
+  export declare type TextEncoderGlobal = {
     prototype: TextEncoder;
     new(): TextEncoder;
 };
@@ -2442,7 +2440,7 @@ and limitations under the License.
     readonly ideographicBaseline: number;
     readonly width: number;
 }
-  export var TextMetrics: {
+  export declare type TextMetricsGlobal = {
     prototype: TextMetrics;
     new(): TextMetrics;
 };
@@ -2450,7 +2448,7 @@ and limitations under the License.
     readonly readable: ReadableStream<O>;
     readonly writable: WritableStream<I>;
 }
-  export var TransformStream: {
+  export declare type TransformStreamGlobal = {
     prototype: TransformStream;
     new<I = any, O = any>(transformer?: Transformer<I, O>, writableStrategy?: QueuingStrategy<I>, readableStrategy?: QueuingStrategy<O>): TransformStream<I, O>;
 };
@@ -2475,7 +2473,7 @@ and limitations under the License.
     username: string;
     toJSON(): string;
 }
-  export var URL: {
+  export declare type URLGlobal = {
     prototype: URL;
     new(url: string, base?: string | URL): URL;
     createObjectURL(object: any): string;
@@ -2509,7 +2507,7 @@ and limitations under the License.
     sort(): void;
     forEach(callbackfn: (value: string, key: string, parent: URLSearchParams) => void, thisArg?: any): void;
 }
-  export var URLSearchParams: {
+  export declare type URLSearchParamsGlobal = {
     prototype: URLSearchParams;
     new(init?: string[][] | Record<string, string> | string | URLSearchParams): URLSearchParams;
 };
@@ -2617,50 +2615,50 @@ and limitations under the License.
     readonly size: GLint;
     readonly type: GLenum;
 }
-  export var WebGLActiveInfo: {
+  export declare type WebGLActiveInfoGlobal = {
     prototype: WebGLActiveInfo;
     new(): WebGLActiveInfo;
 };
   export interface WebGLBuffer extends WebGLObject {
 }
-  export var WebGLBuffer: {
+  export declare type WebGLBufferGlobal = {
     prototype: WebGLBuffer;
     new(): WebGLBuffer;
 };
   export interface WebGLContextEvent extends Event {
     readonly statusMessage: string;
 }
-  export var WebGLContextEvent: {
+  export declare type WebGLContextEventGlobal = {
     prototype: WebGLContextEvent;
     new(type: string, eventInit?: WebGLContextEventInit): WebGLContextEvent;
 };
   export interface WebGLFramebuffer extends WebGLObject {
 }
-  export var WebGLFramebuffer: {
+  export declare type WebGLFramebufferGlobal = {
     prototype: WebGLFramebuffer;
     new(): WebGLFramebuffer;
 };
   export interface WebGLObject {
 }
-  export var WebGLObject: {
+  export declare type WebGLObjectGlobal = {
     prototype: WebGLObject;
     new(): WebGLObject;
 };
   export interface WebGLProgram extends WebGLObject {
 }
-  export var WebGLProgram: {
+  export declare type WebGLProgramGlobal = {
     prototype: WebGLProgram;
     new(): WebGLProgram;
 };
   export interface WebGLRenderbuffer extends WebGLObject {
 }
-  export var WebGLRenderbuffer: {
+  export declare type WebGLRenderbufferGlobal = {
     prototype: WebGLRenderbuffer;
     new(): WebGLRenderbuffer;
 };
   export interface WebGLRenderingContext extends WebGLRenderingContextBase {
 }
-  export var WebGLRenderingContext: {
+  export declare type WebGLRenderingContextGlobal = {
     prototype: WebGLRenderingContext;
     new(): WebGLRenderingContext;
     readonly ACTIVE_ATTRIBUTES: GLenum;
@@ -3423,7 +3421,7 @@ and limitations under the License.
 }
   export interface WebGLShader extends WebGLObject {
 }
-  export var WebGLShader: {
+  export declare type WebGLShaderGlobal = {
     prototype: WebGLShader;
     new(): WebGLShader;
 };
@@ -3432,19 +3430,19 @@ and limitations under the License.
     readonly rangeMax: GLint;
     readonly rangeMin: GLint;
 }
-  export var WebGLShaderPrecisionFormat: {
+  export declare type WebGLShaderPrecisionFormatGlobal = {
     prototype: WebGLShaderPrecisionFormat;
     new(): WebGLShaderPrecisionFormat;
 };
   export interface WebGLTexture extends WebGLObject {
 }
-  export var WebGLTexture: {
+  export declare type WebGLTextureGlobal = {
     prototype: WebGLTexture;
     new(): WebGLTexture;
 };
   export interface WebGLUniformLocation {
 }
-  export var WebGLUniformLocation: {
+  export declare type WebGLUniformLocationGlobal = {
     prototype: WebGLUniformLocation;
     new(): WebGLUniformLocation;
 };
@@ -3478,7 +3476,7 @@ and limitations under the License.
     removeEventListener<K extends keyof WebSocketEventMap>(type: K, listener: (this: WebSocket, ev: WebSocketEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var WebSocket: {
+  export declare type WebSocketGlobal = {
     prototype: WebSocket;
     new(url: string, protocols?: string | string[]): WebSocket;
     readonly CLOSED: number;
@@ -3497,7 +3495,7 @@ and limitations under the License.
     focus(): Promise<WindowClient>;
     navigate(url: string): Promise<WindowClient | null>;
 }
-  export var WindowClient: {
+  export declare type WindowClientGlobal = {
     prototype: WindowClient;
     new(): WindowClient;
 };
@@ -3533,7 +3531,7 @@ and limitations under the License.
     removeEventListener<K extends keyof WorkerEventMap>(type: K, listener: (this: Worker, ev: WorkerEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var Worker: {
+  export declare type WorkerGlobal = {
     prototype: Worker;
     new(stringUrl: string, options?: WorkerOptions): Worker;
 };
@@ -3553,7 +3551,7 @@ and limitations under the License.
     removeEventListener<K extends keyof WorkerGlobalScopeEventMap>(type: K, listener: (this: WorkerGlobalScope, ev: WorkerGlobalScopeEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var WorkerGlobalScope: {
+  export declare type WorkerGlobalScopeGlobal = {
     prototype: WorkerGlobalScope;
     new(): WorkerGlobalScope;
 };
@@ -3569,14 +3567,14 @@ and limitations under the License.
     readonly search: string;
     toString(): string;
 }
-  export var WorkerLocation: {
+  export declare type WorkerLocationGlobal = {
     prototype: WorkerLocation;
     new(): WorkerLocation;
 };
   export interface WorkerNavigator extends NavigatorID, NavigatorOnLine, NavigatorBeacon, NavigatorConcurrentHardware, NavigatorStorage {
     readonly serviceWorker: ServiceWorkerContainer;
 }
-  export var WorkerNavigator: {
+  export declare type WorkerNavigatorGlobal = {
     prototype: WorkerNavigator;
     new(): WorkerNavigator;
 };
@@ -3591,7 +3589,7 @@ and limitations under the License.
     abort(reason?: any): Promise<void>;
     getWriter(): WritableStreamDefaultWriter<W>;
 }
-  export var WritableStream: {
+  export declare type WritableStreamGlobal = {
     prototype: WritableStream;
     new<W = any>(underlyingSink?: UnderlyingSink<W>, strategy?: QueuingStrategy<W>): WritableStream<W>;
 };
@@ -3705,7 +3703,7 @@ and limitations under the License.
     removeEventListener<K extends keyof XMLHttpRequestEventMap>(type: K, listener: (this: XMLHttpRequest, ev: XMLHttpRequestEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var XMLHttpRequest: {
+  export declare type XMLHttpRequestGlobal = {
     prototype: XMLHttpRequest;
     new(): XMLHttpRequest;
     readonly DONE: number;
@@ -3736,7 +3734,7 @@ and limitations under the License.
     removeEventListener<K extends keyof XMLHttpRequestEventTargetEventMap>(type: K, listener: (this: XMLHttpRequestEventTarget, ev: XMLHttpRequestEventTargetEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var XMLHttpRequestEventTarget: {
+  export declare type XMLHttpRequestEventTargetGlobal = {
     prototype: XMLHttpRequestEventTarget;
     new(): XMLHttpRequestEventTarget;
 };
@@ -3746,11 +3744,12 @@ and limitations under the License.
     removeEventListener<K extends keyof XMLHttpRequestEventTargetEventMap>(type: K, listener: (this: XMLHttpRequestUpload, ev: XMLHttpRequestEventTargetEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var XMLHttpRequestUpload: {
+  export declare type XMLHttpRequestUploadGlobal = {
     prototype: XMLHttpRequestUpload;
     new(): XMLHttpRequestUpload;
 };
-  export type EventListenerOrEventListenerObject = EventListener | EventListenerObject;
+
+declare type EventListenerOrEventListenerObject = EventListener | EventListenerObject;
   export interface EventHandlerNonNull {
     (event: Event): any;
 }
@@ -3787,53 +3786,53 @@ and limitations under the License.
   export interface WritableStreamErrorCallback {
     (reason: any): void | PromiseLike<void>;
 }
-  export var onmessage: ((this: DedicatedWorkerGlobalScope, ev: MessageEvent) => any) | null;
-  export function close(): void;
-  export function postMessage(message: any, transfer?: Transferable[]): void;
+  export declare type onmessageGlobal = ((this: DedicatedWorkerGlobalScope, ev: MessageEvent) => any) | null;
+  export type close = () =>  void;
+  export type postMessage = (message: any, transfer?: Transferable[]) =>  void;
 /**
  * Dispatches a synthetic event event to target and returns true
  * if either event's cancelable attribute value is false or its preventDefault() method was not invoked, and false otherwise.
  */
-  export function dispatchEvent(event: Event): boolean;
-  export var caches: CacheStorage;
-  export var isSecureContext: boolean;
-  export var location: WorkerLocation;
-  export var onerror: ((this: DedicatedWorkerGlobalScope, ev: ErrorEvent) => any) | null;
-  export var performance: Performance;
-  export var self: WorkerGlobalScope;
-  export function msWriteProfilerMark(profilerMarkName: string): void;
+  export type dispatchEvent = (event: Event) =>  boolean;
+  export declare type cachesGlobal = CacheStorage;
+  export declare type isSecureContextGlobal = boolean;
+  export declare type locationGlobal = WorkerLocation;
+  export declare type onerrorGlobal = ((this: DedicatedWorkerGlobalScope, ev: ErrorEvent) => any) | null;
+  export declare type performanceGlobal = Performance;
+  export declare type selfGlobal = WorkerGlobalScope;
+  export type msWriteProfilerMark = (profilerMarkName: string) =>  void;
 /**
  * Dispatches a synthetic event event to target and returns true
  * if either event's cancelable attribute value is false or its preventDefault() method was not invoked, and false otherwise.
  */
-  export function dispatchEvent(event: Event): boolean;
-  export var indexedDB: IDBFactory;
-  export var msIndexedDB: IDBFactory;
-  export var navigator: WorkerNavigator;
-  export function importScripts(...urls: string[]): void;
-  export function atob(encodedString: string): string;
-  export function btoa(rawString: string): string;
-  export var console: Console;
-  export function fetch(input: RequestInfo, init?: RequestInit): Promise<Response>;
-  export var caches: CacheStorage;
-  export var crypto: Crypto;
-  export var indexedDB: IDBFactory;
-  export var origin: string;
-  export var performance: Performance;
-  export function atob(data: string): string;
-  export function btoa(data: string): string;
-  export function clearInterval(handle?: number): void;
-  export function clearTimeout(handle?: number): void;
-  export function createImageBitmap(image: ImageBitmapSource): Promise<ImageBitmap>;
-  export function createImageBitmap(image: ImageBitmapSource, sx: number, sy: number, sw: number, sh: number): Promise<ImageBitmap>;
-  export function fetch(input: RequestInfo, init?: RequestInit): Promise<Response>;
-  export function queueMicrotask(callback: Function): void;
-  export function setInterval(handler: TimerHandler, timeout?: number, ...arguments: any[]): number;
-  export function setTimeout(handler: TimerHandler, timeout?: number, ...arguments: any[]): number;
-  export function addEventListener<K extends keyof DedicatedWorkerGlobalScopeEventMap>(type: K, listener: (this: DedicatedWorkerGlobalScope, ev: DedicatedWorkerGlobalScopeEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
-  export function addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
-  export function removeEventListener<K extends keyof DedicatedWorkerGlobalScopeEventMap>(type: K, listener: (this: DedicatedWorkerGlobalScope, ev: DedicatedWorkerGlobalScopeEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
-  export function removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+  export type dispatchEvent = (event: Event) =>  boolean;
+  export declare type indexedDBGlobal = IDBFactory;
+  export declare type msIndexedDBGlobal = IDBFactory;
+  export declare type navigatorGlobal = WorkerNavigator;
+  export type importScripts = (...urls: string[]) =>  void;
+  export type atob = (encodedString: string) =>  string;
+  export type btoa = (rawString: string) =>  string;
+  export declare type consoleGlobal = Console;
+  export type fetch = (input: RequestInfo, init?: RequestInit) =>  Promise<Response>;
+  export declare type cachesGlobal = CacheStorage;
+  export declare type cryptoGlobal = Crypto;
+  export declare type indexedDBGlobal = IDBFactory;
+  export declare type originGlobal = string;
+  export declare type performanceGlobal = Performance;
+  export type atob = (data: string) =>  string;
+  export type btoa = (data: string) =>  string;
+  export type clearInterval = (handle?: number) =>  void;
+  export type clearTimeout = (handle?: number) =>  void;
+  export type createImageBitmap = (image: ImageBitmapSource) =>  Promise<ImageBitmap>;
+  export type createImageBitmap = (image: ImageBitmapSource, sx: number, sy: number, sw: number, sh: number) =>  Promise<ImageBitmap>;
+  export type fetch = (input: RequestInfo, init?: RequestInit) =>  Promise<Response>;
+  export type queueMicrotask = (callback: Function) =>  void;
+  export type setInterval = (handler: TimerHandler, timeout?: number, ...arguments: any[]) =>  number;
+  export type setTimeout = (handler: TimerHandler, timeout?: number, ...arguments: any[]) =>  number;
+  export type addEventListener = <K extends keyof DedicatedWorkerGlobalScopeEventMap>(type: K, listener: (this: DedicatedWorkerGlobalScope, ev: DedicatedWorkerGlobalScopeEventMap[K]) => any, options?: boolean | AddEventListenerOptions) =>  void;
+  export type addEventListener = (type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions) =>  void;
+  export type removeEventListener = <K extends keyof DedicatedWorkerGlobalScopeEventMap>(type: K, listener: (this: DedicatedWorkerGlobalScope, ev: DedicatedWorkerGlobalScopeEventMap[K]) => any, options?: boolean | EventListenerOptions) =>  void;
+  export type removeEventListener = (type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions) =>  void;
   export type BlobPart = BufferSource | Blob | string;
   export type HeadersInit = Headers | string[][] | Record<string, string>;
   export type BodyInit = Blob | BufferSource | FormData | URLSearchParams | ReadableStream<Uint8Array> | string;
@@ -3894,5 +3893,3 @@ and limitations under the License.
   export type WebGLPowerPreference = "default" | "low-power" | "high-performance";
   export type WorkerType = "classic" | "module";
   export type XMLHttpRequestResponseType = "" | "arraybuffer" | "blob" | "document" | "json" | "text";
-
-}

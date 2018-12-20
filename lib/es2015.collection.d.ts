@@ -1,5 +1,3 @@
-
-export namespace ES2015_COLLECTION {
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -31,7 +29,7 @@ and limitations under the License.
     new<K, V>(entries?: ReadonlyArray<[K, V]> | null): Map<K, V>;
     readonly prototype: Map<any, any>;
 }
-  export var Map: MapConstructor;
+  export declare type MapGlobal = MapConstructor;
   export interface ReadonlyMap<K, V> {
     forEach(callbackfn: (value: V, key: K, map: ReadonlyMap<K, V>) => void, thisArg?: any): void;
     get(key: K): V | undefined;
@@ -48,7 +46,7 @@ and limitations under the License.
     new <K extends object = object, V = any>(entries?: ReadonlyArray<[K, V]> | null): WeakMap<K, V>;
     readonly prototype: WeakMap<object, any>;
 }
-  export var WeakMap: WeakMapConstructor;
+  export declare type WeakMapGlobal = WeakMapConstructor;
   export interface Set<T> {
     add(value: T): this;
     clear(): void;
@@ -61,7 +59,7 @@ and limitations under the License.
     new <T = any>(values?: ReadonlyArray<T> | null): Set<T>;
     readonly prototype: Set<any>;
 }
-  export var Set: SetConstructor;
+  export declare type SetGlobal = SetConstructor;
   export interface ReadonlySet<T> {
     forEach(callbackfn: (value: T, value2: T, set: ReadonlySet<T>) => void, thisArg?: any): void;
     has(value: T): boolean;
@@ -76,6 +74,4 @@ and limitations under the License.
     new <T extends object = object>(values?: ReadonlyArray<T> | null): WeakSet<T>;
     readonly prototype: WeakSet<object>;
 }
-  export var WeakSet: WeakSetConstructor;
-
-}
+  export declare type WeakSetGlobal = WeakSetConstructor;

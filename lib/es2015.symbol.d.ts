@@ -1,5 +1,3 @@
-
-export namespace ES2015_SYMBOL {
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -43,5 +41,4 @@ and limitations under the License.
      */
     keyFor(sym: symbol): string | undefined;
 }
-  export var Symbol: SymbolConstructor;
-}
+  export declare type SymbolGlobal = SymbolConstructor;

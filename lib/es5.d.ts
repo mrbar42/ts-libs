@@ -1,5 +1,3 @@
-
-export namespace ES5 {
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -22,14 +20,14 @@ and limitations under the License.
 /////////////////////////////
 /// ECMAScript APIs
 /////////////////////////////
-  export const NaN: number;
-  export const Infinity: number;
+  export declare type NaNGlobal = number;
+  export declare type InfinityGlobal = number;
 
 /**
   * Evaluates JavaScript code and executes it.
   * @param x A String value that contains valid JavaScript code.
   */
-  export function eval(x: string): any;
+  export type eval = (x: string) =>  any;
 
 /**
   * Converts A string to an integer.
@@ -38,61 +36,61 @@ and limitations under the License.
   * If this argument is not supplied, strings with a prefix of '0x' are considered hexadecimal.
   * All other strings are considered decimal.
   */
-  export function parseInt(s: string, radix?: number): number;
+  export type parseInt = (s: string, radix?: number) =>  number;
 
 /**
   * Converts a string to a floating-point number.
   * @param string A string that contains a floating-point number.
   */
-  export function parseFloat(string: string): number;
+  export type parseFloat = (string: string) =>  number;
 
 /**
   * Returns a Boolean value that indicates whether a value is the reserved value NaN (not a number).
   * @param number A numeric value.
   */
-  export function isNaN(number: number): boolean;
+  export type isNaN = (number: number) =>  boolean;
 
 /**
   * Determines whether a supplied number is finite.
   * @param number Any numeric value.
   */
-  export function isFinite(number: number): boolean;
+  export type isFinite = (number: number) =>  boolean;
 
 /**
   * Gets the unencoded version of an encoded Uniform Resource Identifier (URI).
   * @param encodedURI A value representing an encoded URI.
   */
-  export function decodeURI(encodedURI: string): string;
+  export type decodeURI = (encodedURI: string) =>  string;
 
 /**
   * Gets the unencoded version of an encoded component of a Uniform Resource Identifier (URI).
   * @param encodedURIComponent A value representing an encoded URI component.
   */
-  export function decodeURIComponent(encodedURIComponent: string): string;
+  export type decodeURIComponent = (encodedURIComponent: string) =>  string;
 
 /**
   * Encodes a text string as a valid Uniform Resource Identifier (URI)
   * @param uri A value representing an encoded URI.
   */
-  export function encodeURI(uri: string): string;
+  export type encodeURI = (uri: string) =>  string;
 
 /**
   * Encodes a text string as a valid component of a Uniform Resource Identifier (URI).
   * @param uriComponent A value representing an encoded URI component.
   */
-  export function encodeURIComponent(uriComponent: string): string;
+  export type encodeURIComponent = (uriComponent: string) =>  string;
 
 /**
   * Computes a new string in which certain characters have been replaced by a hexadecimal escape sequence.
   * @param string A string value
   */
-  export function escape(string: string): string;
+  export type escape = (string: string) =>  string;
 
 /**
   * Computes a new string in which hexadecimal escape sequences are replaced with the character that it represents.
   * @param string A string value
   */
-  export function unescape(string: string): string;
+  export type unescape = (string: string) =>  string;
   export interface Symbol {
   /** Returns a string representation of an object. */
   toString(): string;
@@ -100,7 +98,8 @@ and limitations under the License.
   /** Returns the primitive value of the specified object. */
   valueOf(): symbol;
 }
-  export type PropertyKey = string | number | symbol;
+
+declare type PropertyKey = string | number | symbol;
   export interface PropertyDescriptor {
     configurable?: boolean;
     enumerable?: boolean;
@@ -258,7 +257,7 @@ and limitations under the License.
 /**
   * Provides functionality common to all JavaScript objects.
   */
-  export const Object: ObjectConstructor;
+  export declare type ObjectGlobal = ObjectConstructor;
 
 /**
   * Creates a new function.
@@ -305,7 +304,7 @@ and limitations under the License.
     (...args: string[]): Function;
     readonly prototype: Function;
 }
-  export const Function: FunctionConstructor;
+  export declare type FunctionGlobal = FunctionConstructor;
   export interface CallableFunction extends Function {
     /**
       * Calls the function with the specified object as the this value and the elements of specified array as the arguments.
@@ -501,7 +500,7 @@ and limitations under the License.
 /**
   * Allows manipulation and formatting of text strings and determination and location of substrings within strings.
   */
-  export const String: StringConstructor;
+  export declare type StringGlobal = StringConstructor;
   export interface Boolean {
     /** Returns the primitive value of the specified object. */
     valueOf(): boolean;
@@ -511,7 +510,7 @@ and limitations under the License.
     (value?: any): boolean;
     readonly prototype: Boolean;
 }
-  export const Boolean: BooleanConstructor;
+  export declare type BooleanGlobal = BooleanConstructor;
   export interface Number {
     /**
       * Returns a string representation of an object.
@@ -571,7 +570,7 @@ and limitations under the License.
 }
 
 /** An object that represents a number of any kind. All JavaScript numbers are 64-bit floating-point numbers. */
-  export const Number: NumberConstructor;
+  export declare type NumberGlobal = NumberConstructor;
   export interface TemplateStringsArray extends ReadonlyArray<string> {
     readonly raw: ReadonlyArray<string>;
 }
@@ -693,7 +692,7 @@ and limitations under the License.
     tan(x: number): number;
 }
 /** An intrinsic object that provides basic mathematics functionality and constants. */
-  export const Math: Math;
+  export declare type MathGlobal = Math;
 
 /** Enables basic storage and retrieval of dates and times. */
   export interface Date {
@@ -872,7 +871,7 @@ and limitations under the License.
     UTC(year: number, month: number, date?: number, hours?: number, minutes?: number, seconds?: number, ms?: number): number;
     now(): number;
 }
-  export const Date: DateConstructor;
+  export declare type DateGlobal = DateConstructor;
   export interface RegExpMatchArray extends Array<string> {
     index?: number;
     input?: string;
@@ -930,7 +929,7 @@ and limitations under the License.
     $9: string;
     lastMatch: string;
 }
-  export const RegExp: RegExpConstructor;
+  export declare type RegExpGlobal = RegExpConstructor;
   export interface Error {
     name: string;
     message: string;
@@ -941,7 +940,7 @@ and limitations under the License.
     (message?: string): Error;
     readonly prototype: Error;
 }
-  export const Error: ErrorConstructor;
+  export declare type ErrorGlobal = ErrorConstructor;
   export interface EvalError extends Error {
 }
   export interface EvalErrorConstructor {
@@ -949,7 +948,7 @@ and limitations under the License.
     (message?: string): EvalError;
     readonly prototype: EvalError;
 }
-  export const EvalError: EvalErrorConstructor;
+  export declare type EvalErrorGlobal = EvalErrorConstructor;
   export interface RangeError extends Error {
 }
   export interface RangeErrorConstructor {
@@ -957,7 +956,7 @@ and limitations under the License.
     (message?: string): RangeError;
     readonly prototype: RangeError;
 }
-  export const RangeError: RangeErrorConstructor;
+  export declare type RangeErrorGlobal = RangeErrorConstructor;
   export interface ReferenceError extends Error {
 }
   export interface ReferenceErrorConstructor {
@@ -965,7 +964,7 @@ and limitations under the License.
     (message?: string): ReferenceError;
     readonly prototype: ReferenceError;
 }
-  export const ReferenceError: ReferenceErrorConstructor;
+  export declare type ReferenceErrorGlobal = ReferenceErrorConstructor;
   export interface SyntaxError extends Error {
 }
   export interface SyntaxErrorConstructor {
@@ -973,7 +972,7 @@ and limitations under the License.
     (message?: string): SyntaxError;
     readonly prototype: SyntaxError;
 }
-  export const SyntaxError: SyntaxErrorConstructor;
+  export declare type SyntaxErrorGlobal = SyntaxErrorConstructor;
   export interface TypeError extends Error {
 }
   export interface TypeErrorConstructor {
@@ -981,7 +980,7 @@ and limitations under the License.
     (message?: string): TypeError;
     readonly prototype: TypeError;
 }
-  export const TypeError: TypeErrorConstructor;
+  export declare type TypeErrorGlobal = TypeErrorConstructor;
   export interface URIError extends Error {
 }
   export interface URIErrorConstructor {
@@ -989,7 +988,7 @@ and limitations under the License.
     (message?: string): URIError;
     readonly prototype: URIError;
 }
-  export const URIError: URIErrorConstructor;
+  export declare type URIErrorGlobal = URIErrorConstructor;
   export interface JSON {
     /**
       * Converts a JavaScript Object Notation (JSON) string into an object.
@@ -1017,7 +1016,7 @@ and limitations under the License.
 /**
   * An intrinsic object that provides functions to convert JavaScript values to and from the JavaScript Object Notation (JSON) format.
   */
-  export const JSON: JSON;
+  export declare type JSONGlobal = JSON;
 
 
 /////////////////////////////
@@ -1301,7 +1300,7 @@ and limitations under the License.
     isArray(arg: any): arg is Array<any>;
     readonly prototype: Array<any>;
 }
-  export const Array: ArrayConstructor;
+  export declare type ArrayGlobal = ArrayConstructor;
   export interface TypedPropertyDescriptor<T> {
     enumerable?: boolean;
     configurable?: boolean;
@@ -1310,11 +1309,13 @@ and limitations under the License.
     get?: () => T;
     set?: (value: T) => void;
 }
-  export type ClassDecorator = <TFunction extends Function>(target: TFunction) => TFunction | void;
-  export type PropertyDecorator = (target: Object, propertyKey: string | symbol) => void;
-  export type MethodDecorator = <T>(target: Object, propertyKey: string | symbol, descriptor: TypedPropertyDescriptor<T>) => TypedPropertyDescriptor<T> | void;
-  export type ParameterDecorator = (target: Object, propertyKey: string | symbol, parameterIndex: number) => void;
-  export type PromiseConstructorLike = new <T>(executor: (resolve: (value?: T | PromiseLike<T>) => void, reject: (reason?: any) => void) => void) => PromiseLike<T>;
+
+declare type ClassDecorator = <TFunction extends Function>(target: TFunction) => TFunction | void;
+declare type PropertyDecorator = (target: Object, propertyKey: string | symbol) => void;
+declare type MethodDecorator = <T>(target: Object, propertyKey: string | symbol, descriptor: TypedPropertyDescriptor<T>) => TypedPropertyDescriptor<T> | void;
+declare type ParameterDecorator = (target: Object, propertyKey: string | symbol, parameterIndex: number) => void;
+
+declare type PromiseConstructorLike = new <T>(executor: (resolve: (value?: T | PromiseLike<T>) => void, reject: (reason?: any) => void) => void) => PromiseLike<T>;
   export interface PromiseLike<T> {
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -1454,7 +1455,7 @@ and limitations under the License.
     new(byteLength: number): ArrayBuffer;
     isView(arg: any): arg is ArrayBufferView;
 }
-  export const ArrayBuffer: ArrayBufferConstructor;
+  export declare type ArrayBufferGlobal = ArrayBufferConstructor;
   export interface ArrayBufferView {
     /**
       * The ArrayBuffer instance referenced by the array.
@@ -1601,7 +1602,7 @@ and limitations under the License.
   export interface DataViewConstructor {
     new(buffer: ArrayBufferLike, byteOffset?: number, byteLength?: number): DataView;
 }
-  export const DataView: DataViewConstructor;
+  export declare type DataViewGlobal = DataViewConstructor;
 
 /**
   * A typed array of 8-bit integer values. The contents are initialized to 0. If the requested
@@ -1870,7 +1871,7 @@ and limitations under the License.
 
 
 }
-  export const Int8Array: Int8ArrayConstructor;
+  export declare type Int8ArrayGlobal = Int8ArrayConstructor;
 
 /**
   * A typed array of 8-bit unsigned integer values. The contents are initialized to 0. If the
@@ -2138,7 +2139,7 @@ and limitations under the License.
     from(arrayLike: ArrayLike<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Uint8Array;
 
 }
-  export const Uint8Array: Uint8ArrayConstructor;
+  export declare type Uint8ArrayGlobal = Uint8ArrayConstructor;
 
 /**
   * A typed array of 8-bit unsigned integer (clamped) values. The contents are initialized to 0.
@@ -2405,7 +2406,7 @@ and limitations under the License.
       */
     from(arrayLike: ArrayLike<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Uint8ClampedArray;
 }
-  export const Uint8ClampedArray: Uint8ClampedArrayConstructor;
+  export declare type Uint8ClampedArrayGlobal = Uint8ClampedArrayConstructor;
 
 /**
   * A typed array of 16-bit signed integer values. The contents are initialized to 0. If the
@@ -2673,7 +2674,7 @@ and limitations under the License.
 
 
 }
-  export const Int16Array: Int16ArrayConstructor;
+  export declare type Int16ArrayGlobal = Int16ArrayConstructor;
 
 /**
   * A typed array of 16-bit unsigned integer values. The contents are initialized to 0. If the
@@ -2942,7 +2943,7 @@ and limitations under the License.
 
 
 }
-  export const Uint16Array: Uint16ArrayConstructor;
+  export declare type Uint16ArrayGlobal = Uint16ArrayConstructor;
 /**
   * A typed array of 32-bit signed integer values. The contents are initialized to 0. If the
   * requested number of bytes could not be allocated an exception is raised.
@@ -3209,7 +3210,7 @@ and limitations under the License.
     from(arrayLike: ArrayLike<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Int32Array;
 
 }
-  export const Int32Array: Int32ArrayConstructor;
+  export declare type Int32ArrayGlobal = Int32ArrayConstructor;
 
 /**
   * A typed array of 32-bit unsigned integer values. The contents are initialized to 0. If the
@@ -3476,7 +3477,7 @@ and limitations under the License.
     from(arrayLike: ArrayLike<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Uint32Array;
 
 }
-  export const Uint32Array: Uint32ArrayConstructor;
+  export declare type Uint32ArrayGlobal = Uint32ArrayConstructor;
 
 /**
   * A typed array of 32-bit float values. The contents are initialized to 0. If the requested number
@@ -3745,7 +3746,7 @@ and limitations under the License.
 
 
 }
-  export const Float32Array: Float32ArrayConstructor;
+  export declare type Float32ArrayGlobal = Float32ArrayConstructor;
 
 /**
   * A typed array of 64-bit float values. The contents are initialized to 0. If the requested
@@ -4013,12 +4014,13 @@ and limitations under the License.
     from(arrayLike: ArrayLike<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Float64Array;
 
 }
-  export const Float64Array: Float64ArrayConstructor;
+  export declare type Float64ArrayGlobal = Float64ArrayConstructor;
 
 /////////////////////////////
 /// ECMAScript Internationalization API
 /////////////////////////////
-  export namespace Intl {
+
+declare namespace Intl {
   export interface CollatorOptions {
         usage?: string;
         localeMatcher?: string;
@@ -4157,6 +4159,4 @@ and limitations under the License.
       * @param options An object that contains one or more properties that specify comparison options.
       */
     toLocaleTimeString(locales?: string | string[], options?: Intl.DateTimeFormatOptions): string;
-}
-
 }
