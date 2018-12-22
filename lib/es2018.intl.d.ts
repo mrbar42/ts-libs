@@ -1,5 +1,5 @@
+export {};
 
-export namespace ES2018_INTL {
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -14,15 +14,12 @@ MERCHANTABLITY OR NON-INFRINGEMENT.
 See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ***************************************************************************** */
-
-
-
-  export namespace Intl {
-  export interface PluralRulesOptions {
+export namespace Intl {
+export interface PluralRulesOptions {
         localeMatcher?: 'lookup' | 'best fit';
         type?: 'cardinal' | 'ordinal';
     }
-  export interface ResolvedPluralRulesOptions {
+export interface ResolvedPluralRulesOptions {
         locale: string;
         pluralCategories: string[];
         type: 'cardinal' | 'ordinal';
@@ -32,7 +29,7 @@ and limitations under the License.
         minimumSignificantDigits: number;
         maximumSignificantDigits: number;
     }
-  export interface PluralRules {
+export interface PluralRules {
         resolvedOptions(): ResolvedPluralRulesOptions;
         select(n: number): string;
     }
@@ -45,6 +42,4 @@ and limitations under the License.
             options?: PluralRulesOptions,
         ): string[];
     };
-}
-
 }

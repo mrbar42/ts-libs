@@ -1,5 +1,5 @@
+export {};
 
-export namespace ES2015_PROXY {
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -14,10 +14,7 @@ MERCHANTABLITY OR NON-INFRINGEMENT.
 See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ***************************************************************************** */
-
-
-
-  export interface ProxyHandler<T extends object> {
+export interface ProxyHandler<T extends object> {
     getPrototypeOf? (target: T): object | null;
     setPrototypeOf? (target: T, v: any): boolean;
     isExtensible? (target: T): boolean;
@@ -33,10 +30,8 @@ and limitations under the License.
     apply? (target: T, thisArg: any, argArray?: any): any;
     construct? (target: T, argArray: any, newTarget?: any): object;
 }
-  export interface ProxyConstructor {
+export interface ProxyConstructor {
     revocable<T extends object>(target: T, handler: ProxyHandler<T>): { proxy: T; revoke: () => void; };
     new <T extends object>(target: T, handler: ProxyHandler<T>): T;
 }
-  export var Proxy: ProxyConstructor;
-
-}
+export type Proxy =  ProxyConstructor;

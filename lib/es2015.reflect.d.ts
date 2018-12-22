@@ -1,5 +1,5 @@
+export {};
 
-export namespace ES2015_REFLECT {
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -14,10 +14,7 @@ MERCHANTABLITY OR NON-INFRINGEMENT.
 See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ***************************************************************************** */
-
-
-
-  export namespace Reflect {
+export namespace Reflect {
     function apply(target: Function, thisArgument: any, argumentsList: ArrayLike<any>): any;
     function construct(target: Function, argumentsList: ArrayLike<any>, newTarget?: any): any;
     function defineProperty(target: object, propertyKey: PropertyKey, attributes: PropertyDescriptor): boolean;
@@ -31,6 +28,4 @@ and limitations under the License.
     function preventExtensions(target: object): boolean;
     function set(target: object, propertyKey: PropertyKey, value: any, receiver?: any): boolean;
     function setPrototypeOf(target: object, proto: any): boolean;
-}
-
 }

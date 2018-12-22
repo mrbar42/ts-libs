@@ -1,5 +1,5 @@
+export {};
 
-export namespace ES2015_CORE {
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -14,10 +14,7 @@ MERCHANTABLITY OR NON-INFRINGEMENT.
 See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ***************************************************************************** */
-
-
-
-  export interface Array<T> {
+export interface Array<T> {
     /**
      * Returns the value of the first element in the array where predicate is true, and undefined
      * otherwise.
@@ -62,7 +59,7 @@ and limitations under the License.
      */
     copyWithin(target: number, start: number, end?: number): this;
 }
-  export interface ArrayConstructor {
+export interface ArrayConstructor {
     /**
      * Creates an array from an array-like object.
      * @param arrayLike An array-like object to convert to an array.
@@ -83,16 +80,16 @@ and limitations under the License.
      */
     of<T>(...items: T[]): T[];
 }
-  export interface DateConstructor {
+export interface DateConstructor {
     new (value: number | string | Date): Date;
 }
-  export interface Function {
+export interface Function {
     /**
      * Returns the name of the function. Function names are read-only and can not be changed.
      */
     readonly name: string;
 }
-  export interface Math {
+export interface Math {
     /**
      * Returns the number of leading zero bits in the 32-bit binary representation of a number.
      * @param x A numeric expression.
@@ -204,7 +201,7 @@ and limitations under the License.
      */
     cbrt(x: number): number;
 }
-  export interface NumberConstructor {
+export interface NumberConstructor {
     /**
      * The value of Number.EPSILON is the difference between 1 and the smallest value greater than 1
      * that is representable as a Number value, which is approximately:
@@ -269,7 +266,7 @@ and limitations under the License.
      */
     parseInt(string: string, radix?: number): number;
 }
-  export interface ObjectConstructor {
+export interface ObjectConstructor {
     /**
      * Copy the values of all of the enumerable own properties from one or more source objects to a
      * target object. Returns the target object.
@@ -325,7 +322,7 @@ and limitations under the License.
      */
     setPrototypeOf(o: any, proto: object | null): any;
 }
-  export interface ReadonlyArray<T> {
+export interface ReadonlyArray<T> {
     /**
      * Returns the value of the first element in the array where predicate is true, and undefined
      * otherwise.
@@ -349,7 +346,7 @@ and limitations under the License.
      */
     findIndex(predicate: (value: T, index: number, obj: ReadonlyArray<T>) => boolean, thisArg?: any): number;
 }
-  export interface RegExp {
+export interface RegExp {
     /**
      * Returns a string indicating the flags of the regular expression in question. This field is read-only.
      * The characters in this string are sequenced and concatenated in the following order:
@@ -376,11 +373,11 @@ and limitations under the License.
      */
     readonly unicode: boolean;
 }
-  export interface RegExpConstructor {
+export interface RegExpConstructor {
     new (pattern: RegExp, flags?: string): RegExp;
     (pattern: RegExp, flags?: string): RegExp;
 }
-  export interface String {
+export interface String {
     /**
      * Returns a nonnegative integer Number less than 1114112 (0x110000) that is the code point
      * value of the UTF-16 encoded code point starting at the string element at position pos in
@@ -481,7 +478,7 @@ and limitations under the License.
     /** Returns a <sup> HTML element */
     sup(): string;
 }
-  export interface StringConstructor {
+export interface StringConstructor {
     /**
      * Return the String value whose elements are, in order, the elements in the List elements.
      * If length is 0, the empty string is returned.
@@ -496,6 +493,4 @@ and limitations under the License.
      * @param substitutions A set of substitution values.
      */
     raw(template: TemplateStringsArray, ...substitutions: any[]): string;
-}
-
 }

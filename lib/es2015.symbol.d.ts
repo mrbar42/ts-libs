@@ -1,5 +1,5 @@
+export {};
 
-export namespace ES2015_SYMBOL {
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -14,10 +14,7 @@ MERCHANTABLITY OR NON-INFRINGEMENT.
 See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ***************************************************************************** */
-
-
-
-  export interface SymbolConstructor {
+export interface SymbolConstructor {
     /**
      * A reference to the prototype.
      */
@@ -43,5 +40,4 @@ and limitations under the License.
      */
     keyFor(sym: symbol): string | undefined;
 }
-  export var Symbol: SymbolConstructor;
-}
+export type Symbol =  SymbolConstructor;

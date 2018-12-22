@@ -1,5 +1,5 @@
+export {};
 
-export namespace ESNEXT_SYMBOL {
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -14,14 +14,9 @@ MERCHANTABLITY OR NON-INFRINGEMENT.
 See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ***************************************************************************** */
-
-
-
-  export interface Symbol {
+export interface Symbol {
     /**
      * expose the [[Description]] internal slot of a symbol directly
      */
     readonly description: string;
-}
-
 }

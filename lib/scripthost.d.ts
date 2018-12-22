@@ -1,5 +1,5 @@
+export {};
 
-export namespace SCRIPTHOST {
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -24,16 +24,16 @@ and limitations under the License.
 /////////////////////////////
 /// Windows Script Host APIS
 /////////////////////////////
-  export interface ActiveXObject {
+export interface ActiveXObject {
     new (s: string): any;
 }
-  export var ActiveXObject: ActiveXObject;
-  export interface ITextWriter {
+export type ActiveXObjectGlobal =  ActiveXObject;
+export interface ITextWriter {
     Write(s: string): void;
     WriteLine(s: string): void;
     Close(): void;
 }
-  export interface TextStreamBase {
+export interface TextStreamBase {
     /**
      * The column number of the current character position in an input stream.
      */
@@ -51,7 +51,7 @@ and limitations under the License.
      */
     Close(): void;
 }
-  export interface TextStreamWriter extends TextStreamBase {
+export interface TextStreamWriter extends TextStreamBase {
     /**
      * Sends a string to an output stream.
      */
@@ -67,7 +67,7 @@ and limitations under the License.
      */
     WriteLine(s: string): void;
 }
-  export interface TextStreamReader extends TextStreamBase {
+export interface TextStreamReader extends TextStreamBase {
     /**
      * Returns a specified number of characters from an input stream, starting at the current pointer position.
      * Does not return until the ENTER key is pressed.
@@ -111,7 +111,7 @@ and limitations under the License.
      */
     AtEndOfStream: boolean;
 }
-  export var WScript: {
+export type WScript =  {
     /**
      * Outputs text to either a message box (under WScript.exe) or the command console window followed by
      * a newline (under CScript.exe).
@@ -218,12 +218,11 @@ and limitations under the License.
 /**
  * WSH is an alias for WScript under Windows Script Host
  */
-  export var WSH: typeof WScript;
 
 /**
  * Represents an Automation SAFEARRAY
  */
-  export class SafeArray<T = any> {
+declare class SafeArray<T = any> {
     private constructor();
     private SafeArray_typekey: SafeArray<T>;
 }
@@ -231,7 +230,7 @@ and limitations under the License.
 /**
  * Allows enumerating over a COM collection, which may not have indexed item access.
  */
-  export interface Enumerator<T = any> {
+export interface Enumerator<T = any> {
     /**
      * Returns true if the current item is the last one in the collection, or the collection is empty,
      * or the current item is undefined.
@@ -255,17 +254,17 @@ and limitations under the License.
      */
     moveNext(): void;
 }
-  export interface EnumeratorConstructor {
+export interface EnumeratorConstructor {
     new <T = any>(safearray: SafeArray<T>): Enumerator<T>;
     new <T = any>(collection: { Item(index: any): T }): Enumerator<T>;
     new <T = any>(collection: any): Enumerator<T>;
 }
-  export var Enumerator: EnumeratorConstructor;
+export type EnumeratorGlobal =  EnumeratorConstructor;
 
 /**
  * Enables reading from a COM safe array, which might have an alternate lower bound, or multiple dimensions.
  */
-  export interface VBArray<T = any> {
+export interface VBArray<T = any> {
     /**
      * Returns the number of dimensions (1-based).
      */
@@ -295,23 +294,21 @@ and limitations under the License.
      */
     toArray(): T[];
 }
-  export interface VBArrayConstructor {
+export interface VBArrayConstructor {
     new <T = any>(safeArray: SafeArray<T>): VBArray<T>;
 }
-  export var VBArray: VBArrayConstructor;
+export type VBArrayGlobal =  VBArrayConstructor;
 
 /**
  * Automation date (VT_DATE)
  */
-  export class VarDate {
+declare class VarDate {
     private constructor();
     private VarDate_typekey: VarDate;
 }
-  export interface DateConstructor {
+export interface DateConstructor {
     new (vd: VarDate): Date;
 }
-  export interface Date {
+export interface Date {
     getVarDate: () => VarDate;
-}
-
 }

@@ -1,5 +1,5 @@
+export {};
 
-export namespace ESNEXT_ARRAY {
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -14,10 +14,7 @@ MERCHANTABLITY OR NON-INFRINGEMENT.
 See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ***************************************************************************** */
-
-
-
-  export interface ReadonlyArray<T> {
+export interface ReadonlyArray<T> {
 
     /**
      * Calls a defined callback function on each element of an array. Then, flattens the result into
@@ -130,7 +127,7 @@ and limitations under the License.
      */
     flat<U>(depth?: number): any[];
   }
-  export interface Array<T> {
+export interface Array<T> {
 
     /**
      * Calls a defined callback function on each element of an array. Then, flattens the result into
@@ -218,6 +215,4 @@ and limitations under the License.
      * @param depth The maximum recursion depth
      */
     flat<U>(depth?: number): any[];
-}
-
 }

@@ -1,5 +1,5 @@
+export {};
 
-export namespace WEBWORKER {
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -22,61 +22,61 @@ and limitations under the License.
 /////////////////////////////
 /// Worker APIs
 /////////////////////////////
-  export interface AddEventListenerOptions extends EventListenerOptions {
+export interface AddEventListenerOptions extends EventListenerOptions {
     once?: boolean;
     passive?: boolean;
 }
-  export interface AesCbcParams extends Algorithm {
+export interface AesCbcParams extends Algorithm {
     iv: Int8Array | Int16Array | Int32Array | Uint8Array | Uint16Array | Uint32Array | Uint8ClampedArray | Float32Array | Float64Array | DataView | ArrayBuffer;
 }
-  export interface AesCtrParams extends Algorithm {
+export interface AesCtrParams extends Algorithm {
     counter: Int8Array | Int16Array | Int32Array | Uint8Array | Uint16Array | Uint32Array | Uint8ClampedArray | Float32Array | Float64Array | DataView | ArrayBuffer;
     length: number;
 }
-  export interface AesDerivedKeyParams extends Algorithm {
+export interface AesDerivedKeyParams extends Algorithm {
     length: number;
 }
-  export interface AesGcmParams extends Algorithm {
+export interface AesGcmParams extends Algorithm {
     additionalData?: Int8Array | Int16Array | Int32Array | Uint8Array | Uint16Array | Uint32Array | Uint8ClampedArray | Float32Array | Float64Array | DataView | ArrayBuffer;
     iv: Int8Array | Int16Array | Int32Array | Uint8Array | Uint16Array | Uint32Array | Uint8ClampedArray | Float32Array | Float64Array | DataView | ArrayBuffer;
     tagLength?: number;
 }
-  export interface AesKeyAlgorithm extends KeyAlgorithm {
+export interface AesKeyAlgorithm extends KeyAlgorithm {
     length: number;
 }
-  export interface AesKeyGenParams extends Algorithm {
+export interface AesKeyGenParams extends Algorithm {
     length: number;
 }
-  export interface Algorithm {
+export interface Algorithm {
     name: string;
 }
-  export interface BlobPropertyBag {
+export interface BlobPropertyBag {
     endings?: EndingType;
     type?: string;
 }
-  export interface CacheQueryOptions {
+export interface CacheQueryOptions {
     cacheName?: string;
     ignoreMethod?: boolean;
     ignoreSearch?: boolean;
     ignoreVary?: boolean;
 }
-  export interface ClientQueryOptions {
+export interface ClientQueryOptions {
     includeUncontrolled?: boolean;
     type?: ClientTypes;
 }
-  export interface CloseEventInit extends EventInit {
+export interface CloseEventInit extends EventInit {
     code?: number;
     reason?: string;
     wasClean?: boolean;
 }
-  export interface CryptoKeyPair {
+export interface CryptoKeyPair {
     privateKey?: CryptoKey;
     publicKey?: CryptoKey;
 }
-  export interface CustomEventInit<T = any> extends EventInit {
+export interface CustomEventInit<T = any> extends EventInit {
     detail?: T;
 }
-  export interface DOMMatrix2DInit {
+export interface DOMMatrix2DInit {
     a?: number;
     b?: number;
     c?: number;
@@ -90,7 +90,7 @@ and limitations under the License.
     m41?: number;
     m42?: number;
 }
-  export interface DOMMatrixInit extends DOMMatrix2DInit {
+export interface DOMMatrixInit extends DOMMatrix2DInit {
     is2D?: boolean;
     m13?: number;
     m14?: number;
@@ -103,94 +103,94 @@ and limitations under the License.
     m43?: number;
     m44?: number;
 }
-  export interface DOMPointInit {
+export interface DOMPointInit {
     w?: number;
     x?: number;
     y?: number;
     z?: number;
 }
-  export interface DOMQuadInit {
+export interface DOMQuadInit {
     p1?: DOMPointInit;
     p2?: DOMPointInit;
     p3?: DOMPointInit;
     p4?: DOMPointInit;
 }
-  export interface DOMRectInit {
+export interface DOMRectInit {
     height?: number;
     width?: number;
     x?: number;
     y?: number;
 }
-  export interface EcKeyGenParams extends Algorithm {
+export interface EcKeyGenParams extends Algorithm {
     namedCurve: NamedCurve;
 }
-  export interface EcKeyImportParams extends Algorithm {
+export interface EcKeyImportParams extends Algorithm {
     namedCurve: NamedCurve;
 }
-  export interface EcdhKeyDeriveParams extends Algorithm {
+export interface EcdhKeyDeriveParams extends Algorithm {
     public: CryptoKey;
 }
-  export interface EcdsaParams extends Algorithm {
+export interface EcdsaParams extends Algorithm {
     hash: HashAlgorithmIdentifier;
 }
-  export interface ErrorEventInit extends EventInit {
+export interface ErrorEventInit extends EventInit {
     colno?: number;
     error?: any;
     filename?: string;
     lineno?: number;
     message?: string;
 }
-  export interface EventInit {
+export interface EventInit {
     bubbles?: boolean;
     cancelable?: boolean;
     composed?: boolean;
 }
-  export interface EventListenerOptions {
+export interface EventListenerOptions {
     capture?: boolean;
 }
-  export interface ExtendableEventInit extends EventInit {
+export interface ExtendableEventInit extends EventInit {
 }
-  export interface ExtendableMessageEventInit extends ExtendableEventInit {
+export interface ExtendableMessageEventInit extends ExtendableEventInit {
     data?: any;
     lastEventId?: string;
     origin?: string;
     ports?: MessagePort[];
     source?: Client | ServiceWorker | MessagePort | null;
 }
-  export interface FetchEventInit extends ExtendableEventInit {
+export interface FetchEventInit extends ExtendableEventInit {
     clientId?: string;
     preloadResponse?: Promise<any>;
     request: Request;
     resultingClientId?: string;
     targetClientId?: string;
 }
-  export interface FilePropertyBag extends BlobPropertyBag {
+export interface FilePropertyBag extends BlobPropertyBag {
     lastModified?: number;
 }
-  export interface GetNotificationOptions {
+export interface GetNotificationOptions {
     tag?: string;
 }
-  export interface HmacImportParams extends Algorithm {
+export interface HmacImportParams extends Algorithm {
     hash: HashAlgorithmIdentifier;
     length?: number;
 }
-  export interface HmacKeyGenParams extends Algorithm {
+export interface HmacKeyGenParams extends Algorithm {
     hash: HashAlgorithmIdentifier;
     length?: number;
 }
-  export interface IDBIndexParameters {
+export interface IDBIndexParameters {
     multiEntry?: boolean;
     unique?: boolean;
 }
-  export interface IDBObjectStoreParameters {
+export interface IDBObjectStoreParameters {
     autoIncrement?: boolean;
     keyPath?: string | string[] | null;
 }
-  export interface IDBVersionChangeEventInit extends EventInit {
+export interface IDBVersionChangeEventInit extends EventInit {
     newVersion?: number | null;
     oldVersion?: number;
 }
-  export interface JsonWebKey {
+export interface JsonWebKey {
     alg?: string;
     crv?: string;
     d?: string;
@@ -210,30 +210,30 @@ and limitations under the License.
     x?: string;
     y?: string;
 }
-  export interface KeyAlgorithm {
+export interface KeyAlgorithm {
     name: string;
 }
-  export interface MessageEventInit extends EventInit {
+export interface MessageEventInit extends EventInit {
     data?: any;
     lastEventId?: string;
     origin?: string;
     ports?: MessagePort[];
     source?: MessageEventSource | null;
 }
-  export interface NavigationPreloadState {
+export interface NavigationPreloadState {
     enabled?: boolean;
     headerValue?: string;
 }
-  export interface NotificationAction {
+export interface NotificationAction {
     action: string;
     icon?: string;
     title: string;
 }
-  export interface NotificationEventInit extends ExtendableEventInit {
+export interface NotificationEventInit extends ExtendableEventInit {
     action?: string;
     notification: Notification;
 }
-  export interface NotificationOptions {
+export interface NotificationOptions {
     actions?: NotificationAction[];
     badge?: string;
     body?: string;
@@ -249,55 +249,55 @@ and limitations under the License.
     timestamp?: number;
     vibrate?: VibratePattern;
 }
-  export interface Pbkdf2Params extends Algorithm {
+export interface Pbkdf2Params extends Algorithm {
     hash: HashAlgorithmIdentifier;
     iterations: number;
     salt: Int8Array | Int16Array | Int32Array | Uint8Array | Uint16Array | Uint32Array | Uint8ClampedArray | Float32Array | Float64Array | DataView | ArrayBuffer;
 }
-  export interface PerformanceObserverInit {
+export interface PerformanceObserverInit {
     buffered?: boolean;
     entryTypes: string[];
 }
-  export interface PipeOptions {
+export interface PipeOptions {
     preventAbort?: boolean;
     preventCancel?: boolean;
     preventClose?: boolean;
 }
-  export interface ProgressEventInit extends EventInit {
+export interface ProgressEventInit extends EventInit {
     lengthComputable?: boolean;
     loaded?: number;
     total?: number;
 }
-  export interface PromiseRejectionEventInit extends EventInit {
+export interface PromiseRejectionEventInit extends EventInit {
     promise: Promise<any>;
     reason?: any;
 }
-  export interface PushEventInit extends ExtendableEventInit {
+export interface PushEventInit extends ExtendableEventInit {
     data?: PushMessageDataInit;
 }
-  export interface PushSubscriptionChangeInit extends ExtendableEventInit {
+export interface PushSubscriptionChangeInit extends ExtendableEventInit {
     newSubscription?: PushSubscription;
     oldSubscription?: PushSubscription;
 }
-  export interface PushSubscriptionJSON {
+export interface PushSubscriptionJSON {
     endpoint?: string;
     expirationTime?: number | null;
     keys?: Record<string, string>;
 }
-  export interface PushSubscriptionOptionsInit {
+export interface PushSubscriptionOptionsInit {
     applicationServerKey?: BufferSource | string | null;
     userVisibleOnly?: boolean;
 }
-  export interface QueuingStrategy<T = any> {
+export interface QueuingStrategy<T = any> {
     highWaterMark?: number;
     size?: QueuingStrategySizeCallback<T>;
 }
-  export interface RegistrationOptions {
+export interface RegistrationOptions {
     scope?: string;
     type?: WorkerType;
     updateViaCache?: ServiceWorkerUpdateViaCache;
 }
-  export interface RequestInit {
+export interface RequestInit {
     body?: BodyInit | null;
     cache?: RequestCache;
     credentials?: RequestCredentials;
@@ -312,75 +312,75 @@ and limitations under the License.
     signal?: AbortSignal | null;
     window?: any;
 }
-  export interface ResponseInit {
+export interface ResponseInit {
     headers?: HeadersInit;
     status?: number;
     statusText?: string;
 }
-  export interface RsaHashedImportParams extends Algorithm {
+export interface RsaHashedImportParams extends Algorithm {
     hash: HashAlgorithmIdentifier;
 }
-  export interface RsaHashedKeyGenParams extends RsaKeyGenParams {
+export interface RsaHashedKeyGenParams extends RsaKeyGenParams {
     hash: HashAlgorithmIdentifier;
 }
-  export interface RsaKeyGenParams extends Algorithm {
+export interface RsaKeyGenParams extends Algorithm {
     modulusLength: number;
     publicExponent: BigInteger;
 }
-  export interface RsaOaepParams extends Algorithm {
+export interface RsaOaepParams extends Algorithm {
     label?: Int8Array | Int16Array | Int32Array | Uint8Array | Uint16Array | Uint32Array | Uint8ClampedArray | Float32Array | Float64Array | DataView | ArrayBuffer;
 }
-  export interface RsaOtherPrimesInfo {
+export interface RsaOtherPrimesInfo {
     d?: string;
     r?: string;
     t?: string;
 }
-  export interface RsaPssParams extends Algorithm {
+export interface RsaPssParams extends Algorithm {
     saltLength: number;
 }
-  export interface StorageEstimate {
+export interface StorageEstimate {
     quota?: number;
     usage?: number;
 }
-  export interface SyncEventInit extends ExtendableEventInit {
+export interface SyncEventInit extends ExtendableEventInit {
     lastChance?: boolean;
     tag: string;
 }
-  export interface TextDecodeOptions {
+export interface TextDecodeOptions {
     stream?: boolean;
 }
-  export interface TextDecoderOptions {
+export interface TextDecoderOptions {
     fatal?: boolean;
     ignoreBOM?: boolean;
 }
-  export interface Transformer<I = any, O = any> {
+export interface Transformer<I = any, O = any> {
     flush?: TransformStreamDefaultControllerCallback<O>;
     readableType?: undefined;
     start?: TransformStreamDefaultControllerCallback<O>;
     transform?: TransformStreamDefaultControllerTransformCallback<I, O>;
     writableType?: undefined;
 }
-  export interface UnderlyingByteSource {
+export interface UnderlyingByteSource {
     autoAllocateChunkSize?: number;
     cancel?: ReadableStreamErrorCallback;
     pull?: ReadableByteStreamControllerCallback;
     start?: ReadableByteStreamControllerCallback;
     type: "bytes";
 }
-  export interface UnderlyingSink<W = any> {
+export interface UnderlyingSink<W = any> {
     abort?: WritableStreamErrorCallback;
     close?: WritableStreamDefaultControllerCloseCallback;
     start?: WritableStreamDefaultControllerStartCallback;
     type?: undefined;
     write?: WritableStreamDefaultControllerWriteCallback<W>;
 }
-  export interface UnderlyingSource<R = any> {
+export interface UnderlyingSource<R = any> {
     cancel?: ReadableStreamErrorCallback;
     pull?: ReadableStreamDefaultControllerCallback<R>;
     start?: ReadableStreamDefaultControllerCallback<R>;
     type?: undefined;
 }
-  export interface WebGLContextAttributes {
+export interface WebGLContextAttributes {
     alpha?: GLboolean;
     antialias?: GLboolean;
     depth?: GLboolean;
@@ -390,24 +390,24 @@ and limitations under the License.
     preserveDrawingBuffer?: GLboolean;
     stencil?: GLboolean;
 }
-  export interface WebGLContextEventInit extends EventInit {
+export interface WebGLContextEventInit extends EventInit {
     statusMessage?: string;
 }
-  export interface WorkerOptions {
+export interface WorkerOptions {
     credentials?: RequestCredentials;
     name?: string;
     type?: WorkerType;
 }
-  export interface EventListener {
+export interface EventListener {
     (evt: Event): void;
 }
-  export interface ANGLE_instanced_arrays {
+export interface ANGLE_instanced_arrays {
     drawArraysInstancedANGLE(mode: GLenum, first: GLint, count: GLsizei, primcount: GLsizei): void;
     drawElementsInstancedANGLE(mode: GLenum, count: GLsizei, type: GLenum, offset: GLintptr, primcount: GLsizei): void;
     vertexAttribDivisorANGLE(index: GLuint, divisor: GLuint): void;
     readonly VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE: GLenum;
 }
-  export interface AbortController {
+export interface AbortController {
     /**
      * Returns the AbortSignal object associated with this object.
      */
@@ -418,14 +418,14 @@ and limitations under the License.
      */
     abort(): void;
 }
-  export var AbortController: {
+export type AbortControllerGlobal =  {
     prototype: AbortController;
     new(): AbortController;
 };
-  export interface AbortSignalEventMap {
+export interface AbortSignalEventMap {
     "abort": ProgressEvent;
 }
-  export interface AbortSignal extends EventTarget {
+export interface AbortSignal extends EventTarget {
     /**
      * Returns true if this AbortSignal's AbortController has signaled to abort, and false
      * otherwise.
@@ -437,36 +437,36 @@ and limitations under the License.
     removeEventListener<K extends keyof AbortSignalEventMap>(type: K, listener: (this: AbortSignal, ev: AbortSignalEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var AbortSignal: {
+export type AbortSignalGlobal =  {
     prototype: AbortSignal;
     new(): AbortSignal;
 };
-  export interface AbstractWorkerEventMap {
+export interface AbstractWorkerEventMap {
     "error": ErrorEvent;
 }
-  export interface AbstractWorker {
+export interface AbstractWorker {
     onerror: ((this: AbstractWorker, ev: ErrorEvent) => any) | null;
     addEventListener<K extends keyof AbstractWorkerEventMap>(type: K, listener: (this: AbstractWorker, ev: AbstractWorkerEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
     addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
     removeEventListener<K extends keyof AbstractWorkerEventMap>(type: K, listener: (this: AbstractWorker, ev: AbstractWorkerEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export interface AesCfbParams extends Algorithm {
+export interface AesCfbParams extends Algorithm {
     iv: Int8Array | Int16Array | Int32Array | Uint8Array | Uint16Array | Uint32Array | Uint8ClampedArray | Float32Array | Float64Array | DataView | ArrayBuffer;
 }
-  export interface AesCmacParams extends Algorithm {
+export interface AesCmacParams extends Algorithm {
     length: number;
 }
-  export interface Blob {
+export interface Blob {
     readonly size: number;
     readonly type: string;
     slice(start?: number, end?: number, contentType?: string): Blob;
 }
-  export var Blob: {
+export type BlobGlobal =  {
     prototype: Blob;
     new(blobParts?: BlobPart[], options?: BlobPropertyBag): Blob;
 };
-  export interface Body {
+export interface Body {
     readonly body: ReadableStream<Uint8Array> | null;
     readonly bodyUsed: boolean;
     arrayBuffer(): Promise<ArrayBuffer>;
@@ -475,11 +475,11 @@ and limitations under the License.
     json(): Promise<any>;
     text(): Promise<string>;
 }
-  export interface BroadcastChannelEventMap {
+export interface BroadcastChannelEventMap {
     "message": MessageEvent;
     "messageerror": MessageEvent;
 }
-  export interface BroadcastChannel extends EventTarget {
+export interface BroadcastChannel extends EventTarget {
     /**
      * Returns the channel name (as passed to the constructor).
      */
@@ -499,23 +499,23 @@ and limitations under the License.
     removeEventListener<K extends keyof BroadcastChannelEventMap>(type: K, listener: (this: BroadcastChannel, ev: BroadcastChannelEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var BroadcastChannel: {
+export type BroadcastChannelGlobal =  {
     prototype: BroadcastChannel;
     new(name: string): BroadcastChannel;
 };
-  export interface BroadcastChannelEventMap {
+export interface BroadcastChannelEventMap {
     message: MessageEvent;
     messageerror: MessageEvent;
 }
-  export interface ByteLengthQueuingStrategy extends QueuingStrategy<ArrayBufferView> {
+export interface ByteLengthQueuingStrategy extends QueuingStrategy<ArrayBufferView> {
     highWaterMark: number;
     size(chunk: ArrayBufferView): number;
 }
-  export var ByteLengthQueuingStrategy: {
+export type ByteLengthQueuingStrategyGlobal =  {
     prototype: ByteLengthQueuingStrategy;
     new(options: { highWaterMark: number }): ByteLengthQueuingStrategy;
 };
-  export interface Cache {
+export interface Cache {
     add(request: RequestInfo): Promise<void>;
     addAll(requests: RequestInfo[]): Promise<void>;
     delete(request: RequestInfo, options?: CacheQueryOptions): Promise<boolean>;
@@ -524,22 +524,22 @@ and limitations under the License.
     matchAll(request?: RequestInfo, options?: CacheQueryOptions): Promise<ReadonlyArray<Response>>;
     put(request: RequestInfo, response: Response): Promise<void>;
 }
-  export var Cache: {
+export type CacheGlobal =  {
     prototype: Cache;
     new(): Cache;
 };
-  export interface CacheStorage {
+export interface CacheStorage {
     delete(cacheName: string): Promise<boolean>;
     has(cacheName: string): Promise<boolean>;
     keys(): Promise<string[]>;
     match(request: RequestInfo, options?: CacheQueryOptions): Promise<Response | undefined>;
     open(cacheName: string): Promise<Cache>;
 }
-  export var CacheStorage: {
+export type CacheStorageGlobal =  {
     prototype: CacheStorage;
     new(): CacheStorage;
 };
-  export interface CanvasGradient {
+export interface CanvasGradient {
     /**
      * Adds a color stop with the given color to the gradient at the given offset. 0.0 is the offset
      * at one end of the gradient, 1.0 is the offset at the other end.
@@ -549,11 +549,11 @@ and limitations under the License.
      */
     addColorStop(offset: number, color: string): void;
 }
-  export var CanvasGradient: {
+export type CanvasGradientGlobal =  {
     prototype: CanvasGradient;
     new(): CanvasGradient;
 };
-  export interface CanvasPath {
+export interface CanvasPath {
     arc(x: number, y: number, radius: number, startAngle: number, endAngle: number, anticlockwise?: boolean): void;
     arcTo(x1: number, y1: number, x2: number, y2: number, radius: number): void;
     bezierCurveTo(cp1x: number, cp1y: number, cp2x: number, cp2y: number, x: number, y: number): void;
@@ -564,49 +564,49 @@ and limitations under the License.
     quadraticCurveTo(cpx: number, cpy: number, x: number, y: number): void;
     rect(x: number, y: number, w: number, h: number): void;
 }
-  export interface CanvasPattern {
+export interface CanvasPattern {
     /**
      * Sets the transformation matrix that will be used when rendering the pattern during a fill or
      * stroke painting operation.
      */
     setTransform(transform?: DOMMatrix2DInit): void;
 }
-  export var CanvasPattern: {
+export type CanvasPatternGlobal =  {
     prototype: CanvasPattern;
     new(): CanvasPattern;
 };
-  export interface Client {
+export interface Client {
     readonly id: string;
     readonly type: ClientTypes;
     readonly url: string;
     postMessage(message: any, transfer?: Transferable[]): void;
 }
-  export var Client: {
+export type ClientGlobal =  {
     prototype: Client;
     new(): Client;
 };
-  export interface Clients {
+export interface Clients {
     claim(): Promise<void>;
     get(id: string): Promise<any>;
     matchAll(options?: ClientQueryOptions): Promise<ReadonlyArray<Client>>;
     openWindow(url: string): Promise<WindowClient | null>;
 }
-  export var Clients: {
+export type ClientsGlobal =  {
     prototype: Clients;
     new(): Clients;
 };
-  export interface CloseEvent extends Event {
+export interface CloseEvent extends Event {
     readonly code: number;
     readonly reason: string;
     readonly wasClean: boolean;
     /** @deprecated */
     initCloseEvent(typeArg: string, canBubbleArg: boolean, cancelableArg: boolean, wasCleanArg: boolean, codeArg: number, reasonArg: string): void;
 }
-  export var CloseEvent: {
+export type CloseEventGlobal =  {
     prototype: CloseEvent;
     new(type: string, eventInitDict?: CloseEventInit): CloseEvent;
 };
-  export interface ConcatParams extends Algorithm {
+export interface ConcatParams extends Algorithm {
     algorithmId: Uint8Array;
     hash?: string | Algorithm;
     partyUInfo: Uint8Array;
@@ -614,7 +614,7 @@ and limitations under the License.
     privateInfo?: Uint8Array;
     publicInfo?: Uint8Array;
 }
-  export interface Console {
+export interface Console {
     memory: any;
     assert(condition?: boolean, message?: string, ...data: any[]): void;
     clear(): void;
@@ -641,37 +641,37 @@ and limitations under the License.
     trace(message?: any, ...optionalParams: any[]): void;
     warn(message?: any, ...optionalParams: any[]): void;
 }
-  export var Console: {
+export type ConsoleGlobal =  {
     prototype: Console;
     new(): Console;
 };
-  export interface CountQueuingStrategy extends QueuingStrategy {
+export interface CountQueuingStrategy extends QueuingStrategy {
     highWaterMark: number;
     size(chunk: any): 1;
 }
-  export var CountQueuingStrategy: {
+export type CountQueuingStrategyGlobal =  {
     prototype: CountQueuingStrategy;
     new(options: { highWaterMark: number }): CountQueuingStrategy;
 };
-  export interface Crypto {
+export interface Crypto {
     readonly subtle: SubtleCrypto;
     getRandomValues<T extends Int8Array | Int16Array | Int32Array | Uint8Array | Uint16Array | Uint32Array | Uint8ClampedArray | Float32Array | Float64Array | DataView | null>(array: T): T;
 }
-  export var Crypto: {
+export type CryptoGlobal =  {
     prototype: Crypto;
     new(): Crypto;
 };
-  export interface CryptoKey {
+export interface CryptoKey {
     readonly algorithm: KeyAlgorithm;
     readonly extractable: boolean;
     readonly type: KeyType;
     readonly usages: KeyUsage[];
 }
-  export var CryptoKey: {
+export type CryptoKeyGlobal =  {
     prototype: CryptoKey;
     new(): CryptoKey;
 };
-  export interface CustomEvent<T = any> extends Event {
+export interface CustomEvent<T = any> extends Event {
     /**
      * Returns any custom data event was created with.
      * Typically used for synthetic events.
@@ -679,11 +679,11 @@ and limitations under the License.
     readonly detail: T;
     initCustomEvent(typeArg: string, canBubbleArg: boolean, cancelableArg: boolean, detailArg: T): void;
 }
-  export var CustomEvent: {
+export type CustomEventGlobal =  {
     prototype: CustomEvent;
     new<T>(typeArg: string, eventInitDict?: CustomEventInit<T>): CustomEvent<T>;
 };
-  export interface DOMException {
+export interface DOMException {
     readonly code: number;
     readonly message: string;
     readonly name: string;
@@ -713,7 +713,7 @@ and limitations under the License.
     readonly VALIDATION_ERR: number;
     readonly WRONG_DOCUMENT_ERR: number;
 }
-  export var DOMException: {
+export type DOMExceptionGlobal =  {
     prototype: DOMException;
     new(message?: string, name?: string): DOMException;
     readonly ABORT_ERR: number;
@@ -742,7 +742,7 @@ and limitations under the License.
     readonly VALIDATION_ERR: number;
     readonly WRONG_DOCUMENT_ERR: number;
 };
-  export interface DOMMatrix extends DOMMatrixReadOnly {
+export interface DOMMatrix extends DOMMatrixReadOnly {
     a: number;
     b: number;
     c: number;
@@ -777,14 +777,14 @@ and limitations under the License.
     skewYSelf(sy?: number): DOMMatrix;
     translateSelf(tx?: number, ty?: number, tz?: number): DOMMatrix;
 }
-  export var DOMMatrix: {
+export type DOMMatrixGlobal =  {
     prototype: DOMMatrix;
     new(init?: string | number[]): DOMMatrix;
     fromFloat32Array(array32: Float32Array): DOMMatrix;
     fromFloat64Array(array64: Float64Array): DOMMatrix;
     fromMatrix(other?: DOMMatrixInit): DOMMatrix;
 };
-  export interface DOMMatrixReadOnly {
+export interface DOMMatrixReadOnly {
     readonly a: number;
     readonly b: number;
     readonly c: number;
@@ -826,25 +826,25 @@ and limitations under the License.
     transformPoint(point?: DOMPointInit): DOMPoint;
     translate(tx?: number, ty?: number, tz?: number): DOMMatrix;
 }
-  export var DOMMatrixReadOnly: {
+export type DOMMatrixReadOnlyGlobal =  {
     prototype: DOMMatrixReadOnly;
     new(init?: string | number[]): DOMMatrixReadOnly;
     fromFloat32Array(array32: Float32Array): DOMMatrixReadOnly;
     fromFloat64Array(array64: Float64Array): DOMMatrixReadOnly;
     fromMatrix(other?: DOMMatrixInit): DOMMatrixReadOnly;
 };
-  export interface DOMPoint extends DOMPointReadOnly {
+export interface DOMPoint extends DOMPointReadOnly {
     w: number;
     x: number;
     y: number;
     z: number;
 }
-  export var DOMPoint: {
+export type DOMPointGlobal =  {
     prototype: DOMPoint;
     new(x?: number, y?: number, z?: number, w?: number): DOMPoint;
     fromPoint(other?: DOMPointInit): DOMPoint;
 };
-  export interface DOMPointReadOnly {
+export interface DOMPointReadOnly {
     readonly w: number;
     readonly x: number;
     readonly y: number;
@@ -852,12 +852,12 @@ and limitations under the License.
     matrixTransform(matrix?: DOMMatrixInit): DOMPoint;
     toJSON(): any;
 }
-  export var DOMPointReadOnly: {
+export type DOMPointReadOnlyGlobal =  {
     prototype: DOMPointReadOnly;
     new(x?: number, y?: number, z?: number, w?: number): DOMPointReadOnly;
     fromPoint(other?: DOMPointInit): DOMPointReadOnly;
 };
-  export interface DOMQuad {
+export interface DOMQuad {
     readonly p1: DOMPoint;
     readonly p2: DOMPoint;
     readonly p3: DOMPoint;
@@ -865,24 +865,24 @@ and limitations under the License.
     getBounds(): DOMRect;
     toJSON(): any;
 }
-  export var DOMQuad: {
+export type DOMQuadGlobal =  {
     prototype: DOMQuad;
     new(p1?: DOMPointInit, p2?: DOMPointInit, p3?: DOMPointInit, p4?: DOMPointInit): DOMQuad;
     fromQuad(other?: DOMQuadInit): DOMQuad;
     fromRect(other?: DOMRectInit): DOMQuad;
 };
-  export interface DOMRect extends DOMRectReadOnly {
+export interface DOMRect extends DOMRectReadOnly {
     height: number;
     width: number;
     x: number;
     y: number;
 }
-  export var DOMRect: {
+export type DOMRectGlobal =  {
     prototype: DOMRect;
     new(x?: number, y?: number, width?: number, height?: number): DOMRect;
     fromRect(other?: DOMRectInit): DOMRect;
 };
-  export interface DOMRectReadOnly {
+export interface DOMRectReadOnly {
     readonly bottom: number;
     readonly height: number;
     readonly left: number;
@@ -893,12 +893,12 @@ and limitations under the License.
     readonly y: number;
     toJSON(): any;
 }
-  export var DOMRectReadOnly: {
+export type DOMRectReadOnlyGlobal =  {
     prototype: DOMRectReadOnly;
     new(x?: number, y?: number, width?: number, height?: number): DOMRectReadOnly;
     fromRect(other?: DOMRectInit): DOMRectReadOnly;
 };
-  export interface DOMStringList {
+export interface DOMStringList {
     /**
      * Returns the number of strings in strings.
      */
@@ -914,14 +914,14 @@ and limitations under the License.
     item(index: number): string | null;
     [index: number]: string;
 }
-  export var DOMStringList: {
+export type DOMStringListGlobal =  {
     prototype: DOMStringList;
     new(): DOMStringList;
 };
-  export interface DedicatedWorkerGlobalScopeEventMap extends WorkerGlobalScopeEventMap {
+export interface DedicatedWorkerGlobalScopeEventMap extends WorkerGlobalScopeEventMap {
     "message": MessageEvent;
 }
-  export interface DedicatedWorkerGlobalScope extends WorkerGlobalScope {
+export interface DedicatedWorkerGlobalScope extends WorkerGlobalScope {
     onmessage: ((this: DedicatedWorkerGlobalScope, ev: MessageEvent) => any) | null;
     close(): void;
     postMessage(message: any, transfer?: Transferable[]): void;
@@ -930,55 +930,55 @@ and limitations under the License.
     removeEventListener<K extends keyof DedicatedWorkerGlobalScopeEventMap>(type: K, listener: (this: DedicatedWorkerGlobalScope, ev: DedicatedWorkerGlobalScopeEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var DedicatedWorkerGlobalScope: {
+export type DedicatedWorkerGlobalScopeGlobal =  {
     prototype: DedicatedWorkerGlobalScope;
     new(): DedicatedWorkerGlobalScope;
 };
-  export interface DhImportKeyParams extends Algorithm {
+export interface DhImportKeyParams extends Algorithm {
     generator: Uint8Array;
     prime: Uint8Array;
 }
-  export interface DhKeyAlgorithm extends KeyAlgorithm {
+export interface DhKeyAlgorithm extends KeyAlgorithm {
     generator: Uint8Array;
     prime: Uint8Array;
 }
-  export interface DhKeyDeriveParams extends Algorithm {
+export interface DhKeyDeriveParams extends Algorithm {
     public: CryptoKey;
 }
-  export interface DhKeyGenParams extends Algorithm {
+export interface DhKeyGenParams extends Algorithm {
     generator: Uint8Array;
     prime: Uint8Array;
 }
-  export interface EXT_blend_minmax {
+export interface EXT_blend_minmax {
     readonly MAX_EXT: GLenum;
     readonly MIN_EXT: GLenum;
 }
-  export interface EXT_frag_depth {
+export interface EXT_frag_depth {
 }
-  export interface EXT_sRGB {
+export interface EXT_sRGB {
     readonly FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING_EXT: GLenum;
     readonly SRGB8_ALPHA8_EXT: GLenum;
     readonly SRGB_ALPHA_EXT: GLenum;
     readonly SRGB_EXT: GLenum;
 }
-  export interface EXT_shader_texture_lod {
+export interface EXT_shader_texture_lod {
 }
-  export interface EXT_texture_filter_anisotropic {
+export interface EXT_texture_filter_anisotropic {
     readonly MAX_TEXTURE_MAX_ANISOTROPY_EXT: GLenum;
     readonly TEXTURE_MAX_ANISOTROPY_EXT: GLenum;
 }
-  export interface ErrorEvent extends Event {
+export interface ErrorEvent extends Event {
     readonly colno: number;
     readonly error: any;
     readonly filename: string;
     readonly lineno: number;
     readonly message: string;
 }
-  export var ErrorEvent: {
+export type ErrorEventGlobal =  {
     prototype: ErrorEvent;
     new(type: string, eventInitDict?: ErrorEventInit): ErrorEvent;
 };
-  export interface Event {
+export interface Event {
     /**
      * Returns true or false depending on how event was initialized. True if event goes through its target's ancestors in reverse tree order, and false otherwise.
      */
@@ -1035,7 +1035,7 @@ and limitations under the License.
     readonly CAPTURING_PHASE: number;
     readonly NONE: number;
 }
-  export var Event: {
+export type EventGlobal =  {
     prototype: Event;
     new(type: string, eventInitDict?: EventInit): Event;
     readonly AT_TARGET: number;
@@ -1043,10 +1043,10 @@ and limitations under the License.
     readonly CAPTURING_PHASE: number;
     readonly NONE: number;
 };
-  export interface EventListenerObject {
+export interface EventListenerObject {
     handleEvent(evt: Event): void;
 }
-  export interface EventSource extends EventTarget {
+export interface EventSource extends EventTarget {
     readonly CLOSED: number;
     readonly CONNECTING: number;
     readonly OPEN: number;
@@ -1058,14 +1058,14 @@ and limitations under the License.
     readonly withCredentials: boolean;
     close(): void;
 }
-  export var EventSource: {
+export type EventSourceGlobal =  {
     prototype: EventSource;
     new(url: string, eventSourceInitDict?: EventSourceInit): EventSource;
 };
-  export interface EventSourceInit {
+export interface EventSourceInit {
     readonly withCredentials: boolean;
 }
-  export interface EventTarget {
+export interface EventTarget {
     /**
      * Appends an event listener for events whose type attribute value is type. The callback argument sets the callback that will be invoked when the event is dispatched.
      * The options argument sets listener-specific options. For compatibility this can be a
@@ -1087,29 +1087,29 @@ and limitations under the License.
      */
     removeEventListener(type: string, callback: EventListenerOrEventListenerObject | null, options?: EventListenerOptions | boolean): void;
 }
-  export var EventTarget: {
+export type EventTargetGlobal =  {
     prototype: EventTarget;
     new(): EventTarget;
 };
-  export interface ExtendableEvent extends Event {
+export interface ExtendableEvent extends Event {
     waitUntil(f: Promise<any>): void;
 }
-  export var ExtendableEvent: {
+export type ExtendableEventGlobal =  {
     prototype: ExtendableEvent;
     new(type: string, eventInitDict?: ExtendableEventInit): ExtendableEvent;
 };
-  export interface ExtendableMessageEvent extends ExtendableEvent {
+export interface ExtendableMessageEvent extends ExtendableEvent {
     readonly data: any;
     readonly lastEventId: string;
     readonly origin: string;
     readonly ports: ReadonlyArray<MessagePort>;
     readonly source: Client | ServiceWorker | MessagePort | null;
 }
-  export var ExtendableMessageEvent: {
+export type ExtendableMessageEventGlobal =  {
     prototype: ExtendableMessageEvent;
     new(type: string, eventInitDict?: ExtendableMessageEventInit): ExtendableMessageEvent;
 };
-  export interface FetchEvent extends ExtendableEvent {
+export interface FetchEvent extends ExtendableEvent {
     readonly clientId: string;
     readonly preloadResponse: Promise<any>;
     readonly request: Request;
@@ -1117,28 +1117,28 @@ and limitations under the License.
     readonly targetClientId: string;
     respondWith(r: Promise<Response>): void;
 }
-  export var FetchEvent: {
+export type FetchEventGlobal =  {
     prototype: FetchEvent;
     new(type: string, eventInitDict: FetchEventInit): FetchEvent;
 };
-  export interface File extends Blob {
+export interface File extends Blob {
     readonly lastModified: number;
     readonly name: string;
 }
-  export var File: {
+export type FileGlobal =  {
     prototype: File;
     new(fileBits: BlobPart[], fileName: string, options?: FilePropertyBag): File;
 };
-  export interface FileList {
+export interface FileList {
     readonly length: number;
     item(index: number): File | null;
     [index: number]: File;
 }
-  export var FileList: {
+export type FileListGlobal =  {
     prototype: FileList;
     new(): FileList;
 };
-  export interface FileReaderEventMap {
+export interface FileReaderEventMap {
     "abort": ProgressEvent;
     "error": ProgressEvent;
     "load": ProgressEvent;
@@ -1146,7 +1146,7 @@ and limitations under the License.
     "loadstart": ProgressEvent;
     "progress": ProgressEvent;
 }
-  export interface FileReader extends EventTarget {
+export interface FileReader extends EventTarget {
     readonly error: DOMException | null;
     onabort: ((this: FileReader, ev: ProgressEvent) => any) | null;
     onerror: ((this: FileReader, ev: ProgressEvent) => any) | null;
@@ -1169,24 +1169,24 @@ and limitations under the License.
     removeEventListener<K extends keyof FileReaderEventMap>(type: K, listener: (this: FileReader, ev: FileReaderEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var FileReader: {
+export type FileReaderGlobal =  {
     prototype: FileReader;
     new(): FileReader;
     readonly DONE: number;
     readonly EMPTY: number;
     readonly LOADING: number;
 };
-  export interface FileReaderSync {
+export interface FileReaderSync {
     readAsArrayBuffer(blob: Blob): ArrayBuffer;
     readAsBinaryString(blob: Blob): string;
     readAsDataURL(blob: Blob): string;
     readAsText(blob: Blob, encoding?: string): string;
 }
-  export var FileReaderSync: {
+export type FileReaderSyncGlobal =  {
     prototype: FileReaderSync;
     new(): FileReaderSync;
 };
-  export interface FormData {
+export interface FormData {
     append(name: string, value: string | Blob, fileName?: string): void;
     delete(name: string): void;
     get(name: string): FormDataEntryValue | null;
@@ -1195,14 +1195,14 @@ and limitations under the License.
     set(name: string, value: string | Blob, fileName?: string): void;
     forEach(callbackfn: (value: FormDataEntryValue, key: string, parent: FormData) => void, thisArg?: any): void;
 }
-  export var FormData: {
+export type FormDataGlobal =  {
     prototype: FormData;
     new(): FormData;
 };
-  export interface GlobalFetch {
+export interface GlobalFetch {
     fetch(input: RequestInfo, init?: RequestInit): Promise<Response>;
 }
-  export interface Headers {
+export interface Headers {
     append(name: string, value: string): void;
     delete(name: string): void;
     get(name: string): string | null;
@@ -1210,18 +1210,18 @@ and limitations under the License.
     set(name: string, value: string): void;
     forEach(callbackfn: (value: string, key: string, parent: Headers) => void, thisArg?: any): void;
 }
-  export var Headers: {
+export type HeadersGlobal =  {
     prototype: Headers;
     new(init?: HeadersInit): Headers;
 };
-  export interface HkdfCtrParams extends Algorithm {
+export interface HkdfCtrParams extends Algorithm {
     context: Int8Array | Int16Array | Int32Array | Uint8Array | Uint16Array | Uint32Array | Uint8ClampedArray | Float32Array | Float64Array | DataView | ArrayBuffer;
     hash: string | Algorithm;
     label: Int8Array | Int16Array | Int32Array | Uint8Array | Uint16Array | Uint32Array | Uint8ClampedArray | Float32Array | Float64Array | DataView | ArrayBuffer;
 }
-  export interface IDBArrayKey extends Array<IDBValidKey> {
+export interface IDBArrayKey extends Array<IDBValidKey> {
 }
-  export interface IDBCursor {
+export interface IDBCursor {
     /**
      * Returns the direction ("next", "nextunique", "prev" or "prevunique")
      * of the cursor.
@@ -1268,27 +1268,27 @@ and limitations under the License.
      */
     update(value: any): IDBRequest<IDBValidKey>;
 }
-  export var IDBCursor: {
+export type IDBCursorGlobal =  {
     prototype: IDBCursor;
     new(): IDBCursor;
 };
-  export interface IDBCursorWithValue extends IDBCursor {
+export interface IDBCursorWithValue extends IDBCursor {
     /**
      * Returns the cursor's current value.
      */
     readonly value: any;
 }
-  export var IDBCursorWithValue: {
+export type IDBCursorWithValueGlobal =  {
     prototype: IDBCursorWithValue;
     new(): IDBCursorWithValue;
 };
-  export interface IDBDatabaseEventMap {
+export interface IDBDatabaseEventMap {
     "abort": Event;
     "close": Event;
     "error": Event;
     "versionchange": IDBVersionChangeEvent;
 }
-  export interface IDBDatabase extends EventTarget {
+export interface IDBDatabase extends EventTarget {
     /**
      * Returns the name of the database.
      */
@@ -1329,11 +1329,11 @@ and limitations under the License.
     removeEventListener<K extends keyof IDBDatabaseEventMap>(type: K, listener: (this: IDBDatabase, ev: IDBDatabaseEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var IDBDatabase: {
+export type IDBDatabaseGlobal =  {
     prototype: IDBDatabase;
     new(): IDBDatabase;
 };
-  export interface IDBFactory {
+export interface IDBFactory {
     /**
      * Compares two values as keys. Returns -1 if key1 precedes key2, 1 if key2 precedes key1, and 0 if
      * the keys are equal.
@@ -1356,11 +1356,11 @@ and limitations under the License.
      */
     open(name: string, version?: number): IDBOpenDBRequest;
 }
-  export var IDBFactory: {
+export type IDBFactoryGlobal =  {
     prototype: IDBFactory;
     new(): IDBFactory;
 };
-  export interface IDBIndex {
+export interface IDBIndex {
     readonly keyPath: string | string[];
     readonly multiEntry: boolean;
     /**
@@ -1414,11 +1414,11 @@ and limitations under the License.
      */
     openKeyCursor(range?: IDBValidKey | IDBKeyRange, direction?: IDBCursorDirection): IDBRequest<IDBCursor | null>;
 }
-  export var IDBIndex: {
+export type IDBIndexGlobal =  {
     prototype: IDBIndex;
     new(): IDBIndex;
 };
-  export interface IDBKeyRange {
+export interface IDBKeyRange {
     /**
      * Returns lower bound, or undefined if none.
      */
@@ -1440,7 +1440,7 @@ and limitations under the License.
      */
     includes(key: any): boolean;
 }
-  export var IDBKeyRange: {
+export type IDBKeyRangeGlobal =  {
     prototype: IDBKeyRange;
     new(): IDBKeyRange;
     /**
@@ -1464,7 +1464,7 @@ and limitations under the License.
      */
     upperBound(upper: any, open?: boolean): IDBKeyRange;
 };
-  export interface IDBObjectStore {
+export interface IDBObjectStore {
     /**
      * Returns true if the store has a key generator, and false otherwise.
      */
@@ -1562,15 +1562,15 @@ and limitations under the License.
     openKeyCursor(query?: IDBValidKey | IDBKeyRange, direction?: IDBCursorDirection): IDBRequest<IDBCursor | null>;
     put(value: any, key?: IDBValidKey | IDBKeyRange): IDBRequest<IDBValidKey>;
 }
-  export var IDBObjectStore: {
+export type IDBObjectStoreGlobal =  {
     prototype: IDBObjectStore;
     new(): IDBObjectStore;
 };
-  export interface IDBOpenDBRequestEventMap extends IDBRequestEventMap {
+export interface IDBOpenDBRequestEventMap extends IDBRequestEventMap {
     "blocked": Event;
     "upgradeneeded": IDBVersionChangeEvent;
 }
-  export interface IDBOpenDBRequest extends IDBRequest<IDBDatabase> {
+export interface IDBOpenDBRequest extends IDBRequest<IDBDatabase> {
     onblocked: ((this: IDBOpenDBRequest, ev: Event) => any) | null;
     onupgradeneeded: ((this: IDBOpenDBRequest, ev: IDBVersionChangeEvent) => any) | null;
     addEventListener<K extends keyof IDBOpenDBRequestEventMap>(type: K, listener: (this: IDBOpenDBRequest, ev: IDBOpenDBRequestEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
@@ -1578,15 +1578,15 @@ and limitations under the License.
     removeEventListener<K extends keyof IDBOpenDBRequestEventMap>(type: K, listener: (this: IDBOpenDBRequest, ev: IDBOpenDBRequestEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var IDBOpenDBRequest: {
+export type IDBOpenDBRequestGlobal =  {
     prototype: IDBOpenDBRequest;
     new(): IDBOpenDBRequest;
 };
-  export interface IDBRequestEventMap {
+export interface IDBRequestEventMap {
     "error": Event;
     "success": Event;
 }
-  export interface IDBRequest<T = any> extends EventTarget {
+export interface IDBRequest<T = any> extends EventTarget {
     /**
      * When a request is completed, returns the error (a DOMException), or null if the request succeeded. Throws
      * a "InvalidStateError" DOMException if the request is still pending.
@@ -1620,16 +1620,16 @@ and limitations under the License.
     removeEventListener<K extends keyof IDBRequestEventMap>(type: K, listener: (this: IDBRequest<T>, ev: IDBRequestEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var IDBRequest: {
+export type IDBRequestGlobal =  {
     prototype: IDBRequest;
     new(): IDBRequest;
 };
-  export interface IDBTransactionEventMap {
+export interface IDBTransactionEventMap {
     "abort": Event;
     "complete": Event;
     "error": Event;
 }
-  export interface IDBTransaction extends EventTarget {
+export interface IDBTransaction extends EventTarget {
     /**
      * Returns the transaction's connection.
      */
@@ -1668,19 +1668,19 @@ and limitations under the License.
     removeEventListener<K extends keyof IDBTransactionEventMap>(type: K, listener: (this: IDBTransaction, ev: IDBTransactionEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var IDBTransaction: {
+export type IDBTransactionGlobal =  {
     prototype: IDBTransaction;
     new(): IDBTransaction;
 };
-  export interface IDBVersionChangeEvent extends Event {
+export interface IDBVersionChangeEvent extends Event {
     readonly newVersion: number | null;
     readonly oldVersion: number;
 }
-  export var IDBVersionChangeEvent: {
+export type IDBVersionChangeEventGlobal =  {
     prototype: IDBVersionChangeEvent;
     new(type: string, eventInitDict?: IDBVersionChangeEventInit): IDBVersionChangeEvent;
 };
-  export interface ImageBitmap {
+export interface ImageBitmap {
     /**
      * Returns the intrinsic height of the image, in CSS
      * pixels.
@@ -1696,11 +1696,11 @@ and limitations under the License.
      */
     close(): void;
 }
-  export var ImageBitmap: {
+export type ImageBitmapGlobal =  {
     prototype: ImageBitmap;
     new(): ImageBitmap;
 };
-  export interface ImageBitmapOptions {
+export interface ImageBitmapOptions {
     colorSpaceConversion?: "none" | "default";
     imageOrientation?: "none" | "flipY";
     premultiplyAlpha?: "none" | "premultiply" | "default";
@@ -1708,7 +1708,7 @@ and limitations under the License.
     resizeQuality?: "pixelated" | "low" | "medium" | "high";
     resizeWidth?: number;
 }
-  export interface ImageData {
+export interface ImageData {
     /**
      * Returns the one-dimensional array containing the data in RGBA order, as integers in the
      * range 0 to 255.
@@ -1721,20 +1721,20 @@ and limitations under the License.
     readonly height: number;
     readonly width: number;
 }
-  export var ImageData: {
+export type ImageDataGlobal =  {
     prototype: ImageData;
     new(width: number, height: number): ImageData;
     new(array: Uint8ClampedArray, width: number, height: number): ImageData;
 };
-  export interface MessageChannel {
+export interface MessageChannel {
     readonly port1: MessagePort;
     readonly port2: MessagePort;
 }
-  export var MessageChannel: {
+export type MessageChannelGlobal =  {
     prototype: MessageChannel;
     new(): MessageChannel;
 };
-  export interface MessageEvent extends Event {
+export interface MessageEvent extends Event {
     /**
      * Returns the data of the message.
      */
@@ -1761,15 +1761,15 @@ and limitations under the License.
      */
     readonly source: MessageEventSource | null;
 }
-  export var MessageEvent: {
+export type MessageEventGlobal =  {
     prototype: MessageEvent;
     new(type: string, eventInitDict?: MessageEventInit): MessageEvent;
 };
-  export interface MessagePortEventMap {
+export interface MessagePortEventMap {
     "message": MessageEvent;
     "messageerror": MessageEvent;
 }
-  export interface MessagePort extends EventTarget {
+export interface MessagePort extends EventTarget {
     onmessage: ((this: MessagePort, ev: MessageEvent) => any) | null;
     onmessageerror: ((this: MessagePort, ev: MessageEvent) => any) | null;
     /**
@@ -1793,27 +1793,27 @@ and limitations under the License.
     removeEventListener<K extends keyof MessagePortEventMap>(type: K, listener: (this: MessagePort, ev: MessagePortEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var MessagePort: {
+export type MessagePortGlobal =  {
     prototype: MessagePort;
     new(): MessagePort;
 };
-  export interface NavigationPreloadManager {
+export interface NavigationPreloadManager {
     disable(): Promise<void>;
     enable(): Promise<void>;
     getState(): Promise<NavigationPreloadState>;
     setHeaderValue(value: string): Promise<void>;
 }
-  export var NavigationPreloadManager: {
+export type NavigationPreloadManagerGlobal =  {
     prototype: NavigationPreloadManager;
     new(): NavigationPreloadManager;
 };
-  export interface NavigatorBeacon {
+export interface NavigatorBeacon {
     sendBeacon(url: string, data?: Blob | Int8Array | Int16Array | Int32Array | Uint8Array | Uint16Array | Uint32Array | Uint8ClampedArray | Float32Array | Float64Array | DataView | ArrayBuffer | FormData | string | null): boolean;
 }
-  export interface NavigatorConcurrentHardware {
+export interface NavigatorConcurrentHardware {
     readonly hardwareConcurrency: number;
 }
-  export interface NavigatorID {
+export interface NavigatorID {
     readonly appCodeName: string;
     readonly appName: string;
     readonly appVersion: string;
@@ -1824,19 +1824,19 @@ and limitations under the License.
     readonly vendor: string;
     readonly vendorSub: string;
 }
-  export interface NavigatorOnLine {
+export interface NavigatorOnLine {
     readonly onLine: boolean;
 }
-  export interface NavigatorStorage {
+export interface NavigatorStorage {
     readonly storage: StorageManager;
 }
-  export interface NotificationEventMap {
+export interface NotificationEventMap {
     "click": Event;
     "close": Event;
     "error": Event;
     "show": Event;
 }
-  export interface Notification extends EventTarget {
+export interface Notification extends EventTarget {
     readonly actions: ReadonlyArray<NotificationAction>;
     readonly badge: string;
     readonly body: string;
@@ -1862,52 +1862,52 @@ and limitations under the License.
     removeEventListener<K extends keyof NotificationEventMap>(type: K, listener: (this: Notification, ev: NotificationEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var Notification: {
+export type NotificationGlobal =  {
     prototype: Notification;
     new(title: string, options?: NotificationOptions): Notification;
     readonly maxActions: number;
     readonly permission: NotificationPermission;
 };
-  export interface NotificationEvent extends ExtendableEvent {
+export interface NotificationEvent extends ExtendableEvent {
     readonly action: string;
     readonly notification: Notification;
 }
-  export var NotificationEvent: {
+export type NotificationEventGlobal =  {
     prototype: NotificationEvent;
     new(type: string, eventInitDict: NotificationEventInit): NotificationEvent;
 };
-  export interface OES_element_index_uint {
+export interface OES_element_index_uint {
 }
-  export interface OES_standard_derivatives {
+export interface OES_standard_derivatives {
     readonly FRAGMENT_SHADER_DERIVATIVE_HINT_OES: GLenum;
 }
-  export interface OES_texture_float {
+export interface OES_texture_float {
 }
-  export interface OES_texture_float_linear {
+export interface OES_texture_float_linear {
 }
-  export interface OES_texture_half_float {
+export interface OES_texture_half_float {
     readonly HALF_FLOAT_OES: GLenum;
 }
-  export interface OES_texture_half_float_linear {
+export interface OES_texture_half_float_linear {
 }
-  export interface OES_vertex_array_object {
+export interface OES_vertex_array_object {
     bindVertexArrayOES(arrayObject: WebGLVertexArrayObjectOES | null): void;
     createVertexArrayOES(): WebGLVertexArrayObjectOES | null;
     deleteVertexArrayOES(arrayObject: WebGLVertexArrayObjectOES | null): void;
     isVertexArrayOES(arrayObject: WebGLVertexArrayObjectOES | null): GLboolean;
     readonly VERTEX_ARRAY_BINDING_OES: GLenum;
 }
-  export interface Path2D extends CanvasPath {
+export interface Path2D extends CanvasPath {
     addPath(path: Path2D, transform?: DOMMatrix2DInit): void;
 }
-  export var Path2D: {
+export type Path2DGlobal =  {
     prototype: Path2D;
     new(path?: Path2D | string): Path2D;
 };
-  export interface PerformanceEventMap {
+export interface PerformanceEventMap {
     "resourcetimingbufferfull": Event;
 }
-  export interface Performance extends EventTarget {
+export interface Performance extends EventTarget {
     onresourcetimingbufferfull: ((this: Performance, ev: Event) => any) | null;
     readonly timeOrigin: number;
     clearMarks(markName?: string): void;
@@ -1926,52 +1926,52 @@ and limitations under the License.
     removeEventListener<K extends keyof PerformanceEventMap>(type: K, listener: (this: Performance, ev: PerformanceEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var Performance: {
+export type PerformanceGlobal =  {
     prototype: Performance;
     new(): Performance;
 };
-  export interface PerformanceEntry {
+export interface PerformanceEntry {
     readonly duration: number;
     readonly entryType: string;
     readonly name: string;
     readonly startTime: number;
     toJSON(): any;
 }
-  export var PerformanceEntry: {
+export type PerformanceEntryGlobal =  {
     prototype: PerformanceEntry;
     new(): PerformanceEntry;
 };
-  export interface PerformanceMark extends PerformanceEntry {
+export interface PerformanceMark extends PerformanceEntry {
 }
-  export var PerformanceMark: {
+export type PerformanceMarkGlobal =  {
     prototype: PerformanceMark;
     new(): PerformanceMark;
 };
-  export interface PerformanceMeasure extends PerformanceEntry {
+export interface PerformanceMeasure extends PerformanceEntry {
 }
-  export var PerformanceMeasure: {
+export type PerformanceMeasureGlobal =  {
     prototype: PerformanceMeasure;
     new(): PerformanceMeasure;
 };
-  export interface PerformanceObserver {
+export interface PerformanceObserver {
     disconnect(): void;
     observe(options: PerformanceObserverInit): void;
     takeRecords(): PerformanceEntryList;
 }
-  export var PerformanceObserver: {
+export type PerformanceObserverGlobal =  {
     prototype: PerformanceObserver;
     new(callback: PerformanceObserverCallback): PerformanceObserver;
 };
-  export interface PerformanceObserverEntryList {
+export interface PerformanceObserverEntryList {
     getEntries(): PerformanceEntryList;
     getEntriesByName(name: string, type?: string): PerformanceEntryList;
     getEntriesByType(type: string): PerformanceEntryList;
 }
-  export var PerformanceObserverEntryList: {
+export type PerformanceObserverEntryListGlobal =  {
     prototype: PerformanceObserverEntryList;
     new(): PerformanceObserverEntryList;
 };
-  export interface PerformanceResourceTiming extends PerformanceEntry {
+export interface PerformanceResourceTiming extends PerformanceEntry {
     readonly connectEnd: number;
     readonly connectStart: number;
     readonly decodedBodySize: number;
@@ -1991,55 +1991,55 @@ and limitations under the License.
     readonly workerStart: number;
     toJSON(): any;
 }
-  export var PerformanceResourceTiming: {
+export type PerformanceResourceTimingGlobal =  {
     prototype: PerformanceResourceTiming;
     new(): PerformanceResourceTiming;
 };
-  export interface ProgressEvent extends Event {
+export interface ProgressEvent extends Event {
     readonly lengthComputable: boolean;
     readonly loaded: number;
     readonly total: number;
 }
-  export var ProgressEvent: {
+export type ProgressEventGlobal =  {
     prototype: ProgressEvent;
     new(type: string, eventInitDict?: ProgressEventInit): ProgressEvent;
 };
-  export interface PromiseRejectionEvent extends Event {
+export interface PromiseRejectionEvent extends Event {
     readonly promise: Promise<any>;
     readonly reason: any;
 }
-  export var PromiseRejectionEvent: {
+export type PromiseRejectionEventGlobal =  {
     prototype: PromiseRejectionEvent;
     new(type: string, eventInitDict: PromiseRejectionEventInit): PromiseRejectionEvent;
 };
-  export interface PushEvent extends ExtendableEvent {
+export interface PushEvent extends ExtendableEvent {
     readonly data: PushMessageData | null;
 }
-  export var PushEvent: {
+export type PushEventGlobal =  {
     prototype: PushEvent;
     new(type: string, eventInitDict?: PushEventInit): PushEvent;
 };
-  export interface PushManager {
+export interface PushManager {
     getSubscription(): Promise<PushSubscription | null>;
     permissionState(options?: PushSubscriptionOptionsInit): Promise<PushPermissionState>;
     subscribe(options?: PushSubscriptionOptionsInit): Promise<PushSubscription>;
 }
-  export var PushManager: {
+export type PushManagerGlobal =  {
     prototype: PushManager;
     new(): PushManager;
     readonly supportedContentEncodings: ReadonlyArray<string>;
 };
-  export interface PushMessageData {
+export interface PushMessageData {
     arrayBuffer(): ArrayBuffer;
     blob(): Blob;
     json(): any;
     text(): string;
 }
-  export var PushMessageData: {
+export type PushMessageDataGlobal =  {
     prototype: PushMessageData;
     new(): PushMessageData;
 };
-  export interface PushSubscription {
+export interface PushSubscription {
     readonly endpoint: string;
     readonly expirationTime: number | null;
     readonly options: PushSubscriptionOptions;
@@ -2047,34 +2047,34 @@ and limitations under the License.
     toJSON(): PushSubscriptionJSON;
     unsubscribe(): Promise<boolean>;
 }
-  export var PushSubscription: {
+export type PushSubscriptionGlobal =  {
     prototype: PushSubscription;
     new(): PushSubscription;
 };
-  export interface PushSubscriptionChangeEvent extends ExtendableEvent {
+export interface PushSubscriptionChangeEvent extends ExtendableEvent {
     readonly newSubscription: PushSubscription | null;
     readonly oldSubscription: PushSubscription | null;
 }
-  export var PushSubscriptionChangeEvent: {
+export type PushSubscriptionChangeEventGlobal =  {
     prototype: PushSubscriptionChangeEvent;
     new(type: string, eventInitDict?: PushSubscriptionChangeInit): PushSubscriptionChangeEvent;
 };
-  export interface PushSubscriptionOptions {
+export interface PushSubscriptionOptions {
     readonly applicationServerKey: ArrayBuffer | null;
     readonly userVisibleOnly: boolean;
 }
-  export var PushSubscriptionOptions: {
+export type PushSubscriptionOptionsGlobal =  {
     prototype: PushSubscriptionOptions;
     new(): PushSubscriptionOptions;
 };
-  export interface ReadableByteStreamController {
+export interface ReadableByteStreamController {
     readonly byobRequest: ReadableStreamBYOBRequest | undefined;
     readonly desiredSize: number | null;
     close(): void;
     enqueue(chunk: ArrayBufferView): void;
     error(error?: any): void;
 }
-  export interface ReadableStream<R = any> {
+export interface ReadableStream<R = any> {
     readonly locked: boolean;
     cancel(reason?: any): Promise<void>;
     getReader(options: { mode: "byob" }): ReadableStreamBYOBReader;
@@ -2083,52 +2083,52 @@ and limitations under the License.
     pipeTo(dest: WritableStream<R>, options?: PipeOptions): Promise<void>;
     tee(): [ReadableStream<R>, ReadableStream<R>];
 }
-  export var ReadableStream: {
+export type ReadableStreamGlobal =  {
     prototype: ReadableStream;
     new(underlyingSource: UnderlyingByteSource, strategy?: { highWaterMark?: number, size?: undefined }): ReadableStream<Uint8Array>;
     new<R = any>(underlyingSource?: UnderlyingSource<R>, strategy?: QueuingStrategy<R>): ReadableStream<R>;
 };
-  export interface ReadableStreamBYOBReader {
+export interface ReadableStreamBYOBReader {
     readonly closed: Promise<void>;
     cancel(reason?: any): Promise<void>;
     read<T extends ArrayBufferView>(view: T): Promise<ReadableStreamReadResult<T>>;
     releaseLock(): void;
 }
-  export var ReadableStreamBYOBReader: {
+export type ReadableStreamBYOBReaderGlobal =  {
     prototype: ReadableStreamBYOBReader;
     new(stream: ReadableStream<Uint8Array>): ReadableStreamBYOBReader;
 };
-  export interface ReadableStreamBYOBRequest {
+export interface ReadableStreamBYOBRequest {
     readonly view: ArrayBufferView;
     respond(bytesWritten: number): void;
     respondWithNewView(view: ArrayBufferView): void;
 }
-  export interface ReadableStreamDefaultController<R = any> {
+export interface ReadableStreamDefaultController<R = any> {
     readonly desiredSize: number | null;
     close(): void;
     enqueue(chunk: R): void;
     error(error?: any): void;
 }
-  export interface ReadableStreamDefaultReader<R = any> {
+export interface ReadableStreamDefaultReader<R = any> {
     readonly closed: Promise<void>;
     cancel(reason?: any): Promise<void>;
     read(): Promise<ReadableStreamReadResult<R>>;
     releaseLock(): void;
 }
-  export interface ReadableStreamReadResult<T> {
+export interface ReadableStreamReadResult<T> {
     done: boolean;
     value: T;
 }
-  export interface ReadableStreamReader<R = any> {
+export interface ReadableStreamReader<R = any> {
     cancel(): Promise<void>;
     read(): Promise<ReadableStreamReadResult<R>>;
     releaseLock(): void;
 }
-  export var ReadableStreamReader: {
+export type ReadableStreamReaderGlobal =  {
     prototype: ReadableStreamReader;
     new(): ReadableStreamReader;
 };
-  export interface Request extends Body {
+export interface Request extends Body {
     /**
      * Returns the cache mode associated with request, which is a string indicating
      * how the request will interact with the browser's cache when fetching.
@@ -2207,11 +2207,11 @@ and limitations under the License.
     readonly url: string;
     clone(): Request;
 }
-  export var Request: {
+export type RequestGlobal =  {
     prototype: Request;
     new(input: RequestInfo, init?: RequestInit): Request;
 };
-  export interface Response extends Body {
+export interface Response extends Body {
     readonly headers: Headers;
     readonly ok: boolean;
     readonly redirected: boolean;
@@ -2222,16 +2222,16 @@ and limitations under the License.
     readonly url: string;
     clone(): Response;
 }
-  export var Response: {
+export type ResponseGlobal =  {
     prototype: Response;
     new(body?: BodyInit | null, init?: ResponseInit): Response;
     error(): Response;
     redirect(url: string, status?: number): Response;
 };
-  export interface ServiceWorkerEventMap extends AbstractWorkerEventMap {
+export interface ServiceWorkerEventMap extends AbstractWorkerEventMap {
     "statechange": Event;
 }
-  export interface ServiceWorker extends EventTarget, AbstractWorker {
+export interface ServiceWorker extends EventTarget, AbstractWorker {
     onstatechange: ((this: ServiceWorker, ev: Event) => any) | null;
     readonly scriptURL: string;
     readonly state: ServiceWorkerState;
@@ -2241,16 +2241,16 @@ and limitations under the License.
     removeEventListener<K extends keyof ServiceWorkerEventMap>(type: K, listener: (this: ServiceWorker, ev: ServiceWorkerEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var ServiceWorker: {
+export type ServiceWorkerGlobal =  {
     prototype: ServiceWorker;
     new(): ServiceWorker;
 };
-  export interface ServiceWorkerContainerEventMap {
+export interface ServiceWorkerContainerEventMap {
     "controllerchange": Event;
     "message": MessageEvent;
     "messageerror": MessageEvent;
 }
-  export interface ServiceWorkerContainer extends EventTarget {
+export interface ServiceWorkerContainer extends EventTarget {
     readonly controller: ServiceWorker | null;
     oncontrollerchange: ((this: ServiceWorkerContainer, ev: Event) => any) | null;
     onmessage: ((this: ServiceWorkerContainer, ev: MessageEvent) => any) | null;
@@ -2265,11 +2265,11 @@ and limitations under the License.
     removeEventListener<K extends keyof ServiceWorkerContainerEventMap>(type: K, listener: (this: ServiceWorkerContainer, ev: ServiceWorkerContainerEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var ServiceWorkerContainer: {
+export type ServiceWorkerContainerGlobal =  {
     prototype: ServiceWorkerContainer;
     new(): ServiceWorkerContainer;
 };
-  export interface ServiceWorkerGlobalScopeEventMap extends WorkerGlobalScopeEventMap {
+export interface ServiceWorkerGlobalScopeEventMap extends WorkerGlobalScopeEventMap {
     "activate": ExtendableEvent;
     "fetch": FetchEvent;
     "install": ExtendableEvent;
@@ -2281,7 +2281,7 @@ and limitations under the License.
     "pushsubscriptionchange": PushSubscriptionChangeEvent;
     "sync": SyncEvent;
 }
-  export interface ServiceWorkerGlobalScope extends WorkerGlobalScope {
+export interface ServiceWorkerGlobalScope extends WorkerGlobalScope {
     readonly clients: Clients;
     onactivate: ((this: ServiceWorkerGlobalScope, ev: ExtendableEvent) => any) | null;
     onfetch: ((this: ServiceWorkerGlobalScope, ev: FetchEvent) => any) | null;
@@ -2300,14 +2300,14 @@ and limitations under the License.
     removeEventListener<K extends keyof ServiceWorkerGlobalScopeEventMap>(type: K, listener: (this: ServiceWorkerGlobalScope, ev: ServiceWorkerGlobalScopeEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var ServiceWorkerGlobalScope: {
+export type ServiceWorkerGlobalScopeGlobal =  {
     prototype: ServiceWorkerGlobalScope;
     new(): ServiceWorkerGlobalScope;
 };
-  export interface ServiceWorkerRegistrationEventMap {
+export interface ServiceWorkerRegistrationEventMap {
     "updatefound": Event;
 }
-  export interface ServiceWorkerRegistration extends EventTarget {
+export interface ServiceWorkerRegistration extends EventTarget {
     readonly active: ServiceWorker | null;
     readonly installing: ServiceWorker | null;
     readonly navigationPreload: NavigationPreloadManager;
@@ -2326,19 +2326,19 @@ and limitations under the License.
     removeEventListener<K extends keyof ServiceWorkerRegistrationEventMap>(type: K, listener: (this: ServiceWorkerRegistration, ev: ServiceWorkerRegistrationEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var ServiceWorkerRegistration: {
+export type ServiceWorkerRegistrationGlobal =  {
     prototype: ServiceWorkerRegistration;
     new(): ServiceWorkerRegistration;
 };
-  export interface StorageManager {
+export interface StorageManager {
     estimate(): Promise<StorageEstimate>;
     persisted(): Promise<boolean>;
 }
-  export var StorageManager: {
+export type StorageManagerGlobal =  {
     prototype: StorageManager;
     new(): StorageManager;
 };
-  export interface SubtleCrypto {
+export interface SubtleCrypto {
     decrypt(algorithm: string | RsaOaepParams | AesCtrParams | AesCbcParams | AesCmacParams | AesGcmParams | AesCfbParams, key: CryptoKey, data: Int8Array | Int16Array | Int32Array | Uint8Array | Uint16Array | Uint32Array | Uint8ClampedArray | Float32Array | Float64Array | DataView | ArrayBuffer): PromiseLike<ArrayBuffer>;
     deriveBits(algorithm: string | EcdhKeyDeriveParams | DhKeyDeriveParams | ConcatParams | HkdfCtrParams | Pbkdf2Params, baseKey: CryptoKey, length: number): PromiseLike<ArrayBuffer>;
     deriveKey(algorithm: string | EcdhKeyDeriveParams | DhKeyDeriveParams | ConcatParams | HkdfCtrParams | Pbkdf2Params, baseKey: CryptoKey, derivedKeyType: string | AesDerivedKeyParams | HmacImportParams | ConcatParams | HkdfCtrParams | Pbkdf2Params, extractable: boolean, keyUsages: string[]): PromiseLike<CryptoKey>;
@@ -2358,27 +2358,27 @@ and limitations under the License.
     verify(algorithm: string | RsaPssParams | EcdsaParams | AesCmacParams, key: CryptoKey, signature: Int8Array | Int16Array | Int32Array | Uint8Array | Uint16Array | Uint32Array | Uint8ClampedArray | Float32Array | Float64Array | DataView | ArrayBuffer, data: Int8Array | Int16Array | Int32Array | Uint8Array | Uint16Array | Uint32Array | Uint8ClampedArray | Float32Array | Float64Array | DataView | ArrayBuffer): PromiseLike<boolean>;
     wrapKey(format: string, key: CryptoKey, wrappingKey: CryptoKey, wrapAlgorithm: string | Algorithm): PromiseLike<ArrayBuffer>;
 }
-  export var SubtleCrypto: {
+export type SubtleCryptoGlobal =  {
     prototype: SubtleCrypto;
     new(): SubtleCrypto;
 };
-  export interface SyncEvent extends ExtendableEvent {
+export interface SyncEvent extends ExtendableEvent {
     readonly lastChance: boolean;
     readonly tag: string;
 }
-  export var SyncEvent: {
+export type SyncEventGlobal =  {
     prototype: SyncEvent;
     new(type: string, init: SyncEventInit): SyncEvent;
 };
-  export interface SyncManager {
+export interface SyncManager {
     getTags(): Promise<string[]>;
     register(tag: string): Promise<void>;
 }
-  export var SyncManager: {
+export type SyncManagerGlobal =  {
     prototype: SyncManager;
     new(): SyncManager;
 };
-  export interface TextDecoder {
+export interface TextDecoder {
     /**
      * Returns encoding's name, lowercased.
      */
@@ -2407,11 +2407,11 @@ and limitations under the License.
      */
     decode(input?: BufferSource, options?: TextDecodeOptions): string;
 }
-  export var TextDecoder: {
+export type TextDecoderGlobal =  {
     prototype: TextDecoder;
     new(label?: string, options?: TextDecoderOptions): TextDecoder;
 };
-  export interface TextEncoder {
+export interface TextEncoder {
     /**
      * Returns "utf-8".
      */
@@ -2421,11 +2421,11 @@ and limitations under the License.
      */
     encode(input?: string): Uint8Array;
 }
-  export var TextEncoder: {
+export type TextEncoderGlobal =  {
     prototype: TextEncoder;
     new(): TextEncoder;
 };
-  export interface TextMetrics {
+export interface TextMetrics {
     readonly actualBoundingBoxAscent: number;
     readonly actualBoundingBoxDescent: number;
     readonly actualBoundingBoxLeft: number;
@@ -2442,25 +2442,25 @@ and limitations under the License.
     readonly ideographicBaseline: number;
     readonly width: number;
 }
-  export var TextMetrics: {
+export type TextMetricsGlobal =  {
     prototype: TextMetrics;
     new(): TextMetrics;
 };
-  export interface TransformStream<I = any, O = any> {
+export interface TransformStream<I = any, O = any> {
     readonly readable: ReadableStream<O>;
     readonly writable: WritableStream<I>;
 }
-  export var TransformStream: {
+export type TransformStreamGlobal =  {
     prototype: TransformStream;
     new<I = any, O = any>(transformer?: Transformer<I, O>, writableStrategy?: QueuingStrategy<I>, readableStrategy?: QueuingStrategy<O>): TransformStream<I, O>;
 };
-  export interface TransformStreamDefaultController<O = any> {
+export interface TransformStreamDefaultController<O = any> {
     readonly desiredSize: number | null;
     enqueue(chunk: O): void;
     error(reason?: any): void;
     terminate(): void;
 }
-  export interface URL {
+export interface URL {
     hash: string;
     host: string;
     hostname: string;
@@ -2475,13 +2475,13 @@ and limitations under the License.
     username: string;
     toJSON(): string;
 }
-  export var URL: {
+export type URLGlobal =  {
     prototype: URL;
     new(url: string, base?: string | URL): URL;
     createObjectURL(object: any): string;
     revokeObjectURL(url: string): void;
 };
-  export interface URLSearchParams {
+export interface URLSearchParams {
     /**
      * Appends a specified key/value pair as a new search parameter.
      */
@@ -2509,16 +2509,16 @@ and limitations under the License.
     sort(): void;
     forEach(callbackfn: (value: string, key: string, parent: URLSearchParams) => void, thisArg?: any): void;
 }
-  export var URLSearchParams: {
+export type URLSearchParamsGlobal =  {
     prototype: URLSearchParams;
     new(init?: string[][] | Record<string, string> | string | URLSearchParams): URLSearchParams;
 };
-  export interface WEBGL_color_buffer_float {
+export interface WEBGL_color_buffer_float {
     readonly FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT: GLenum;
     readonly RGBA32F_EXT: GLenum;
     readonly UNSIGNED_NORMALIZED_EXT: GLenum;
 }
-  export interface WEBGL_compressed_texture_astc {
+export interface WEBGL_compressed_texture_astc {
     getSupportedProfiles(): string[];
     readonly COMPRESSED_RGBA_ASTC_10x10_KHR: GLenum;
     readonly COMPRESSED_RGBA_ASTC_10x5_KHR: GLenum;
@@ -2549,29 +2549,29 @@ and limitations under the License.
     readonly COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR: GLenum;
     readonly COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR: GLenum;
 }
-  export interface WEBGL_compressed_texture_s3tc {
+export interface WEBGL_compressed_texture_s3tc {
     readonly COMPRESSED_RGBA_S3TC_DXT1_EXT: GLenum;
     readonly COMPRESSED_RGBA_S3TC_DXT3_EXT: GLenum;
     readonly COMPRESSED_RGBA_S3TC_DXT5_EXT: GLenum;
     readonly COMPRESSED_RGB_S3TC_DXT1_EXT: GLenum;
 }
-  export interface WEBGL_compressed_texture_s3tc_srgb {
+export interface WEBGL_compressed_texture_s3tc_srgb {
     readonly COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT: GLenum;
     readonly COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT: GLenum;
     readonly COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT: GLenum;
     readonly COMPRESSED_SRGB_S3TC_DXT1_EXT: GLenum;
 }
-  export interface WEBGL_debug_renderer_info {
+export interface WEBGL_debug_renderer_info {
     readonly UNMASKED_RENDERER_WEBGL: GLenum;
     readonly UNMASKED_VENDOR_WEBGL: GLenum;
 }
-  export interface WEBGL_debug_shaders {
+export interface WEBGL_debug_shaders {
     getTranslatedShaderSource(shader: WebGLShader): string;
 }
-  export interface WEBGL_depth_texture {
+export interface WEBGL_depth_texture {
     readonly UNSIGNED_INT_24_8_WEBGL: GLenum;
 }
-  export interface WEBGL_draw_buffers {
+export interface WEBGL_draw_buffers {
     drawBuffersWEBGL(buffers: GLenum[]): void;
     readonly COLOR_ATTACHMENT0_WEBGL: GLenum;
     readonly COLOR_ATTACHMENT10_WEBGL: GLenum;
@@ -2608,59 +2608,59 @@ and limitations under the License.
     readonly MAX_COLOR_ATTACHMENTS_WEBGL: GLenum;
     readonly MAX_DRAW_BUFFERS_WEBGL: GLenum;
 }
-  export interface WEBGL_lose_context {
+export interface WEBGL_lose_context {
     loseContext(): void;
     restoreContext(): void;
 }
-  export interface WebGLActiveInfo {
+export interface WebGLActiveInfo {
     readonly name: string;
     readonly size: GLint;
     readonly type: GLenum;
 }
-  export var WebGLActiveInfo: {
+export type WebGLActiveInfoGlobal =  {
     prototype: WebGLActiveInfo;
     new(): WebGLActiveInfo;
 };
-  export interface WebGLBuffer extends WebGLObject {
+export interface WebGLBuffer extends WebGLObject {
 }
-  export var WebGLBuffer: {
+export type WebGLBufferGlobal =  {
     prototype: WebGLBuffer;
     new(): WebGLBuffer;
 };
-  export interface WebGLContextEvent extends Event {
+export interface WebGLContextEvent extends Event {
     readonly statusMessage: string;
 }
-  export var WebGLContextEvent: {
+export type WebGLContextEventGlobal =  {
     prototype: WebGLContextEvent;
     new(type: string, eventInit?: WebGLContextEventInit): WebGLContextEvent;
 };
-  export interface WebGLFramebuffer extends WebGLObject {
+export interface WebGLFramebuffer extends WebGLObject {
 }
-  export var WebGLFramebuffer: {
+export type WebGLFramebufferGlobal =  {
     prototype: WebGLFramebuffer;
     new(): WebGLFramebuffer;
 };
-  export interface WebGLObject {
+export interface WebGLObject {
 }
-  export var WebGLObject: {
+export type WebGLObjectGlobal =  {
     prototype: WebGLObject;
     new(): WebGLObject;
 };
-  export interface WebGLProgram extends WebGLObject {
+export interface WebGLProgram extends WebGLObject {
 }
-  export var WebGLProgram: {
+export type WebGLProgramGlobal =  {
     prototype: WebGLProgram;
     new(): WebGLProgram;
 };
-  export interface WebGLRenderbuffer extends WebGLObject {
+export interface WebGLRenderbuffer extends WebGLObject {
 }
-  export var WebGLRenderbuffer: {
+export type WebGLRenderbufferGlobal =  {
     prototype: WebGLRenderbuffer;
     new(): WebGLRenderbuffer;
 };
-  export interface WebGLRenderingContext extends WebGLRenderingContextBase {
+export interface WebGLRenderingContext extends WebGLRenderingContextBase {
 }
-  export var WebGLRenderingContext: {
+export type WebGLRenderingContextGlobal =  {
     prototype: WebGLRenderingContext;
     new(): WebGLRenderingContext;
     readonly ACTIVE_ATTRIBUTES: GLenum;
@@ -2960,7 +2960,7 @@ and limitations under the License.
     readonly VIEWPORT: GLenum;
     readonly ZERO: GLenum;
 };
-  export interface WebGLRenderingContextBase {
+export interface WebGLRenderingContextBase {
     readonly drawingBufferHeight: GLsizei;
     readonly drawingBufferWidth: GLsizei;
     activeTexture(texture: GLenum): void;
@@ -3421,42 +3421,42 @@ and limitations under the License.
     readonly VIEWPORT: GLenum;
     readonly ZERO: GLenum;
 }
-  export interface WebGLShader extends WebGLObject {
+export interface WebGLShader extends WebGLObject {
 }
-  export var WebGLShader: {
+export type WebGLShaderGlobal =  {
     prototype: WebGLShader;
     new(): WebGLShader;
 };
-  export interface WebGLShaderPrecisionFormat {
+export interface WebGLShaderPrecisionFormat {
     readonly precision: GLint;
     readonly rangeMax: GLint;
     readonly rangeMin: GLint;
 }
-  export var WebGLShaderPrecisionFormat: {
+export type WebGLShaderPrecisionFormatGlobal =  {
     prototype: WebGLShaderPrecisionFormat;
     new(): WebGLShaderPrecisionFormat;
 };
-  export interface WebGLTexture extends WebGLObject {
+export interface WebGLTexture extends WebGLObject {
 }
-  export var WebGLTexture: {
+export type WebGLTextureGlobal =  {
     prototype: WebGLTexture;
     new(): WebGLTexture;
 };
-  export interface WebGLUniformLocation {
+export interface WebGLUniformLocation {
 }
-  export var WebGLUniformLocation: {
+export type WebGLUniformLocationGlobal =  {
     prototype: WebGLUniformLocation;
     new(): WebGLUniformLocation;
 };
-  export interface WebGLVertexArrayObjectOES extends WebGLObject {
+export interface WebGLVertexArrayObjectOES extends WebGLObject {
 }
-  export interface WebSocketEventMap {
+export interface WebSocketEventMap {
     "close": CloseEvent;
     "error": Event;
     "message": MessageEvent;
     "open": Event;
 }
-  export interface WebSocket extends EventTarget {
+export interface WebSocket extends EventTarget {
     binaryType: BinaryType;
     readonly bufferedAmount: number;
     readonly extensions: string;
@@ -3478,7 +3478,7 @@ and limitations under the License.
     removeEventListener<K extends keyof WebSocketEventMap>(type: K, listener: (this: WebSocket, ev: WebSocketEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var WebSocket: {
+export type WebSocketGlobal =  {
     prototype: WebSocket;
     new(url: string, protocols?: string | string[]): WebSocket;
     readonly CLOSED: number;
@@ -3486,25 +3486,25 @@ and limitations under the License.
     readonly CONNECTING: number;
     readonly OPEN: number;
 };
-  export interface WindowBase64 {
+export interface WindowBase64 {
     atob(encodedString: string): string;
     btoa(rawString: string): string;
 }
-  export interface WindowClient extends Client {
+export interface WindowClient extends Client {
     readonly ancestorOrigins: ReadonlyArray<string>;
     readonly focused: boolean;
     readonly visibilityState: VisibilityState;
     focus(): Promise<WindowClient>;
     navigate(url: string): Promise<WindowClient | null>;
 }
-  export var WindowClient: {
+export type WindowClientGlobal =  {
     prototype: WindowClient;
     new(): WindowClient;
 };
-  export interface WindowConsole {
+export interface WindowConsole {
     readonly console: Console;
 }
-  export interface WindowOrWorkerGlobalScope {
+export interface WindowOrWorkerGlobalScope {
     readonly caches: CacheStorage;
     readonly crypto: Crypto;
     readonly indexedDB: IDBFactory;
@@ -3521,10 +3521,10 @@ and limitations under the License.
     setInterval(handler: TimerHandler, timeout?: number, ...arguments: any[]): number;
     setTimeout(handler: TimerHandler, timeout?: number, ...arguments: any[]): number;
 }
-  export interface WorkerEventMap extends AbstractWorkerEventMap {
+export interface WorkerEventMap extends AbstractWorkerEventMap {
     "message": MessageEvent;
 }
-  export interface Worker extends EventTarget, AbstractWorker {
+export interface Worker extends EventTarget, AbstractWorker {
     onmessage: ((this: Worker, ev: MessageEvent) => any) | null;
     postMessage(message: any, transfer?: Transferable[]): void;
     terminate(): void;
@@ -3533,14 +3533,14 @@ and limitations under the License.
     removeEventListener<K extends keyof WorkerEventMap>(type: K, listener: (this: Worker, ev: WorkerEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var Worker: {
+export type WorkerGlobal =  {
     prototype: Worker;
     new(stringUrl: string, options?: WorkerOptions): Worker;
 };
-  export interface WorkerGlobalScopeEventMap {
+export interface WorkerGlobalScopeEventMap {
     "error": ErrorEvent;
 }
-  export interface WorkerGlobalScope extends EventTarget, WorkerUtils, WindowConsole, GlobalFetch, WindowOrWorkerGlobalScope {
+export interface WorkerGlobalScope extends EventTarget, WorkerUtils, WindowConsole, GlobalFetch, WindowOrWorkerGlobalScope {
     readonly caches: CacheStorage;
     readonly isSecureContext: boolean;
     readonly location: WorkerLocation;
@@ -3553,11 +3553,11 @@ and limitations under the License.
     removeEventListener<K extends keyof WorkerGlobalScopeEventMap>(type: K, listener: (this: WorkerGlobalScope, ev: WorkerGlobalScopeEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var WorkerGlobalScope: {
+export type WorkerGlobalScopeGlobal =  {
     prototype: WorkerGlobalScope;
     new(): WorkerGlobalScope;
 };
-  export interface WorkerLocation {
+export interface WorkerLocation {
     readonly hash: string;
     readonly host: string;
     readonly hostname: string;
@@ -3569,36 +3569,36 @@ and limitations under the License.
     readonly search: string;
     toString(): string;
 }
-  export var WorkerLocation: {
+export type WorkerLocationGlobal =  {
     prototype: WorkerLocation;
     new(): WorkerLocation;
 };
-  export interface WorkerNavigator extends NavigatorID, NavigatorOnLine, NavigatorBeacon, NavigatorConcurrentHardware, NavigatorStorage {
+export interface WorkerNavigator extends NavigatorID, NavigatorOnLine, NavigatorBeacon, NavigatorConcurrentHardware, NavigatorStorage {
     readonly serviceWorker: ServiceWorkerContainer;
 }
-  export var WorkerNavigator: {
+export type WorkerNavigatorGlobal =  {
     prototype: WorkerNavigator;
     new(): WorkerNavigator;
 };
-  export interface WorkerUtils extends WindowBase64 {
+export interface WorkerUtils extends WindowBase64 {
     readonly indexedDB: IDBFactory;
     readonly msIndexedDB: IDBFactory;
     readonly navigator: WorkerNavigator;
     importScripts(...urls: string[]): void;
 }
-  export interface WritableStream<W = any> {
+export interface WritableStream<W = any> {
     readonly locked: boolean;
     abort(reason?: any): Promise<void>;
     getWriter(): WritableStreamDefaultWriter<W>;
 }
-  export var WritableStream: {
+export type WritableStreamGlobal =  {
     prototype: WritableStream;
     new<W = any>(underlyingSink?: UnderlyingSink<W>, strategy?: QueuingStrategy<W>): WritableStream<W>;
 };
-  export interface WritableStreamDefaultController {
+export interface WritableStreamDefaultController {
     error(error?: any): void;
 }
-  export interface WritableStreamDefaultWriter<W = any> {
+export interface WritableStreamDefaultWriter<W = any> {
     readonly closed: Promise<void>;
     readonly desiredSize: number | null;
     readonly ready: Promise<void>;
@@ -3607,10 +3607,10 @@ and limitations under the License.
     releaseLock(): void;
     write(chunk: W): Promise<void>;
 }
-  export interface XMLHttpRequestEventMap extends XMLHttpRequestEventTargetEventMap {
+export interface XMLHttpRequestEventMap extends XMLHttpRequestEventTargetEventMap {
     "readystatechange": Event;
 }
-  export interface XMLHttpRequest extends XMLHttpRequestEventTarget {
+export interface XMLHttpRequest extends XMLHttpRequestEventTarget {
     onreadystatechange: ((this: XMLHttpRequest, ev: Event) => any) | null;
     /**
      * Returns client's state.
@@ -3705,7 +3705,7 @@ and limitations under the License.
     removeEventListener<K extends keyof XMLHttpRequestEventMap>(type: K, listener: (this: XMLHttpRequest, ev: XMLHttpRequestEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var XMLHttpRequest: {
+export type XMLHttpRequestGlobal =  {
     prototype: XMLHttpRequest;
     new(): XMLHttpRequest;
     readonly DONE: number;
@@ -3714,7 +3714,7 @@ and limitations under the License.
     readonly OPENED: number;
     readonly UNSENT: number;
 };
-  export interface XMLHttpRequestEventTargetEventMap {
+export interface XMLHttpRequestEventTargetEventMap {
     "abort": ProgressEvent;
     "error": ProgressEvent;
     "load": ProgressEvent;
@@ -3723,7 +3723,7 @@ and limitations under the License.
     "progress": ProgressEvent;
     "timeout": ProgressEvent;
 }
-  export interface XMLHttpRequestEventTarget extends EventTarget {
+export interface XMLHttpRequestEventTarget extends EventTarget {
     onabort: ((this: XMLHttpRequest, ev: ProgressEvent) => any) | null;
     onerror: ((this: XMLHttpRequest, ev: ProgressEvent) => any) | null;
     onload: ((this: XMLHttpRequest, ev: ProgressEvent) => any) | null;
@@ -3736,163 +3736,173 @@ and limitations under the License.
     removeEventListener<K extends keyof XMLHttpRequestEventTargetEventMap>(type: K, listener: (this: XMLHttpRequestEventTarget, ev: XMLHttpRequestEventTargetEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var XMLHttpRequestEventTarget: {
+export type XMLHttpRequestEventTargetGlobal =  {
     prototype: XMLHttpRequestEventTarget;
     new(): XMLHttpRequestEventTarget;
 };
-  export interface XMLHttpRequestUpload extends XMLHttpRequestEventTarget {
+export interface XMLHttpRequestUpload extends XMLHttpRequestEventTarget {
     addEventListener<K extends keyof XMLHttpRequestEventTargetEventMap>(type: K, listener: (this: XMLHttpRequestUpload, ev: XMLHttpRequestEventTargetEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
     addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
     removeEventListener<K extends keyof XMLHttpRequestEventTargetEventMap>(type: K, listener: (this: XMLHttpRequestUpload, ev: XMLHttpRequestEventTargetEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
     removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
 }
-  export var XMLHttpRequestUpload: {
+export type XMLHttpRequestUploadGlobal =  {
     prototype: XMLHttpRequestUpload;
     new(): XMLHttpRequestUpload;
 };
-  export type EventListenerOrEventListenerObject = EventListener | EventListenerObject;
-  export interface EventHandlerNonNull {
+
+declare type EventListenerOrEventListenerObject = EventListener | EventListenerObject;
+export interface EventHandlerNonNull {
     (event: Event): any;
 }
-  export interface PerformanceObserverCallback {
+export interface PerformanceObserverCallback {
     (entries: PerformanceObserverEntryList, observer: PerformanceObserver): void;
 }
-  export interface QueuingStrategySizeCallback<T = any> {
+export interface QueuingStrategySizeCallback<T = any> {
     (chunk: T): number;
 }
-  export interface ReadableByteStreamControllerCallback {
+export interface ReadableByteStreamControllerCallback {
     (controller: ReadableByteStreamController): void | PromiseLike<void>;
 }
-  export interface ReadableStreamDefaultControllerCallback<R> {
+export interface ReadableStreamDefaultControllerCallback<R> {
     (controller: ReadableStreamDefaultController<R>): void | PromiseLike<void>;
 }
-  export interface ReadableStreamErrorCallback {
+export interface ReadableStreamErrorCallback {
     (reason: any): void | PromiseLike<void>;
 }
-  export interface TransformStreamDefaultControllerCallback<O> {
+export interface TransformStreamDefaultControllerCallback<O> {
     (controller: TransformStreamDefaultController<O>): void | PromiseLike<void>;
 }
-  export interface TransformStreamDefaultControllerTransformCallback<I, O> {
+export interface TransformStreamDefaultControllerTransformCallback<I, O> {
     (chunk: I, controller: TransformStreamDefaultController<O>): void | PromiseLike<void>;
 }
-  export interface WritableStreamDefaultControllerCloseCallback {
+export interface WritableStreamDefaultControllerCloseCallback {
     (): void | PromiseLike<void>;
 }
-  export interface WritableStreamDefaultControllerStartCallback {
+export interface WritableStreamDefaultControllerStartCallback {
     (controller: WritableStreamDefaultController): void | PromiseLike<void>;
 }
-  export interface WritableStreamDefaultControllerWriteCallback<W> {
+export interface WritableStreamDefaultControllerWriteCallback<W> {
     (chunk: W, controller: WritableStreamDefaultController): void | PromiseLike<void>;
 }
-  export interface WritableStreamErrorCallback {
+export interface WritableStreamErrorCallback {
     (reason: any): void | PromiseLike<void>;
 }
-  export var onmessage: ((this: DedicatedWorkerGlobalScope, ev: MessageEvent) => any) | null;
-  export function close(): void;
-  export function postMessage(message: any, transfer?: Transferable[]): void;
+export type onmessage =  ((this: DedicatedWorkerGlobalScope, ev: MessageEvent) => any) | null;
+export type close = () =>  void;
+export type postMessage = (message: any, transfer?: Transferable[]) =>  void;
 /**
  * Dispatches a synthetic event event to target and returns true
  * if either event's cancelable attribute value is false or its preventDefault() method was not invoked, and false otherwise.
  */
-  export function dispatchEvent(event: Event): boolean;
-  export var caches: CacheStorage;
-  export var isSecureContext: boolean;
-  export var location: WorkerLocation;
-  export var onerror: ((this: DedicatedWorkerGlobalScope, ev: ErrorEvent) => any) | null;
-  export var performance: Performance;
-  export var self: WorkerGlobalScope;
-  export function msWriteProfilerMark(profilerMarkName: string): void;
+export type dispatchEventGlobalv1 = (event: Event) =>  boolean;
+export type cachesGlobalv1 =  CacheStorage;
+export type isSecureContext =  boolean;
+export type location =  WorkerLocation;
+export type onerror =  ((this: DedicatedWorkerGlobalScope, ev: ErrorEvent) => any) | null;
+export type performanceGlobalv1 =  Performance;
+export type self =  WorkerGlobalScope;
+export type msWriteProfilerMark = (profilerMarkName: string) =>  void;
 /**
  * Dispatches a synthetic event event to target and returns true
  * if either event's cancelable attribute value is false or its preventDefault() method was not invoked, and false otherwise.
  */
-  export function dispatchEvent(event: Event): boolean;
-  export var indexedDB: IDBFactory;
-  export var msIndexedDB: IDBFactory;
-  export var navigator: WorkerNavigator;
-  export function importScripts(...urls: string[]): void;
-  export function atob(encodedString: string): string;
-  export function btoa(rawString: string): string;
-  export var console: Console;
-  export function fetch(input: RequestInfo, init?: RequestInit): Promise<Response>;
-  export var caches: CacheStorage;
-  export var crypto: Crypto;
-  export var indexedDB: IDBFactory;
-  export var origin: string;
-  export var performance: Performance;
-  export function atob(data: string): string;
-  export function btoa(data: string): string;
-  export function clearInterval(handle?: number): void;
-  export function clearTimeout(handle?: number): void;
-  export function createImageBitmap(image: ImageBitmapSource): Promise<ImageBitmap>;
-  export function createImageBitmap(image: ImageBitmapSource, sx: number, sy: number, sw: number, sh: number): Promise<ImageBitmap>;
-  export function fetch(input: RequestInfo, init?: RequestInit): Promise<Response>;
-  export function queueMicrotask(callback: Function): void;
-  export function setInterval(handler: TimerHandler, timeout?: number, ...arguments: any[]): number;
-  export function setTimeout(handler: TimerHandler, timeout?: number, ...arguments: any[]): number;
-  export function addEventListener<K extends keyof DedicatedWorkerGlobalScopeEventMap>(type: K, listener: (this: DedicatedWorkerGlobalScope, ev: DedicatedWorkerGlobalScopeEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
-  export function addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
-  export function removeEventListener<K extends keyof DedicatedWorkerGlobalScopeEventMap>(type: K, listener: (this: DedicatedWorkerGlobalScope, ev: DedicatedWorkerGlobalScopeEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
-  export function removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
-  export type BlobPart = BufferSource | Blob | string;
-  export type HeadersInit = Headers | string[][] | Record<string, string>;
-  export type BodyInit = Blob | BufferSource | FormData | URLSearchParams | ReadableStream<Uint8Array> | string;
-  export type RequestInfo = Request | string;
-  export type DOMHighResTimeStamp = number;
-  export type CanvasImageSource = ImageBitmap;
-  export type MessageEventSource = MessagePort | ServiceWorker;
-  export type ImageBitmapSource = CanvasImageSource | Blob | ImageData;
-  export type TimerHandler = string | Function;
-  export type PerformanceEntryList = PerformanceEntry[];
-  export type PushMessageDataInit = BufferSource | string;
-  export type VibratePattern = number | number[];
-  export type AlgorithmIdentifier = string | Algorithm;
-  export type HashAlgorithmIdentifier = AlgorithmIdentifier;
-  export type BigInteger = Uint8Array;
-  export type NamedCurve = string;
-  export type GLenum = number;
-  export type GLboolean = boolean;
-  export type GLbitfield = number;
-  export type GLint = number;
-  export type GLsizei = number;
-  export type GLintptr = number;
-  export type GLsizeiptr = number;
-  export type GLuint = number;
-  export type GLfloat = number;
-  export type GLclampf = number;
-  export type TexImageSource = ImageBitmap | ImageData;
-  export type Float32List = Float32Array | GLfloat[];
-  export type Int32List = Int32Array | GLint[];
-  export type BufferSource = ArrayBufferView | ArrayBuffer;
-  export type DOMTimeStamp = number;
-  export type FormDataEntryValue = File | string;
-  export type IDBValidKey = number | string | Date | BufferSource | IDBArrayKey;
-  export type Transferable = ArrayBuffer | MessagePort | ImageBitmap;
-  export type BinaryType = "blob" | "arraybuffer";
-  export type ClientTypes = "window" | "worker" | "sharedworker" | "all";
-  export type EndingType = "transparent" | "native";
-  export type IDBCursorDirection = "next" | "nextunique" | "prev" | "prevunique";
-  export type IDBRequestReadyState = "pending" | "done";
-  export type IDBTransactionMode = "readonly" | "readwrite" | "versionchange";
-  export type KeyFormat = "raw" | "spki" | "pkcs8" | "jwk";
-  export type KeyType = "public" | "private" | "secret";
-  export type KeyUsage = "encrypt" | "decrypt" | "sign" | "verify" | "deriveKey" | "deriveBits" | "wrapKey" | "unwrapKey";
-  export type NotificationDirection = "auto" | "ltr" | "rtl";
-  export type NotificationPermission = "default" | "denied" | "granted";
-  export type PushEncryptionKeyName = "p256dh" | "auth";
-  export type PushPermissionState = "denied" | "granted" | "prompt";
-  export type ReferrerPolicy = "" | "no-referrer" | "no-referrer-when-downgrade" | "origin-only" | "origin-when-cross-origin" | "unsafe-url";
-  export type RequestCache = "default" | "no-store" | "reload" | "no-cache" | "force-cache" | "only-if-cached";
-  export type RequestCredentials = "omit" | "same-origin" | "include";
-  export type RequestDestination = "" | "audio" | "audioworklet" | "document" | "embed" | "font" | "image" | "manifest" | "object" | "paintworklet" | "report" | "script" | "sharedworker" | "style" | "track" | "video" | "worker" | "xslt";
-  export type RequestMode = "navigate" | "same-origin" | "no-cors" | "cors";
-  export type RequestRedirect = "follow" | "error" | "manual";
-  export type ResponseType = "basic" | "cors" | "default" | "error" | "opaque" | "opaqueredirect";
-  export type ServiceWorkerState = "installing" | "installed" | "activating" | "activated" | "redundant";
-  export type ServiceWorkerUpdateViaCache = "imports" | "all" | "none";
-  export type VisibilityState = "hidden" | "visible" | "prerender";
-  export type WebGLPowerPreference = "default" | "low-power" | "high-performance";
-  export type WorkerType = "classic" | "module";
-  export type XMLHttpRequestResponseType = "" | "arraybuffer" | "blob" | "document" | "json" | "text";
+export type dispatchEventGlobalv2 = (event: Event) =>  boolean;
+export type indexedDBGlobalv1 =  IDBFactory;
+export type msIndexedDB =  IDBFactory;
+export type navigator =  WorkerNavigator;
+export type importScripts = (...urls: string[]) =>  void;
+export type atobGlobalv1 = (encodedString: string) =>  string;
+export type btoaGlobalv1 = (rawString: string) =>  string;
+export type console =  Console;
+export type fetchGlobalv1 = (input: RequestInfo, init?: RequestInit) =>  Promise<Response>;
+export type cachesGlobalv2 =  CacheStorage;
+export type crypto =  Crypto;
+export type indexedDBGlobalv2 =  IDBFactory;
+export type origin =  string;
+export type performanceGlobalv2 =  Performance;
+export type atobGlobalv2 = (data: string) =>  string;
+export type btoaGlobalv2 = (data: string) =>  string;
+export type clearInterval = (handle?: number) =>  void;
+export type clearTimeout = (handle?: number) =>  void;
+export type createImageBitmapGlobalv1 = (image: ImageBitmapSource) =>  Promise<ImageBitmap>;
+export type createImageBitmapGlobalv2 = (image: ImageBitmapSource, sx: number, sy: number, sw: number, sh: number) =>  Promise<ImageBitmap>;
+export type fetchGlobalv2 = (input: RequestInfo, init?: RequestInit) =>  Promise<Response>;
+export type queueMicrotask = (callback: Function) =>  void;
+export type setInterval = (handler: TimerHandler, timeout?: number, ...arguments: any[]) =>  number;
+export type setTimeout = (handler: TimerHandler, timeout?: number, ...arguments: any[]) =>  number;
+export type addEventListenerGlobalv1 = <K extends keyof DedicatedWorkerGlobalScopeEventMap>(type: K, listener: (this: DedicatedWorkerGlobalScope, ev: DedicatedWorkerGlobalScopeEventMap[K]) => any, options?: boolean | AddEventListenerOptions) =>  void;
+export type addEventListenerGlobalv2 = (type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions) =>  void;
+export type removeEventListenerGlobalv1 = <K extends keyof DedicatedWorkerGlobalScopeEventMap>(type: K, listener: (this: DedicatedWorkerGlobalScope, ev: DedicatedWorkerGlobalScopeEventMap[K]) => any, options?: boolean | EventListenerOptions) =>  void;
+export type removeEventListenerGlobalv2 = (type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions) =>  void;
+export type BlobPart = BufferSource | Blob | string;
+export type HeadersInit = Headers | string[][] | Record<string, string>;
+export type BodyInit = Blob | BufferSource | FormData | URLSearchParams | ReadableStream<Uint8Array> | string;
+export type RequestInfo = Request | string;
+export type DOMHighResTimeStamp = number;
+export type CanvasImageSource = ImageBitmap;
+export type MessageEventSource = MessagePort | ServiceWorker;
+export type ImageBitmapSource = CanvasImageSource | Blob | ImageData;
+export type TimerHandler = string | Function;
+export type PerformanceEntryList = PerformanceEntry[];
+export type PushMessageDataInit = BufferSource | string;
+export type VibratePattern = number | number[];
+export type AlgorithmIdentifier = string | Algorithm;
+export type HashAlgorithmIdentifier = AlgorithmIdentifier;
+export type BigInteger = Uint8Array;
+export type NamedCurve = string;
+export type GLenum = number;
+export type GLboolean = boolean;
+export type GLbitfield = number;
+export type GLint = number;
+export type GLsizei = number;
+export type GLintptr = number;
+export type GLsizeiptr = number;
+export type GLuint = number;
+export type GLfloat = number;
+export type GLclampf = number;
+export type TexImageSource = ImageBitmap | ImageData;
+export type Float32List = Float32Array | GLfloat[];
+export type Int32List = Int32Array | GLint[];
+export type BufferSource = ArrayBufferView | ArrayBuffer;
+export type DOMTimeStamp = number;
+export type FormDataEntryValue = File | string;
+export type IDBValidKey = number | string | Date | BufferSource | IDBArrayKey;
+export type Transferable = ArrayBuffer | MessagePort | ImageBitmap;
+export type BinaryType = "blob" | "arraybuffer";
+export type ClientTypes = "window" | "worker" | "sharedworker" | "all";
+export type EndingType = "transparent" | "native";
+export type IDBCursorDirection = "next" | "nextunique" | "prev" | "prevunique";
+export type IDBRequestReadyState = "pending" | "done";
+export type IDBTransactionMode = "readonly" | "readwrite" | "versionchange";
+export type KeyFormat = "raw" | "spki" | "pkcs8" | "jwk";
+export type KeyType = "public" | "private" | "secret";
+export type KeyUsage = "encrypt" | "decrypt" | "sign" | "verify" | "deriveKey" | "deriveBits" | "wrapKey" | "unwrapKey";
+export type NotificationDirection = "auto" | "ltr" | "rtl";
+export type NotificationPermission = "default" | "denied" | "granted";
+export type PushEncryptionKeyName = "p256dh" | "auth";
+export type PushPermissionState = "denied" | "granted" | "prompt";
+export type ReferrerPolicy = "" | "no-referrer" | "no-referrer-when-downgrade" | "origin-only" | "origin-when-cross-origin" | "unsafe-url";
+export type RequestCache = "default" | "no-store" | "reload" | "no-cache" | "force-cache" | "only-if-cached";
+export type RequestCredentials = "omit" | "same-origin" | "include";
+export type RequestDestination = "" | "audio" | "audioworklet" | "document" | "embed" | "font" | "image" | "manifest" | "object" | "paintworklet" | "report" | "script" | "sharedworker" | "style" | "track" | "video" | "worker" | "xslt";
+export type RequestMode = "navigate" | "same-origin" | "no-cors" | "cors";
+export type RequestRedirect = "follow" | "error" | "manual";
+export type ResponseType = "basic" | "cors" | "default" | "error" | "opaque" | "opaqueredirect";
+export type ServiceWorkerState = "installing" | "installed" | "activating" | "activated" | "redundant";
+export type ServiceWorkerUpdateViaCache = "imports" | "all" | "none";
+export type VisibilityState = "hidden" | "visible" | "prerender";
+export type WebGLPowerPreference = "default" | "low-power" | "high-performance";
+export type WorkerType = "classic" | "module";
+export type XMLHttpRequestResponseType = "" | "arraybuffer" | "blob" | "document" | "json" | "text";
 
-}
+export type dispatchEventGlobal = dispatchEventGlobalv1 | dispatchEventGlobalv2;
+export type cachesGlobal = cachesGlobalv1 | cachesGlobalv2;
+export type indexedDBGlobal = indexedDBGlobalv1 | indexedDBGlobalv2;
+export type performanceGlobal = performanceGlobalv1 | performanceGlobalv2;
+export type atobGlobal = atobGlobalv1 | atobGlobalv2;
+export type btoaGlobal = btoaGlobalv1 | btoaGlobalv2;
+export type createImageBitmapGlobal = createImageBitmapGlobalv1 | createImageBitmapGlobalv2;
+export type fetchGlobal = fetchGlobalv1 | fetchGlobalv2;
+export type addEventListenerGlobal = addEventListenerGlobalv1 | addEventListenerGlobalv2;
+export type removeEventListenerGlobal = removeEventListenerGlobalv1 | removeEventListenerGlobalv2;
