@@ -1,11 +1,11 @@
 {
   "name": "ts-libs",
-  "version": "3.2.2-v1",
+  "version": "3.2.2-v2",
   "description": "Typescript libs as scoped modules",
-  "main": "index.js",
   "scripts": {
-    "modulify": "ts-node tools/modulify-libs.ts",
-    "test": "bash tests/test.sh"
+    "modulify": "rm -fr lib/ && ts-node -P tools/tsconfig.json tools/modulify-libs.ts",
+    "test": "bash tests/test.sh",
+    "prepublishOnly": "npm run test && npm run modulify"
   },
   "keywords": [
     "typescript",
@@ -17,12 +17,17 @@
   },
   "devDependencies": {
     "@types/node": "*",
-    "ts-node": "*",
-    "typescript": "3.2.2"
+    "typescript": "3.2.2",
+    "ts-node": "*"
   },
   "files": [
     "lib/*.d.ts"
   ],
+  "homepage": "https://github.com/mrbar42/ts-libs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrbar42/ts-libs.git"
+  },
   "author": "MrBar42",
   "license": "Apache-2.0"
 }

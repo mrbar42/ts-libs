@@ -1,3 +1,5 @@
+export {};
+
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -12,18 +14,13 @@ MERCHANTABLITY OR NON-INFRINGEMENT.
 See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ***************************************************************************** */
-
-
-
-
-
-declare namespace Intl {
-  export type DateTimeFormatPartTypes = "day" | "dayPeriod" | "era" | "hour" | "literal" | "minute" | "month" | "second" | "timeZoneName" | "weekday" | "year";
-  export interface DateTimeFormatPart {
+export namespace Intl {
+export type DateTimeFormatPartTypes = "day" | "dayPeriod" | "era" | "hour" | "literal" | "minute" | "month" | "second" | "timeZoneName" | "weekday" | "year";
+export interface DateTimeFormatPart {
         type: DateTimeFormatPartTypes;
         value: string;
     }
-  export interface DateTimeFormat {
+export interface DateTimeFormat {
         formatToParts(date?: Date | number): DateTimeFormatPart[];
     }
 }

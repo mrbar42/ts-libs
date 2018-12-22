@@ -1,3 +1,5 @@
+export {};
+
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -12,12 +14,7 @@ MERCHANTABLITY OR NON-INFRINGEMENT.
 See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ***************************************************************************** */
-
-
-
-
-
-  export interface SymbolConstructor {
+export interface SymbolConstructor {
     /**
      * A method that determines if a constructor object recognizes an object as one of the
      * constructor’s instances. Called by the semantics of the instanceof operator.
@@ -78,10 +75,10 @@ and limitations under the License.
      */
     readonly unscopables: symbol;
 }
-  export interface Symbol {
+export interface Symbol {
     readonly [Symbol.toStringTag]: string;
 }
-  export interface Array<T> {
+export interface Array<T> {
     /**
      * Returns an object whose properties have the value 'true'
      * when they will be absent when used in a 'with' statement.
@@ -96,7 +93,7 @@ and limitations under the License.
         values: boolean;
     };
 }
-  export interface Date {
+export interface Date {
     /**
      * Converts a Date object to a string.
      */
@@ -119,22 +116,22 @@ and limitations under the License.
      */
     [Symbol.toPrimitive](hint: string): string | number;
 }
-  export interface Map<K, V> {
+export interface Map<K, V> {
     readonly [Symbol.toStringTag]: string;
 }
-  export interface WeakMap<K extends object, V> {
+export interface WeakMap<K extends object, V> {
     readonly [Symbol.toStringTag]: string;
 }
-  export interface Set<T> {
+export interface Set<T> {
     readonly [Symbol.toStringTag]: string;
 }
-  export interface WeakSet<T extends object> {
+export interface WeakSet<T extends object> {
     readonly [Symbol.toStringTag]: string;
 }
-  export interface JSON {
+export interface JSON {
     readonly [Symbol.toStringTag]: string;
 }
-  export interface Function {
+export interface Function {
     /**
      * Determines whether the given value inherits from this function if this function was used
      * as a constructor function.
@@ -144,19 +141,19 @@ and limitations under the License.
      */
     [Symbol.hasInstance](value: any): boolean;
 }
-  export interface GeneratorFunction {
+export interface GeneratorFunction {
     readonly [Symbol.toStringTag]: string;
 }
-  export interface Math {
+export interface Math {
     readonly [Symbol.toStringTag]: string;
 }
-  export interface Promise<T> {
+export interface Promise<T> {
     readonly [Symbol.toStringTag]: string;
 }
-  export interface PromiseConstructor {
+export interface PromiseConstructor {
     readonly [Symbol.species]: PromiseConstructor;
 }
-  export interface RegExp {
+export interface RegExp {
     /**
      * Matches a string with this regular expression, and returns an array containing the results of
      * that search.
@@ -203,10 +200,10 @@ and limitations under the License.
      */
     [Symbol.split](string: string, limit?: number): string[];
 }
-  export interface RegExpConstructor {
+export interface RegExpConstructor {
     readonly [Symbol.species]: RegExpConstructor;
 }
-  export interface String {
+export interface String {
     /**
      * Matches a string an object that supports being matched against, and returns an array containing the results of that search.
      * @param matcher An object that supports being matched against.
@@ -240,48 +237,48 @@ and limitations under the License.
      */
     split(splitter: { [Symbol.split](string: string, limit?: number): string[]; }, limit?: number): string[];
 }
-  export interface ArrayBuffer {
+export interface ArrayBuffer {
     readonly [Symbol.toStringTag]: string;
 }
-  export interface DataView {
+export interface DataView {
     readonly [Symbol.toStringTag]: string;
 }
-  export interface Int8Array {
+export interface Int8Array {
     readonly [Symbol.toStringTag]: "Int8Array";
 }
-  export interface Uint8Array {
+export interface Uint8Array {
     readonly [Symbol.toStringTag]: "UInt8Array";
 }
-  export interface Uint8ClampedArray {
+export interface Uint8ClampedArray {
     readonly [Symbol.toStringTag]: "Uint8ClampedArray";
 }
-  export interface Int16Array {
+export interface Int16Array {
     readonly [Symbol.toStringTag]: "Int16Array";
 }
-  export interface Uint16Array {
+export interface Uint16Array {
     readonly [Symbol.toStringTag]: "Uint16Array";
 }
-  export interface Int32Array {
+export interface Int32Array {
     readonly [Symbol.toStringTag]: "Int32Array";
 }
-  export interface Uint32Array {
+export interface Uint32Array {
     readonly [Symbol.toStringTag]: "Uint32Array";
 }
-  export interface Float32Array {
+export interface Float32Array {
     readonly [Symbol.toStringTag]: "Float32Array";
 }
-  export interface Float64Array {
+export interface Float64Array {
     readonly [Symbol.toStringTag]: "Float64Array";
 }
-  export interface ArrayConstructor {
+export interface ArrayConstructor {
     readonly [Symbol.species]: ArrayConstructor;
 }
-  export interface MapConstructor {
+export interface MapConstructor {
     readonly [Symbol.species]: MapConstructor;
 }
-  export interface SetConstructor {
+export interface SetConstructor {
     readonly [Symbol.species]: SetConstructor;
 }
-  export interface ArrayBufferConstructor {
+export interface ArrayBufferConstructor {
     readonly [Symbol.species]: ArrayBufferConstructor;
 }

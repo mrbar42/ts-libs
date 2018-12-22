@@ -1,3 +1,5 @@
+export {};
+
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -20,14 +22,14 @@ and limitations under the License.
 /////////////////////////////
 /// ECMAScript APIs
 /////////////////////////////
-  export declare type NaNGlobal = number;
-  export declare type InfinityGlobal = number;
+export type NaN =  number;
+export type Infinity =  number;
 
 /**
   * Evaluates JavaScript code and executes it.
   * @param x A String value that contains valid JavaScript code.
   */
-  export type eval = (x: string) =>  any;
+export type eval = (x: string) =>  any;
 
 /**
   * Converts A string to an integer.
@@ -36,62 +38,62 @@ and limitations under the License.
   * If this argument is not supplied, strings with a prefix of '0x' are considered hexadecimal.
   * All other strings are considered decimal.
   */
-  export type parseInt = (s: string, radix?: number) =>  number;
+export type parseInt = (s: string, radix?: number) =>  number;
 
 /**
   * Converts a string to a floating-point number.
   * @param string A string that contains a floating-point number.
   */
-  export type parseFloat = (string: string) =>  number;
+export type parseFloat = (string: string) =>  number;
 
 /**
   * Returns a Boolean value that indicates whether a value is the reserved value NaN (not a number).
   * @param number A numeric value.
   */
-  export type isNaN = (number: number) =>  boolean;
+export type isNaN = (number: number) =>  boolean;
 
 /**
   * Determines whether a supplied number is finite.
   * @param number Any numeric value.
   */
-  export type isFinite = (number: number) =>  boolean;
+export type isFinite = (number: number) =>  boolean;
 
 /**
   * Gets the unencoded version of an encoded Uniform Resource Identifier (URI).
   * @param encodedURI A value representing an encoded URI.
   */
-  export type decodeURI = (encodedURI: string) =>  string;
+export type decodeURI = (encodedURI: string) =>  string;
 
 /**
   * Gets the unencoded version of an encoded component of a Uniform Resource Identifier (URI).
   * @param encodedURIComponent A value representing an encoded URI component.
   */
-  export type decodeURIComponent = (encodedURIComponent: string) =>  string;
+export type decodeURIComponent = (encodedURIComponent: string) =>  string;
 
 /**
   * Encodes a text string as a valid Uniform Resource Identifier (URI)
   * @param uri A value representing an encoded URI.
   */
-  export type encodeURI = (uri: string) =>  string;
+export type encodeURI = (uri: string) =>  string;
 
 /**
   * Encodes a text string as a valid component of a Uniform Resource Identifier (URI).
   * @param uriComponent A value representing an encoded URI component.
   */
-  export type encodeURIComponent = (uriComponent: string) =>  string;
+export type encodeURIComponent = (uriComponent: string) =>  string;
 
 /**
   * Computes a new string in which certain characters have been replaced by a hexadecimal escape sequence.
   * @param string A string value
   */
-  export type escape = (string: string) =>  string;
+export type escape = (string: string) =>  string;
 
 /**
   * Computes a new string in which hexadecimal escape sequences are replaced with the character that it represents.
   * @param string A string value
   */
-  export type unescape = (string: string) =>  string;
-  export interface Symbol {
+export type unescape = (string: string) =>  string;
+export interface Symbol {
   /** Returns a string representation of an object. */
   toString(): string;
 
@@ -100,7 +102,7 @@ and limitations under the License.
 }
 
 declare type PropertyKey = string | number | symbol;
-  export interface PropertyDescriptor {
+export interface PropertyDescriptor {
     configurable?: boolean;
     enumerable?: boolean;
     value?: any;
@@ -108,10 +110,10 @@ declare type PropertyKey = string | number | symbol;
     get?(): any;
     set?(v: any): void;
 }
-  export interface PropertyDescriptorMap {
+export interface PropertyDescriptorMap {
     [s: string]: PropertyDescriptor;
 }
-  export interface Object {
+export interface Object {
     /** The initial value of Object.prototype.constructor is the standard built-in Object constructor. */
     constructor: Function;
 
@@ -142,7 +144,7 @@ declare type PropertyKey = string | number | symbol;
       */
     propertyIsEnumerable(v: PropertyKey): boolean;
 }
-  export interface ObjectConstructor {
+export interface ObjectConstructor {
     new(value?: any): Object;
     (): any;
     (value: any): any;
@@ -257,12 +259,12 @@ declare type PropertyKey = string | number | symbol;
 /**
   * Provides functionality common to all JavaScript objects.
   */
-  export declare type ObjectGlobal = ObjectConstructor;
+export type ObjectGlobal =  ObjectConstructor;
 
 /**
   * Creates a new function.
   */
-  export interface Function {
+export interface Function {
     /**
       * Calls the function, substituting the specified object for the this value of the function, and the specified array for the arguments of the function.
       * @param thisArg The object to be used as the this object.
@@ -295,7 +297,7 @@ declare type PropertyKey = string | number | symbol;
     arguments: any;
     caller: Function;
 }
-  export interface FunctionConstructor {
+export interface FunctionConstructor {
     /**
       * Creates a new function.
       * @param args A list of arguments the function accepts.
@@ -304,8 +306,8 @@ declare type PropertyKey = string | number | symbol;
     (...args: string[]): Function;
     readonly prototype: Function;
 }
-  export declare type FunctionGlobal = FunctionConstructor;
-  export interface CallableFunction extends Function {
+export type FunctionGlobal =  FunctionConstructor;
+export interface CallableFunction extends Function {
     /**
       * Calls the function with the specified object as the this value and the elements of specified array as the arguments.
       * @param thisArg The object to be used as the this object.
@@ -334,7 +336,7 @@ declare type PropertyKey = string | number | symbol;
     bind<T, A0, A1, A2, A3, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, arg2: A2, arg3: A3, ...args: A) => R, thisArg: T, arg0: A0, arg1: A1, arg2: A2, arg3: A3): (...args: A) => R;
     bind<T, AX, R>(this: (this: T, ...args: AX[]) => R, thisArg: T, ...args: AX[]): (...args: AX[]) => R;
 }
-  export interface NewableFunction extends Function {
+export interface NewableFunction extends Function {
     /**
       * Calls the function with the specified object as the this value and the elements of specified array as the arguments.
       * @param thisArg The object to be used as the this object.
@@ -363,12 +365,12 @@ declare type PropertyKey = string | number | symbol;
     bind<A0, A1, A2, A3, A extends any[], R>(this: new (arg0: A0, arg1: A1, arg2: A2, arg3: A3, ...args: A) => R, thisArg: any, arg0: A0, arg1: A1, arg2: A2, arg3: A3): new (...args: A) => R;
     bind<AX, R>(this: new (...args: AX[]) => R, thisArg: any, ...args: AX[]): new (...args: AX[]) => R;
 }
-  export interface IArguments {
+export interface IArguments {
     [index: number]: any;
     length: number;
     callee: Function;
 }
-  export interface String {
+export interface String {
     /** Returns a string representation of a string. */
     toString(): string;
 
@@ -490,7 +492,7 @@ declare type PropertyKey = string | number | symbol;
 
     readonly [index: number]: string;
 }
-  export interface StringConstructor {
+export interface StringConstructor {
     new(value?: any): String;
     (value?: any): string;
     readonly prototype: String;
@@ -500,18 +502,18 @@ declare type PropertyKey = string | number | symbol;
 /**
   * Allows manipulation and formatting of text strings and determination and location of substrings within strings.
   */
-  export declare type StringGlobal = StringConstructor;
-  export interface Boolean {
+export type StringGlobal =  StringConstructor;
+export interface Boolean {
     /** Returns the primitive value of the specified object. */
     valueOf(): boolean;
 }
-  export interface BooleanConstructor {
+export interface BooleanConstructor {
     new(value?: any): Boolean;
     (value?: any): boolean;
     readonly prototype: Boolean;
 }
-  export declare type BooleanGlobal = BooleanConstructor;
-  export interface Number {
+export type BooleanGlobal =  BooleanConstructor;
+export interface Number {
     /**
       * Returns a string representation of an object.
       * @param radix Specifies a radix for converting numeric values to strings. This value is only used for numbers.
@@ -539,7 +541,7 @@ declare type PropertyKey = string | number | symbol;
     /** Returns the primitive value of the specified object. */
     valueOf(): number;
 }
-  export interface NumberConstructor {
+export interface NumberConstructor {
     new(value?: any): Number;
     (value?: any): number;
     readonly prototype: Number;
@@ -570,8 +572,8 @@ declare type PropertyKey = string | number | symbol;
 }
 
 /** An object that represents a number of any kind. All JavaScript numbers are 64-bit floating-point numbers. */
-  export declare type NumberGlobal = NumberConstructor;
-  export interface TemplateStringsArray extends ReadonlyArray<string> {
+export type NumberGlobal =  NumberConstructor;
+export interface TemplateStringsArray extends ReadonlyArray<string> {
     readonly raw: ReadonlyArray<string>;
 }
 
@@ -581,9 +583,9 @@ declare type PropertyKey = string | number | symbol;
  * If you need to declare that a given property exists on `import.meta`,
  * this type may be augmented via interface merging.
  */
-  export interface ImportMeta {
+export interface ImportMeta {
 }
-  export interface Math {
+export interface Math {
     /** The mathematical constant e. This is Euler's number, the base of natural logarithms. */
     readonly E: number;
     /** The natural logarithm of 10. */
@@ -692,10 +694,10 @@ declare type PropertyKey = string | number | symbol;
     tan(x: number): number;
 }
 /** An intrinsic object that provides basic mathematics functionality and constants. */
-  export declare type MathGlobal = Math;
+export type MathGlobal =  Math;
 
 /** Enables basic storage and retrieval of dates and times. */
-  export interface Date {
+export interface Date {
     /** Returns a string representation of a date. The format of the string depends on the locale. */
     toString(): string;
     /** Returns a date as a string value. */
@@ -847,7 +849,7 @@ declare type PropertyKey = string | number | symbol;
     /** Used by the JSON.stringify method to enable the transformation of an object's data for JavaScript Object Notation (JSON) serialization. */
     toJSON(key?: any): string;
 }
-  export interface DateConstructor {
+export interface DateConstructor {
     new(): Date;
     new(value: number | string): Date;
     new(year: number, month: number, date?: number, hours?: number, minutes?: number, seconds?: number, ms?: number): Date;
@@ -871,16 +873,16 @@ declare type PropertyKey = string | number | symbol;
     UTC(year: number, month: number, date?: number, hours?: number, minutes?: number, seconds?: number, ms?: number): number;
     now(): number;
 }
-  export declare type DateGlobal = DateConstructor;
-  export interface RegExpMatchArray extends Array<string> {
+export type DateGlobal =  DateConstructor;
+export interface RegExpMatchArray extends Array<string> {
     index?: number;
     input?: string;
 }
-  export interface RegExpExecArray extends Array<string> {
+export interface RegExpExecArray extends Array<string> {
     index: number;
     input: string;
 }
-  export interface RegExp {
+export interface RegExp {
     /**
       * Executes a search on a string using a regular expression pattern, and returns an array containing the results of that search.
       * @param string The String object or string literal on which to perform the search.
@@ -910,7 +912,7 @@ declare type PropertyKey = string | number | symbol;
     // Non-standard extensions
     compile(): this;
 }
-  export interface RegExpConstructor {
+export interface RegExpConstructor {
     new(pattern: RegExp | string): RegExp;
     new(pattern: string, flags?: string): RegExp;
     (pattern: RegExp | string): RegExp;
@@ -929,67 +931,67 @@ declare type PropertyKey = string | number | symbol;
     $9: string;
     lastMatch: string;
 }
-  export declare type RegExpGlobal = RegExpConstructor;
-  export interface Error {
+export type RegExpGlobal =  RegExpConstructor;
+export interface Error {
     name: string;
     message: string;
     stack?: string;
 }
-  export interface ErrorConstructor {
+export interface ErrorConstructor {
     new(message?: string): Error;
     (message?: string): Error;
     readonly prototype: Error;
 }
-  export declare type ErrorGlobal = ErrorConstructor;
-  export interface EvalError extends Error {
+export type ErrorGlobal =  ErrorConstructor;
+export interface EvalError extends Error {
 }
-  export interface EvalErrorConstructor {
+export interface EvalErrorConstructor {
     new(message?: string): EvalError;
     (message?: string): EvalError;
     readonly prototype: EvalError;
 }
-  export declare type EvalErrorGlobal = EvalErrorConstructor;
-  export interface RangeError extends Error {
+export type EvalErrorGlobal =  EvalErrorConstructor;
+export interface RangeError extends Error {
 }
-  export interface RangeErrorConstructor {
+export interface RangeErrorConstructor {
     new(message?: string): RangeError;
     (message?: string): RangeError;
     readonly prototype: RangeError;
 }
-  export declare type RangeErrorGlobal = RangeErrorConstructor;
-  export interface ReferenceError extends Error {
+export type RangeErrorGlobal =  RangeErrorConstructor;
+export interface ReferenceError extends Error {
 }
-  export interface ReferenceErrorConstructor {
+export interface ReferenceErrorConstructor {
     new(message?: string): ReferenceError;
     (message?: string): ReferenceError;
     readonly prototype: ReferenceError;
 }
-  export declare type ReferenceErrorGlobal = ReferenceErrorConstructor;
-  export interface SyntaxError extends Error {
+export type ReferenceErrorGlobal =  ReferenceErrorConstructor;
+export interface SyntaxError extends Error {
 }
-  export interface SyntaxErrorConstructor {
+export interface SyntaxErrorConstructor {
     new(message?: string): SyntaxError;
     (message?: string): SyntaxError;
     readonly prototype: SyntaxError;
 }
-  export declare type SyntaxErrorGlobal = SyntaxErrorConstructor;
-  export interface TypeError extends Error {
+export type SyntaxErrorGlobal =  SyntaxErrorConstructor;
+export interface TypeError extends Error {
 }
-  export interface TypeErrorConstructor {
+export interface TypeErrorConstructor {
     new(message?: string): TypeError;
     (message?: string): TypeError;
     readonly prototype: TypeError;
 }
-  export declare type TypeErrorGlobal = TypeErrorConstructor;
-  export interface URIError extends Error {
+export type TypeErrorGlobal =  TypeErrorConstructor;
+export interface URIError extends Error {
 }
-  export interface URIErrorConstructor {
+export interface URIErrorConstructor {
     new(message?: string): URIError;
     (message?: string): URIError;
     readonly prototype: URIError;
 }
-  export declare type URIErrorGlobal = URIErrorConstructor;
-  export interface JSON {
+export type URIErrorGlobal =  URIErrorConstructor;
+export interface JSON {
     /**
       * Converts a JavaScript Object Notation (JSON) string into an object.
       * @param text A valid JSON string.
@@ -1016,13 +1018,13 @@ declare type PropertyKey = string | number | symbol;
 /**
   * An intrinsic object that provides functions to convert JavaScript values to and from the JavaScript Object Notation (JSON) format.
   */
-  export declare type JSONGlobal = JSON;
+export type JSONGlobal =  JSON;
 
 
 /////////////////////////////
 /// ECMAScript Array API (specially handled by compiler)
 /////////////////////////////
-  export interface ReadonlyArray<T> {
+export interface ReadonlyArray<T> {
     /**
       * Gets the length of the array. This is a number one higher than the highest element defined in an array.
       */
@@ -1133,13 +1135,13 @@ declare type PropertyKey = string | number | symbol;
 
     readonly [n: number]: T;
 }
-  export interface ConcatArray<T> {
+export interface ConcatArray<T> {
     readonly length: number;
     readonly [n: number]: T;
     join(separator?: string): string;
     slice(start?: number, end?: number): T[];
 }
-  export interface Array<T> {
+export interface Array<T> {
     /**
       * Gets or sets the length of the array. This is a number one higher than the highest element defined in an array.
       */
@@ -1290,7 +1292,7 @@ declare type PropertyKey = string | number | symbol;
 
     [n: number]: T;
 }
-  export interface ArrayConstructor {
+export interface ArrayConstructor {
     new(arrayLength?: number): any[];
     new <T>(arrayLength: number): T[];
     new <T>(...items: T[]): T[];
@@ -1300,8 +1302,8 @@ declare type PropertyKey = string | number | symbol;
     isArray(arg: any): arg is Array<any>;
     readonly prototype: Array<any>;
 }
-  export declare type ArrayGlobal = ArrayConstructor;
-  export interface TypedPropertyDescriptor<T> {
+export type ArrayGlobal =  ArrayConstructor;
+export interface TypedPropertyDescriptor<T> {
     enumerable?: boolean;
     configurable?: boolean;
     writable?: boolean;
@@ -1316,7 +1318,7 @@ declare type MethodDecorator = <T>(target: Object, propertyKey: string | symbol,
 declare type ParameterDecorator = (target: Object, propertyKey: string | symbol, parameterIndex: number) => void;
 
 declare type PromiseConstructorLike = new <T>(executor: (resolve: (value?: T | PromiseLike<T>) => void, reject: (reason?: any) => void) => void) => PromiseLike<T>;
-  export interface PromiseLike<T> {
+export interface PromiseLike<T> {
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1329,7 +1331,7 @@ declare type PromiseConstructorLike = new <T>(executor: (resolve: (value?: T | P
 /**
  * Represents the completion of an asynchronous operation
  */
-  export interface Promise<T> {
+export interface Promise<T> {
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1345,7 +1347,7 @@ declare type PromiseConstructorLike = new <T>(executor: (resolve: (value?: T | P
      */
     catch<TResult = never>(onrejected?: ((reason: any) => TResult | PromiseLike<TResult>) | undefined | null): Promise<T | TResult>;
 }
-  export interface ArrayLike<T> {
+export interface ArrayLike<T> {
     readonly length: number;
     readonly [n: number]: T;
 }
@@ -1353,77 +1355,77 @@ declare type PromiseConstructorLike = new <T>(executor: (resolve: (value?: T | P
 /**
  * Make all properties in T optional
  */
-  export type Partial<T> = {
+export type Partial<T> = {
     [P in keyof T]?: T[P];
 };
 
 /**
  * Make all properties in T required
  */
-  export type Required<T> = {
+export type Required<T> = {
     [P in keyof T]-?: T[P];
 };
 
 /**
  * Make all properties in T readonly
  */
-  export type Readonly<T> = {
+export type Readonly<T> = {
     readonly [P in keyof T]: T[P];
 };
 
 /**
  * From T, pick a set of properties whose keys are in the union K
  */
-  export type Pick<T, K extends keyof T> = {
+export type Pick<T, K extends keyof T> = {
     [P in K]: T[P];
 };
 
 /**
  * Construct a type with a set of properties K of type T
  */
-  export type Record<K extends keyof any, T> = {
+export type Record<K extends keyof any, T> = {
     [P in K]: T;
 };
 
 /**
  * Exclude from T those types that are assignable to U
  */
-  export type Exclude<T, U> = T extends U ? never : T;
+export type Exclude<T, U> = T extends U ? never : T;
 
 /**
  * Extract from T those types that are assignable to U
  */
-  export type Extract<T, U> = T extends U ? T : never;
+export type Extract<T, U> = T extends U ? T : never;
 
 /**
  * Exclude null and undefined from T
  */
-  export type NonNullable<T> = T extends null | undefined ? never : T;
+export type NonNullable<T> = T extends null | undefined ? never : T;
 
 /**
  * Obtain the parameters of a function type in a tuple
  */
-  export type Parameters<T extends (...args: any[]) => any> = T extends (...args: infer P) => any ? P : never;
+export type Parameters<T extends (...args: any[]) => any> = T extends (...args: infer P) => any ? P : never;
 
 /**
  * Obtain the parameters of a constructor function type in a tuple
  */
-  export type ConstructorParameters<T extends new (...args: any[]) => any> = T extends new (...args: infer P) => any ? P : never;
+export type ConstructorParameters<T extends new (...args: any[]) => any> = T extends new (...args: infer P) => any ? P : never;
 
 /**
  * Obtain the return type of a function type
  */
-  export type ReturnType<T extends (...args: any[]) => any> = T extends (...args: any[]) => infer R ? R : any;
+export type ReturnType<T extends (...args: any[]) => any> = T extends (...args: any[]) => infer R ? R : any;
 
 /**
  * Obtain the return type of a constructor function type
  */
-  export type InstanceType<T extends new (...args: any[]) => any> = T extends new (...args: any[]) => infer R ? R : any;
+export type InstanceType<T extends new (...args: any[]) => any> = T extends new (...args: any[]) => infer R ? R : any;
 
 /**
  * Marker for contextual 'this' type
  */
-  export interface ThisType<T> { }
+export interface ThisType<T> { }
 
 /**
   * Represents a raw buffer of binary data, which is used to store data for the
@@ -1431,7 +1433,7 @@ declare type PromiseConstructorLike = new <T>(executor: (resolve: (value?: T | P
   * but can be passed to a typed array or DataView Object to interpret the raw
   * buffer as needed.
   */
-  export interface ArrayBuffer {
+export interface ArrayBuffer {
     /**
       * Read-only. The length of the ArrayBuffer (in bytes).
       */
@@ -1446,17 +1448,17 @@ declare type PromiseConstructorLike = new <T>(executor: (resolve: (value?: T | P
 /**
  * Allowed ArrayBuffer types for the buffer of an ArrayBufferView and related Typed Arrays.
  */
-  export interface ArrayBufferTypes {
+export interface ArrayBufferTypes {
     ArrayBuffer: ArrayBuffer;
 }
-  export type ArrayBufferLike = ArrayBufferTypes[keyof ArrayBufferTypes];
-  export interface ArrayBufferConstructor {
+export type ArrayBufferLike = ArrayBufferTypes[keyof ArrayBufferTypes];
+export interface ArrayBufferConstructor {
     readonly prototype: ArrayBuffer;
     new(byteLength: number): ArrayBuffer;
     isView(arg: any): arg is ArrayBufferView;
 }
-  export declare type ArrayBufferGlobal = ArrayBufferConstructor;
-  export interface ArrayBufferView {
+export type ArrayBufferGlobal =  ArrayBufferConstructor;
+export interface ArrayBufferView {
     /**
       * The ArrayBuffer instance referenced by the array.
       */
@@ -1472,7 +1474,7 @@ declare type PromiseConstructorLike = new <T>(executor: (resolve: (value?: T | P
       */
     byteOffset: number;
 }
-  export interface DataView {
+export interface DataView {
     readonly buffer: ArrayBuffer;
     readonly byteLength: number;
     readonly byteOffset: number;
@@ -1599,16 +1601,16 @@ declare type PromiseConstructorLike = new <T>(executor: (resolve: (value?: T | P
       */
     setUint32(byteOffset: number, value: number, littleEndian?: boolean): void;
 }
-  export interface DataViewConstructor {
+export interface DataViewConstructor {
     new(buffer: ArrayBufferLike, byteOffset?: number, byteLength?: number): DataView;
 }
-  export declare type DataViewGlobal = DataViewConstructor;
+export type DataViewGlobal =  DataViewConstructor;
 
 /**
   * A typed array of 8-bit integer values. The contents are initialized to 0. If the requested
   * number of bytes could not be allocated an exception is raised.
   */
-  export interface Int8Array {
+export interface Int8Array {
     /**
       * The size in bytes of each element in the array.
       */
@@ -1844,7 +1846,7 @@ declare type PromiseConstructorLike = new <T>(executor: (resolve: (value?: T | P
 
     [index: number]: number;
 }
-  export interface Int8ArrayConstructor {
+export interface Int8ArrayConstructor {
     readonly prototype: Int8Array;
     new(length: number): Int8Array;
     new(arrayOrArrayBuffer: ArrayLike<number> | ArrayBufferLike): Int8Array;
@@ -1871,13 +1873,13 @@ declare type PromiseConstructorLike = new <T>(executor: (resolve: (value?: T | P
 
 
 }
-  export declare type Int8ArrayGlobal = Int8ArrayConstructor;
+export type Int8ArrayGlobal =  Int8ArrayConstructor;
 
 /**
   * A typed array of 8-bit unsigned integer values. The contents are initialized to 0. If the
   * requested number of bytes could not be allocated an exception is raised.
   */
-  export interface Uint8Array {
+export interface Uint8Array {
     /**
       * The size in bytes of each element in the array.
       */
@@ -2113,7 +2115,7 @@ declare type PromiseConstructorLike = new <T>(executor: (resolve: (value?: T | P
 
     [index: number]: number;
 }
-  export interface Uint8ArrayConstructor {
+export interface Uint8ArrayConstructor {
     readonly prototype: Uint8Array;
     new(length: number): Uint8Array;
     new(arrayOrArrayBuffer: ArrayLike<number> | ArrayBufferLike): Uint8Array;
@@ -2139,13 +2141,13 @@ declare type PromiseConstructorLike = new <T>(executor: (resolve: (value?: T | P
     from(arrayLike: ArrayLike<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Uint8Array;
 
 }
-  export declare type Uint8ArrayGlobal = Uint8ArrayConstructor;
+export type Uint8ArrayGlobal =  Uint8ArrayConstructor;
 
 /**
   * A typed array of 8-bit unsigned integer (clamped) values. The contents are initialized to 0.
   * If the requested number of bytes could not be allocated an exception is raised.
   */
-  export interface Uint8ClampedArray {
+export interface Uint8ClampedArray {
     /**
       * The size in bytes of each element in the array.
       */
@@ -2381,7 +2383,7 @@ declare type PromiseConstructorLike = new <T>(executor: (resolve: (value?: T | P
 
     [index: number]: number;
 }
-  export interface Uint8ClampedArrayConstructor {
+export interface Uint8ClampedArrayConstructor {
     readonly prototype: Uint8ClampedArray;
     new(length: number): Uint8ClampedArray;
     new(arrayOrArrayBuffer: ArrayLike<number> | ArrayBufferLike): Uint8ClampedArray;
@@ -2406,13 +2408,13 @@ declare type PromiseConstructorLike = new <T>(executor: (resolve: (value?: T | P
       */
     from(arrayLike: ArrayLike<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Uint8ClampedArray;
 }
-  export declare type Uint8ClampedArrayGlobal = Uint8ClampedArrayConstructor;
+export type Uint8ClampedArrayGlobal =  Uint8ClampedArrayConstructor;
 
 /**
   * A typed array of 16-bit signed integer values. The contents are initialized to 0. If the
   * requested number of bytes could not be allocated an exception is raised.
   */
-  export interface Int16Array {
+export interface Int16Array {
     /**
       * The size in bytes of each element in the array.
       */
@@ -2647,7 +2649,7 @@ declare type PromiseConstructorLike = new <T>(executor: (resolve: (value?: T | P
 
     [index: number]: number;
 }
-  export interface Int16ArrayConstructor {
+export interface Int16ArrayConstructor {
     readonly prototype: Int16Array;
     new(length: number): Int16Array;
     new(arrayOrArrayBuffer: ArrayLike<number> | ArrayBufferLike): Int16Array;
@@ -2674,13 +2676,13 @@ declare type PromiseConstructorLike = new <T>(executor: (resolve: (value?: T | P
 
 
 }
-  export declare type Int16ArrayGlobal = Int16ArrayConstructor;
+export type Int16ArrayGlobal =  Int16ArrayConstructor;
 
 /**
   * A typed array of 16-bit unsigned integer values. The contents are initialized to 0. If the
   * requested number of bytes could not be allocated an exception is raised.
   */
-  export interface Uint16Array {
+export interface Uint16Array {
     /**
       * The size in bytes of each element in the array.
       */
@@ -2916,7 +2918,7 @@ declare type PromiseConstructorLike = new <T>(executor: (resolve: (value?: T | P
 
     [index: number]: number;
 }
-  export interface Uint16ArrayConstructor {
+export interface Uint16ArrayConstructor {
     readonly prototype: Uint16Array;
     new(length: number): Uint16Array;
     new(arrayOrArrayBuffer: ArrayLike<number> | ArrayBufferLike): Uint16Array;
@@ -2943,12 +2945,12 @@ declare type PromiseConstructorLike = new <T>(executor: (resolve: (value?: T | P
 
 
 }
-  export declare type Uint16ArrayGlobal = Uint16ArrayConstructor;
+export type Uint16ArrayGlobal =  Uint16ArrayConstructor;
 /**
   * A typed array of 32-bit signed integer values. The contents are initialized to 0. If the
   * requested number of bytes could not be allocated an exception is raised.
   */
-  export interface Int32Array {
+export interface Int32Array {
     /**
       * The size in bytes of each element in the array.
       */
@@ -3184,7 +3186,7 @@ declare type PromiseConstructorLike = new <T>(executor: (resolve: (value?: T | P
 
     [index: number]: number;
 }
-  export interface Int32ArrayConstructor {
+export interface Int32ArrayConstructor {
     readonly prototype: Int32Array;
     new(length: number): Int32Array;
     new(arrayOrArrayBuffer: ArrayLike<number> | ArrayBufferLike): Int32Array;
@@ -3210,13 +3212,13 @@ declare type PromiseConstructorLike = new <T>(executor: (resolve: (value?: T | P
     from(arrayLike: ArrayLike<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Int32Array;
 
 }
-  export declare type Int32ArrayGlobal = Int32ArrayConstructor;
+export type Int32ArrayGlobal =  Int32ArrayConstructor;
 
 /**
   * A typed array of 32-bit unsigned integer values. The contents are initialized to 0. If the
   * requested number of bytes could not be allocated an exception is raised.
   */
-  export interface Uint32Array {
+export interface Uint32Array {
     /**
       * The size in bytes of each element in the array.
       */
@@ -3451,7 +3453,7 @@ declare type PromiseConstructorLike = new <T>(executor: (resolve: (value?: T | P
 
     [index: number]: number;
 }
-  export interface Uint32ArrayConstructor {
+export interface Uint32ArrayConstructor {
     readonly prototype: Uint32Array;
     new(length: number): Uint32Array;
     new(arrayOrArrayBuffer: ArrayLike<number> | ArrayBufferLike): Uint32Array;
@@ -3477,13 +3479,13 @@ declare type PromiseConstructorLike = new <T>(executor: (resolve: (value?: T | P
     from(arrayLike: ArrayLike<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Uint32Array;
 
 }
-  export declare type Uint32ArrayGlobal = Uint32ArrayConstructor;
+export type Uint32ArrayGlobal =  Uint32ArrayConstructor;
 
 /**
   * A typed array of 32-bit float values. The contents are initialized to 0. If the requested number
   * of bytes could not be allocated an exception is raised.
   */
-  export interface Float32Array {
+export interface Float32Array {
     /**
       * The size in bytes of each element in the array.
       */
@@ -3719,7 +3721,7 @@ declare type PromiseConstructorLike = new <T>(executor: (resolve: (value?: T | P
 
     [index: number]: number;
 }
-  export interface Float32ArrayConstructor {
+export interface Float32ArrayConstructor {
     readonly prototype: Float32Array;
     new(length: number): Float32Array;
     new(arrayOrArrayBuffer: ArrayLike<number> | ArrayBufferLike): Float32Array;
@@ -3746,13 +3748,13 @@ declare type PromiseConstructorLike = new <T>(executor: (resolve: (value?: T | P
 
 
 }
-  export declare type Float32ArrayGlobal = Float32ArrayConstructor;
+export type Float32ArrayGlobal =  Float32ArrayConstructor;
 
 /**
   * A typed array of 64-bit float values. The contents are initialized to 0. If the requested
   * number of bytes could not be allocated an exception is raised.
   */
-  export interface Float64Array {
+export interface Float64Array {
     /**
       * The size in bytes of each element in the array.
       */
@@ -3988,7 +3990,7 @@ declare type PromiseConstructorLike = new <T>(executor: (resolve: (value?: T | P
 
     [index: number]: number;
 }
-  export interface Float64ArrayConstructor {
+export interface Float64ArrayConstructor {
     readonly prototype: Float64Array;
     new(length: number): Float64Array;
     new(arrayOrArrayBuffer: ArrayLike<number> | ArrayBufferLike): Float64Array;
@@ -4014,14 +4016,13 @@ declare type PromiseConstructorLike = new <T>(executor: (resolve: (value?: T | P
     from(arrayLike: ArrayLike<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Float64Array;
 
 }
-  export declare type Float64ArrayGlobal = Float64ArrayConstructor;
+export type Float64ArrayGlobal =  Float64ArrayConstructor;
 
 /////////////////////////////
 /// ECMAScript Internationalization API
 /////////////////////////////
-
-declare namespace Intl {
-  export interface CollatorOptions {
+export namespace Intl {
+export interface CollatorOptions {
         usage?: string;
         localeMatcher?: string;
         numeric?: boolean;
@@ -4029,7 +4030,7 @@ declare namespace Intl {
         sensitivity?: string;
         ignorePunctuation?: boolean;
     }
-  export interface ResolvedCollatorOptions {
+export interface ResolvedCollatorOptions {
         locale: string;
         usage: string;
         sensitivity: string;
@@ -4038,7 +4039,7 @@ declare namespace Intl {
         caseFirst: string;
         numeric: boolean;
     }
-  export interface Collator {
+export interface Collator {
         compare(x: string, y: string): number;
         resolvedOptions(): ResolvedCollatorOptions;
     }
@@ -4047,7 +4048,7 @@ declare namespace Intl {
         (locales?: string | string[], options?: CollatorOptions): Collator;
         supportedLocalesOf(locales: string | string[], options?: CollatorOptions): string[];
     };
-  export interface NumberFormatOptions {
+export interface NumberFormatOptions {
         localeMatcher?: string;
         style?: string;
         currency?: string;
@@ -4059,7 +4060,7 @@ declare namespace Intl {
         minimumSignificantDigits?: number;
         maximumSignificantDigits?: number;
     }
-  export interface ResolvedNumberFormatOptions {
+export interface ResolvedNumberFormatOptions {
         locale: string;
         numberingSystem: string;
         style: string;
@@ -4072,7 +4073,7 @@ declare namespace Intl {
         maximumSignificantDigits?: number;
         useGrouping: boolean;
     }
-  export interface NumberFormat {
+export interface NumberFormat {
         format(value: number): string;
         resolvedOptions(): ResolvedNumberFormatOptions;
     }
@@ -4081,7 +4082,7 @@ declare namespace Intl {
         (locales?: string | string[], options?: NumberFormatOptions): NumberFormat;
         supportedLocalesOf(locales: string | string[], options?: NumberFormatOptions): string[];
     };
-  export interface DateTimeFormatOptions {
+export interface DateTimeFormatOptions {
         localeMatcher?: string;
         weekday?: string;
         era?: string;
@@ -4096,7 +4097,7 @@ declare namespace Intl {
         hour12?: boolean;
         timeZone?: string;
     }
-  export interface ResolvedDateTimeFormatOptions {
+export interface ResolvedDateTimeFormatOptions {
         locale: string;
         calendar: string;
         numberingSystem: string;
@@ -4112,7 +4113,7 @@ declare namespace Intl {
         second?: string;
         timeZoneName?: string;
     }
-  export interface DateTimeFormat {
+export interface DateTimeFormat {
         format(date?: Date | number): string;
         resolvedOptions(): ResolvedDateTimeFormatOptions;
     }
@@ -4122,7 +4123,7 @@ declare namespace Intl {
         supportedLocalesOf(locales: string | string[], options?: DateTimeFormatOptions): string[];
     };
 }
-  export interface String {
+export interface String {
     /**
       * Determines whether two strings are equivalent in the current or specified locale.
       * @param that String to compare to target string
@@ -4131,7 +4132,7 @@ declare namespace Intl {
       */
     localeCompare(that: string, locales?: string | string[], options?: Intl.CollatorOptions): number;
 }
-  export interface Number {
+export interface Number {
     /**
       * Converts a number to a string by using the current or specified locale.
       * @param locales A locale string or array of locale strings that contain one or more language or locale tags. If you include more than one locale string, list them in descending order of priority so that the first entry is the preferred locale. If you omit this parameter, the default locale of the JavaScript runtime is used.
@@ -4139,7 +4140,7 @@ declare namespace Intl {
       */
     toLocaleString(locales?: string | string[], options?: Intl.NumberFormatOptions): string;
 }
-  export interface Date {
+export interface Date {
     /**
       * Converts a date and time to a string by using the current or specified locale.
       * @param locales A locale string or array of locale strings that contain one or more language or locale tags. If you include more than one locale string, list them in descending order of priority so that the first entry is the preferred locale. If you omit this parameter, the default locale of the JavaScript runtime is used.

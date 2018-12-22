@@ -1,3 +1,5 @@
+export {};
+
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -12,12 +14,7 @@ MERCHANTABLITY OR NON-INFRINGEMENT.
 See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ***************************************************************************** */
-
-
-
-
-
-  export interface SharedArrayBuffer {
+export interface SharedArrayBuffer {
     /**
      * Read-only. The length of the ArrayBuffer (in bytes).
      */
@@ -34,15 +31,15 @@ and limitations under the License.
     readonly [Symbol.species]: SharedArrayBuffer;
     readonly [Symbol.toStringTag]: "SharedArrayBuffer";
 }
-  export interface SharedArrayBufferConstructor {
+export interface SharedArrayBufferConstructor {
     readonly prototype: SharedArrayBuffer;
     new (byteLength: number): SharedArrayBuffer;
 }
-  export declare type SharedArrayBufferGlobal = SharedArrayBufferConstructor;
-  export interface ArrayBufferTypes {
+export type SharedArrayBufferGlobal =  SharedArrayBufferConstructor;
+export interface ArrayBufferTypes {
     SharedArrayBuffer: SharedArrayBuffer;
 }
-  export interface Atomics {
+export interface Atomics {
     /**
      * Adds a value to the value at the given position in the array, returning the original value.
      * Until this atomic operation completes, any other read or write operation against the array
@@ -127,4 +124,4 @@ and limitations under the License.
 
     readonly [Symbol.toStringTag]: "Atomics";
 }
-  export declare type AtomicsGlobal = Atomics;
+export type AtomicsGlobal =  Atomics;

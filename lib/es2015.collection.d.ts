@@ -1,3 +1,5 @@
+export {};
+
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -12,10 +14,7 @@ MERCHANTABLITY OR NON-INFRINGEMENT.
 See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ***************************************************************************** */
-
-
-
-  export interface Map<K, V> {
+export interface Map<K, V> {
     clear(): void;
     delete(key: K): boolean;
     forEach(callbackfn: (value: V, key: K, map: Map<K, V>) => void, thisArg?: any): void;
@@ -24,30 +23,30 @@ and limitations under the License.
     set(key: K, value: V): this;
     readonly size: number;
 }
-  export interface MapConstructor {
+export interface MapConstructor {
     new(): Map<any, any>;
     new<K, V>(entries?: ReadonlyArray<[K, V]> | null): Map<K, V>;
     readonly prototype: Map<any, any>;
 }
-  export declare type MapGlobal = MapConstructor;
-  export interface ReadonlyMap<K, V> {
+export type MapGlobal =  MapConstructor;
+export interface ReadonlyMap<K, V> {
     forEach(callbackfn: (value: V, key: K, map: ReadonlyMap<K, V>) => void, thisArg?: any): void;
     get(key: K): V | undefined;
     has(key: K): boolean;
     readonly size: number;
 }
-  export interface WeakMap<K extends object, V> {
+export interface WeakMap<K extends object, V> {
     delete(key: K): boolean;
     get(key: K): V | undefined;
     has(key: K): boolean;
     set(key: K, value: V): this;
 }
-  export interface WeakMapConstructor {
+export interface WeakMapConstructor {
     new <K extends object = object, V = any>(entries?: ReadonlyArray<[K, V]> | null): WeakMap<K, V>;
     readonly prototype: WeakMap<object, any>;
 }
-  export declare type WeakMapGlobal = WeakMapConstructor;
-  export interface Set<T> {
+export type WeakMapGlobal =  WeakMapConstructor;
+export interface Set<T> {
     add(value: T): this;
     clear(): void;
     delete(value: T): boolean;
@@ -55,23 +54,23 @@ and limitations under the License.
     has(value: T): boolean;
     readonly size: number;
 }
-  export interface SetConstructor {
+export interface SetConstructor {
     new <T = any>(values?: ReadonlyArray<T> | null): Set<T>;
     readonly prototype: Set<any>;
 }
-  export declare type SetGlobal = SetConstructor;
-  export interface ReadonlySet<T> {
+export type SetGlobal =  SetConstructor;
+export interface ReadonlySet<T> {
     forEach(callbackfn: (value: T, value2: T, set: ReadonlySet<T>) => void, thisArg?: any): void;
     has(value: T): boolean;
     readonly size: number;
 }
-  export interface WeakSet<T extends object> {
+export interface WeakSet<T extends object> {
     add(value: T): this;
     delete(value: T): boolean;
     has(value: T): boolean;
 }
-  export interface WeakSetConstructor {
+export interface WeakSetConstructor {
     new <T extends object = object>(values?: ReadonlyArray<T> | null): WeakSet<T>;
     readonly prototype: WeakSet<object>;
 }
-  export declare type WeakSetGlobal = WeakSetConstructor;
+export type WeakSetGlobal =  WeakSetConstructor;

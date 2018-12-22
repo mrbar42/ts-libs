@@ -1,3 +1,5 @@
+export {};
+
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -12,10 +14,7 @@ MERCHANTABLITY OR NON-INFRINGEMENT.
 See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ***************************************************************************** */
-
-
-
-  export interface BigInt {
+export interface BigInt {
     /**
       * Returns a string representation of an object.
       * @param radix Specifies a radix for converting numeric values to strings.
@@ -30,7 +29,7 @@ and limitations under the License.
 
     readonly [Symbol.toStringTag]: "BigInt";
 }
-  export interface BigIntConstructor {
+export interface BigIntConstructor {
     (value?: any): bigint;
     readonly prototype: BigInt;
 
@@ -49,13 +48,13 @@ and limitations under the License.
       */
     asUintN(bits: number, int: bigint): bigint;
 }
-  export declare type BigIntGlobal = BigIntConstructor;
+export type BigIntGlobal =  BigIntConstructor;
 
 /**
   * A typed array of 64-bit signed integer values. The contents are initialized to 0. If the
   * requested number of bytes could not be allocated, an exception is raised.
   */
-  export interface BigInt64Array {
+export interface BigInt64Array {
     /** The size in bytes of each element in the array. */
     readonly BYTES_PER_ELEMENT: number;
 
@@ -292,7 +291,7 @@ and limitations under the License.
 
     [index: number]: bigint;
 }
-  export interface BigInt64ArrayConstructor {
+export interface BigInt64ArrayConstructor {
     readonly prototype: BigInt64Array;
     new(length?: number): BigInt64Array;
     new(array: Iterable<bigint>): BigInt64Array;
@@ -316,13 +315,13 @@ and limitations under the License.
     from(arrayLike: ArrayLike<bigint>): BigInt64Array;
     from<U>(arrayLike: ArrayLike<U>, mapfn: (v: U, k: number) => bigint, thisArg?: any): BigInt64Array;
 }
-  export declare type BigInt64ArrayGlobal = BigInt64ArrayConstructor;
+export type BigInt64ArrayGlobal =  BigInt64ArrayConstructor;
 
 /**
   * A typed array of 64-bit unsigned integer values. The contents are initialized to 0. If the
   * requested number of bytes could not be allocated, an exception is raised.
   */
-  export interface BigUint64Array {
+export interface BigUint64Array {
     /** The size in bytes of each element in the array. */
     readonly BYTES_PER_ELEMENT: number;
 
@@ -559,7 +558,7 @@ and limitations under the License.
 
     [index: number]: bigint;
 }
-  export interface BigUint64ArrayConstructor {
+export interface BigUint64ArrayConstructor {
     readonly prototype: BigUint64Array;
     new(length?: number): BigUint64Array;
     new(array: Iterable<bigint>): BigUint64Array;
@@ -583,8 +582,8 @@ and limitations under the License.
     from(arrayLike: ArrayLike<bigint>): BigUint64Array;
     from<U>(arrayLike: ArrayLike<U>, mapfn: (v: U, k: number) => bigint, thisArg?: any): BigUint64Array;
 }
-  export declare type BigUint64ArrayGlobal = BigUint64ArrayConstructor;
-  export interface DataView {
+export type BigUint64ArrayGlobal =  BigUint64ArrayConstructor;
+export interface DataView {
     /**
       * Gets the BigInt64 value at the specified byte offset from the start of the view. There is
       * no alignment constraint; multi-byte values may be fetched from any offset.

@@ -1,3 +1,30 @@
+export {};
+    import {
+    Attr,
+    AudioParam,
+    AudioTrack,
+    ClientRect,
+    CSSRule,
+    DataTransferItem,
+    DOMRect,
+    Element,
+    File,
+    FormDataEntryValue,
+    MimeType,
+    Node,
+    SourceBuffer,
+    SpeechGrammar,
+    SpeechRecognitionAlternative,
+    StyleSheet,
+    SVGLength,
+    SVGNumber,
+    TextTrack,
+    TextTrackCue,
+    Touch,
+    VideoTrack
+} from './dom';
+import {ReadonlyMap, IterableIterator} from "./es2015.iterable";
+
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -20,39 +47,39 @@ and limitations under the License.
 /////////////////////////////
 /// DOM Iterable APIs
 /////////////////////////////
-  export interface AudioParamMap extends ReadonlyMap<string, AudioParam> {
+export interface AudioParamMap extends ReadonlyMap<string, AudioParam> {
 }
-  export interface AudioTrackList {
+export interface AudioTrackList {
     [Symbol.iterator](): IterableIterator<AudioTrack>;
 }
-  export interface CSSRuleList {
+export interface CSSRuleList {
     [Symbol.iterator](): IterableIterator<CSSRule>;
 }
-  export interface CSSStyleDeclaration {
+export interface CSSStyleDeclaration {
     [Symbol.iterator](): IterableIterator<string>;
 }
-  export interface ClientRectList {
+export interface ClientRectList {
     [Symbol.iterator](): IterableIterator<ClientRect>;
 }
-  export interface DOMRectList {
+export interface DOMRectList {
     [Symbol.iterator](): IterableIterator<DOMRect>;
 }
-  export interface DOMStringList {
+export interface DOMStringList {
     [Symbol.iterator](): IterableIterator<string>;
 }
-  export interface DOMTokenList {
+export interface DOMTokenList {
     [Symbol.iterator](): IterableIterator<string>;
     entries(): IterableIterator<[number, string]>;
     keys(): IterableIterator<number>;
     values(): IterableIterator<string>;
 }
-  export interface DataTransferItemList {
+export interface DataTransferItemList {
     [Symbol.iterator](): IterableIterator<DataTransferItem>;
 }
-  export interface FileList {
+export interface FileList {
     [Symbol.iterator](): IterableIterator<File>;
 }
-  export interface FormData {
+export interface FormData {
     [Symbol.iterator](): IterableIterator<[string, FormDataEntryValue]>;
     /**
      * Returns an array of key, value pairs for every entry in the list.
@@ -67,22 +94,22 @@ and limitations under the License.
      */
     values(): IterableIterator<FormDataEntryValue>;
 }
-  export interface HTMLAllCollection {
+export interface HTMLAllCollection {
     [Symbol.iterator](): IterableIterator<Element>;
 }
-  export interface HTMLCollectionBase {
+export interface HTMLCollectionBase {
     [Symbol.iterator](): IterableIterator<Element>;
 }
-  export interface HTMLCollectionOf<T extends Element> {
+export interface HTMLCollectionOf<T extends Element> {
     [Symbol.iterator](): IterableIterator<T>;
 }
-  export interface HTMLFormElement {
+export interface HTMLFormElement {
     [Symbol.iterator](): IterableIterator<Element>;
 }
-  export interface HTMLSelectElement {
+export interface HTMLSelectElement {
     [Symbol.iterator](): IterableIterator<Element>;
 }
-  export interface Headers {
+export interface Headers {
     [Symbol.iterator](): IterableIterator<[string, string]>;
     /**
      * Returns an iterator allowing to go through all key/value pairs contained in this object.
@@ -97,16 +124,16 @@ and limitations under the License.
      */
     values(): IterableIterator<string>;
 }
-  export interface MediaList {
+export interface MediaList {
     [Symbol.iterator](): IterableIterator<string>;
 }
-  export interface MimeTypeArray {
+export interface MimeTypeArray {
     [Symbol.iterator](): IterableIterator<Plugin>;
 }
-  export interface NamedNodeMap {
+export interface NamedNodeMap {
     [Symbol.iterator](): IterableIterator<Attr>;
 }
-  export interface NodeList {
+export interface NodeList {
     [Symbol.iterator](): IterableIterator<Node>;
     /**
      * Returns an array of key, value pairs for every entry in the list.
@@ -121,7 +148,7 @@ and limitations under the License.
      */
     values(): IterableIterator<Node>;
 }
-  export interface NodeListOf<TNode extends Node> {
+export interface NodeListOf<TNode extends Node> {
     [Symbol.iterator](): IterableIterator<TNode>;
     /**
      * Returns an array of key, value pairs for every entry in the list.
@@ -136,48 +163,48 @@ and limitations under the License.
      */
     values(): IterableIterator<TNode>;
 }
-  export interface Plugin {
+export interface Plugin {
     [Symbol.iterator](): IterableIterator<MimeType>;
 }
-  export interface PluginArray {
+export interface PluginArray {
     [Symbol.iterator](): IterableIterator<Plugin>;
 }
-  export interface RTCStatsReport extends ReadonlyMap<string, any> {
+export interface RTCStatsReport extends ReadonlyMap<string, any> {
 }
-  export interface SVGLengthList {
+export interface SVGLengthList {
     [Symbol.iterator](): IterableIterator<SVGLength>;
 }
-  export interface SVGNumberList {
+export interface SVGNumberList {
     [Symbol.iterator](): IterableIterator<SVGNumber>;
 }
-  export interface SVGStringList {
+export interface SVGStringList {
     [Symbol.iterator](): IterableIterator<string>;
 }
-  export interface SourceBufferList {
+export interface SourceBufferList {
     [Symbol.iterator](): IterableIterator<SourceBuffer>;
 }
-  export interface SpeechGrammarList {
+export interface SpeechGrammarList {
     [Symbol.iterator](): IterableIterator<SpeechGrammar>;
 }
-  export interface SpeechRecognitionResult {
+export interface SpeechRecognitionResult {
     [Symbol.iterator](): IterableIterator<SpeechRecognitionAlternative>;
 }
-  export interface SpeechRecognitionResultList {
+export interface SpeechRecognitionResultList {
     [Symbol.iterator](): IterableIterator<SpeechRecognitionResult>;
 }
-  export interface StyleSheetList {
+export interface StyleSheetList {
     [Symbol.iterator](): IterableIterator<StyleSheet>;
 }
-  export interface TextTrackCueList {
+export interface TextTrackCueList {
     [Symbol.iterator](): IterableIterator<TextTrackCue>;
 }
-  export interface TextTrackList {
+export interface TextTrackList {
     [Symbol.iterator](): IterableIterator<TextTrack>;
 }
-  export interface TouchList {
+export interface TouchList {
     [Symbol.iterator](): IterableIterator<Touch>;
 }
-  export interface URLSearchParams {
+export interface URLSearchParams {
     [Symbol.iterator](): IterableIterator<[string, string]>;
     /**
      * Returns an array of key, value pairs for every entry in the search params.
@@ -192,6 +219,6 @@ and limitations under the License.
      */
     values(): IterableIterator<string>;
 }
-  export interface VideoTrackList {
+export interface VideoTrackList {
     [Symbol.iterator](): IterableIterator<VideoTrack>;
 }

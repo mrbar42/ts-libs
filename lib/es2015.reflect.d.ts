@@ -1,3 +1,5 @@
+export {};
+
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved. 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -12,12 +14,7 @@ MERCHANTABLITY OR NON-INFRINGEMENT.
 See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ***************************************************************************** */
-
-
-
-
-
-declare namespace Reflect {
+export namespace Reflect {
     function apply(target: Function, thisArgument: any, argumentsList: ArrayLike<any>): any;
     function construct(target: Function, argumentsList: ArrayLike<any>, newTarget?: any): any;
     function defineProperty(target: object, propertyKey: PropertyKey, attributes: PropertyDescriptor): boolean;

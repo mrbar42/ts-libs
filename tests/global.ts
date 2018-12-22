@@ -1,11 +1,11 @@
-import {Window} from "../lib/dom";
-
-declare var window: Window;
-declare var self: Window;
-declare var global: any;
-
+/**
+ * This modules returns the actual global object ignoring Typescript's complaints about non-existing variables
+ */
+// @ts-ignore
 let globalScope = typeof global !== 'undefined' && global;
+// @ts-ignore
 globalScope = globalScope || typeof window !== 'undefined' && window;
+// @ts-ignore
 globalScope = globalScope || typeof self !== 'undefined' && self;
 // @ts-ignore
 globalScope = globalScope || this;
