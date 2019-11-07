@@ -29,9 +29,7 @@ export interface ProxyHandler<T extends object> {
     ownKeys? (target: T): PropertyKey[];
     apply? (target: T, thisArg: any, argArray?: any): any;
     construct? (target: T, argArray: any, newTarget?: any): object;
-}
-export interface ProxyConstructor {
+}export interface ProxyConstructor {
     revocable<T extends object>(target: T, handler: ProxyHandler<T>): { proxy: T; revoke: () => void; };
     new <T extends object>(target: T, handler: ProxyHandler<T>): T;
-}
-export type Proxy =  ProxyConstructor;
+}export type Proxy =  ProxyConstructor;

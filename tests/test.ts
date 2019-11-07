@@ -3,14 +3,14 @@ import global from './global'
 import './all-libs';
 
 // DOM
-import {WebSocketGlobal, XMLHttpRequestGlobal, console, CloseEvent, URLGlobal, fetchGlobal, RequestGlobal} from 'test-ts/dom';
+import {WebSocketGlobal, XMLHttpRequestGlobal, console, CloseEvent, URLGlobal, fetch, RequestGlobal} from 'test-ts/dom';
 
 const browserGlobal = global;
 const console = browserGlobal.console as console;
 const WebSocket = browserGlobal.WebSocket as WebSocketGlobal;
 const XMLHttpRequest = browserGlobal.XMLHttpRequest as XMLHttpRequestGlobal;
 const URL = browserGlobal.URL as URLGlobal;
-const fetch = browserGlobal.fetch as fetchGlobal;
+const fetch = browserGlobal.fetch as fetch;
 const Request = browserGlobal.Request as RequestGlobal;
 
 const urlInstance = new URL('/url');

@@ -30,16 +30,12 @@ export interface SharedArrayBuffer {
     slice(begin: number, end?: number): SharedArrayBuffer;
     readonly [Symbol.species]: SharedArrayBuffer;
     readonly [Symbol.toStringTag]: "SharedArrayBuffer";
-}
-export interface SharedArrayBufferConstructor {
+}export interface SharedArrayBufferConstructor {
     readonly prototype: SharedArrayBuffer;
     new (byteLength: number): SharedArrayBuffer;
-}
-export type SharedArrayBufferGlobal =  SharedArrayBufferConstructor;
-export interface ArrayBufferTypes {
+}export type SharedArrayBufferGlobal =  SharedArrayBufferConstructor;export interface ArrayBufferTypes {
     SharedArrayBuffer: SharedArrayBuffer;
-}
-export interface Atomics {
+}export interface Atomics {
     /**
      * Adds a value to the value at the given position in the array, returning the original value.
      * Until this atomic operation completes, any other read or write operation against the array
@@ -113,7 +109,7 @@ export interface Atomics {
      * Wakes up sleeping agents that are waiting on the given index of the array, returning the
      * number of agents that were awoken.
      */
-    wake(typedArray: Int32Array, index: number, count: number): number;
+    notify(typedArray: Int32Array, index: number, count: number): number;
 
     /**
      * Stores the bitwise XOR of a value with the value at the given position in the array,
@@ -123,5 +119,4 @@ export interface Atomics {
     xor(typedArray: Int8Array | Uint8Array | Int16Array | Uint16Array | Int32Array | Uint32Array, index: number, value: number): number;
 
     readonly [Symbol.toStringTag]: "Atomics";
-}
-export type AtomicsGlobal =  Atomics;
+}export type AtomicsGlobal =  Atomics;

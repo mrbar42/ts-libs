@@ -14,22 +14,19 @@ MERCHANTABLITY OR NON-INFRINGEMENT.
 See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ***************************************************************************** */
-export namespace Intl {
-export interface PluralRulesOptions {
-        localeMatcher?: 'lookup' | 'best fit';
-        type?: 'cardinal' | 'ordinal';
-    }
-export interface ResolvedPluralRulesOptions {
+export namespace Intl {export interface PluralRulesOptions {
+        localeMatcher?: "lookup" | "best fit";
+        type?: "cardinal" | "ordinal";
+    }export interface ResolvedPluralRulesOptions {
         locale: string;
         pluralCategories: string[];
-        type: 'cardinal' | 'ordinal';
+        type: "cardinal" | "ordinal";
         minimumIntegerDigits: number;
         minimumFractionDigits: number;
         maximumFractionDigits: number;
         minimumSignificantDigits: number;
         maximumSignificantDigits: number;
-    }
-export interface PluralRules {
+    }export interface PluralRules {
         resolvedOptions(): ResolvedPluralRulesOptions;
         select(n: number): string;
     }

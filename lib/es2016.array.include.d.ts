@@ -21,80 +21,70 @@ export interface Array<T> {
      * @param fromIndex The position in this array at which to begin searching for searchElement.
      */
     includes(searchElement: T, fromIndex?: number): boolean;
-}
-export interface ReadonlyArray<T> {
+}export interface ReadonlyArray<T> {
     /**
      * Determines whether an array includes a certain element, returning true or false as appropriate.
      * @param searchElement The element to search for.
      * @param fromIndex The position in this array at which to begin searching for searchElement.
      */
     includes(searchElement: T, fromIndex?: number): boolean;
-}
-export interface Int8Array {
+}export interface Int8Array {
     /**
      * Determines whether an array includes a certain element, returning true or false as appropriate.
      * @param searchElement The element to search for.
      * @param fromIndex The position in this array at which to begin searching for searchElement.
      */
     includes(searchElement: number, fromIndex?: number): boolean;
-}
-export interface Uint8Array {
+}export interface Uint8Array {
     /**
      * Determines whether an array includes a certain element, returning true or false as appropriate.
      * @param searchElement The element to search for.
      * @param fromIndex The position in this array at which to begin searching for searchElement.
      */
     includes(searchElement: number, fromIndex?: number): boolean;
-}
-export interface Uint8ClampedArray {
+}export interface Uint8ClampedArray {
     /**
      * Determines whether an array includes a certain element, returning true or false as appropriate.
      * @param searchElement The element to search for.
      * @param fromIndex The position in this array at which to begin searching for searchElement.
      */
     includes(searchElement: number, fromIndex?: number): boolean;
-}
-export interface Int16Array {
+}export interface Int16Array {
     /**
      * Determines whether an array includes a certain element, returning true or false as appropriate.
      * @param searchElement The element to search for.
      * @param fromIndex The position in this array at which to begin searching for searchElement.
      */
     includes(searchElement: number, fromIndex?: number): boolean;
-}
-export interface Uint16Array {
+}export interface Uint16Array {
     /**
      * Determines whether an array includes a certain element, returning true or false as appropriate.
      * @param searchElement The element to search for.
      * @param fromIndex The position in this array at which to begin searching for searchElement.
      */
     includes(searchElement: number, fromIndex?: number): boolean;
-}
-export interface Int32Array {
+}export interface Int32Array {
     /**
      * Determines whether an array includes a certain element, returning true or false as appropriate.
      * @param searchElement The element to search for.
      * @param fromIndex The position in this array at which to begin searching for searchElement.
      */
     includes(searchElement: number, fromIndex?: number): boolean;
-}
-export interface Uint32Array {
+}export interface Uint32Array {
     /**
      * Determines whether an array includes a certain element, returning true or false as appropriate.
      * @param searchElement The element to search for.
      * @param fromIndex The position in this array at which to begin searching for searchElement.
      */
     includes(searchElement: number, fromIndex?: number): boolean;
-}
-export interface Float32Array {
+}export interface Float32Array {
     /**
      * Determines whether an array includes a certain element, returning true or false as appropriate.
      * @param searchElement The element to search for.
      * @param fromIndex The position in this array at which to begin searching for searchElement.
      */
     includes(searchElement: number, fromIndex?: number): boolean;
-}
-export interface Float64Array {
+}export interface Float64Array {
     /**
      * Determines whether an array includes a certain element, returning true or false as appropriate.
      * @param searchElement The element to search for.

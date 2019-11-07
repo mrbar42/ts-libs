@@ -1,16 +1,30 @@
 export {};
     import {
+    Account,
     Attr,
-    AudioParam,
     AudioTrack,
+    BufferSource,
     ClientRect,
     CSSRule,
     DataTransferItem,
     DOMRect,
+    DOMPoint,
     Element,
     File,
     FormDataEntryValue,
+    GLboolean,
+    GLfloat,
+    GLint,
+    GLuint,
+    GLenum,
+    GLsizei,
+    IDBIndex,
+    IDBIndexParameters,
+    IIRFilterNode,
     MimeType,
+    MediaKeySystemAccess,
+    MediaKeySystemConfiguration,
+    MediaKeyStatus,
     Node,
     SourceBuffer,
     SpeechGrammar,
@@ -18,10 +32,20 @@ export {};
     StyleSheet,
     SVGLength,
     SVGNumber,
+    ScopedCredentialInfo,
+    ScopedCredentialParameters,
+    ScopedCredentialOptions,
+    PeriodicWave,
+    PeriodicWaveConstraints,
+    RTCRtpCodecCapability,
+    RequestInfo,
     TextTrack,
     TextTrackCue,
     Touch,
-    VideoTrack
+    VideoTrack,
+    VRLayer,
+    WebGLUniformLocation,
+    WebGLProgram
 } from './dom';
 import {ReadonlyMap, IterableIterator} from "./es2015.iterable";
 
@@ -47,16 +71,29 @@ and limitations under the License.
 /////////////////////////////
 /// DOM Iterable APIs
 /////////////////////////////
+export interface AudioParam {
+    setValueCurveAtTime(values: Iterable<number>, startTime: number, duration: number): AudioParam;
+}
 export interface AudioParamMap extends ReadonlyMap<string, AudioParam> {
 }
 export interface AudioTrackList {
     [Symbol.iterator](): IterableIterator<AudioTrack>;
+}
+export interface BaseAudioContext {
+    createIIRFilter(feedforward: Iterable<number>, feedback: Iterable<number>): IIRFilterNode;
+    createPeriodicWave(real: Iterable<number>, imag: Iterable<number>, constraints?: PeriodicWaveConstraints): PeriodicWave;
 }
 export interface CSSRuleList {
     [Symbol.iterator](): IterableIterator<CSSRule>;
 }
 export interface CSSStyleDeclaration {
     [Symbol.iterator](): IterableIterator<string>;
+}
+export interface Cache {
+    addAll(requests: Iterable<RequestInfo>): Promise<void>;
+}
+export interface CanvasPathDrawingStyles {
+    setLineDash(segments: Iterable<number>): void;
 }
 export interface ClientRectList {
     [Symbol.iterator](): IterableIterator<ClientRect>;
@@ -124,14 +161,31 @@ export interface Headers {
      */
     values(): IterableIterator<string>;
 }
+export interface IDBObjectStore {
+    /**
+     * Creates a new index in store with the given name, keyPath and options and returns a new IDBIndex. If the keyPath and options define constraints that cannot be satisfied with the data already in store the upgrade transaction will abort with a "ConstraintError" DOMException.
+     * 
+     * Throws an "InvalidStateError" DOMException if not called within an upgrade transaction.
+     */
+    createIndex(name: string, keyPath: string | Iterable<string>, options?: IDBIndexParameters): IDBIndex;
+}
+export interface MediaKeyStatusMap {
+    [Symbol.iterator](): IterableIterator<[BufferSource, MediaKeyStatus]>;
+    entries(): IterableIterator<[BufferSource, MediaKeyStatus]>;
+    keys(): IterableIterator<BufferSource>;
+    values(): IterableIterator<MediaKeyStatus>;
+}
 export interface MediaList {
     [Symbol.iterator](): IterableIterator<string>;
 }
 export interface MimeTypeArray {
-    [Symbol.iterator](): IterableIterator<Plugin>;
+    [Symbol.iterator](): IterableIterator<MimeType>;
 }
 export interface NamedNodeMap {
     [Symbol.iterator](): IterableIterator<Attr>;
+}
+export interface Navigator {
+    requestMediaKeySystemAccess(keySystem: string, supportedConfigurations: Iterable<MediaKeySystemConfiguration>): Promise<MediaKeySystemAccess>;
 }
 export interface NodeList {
     [Symbol.iterator](): IterableIterator<Node>;
@@ -169,6 +223,9 @@ export interface Plugin {
 export interface PluginArray {
     [Symbol.iterator](): IterableIterator<Plugin>;
 }
+export interface RTCRtpTransceiver {
+    setCodecPreferences(codecs: Iterable<RTCRtpCodecCapability>): void;
+}
 export interface RTCStatsReport extends ReadonlyMap<string, any> {
 }
 export interface SVGLengthList {
@@ -176,6 +233,9 @@ export interface SVGLengthList {
 }
 export interface SVGNumberList {
     [Symbol.iterator](): IterableIterator<SVGNumber>;
+}
+export interface SVGPointList {
+    [Symbol.iterator](): IterableIterator<DOMPoint>;
 }
 export interface SVGStringList {
     [Symbol.iterator](): IterableIterator<string>;
@@ -219,6 +279,70 @@ export interface URLSearchParams {
      */
     values(): IterableIterator<string>;
 }
+export interface VRDisplay {
+    requestPresent(layers: Iterable<VRLayer>): Promise<void>;
+}
 export interface VideoTrackList {
     [Symbol.iterator](): IterableIterator<VideoTrack>;
+}
+export interface WEBGL_draw_buffers {
+    drawBuffersWEBGL(buffers: Iterable<GLenum>): void;
+}
+export interface WebAuthentication {
+    makeCredential(accountInformation: Account, cryptoParameters: Iterable<ScopedCredentialParameters>, attestationChallenge: Int8Array | Int16Array | Int32Array | Uint8Array | Uint16Array | Uint32Array | Uint8ClampedArray | Float32Array | Float64Array | DataView | ArrayBuffer | null, options?: ScopedCredentialOptions): Promise<ScopedCredentialInfo>;
+}
+export interface WebGL2RenderingContextBase {
+    clearBufferfv(buffer: GLenum, drawbuffer: GLint, values: Iterable<GLfloat>, srcOffset?: GLuint): void;
+    clearBufferiv(buffer: GLenum, drawbuffer: GLint, values: Iterable<GLint>, srcOffset?: GLuint): void;
+    clearBufferuiv(buffer: GLenum, drawbuffer: GLint, values: Iterable<GLuint>, srcOffset?: GLuint): void;
+    drawBuffers(buffers: Iterable<GLenum>): void;
+    getActiveUniforms(program: WebGLProgram, uniformIndices: Iterable<GLuint>, pname: GLenum): any;
+    getUniformIndices(program: WebGLProgram, uniformNames: Iterable<string>): Iterable<GLuint> | null;
+    invalidateFramebuffer(target: GLenum, attachments: Iterable<GLenum>): void;
+    invalidateSubFramebuffer(target: GLenum, attachments: Iterable<GLenum>, x: GLint, y: GLint, width: GLsizei, height: GLsizei): void;
+    transformFeedbackVaryings(program: WebGLProgram, varyings: Iterable<string>, bufferMode: GLenum): void;
+    uniform1uiv(location: WebGLUniformLocation | null, data: Iterable<GLuint>, srcOffset?: GLuint, srcLength?: GLuint): void;
+    uniform2uiv(location: WebGLUniformLocation | null, data: Iterable<GLuint>, srcOffset?: GLuint, srcLength?: GLuint): void;
+    uniform3uiv(location: WebGLUniformLocation | null, data: Iterable<GLuint>, srcOffset?: GLuint, srcLength?: GLuint): void;
+    uniform4uiv(location: WebGLUniformLocation | null, data: Iterable<GLuint>, srcOffset?: GLuint, srcLength?: GLuint): void;
+    uniformMatrix2x3fv(location: WebGLUniformLocation | null, transpose: GLboolean, data: Iterable<GLfloat>, srcOffset?: GLuint, srcLength?: GLuint): void;
+    uniformMatrix2x4fv(location: WebGLUniformLocation | null, transpose: GLboolean, data: Iterable<GLfloat>, srcOffset?: GLuint, srcLength?: GLuint): void;
+    uniformMatrix3x2fv(location: WebGLUniformLocation | null, transpose: GLboolean, data: Iterable<GLfloat>, srcOffset?: GLuint, srcLength?: GLuint): void;
+    uniformMatrix3x4fv(location: WebGLUniformLocation | null, transpose: GLboolean, data: Iterable<GLfloat>, srcOffset?: GLuint, srcLength?: GLuint): void;
+    uniformMatrix4x2fv(location: WebGLUniformLocation | null, transpose: GLboolean, data: Iterable<GLfloat>, srcOffset?: GLuint, srcLength?: GLuint): void;
+    uniformMatrix4x3fv(location: WebGLUniformLocation | null, transpose: GLboolean, data: Iterable<GLfloat>, srcOffset?: GLuint, srcLength?: GLuint): void;
+    vertexAttribI4iv(index: GLuint, values: Iterable<GLint>): void;
+    vertexAttribI4uiv(index: GLuint, values: Iterable<GLuint>): void;
+}
+export interface WebGL2RenderingContextOverloads {
+    uniform1fv(location: WebGLUniformLocation | null, data: Iterable<GLfloat>, srcOffset?: GLuint, srcLength?: GLuint): void;
+    uniform1iv(location: WebGLUniformLocation | null, data: Iterable<GLint>, srcOffset?: GLuint, srcLength?: GLuint): void;
+    uniform2fv(location: WebGLUniformLocation | null, data: Iterable<GLfloat>, srcOffset?: GLuint, srcLength?: GLuint): void;
+    uniform2iv(location: WebGLUniformLocation | null, data: Iterable<GLint>, srcOffset?: GLuint, srcLength?: GLuint): void;
+    uniform3fv(location: WebGLUniformLocation | null, data: Iterable<GLfloat>, srcOffset?: GLuint, srcLength?: GLuint): void;
+    uniform3iv(location: WebGLUniformLocation | null, data: Iterable<GLint>, srcOffset?: GLuint, srcLength?: GLuint): void;
+    uniform4fv(location: WebGLUniformLocation | null, data: Iterable<GLfloat>, srcOffset?: GLuint, srcLength?: GLuint): void;
+    uniform4iv(location: WebGLUniformLocation | null, data: Iterable<GLint>, srcOffset?: GLuint, srcLength?: GLuint): void;
+    uniformMatrix2fv(location: WebGLUniformLocation | null, transpose: GLboolean, data: Iterable<GLfloat>, srcOffset?: GLuint, srcLength?: GLuint): void;
+    uniformMatrix3fv(location: WebGLUniformLocation | null, transpose: GLboolean, data: Iterable<GLfloat>, srcOffset?: GLuint, srcLength?: GLuint): void;
+    uniformMatrix4fv(location: WebGLUniformLocation | null, transpose: GLboolean, data: Iterable<GLfloat>, srcOffset?: GLuint, srcLength?: GLuint): void;
+}
+export interface WebGLRenderingContextBase {
+    vertexAttrib1fv(index: GLuint, values: Iterable<GLfloat>): void;
+    vertexAttrib2fv(index: GLuint, values: Iterable<GLfloat>): void;
+    vertexAttrib3fv(index: GLuint, values: Iterable<GLfloat>): void;
+    vertexAttrib4fv(index: GLuint, values: Iterable<GLfloat>): void;
+}
+export interface WebGLRenderingContextOverloads {
+    uniform1fv(location: WebGLUniformLocation | null, v: Iterable<GLfloat>): void;
+    uniform1iv(location: WebGLUniformLocation | null, v: Iterable<GLint>): void;
+    uniform2fv(location: WebGLUniformLocation | null, v: Iterable<GLfloat>): void;
+    uniform2iv(location: WebGLUniformLocation | null, v: Iterable<GLint>): void;
+    uniform3fv(location: WebGLUniformLocation | null, v: Iterable<GLfloat>): void;
+    uniform3iv(location: WebGLUniformLocation | null, v: Iterable<GLint>): void;
+    uniform4fv(location: WebGLUniformLocation | null, v: Iterable<GLfloat>): void;
+    uniform4iv(location: WebGLUniformLocation | null, v: Iterable<GLint>): void;
+    uniformMatrix2fv(location: WebGLUniformLocation | null, transpose: GLboolean, value: Iterable<GLfloat>): void;
+    uniformMatrix3fv(location: WebGLUniformLocation | null, transpose: GLboolean, value: Iterable<GLfloat>): void;
+    uniformMatrix4fv(location: WebGLUniformLocation | null, transpose: GLboolean, value: Iterable<GLfloat>): void;
 }

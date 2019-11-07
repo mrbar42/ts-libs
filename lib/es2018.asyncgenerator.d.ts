@@ -14,23 +14,23 @@ MERCHANTABLITY OR NON-INFRINGEMENT.
 See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ***************************************************************************** */
-export interface Generator<T = unknown, TReturn = any, TNext = unknown> extends Iterator<T, TReturn, TNext> {
+export interface AsyncGenerator<T = unknown, TReturn = any, TNext = unknown> extends AsyncIterator<T, TReturn, TNext> {
     // NOTE: 'next' is defined using a tuple to ensure we report the correct assignability errors in all places.
-    next(...args: [] | [TNext]): IteratorResult<T, TReturn>;
-    return(value: TReturn): IteratorResult<T, TReturn>;
-    throw(e: any): IteratorResult<T, TReturn>;
-    [Symbol.iterator](): Generator<T, TReturn, TNext>;
-}export interface GeneratorFunction {
+    next(...args: [] | [TNext]): Promise<IteratorResult<T, TReturn>>;
+    return(value: TReturn | PromiseLike<TReturn>): Promise<IteratorResult<T, TReturn>>;
+    throw(e: any): Promise<IteratorResult<T, TReturn>>;
+    [Symbol.asyncIterator](): AsyncGenerator<T, TReturn, TNext>;
+}export interface AsyncGeneratorFunction {
     /**
-     * Creates a new Generator object.
+     * Creates a new AsyncGenerator object.
      * @param args A list of arguments the function accepts.
      */
-    new (...args: any[]): Generator;
+    new (...args: any[]): AsyncGenerator;
     /**
-     * Creates a new Generator object.
+     * Creates a new AsyncGenerator object.
      * @param args A list of arguments the function accepts.
      */
-    (...args: any[]): Generator;
+    (...args: any[]): AsyncGenerator;
     /**
      * The length of the arguments.
      */
@@ -42,18 +42,18 @@ export interface Generator<T = unknown, TReturn = any, TNext = unknown> extends 
     /**
      * A reference to the prototype.
      */
-    readonly prototype: Generator;
-}export interface GeneratorFunctionConstructor {
+    readonly prototype: AsyncGenerator;
+}export interface AsyncGeneratorFunctionConstructor {
     /**
-     * Creates a new Generator function.
+     * Creates a new AsyncGenerator function.
      * @param args A list of arguments the function accepts.
      */
-    new (...args: string[]): GeneratorFunction;
+    new (...args: string[]): AsyncGeneratorFunction;
     /**
-     * Creates a new Generator function.
+     * Creates a new AsyncGenerator function.
      * @param args A list of arguments the function accepts.
      */
-    (...args: string[]): GeneratorFunction;
+    (...args: string[]): AsyncGeneratorFunction;
     /**
      * The length of the arguments.
      */
@@ -65,5 +65,5 @@ export interface Generator<T = unknown, TReturn = any, TNext = unknown> extends 
     /**
      * A reference to the prototype.
      */
-    readonly prototype: GeneratorFunction;
+    readonly prototype: AsyncGeneratorFunction;
 }
