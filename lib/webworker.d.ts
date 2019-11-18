@@ -5523,3 +5523,14 @@ export type VisibilityState = "hidden" | "visible";
 export type WebGLPowerPreference = "default" | "low-power" | "high-performance";
 export type WorkerType = "classic" | "module";
 export type XMLHttpRequestResponseType = "" | "arraybuffer" | "blob" | "document" | "json" | "text";
+
+export type postMessageGlobal = postMessageGlobalv1 | postMessageGlobalv2;
+export type dispatchEventGlobal = dispatchEventGlobalv1 | dispatchEventGlobalv2;
+export type cachesGlobal = cachesGlobalv1 | cachesGlobalv2;
+export type indexedDBGlobal = indexedDBGlobalv1 | indexedDBGlobalv2;
+export type performanceGlobal = performanceGlobalv1 | performanceGlobalv2;
+export type atobGlobal = atobGlobalv1 | atobGlobalv2;
+export type btoaGlobal = btoaGlobalv1 | btoaGlobalv2;
+export type createImageBitmapGlobal = createImageBitmapGlobalv1 | createImageBitmapGlobalv2;
+export type addEventListenerGlobal = addEventListenerGlobalv1 | addEventListenerGlobalv2;
+export type removeEventListenerGlobal = removeEventListenerGlobalv1 | removeEventListenerGlobalv2;
