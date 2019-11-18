@@ -23,5 +23,4 @@ and limitations under the License.
 /////////////////////////////
 /// WorkerGlobalScope APIs
 /////////////////////////////
-// These are only available in a Web Worker
-export type importScripts = (...urls: string[]) =>  void;
+// These are only available in a Web Workerexport type importScripts = (...urls: string[]) =>  void;

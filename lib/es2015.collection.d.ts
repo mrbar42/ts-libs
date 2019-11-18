@@ -22,55 +22,42 @@ export interface Map<K, V> {
     has(key: K): boolean;
     set(key: K, value: V): this;
     readonly size: number;
-}
-export interface MapConstructor {
+}export interface MapConstructor {
     new(): Map<any, any>;
-    new<K, V>(entries?: ReadonlyArray<[K, V]> | null): Map<K, V>;
+    new<K, V>(entries?: readonly (readonly [K, V])[] | null): Map<K, V>;
     readonly prototype: Map<any, any>;
-}
-export type MapGlobal =  MapConstructor;
-export interface ReadonlyMap<K, V> {
+}export type MapGlobal =  MapConstructor;export interface ReadonlyMap<K, V> {
     forEach(callbackfn: (value: V, key: K, map: ReadonlyMap<K, V>) => void, thisArg?: any): void;
     get(key: K): V | undefined;
     has(key: K): boolean;
     readonly size: number;
-}
-export interface WeakMap<K extends object, V> {
+}export interface WeakMap<K extends object, V> {
     delete(key: K): boolean;
     get(key: K): V | undefined;
     has(key: K): boolean;
     set(key: K, value: V): this;
-}
-export interface WeakMapConstructor {
-    new <K extends object = object, V = any>(entries?: ReadonlyArray<[K, V]> | null): WeakMap<K, V>;
+}export interface WeakMapConstructor {
+    new <K extends object = object, V = any>(entries?: readonly [K, V][] | null): WeakMap<K, V>;
     readonly prototype: WeakMap<object, any>;
-}
-export type WeakMapGlobal =  WeakMapConstructor;
-export interface Set<T> {
+}export type WeakMapGlobal =  WeakMapConstructor;export interface Set<T> {
     add(value: T): this;
     clear(): void;
     delete(value: T): boolean;
     forEach(callbackfn: (value: T, value2: T, set: Set<T>) => void, thisArg?: any): void;
     has(value: T): boolean;
     readonly size: number;
-}
-export interface SetConstructor {
-    new <T = any>(values?: ReadonlyArray<T> | null): Set<T>;
+}export interface SetConstructor {
+    new <T = any>(values?: readonly T[] | null): Set<T>;
     readonly prototype: Set<any>;
-}
-export type SetGlobal =  SetConstructor;
-export interface ReadonlySet<T> {
+}export type SetGlobal =  SetConstructor;export interface ReadonlySet<T> {
     forEach(callbackfn: (value: T, value2: T, set: ReadonlySet<T>) => void, thisArg?: any): void;
     has(value: T): boolean;
     readonly size: number;
-}
-export interface WeakSet<T extends object> {
+}export interface WeakSet<T extends object> {
     add(value: T): this;
     delete(value: T): boolean;
     has(value: T): boolean;
-}
-export interface WeakSetConstructor {
-    new <T extends object = object>(values?: ReadonlyArray<T> | null): WeakSet<T>;
+}export interface WeakSetConstructor {
+    new <T extends object = object>(values?: readonly T[] | null): WeakSet<T>;
     readonly prototype: WeakSet<object>;
-}
-export type WeakSetGlobal =  WeakSetConstructor;
+}export type WeakSetGlobal =  WeakSetConstructor;

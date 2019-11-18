@@ -25,7 +25,7 @@ export interface Array<T> {
      * predicate. If it is not provided, undefined is used instead.
      */
     find<S extends T>(predicate: (this: void, value: T, index: number, obj: T[]) => value is S, thisArg?: any): S | undefined;
-    find(predicate: (value: T, index: number, obj: T[]) => boolean, thisArg?: any): T | undefined;
+    find(predicate: (value: T, index: number, obj: T[]) => unknown, thisArg?: any): T | undefined;
 
     /**
      * Returns the index of the first element in the array where predicate is true, and -1
@@ -36,7 +36,7 @@ export interface Array<T> {
      * @param thisArg If provided, it will be used as the this value for each invocation of
      * predicate. If it is not provided, undefined is used instead.
      */
-    findIndex(predicate: (value: T, index: number, obj: T[]) => boolean, thisArg?: any): number;
+    findIndex(predicate: (value: T, index: number, obj: T[]) => unknown, thisArg?: any): number;
 
     /**
      * Returns the this object after filling the section identified by start and end with value
@@ -58,8 +58,7 @@ export interface Array<T> {
      * @param end If not specified, length of the this object is used as its default value.
      */
     copyWithin(target: number, start: number, end?: number): this;
-}
-export interface ArrayConstructor {
+}export interface ArrayConstructor {
     /**
      * Creates an array from an array-like object.
      * @param arrayLike An array-like object to convert to an array.
@@ -79,17 +78,14 @@ export interface ArrayConstructor {
      * @param items A set of elements to include in the new array object.
      */
     of<T>(...items: T[]): T[];
-}
-export interface DateConstructor {
+}export interface DateConstructor {
     new (value: number | string | Date): Date;
-}
-export interface Function {
+}export interface Function {
     /**
      * Returns the name of the function. Function names are read-only and can not be changed.
      */
     readonly name: string;
-}
-export interface Math {
+}export interface Math {
     /**
      * Returns the number of leading zero bits in the 32-bit binary representation of a number.
      * @param x A numeric expression.
@@ -200,8 +196,7 @@ export interface Math {
      * @param x A numeric expression.
      */
     cbrt(x: number): number;
-}
-export interface NumberConstructor {
+}export interface NumberConstructor {
     /**
      * The value of Number.EPSILON is the difference between 1 and the smallest value greater than 1
      * that is representable as a Number value, which is approximately:
@@ -265,8 +260,7 @@ export interface NumberConstructor {
      * All other strings are considered decimal.
      */
     parseInt(string: string, radix?: number): number;
-}
-export interface ObjectConstructor {
+}export interface ObjectConstructor {
     /**
      * Copy the values of all of the enumerable own properties from one or more source objects to a
      * target object. Returns the target object.
@@ -309,6 +303,12 @@ export interface ObjectConstructor {
     getOwnPropertySymbols(o: any): symbol[];
 
     /**
+     * Returns the names of the enumerable string properties and methods of an object.
+     * @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+     */
+    keys(o: {}): string[];
+
+    /**
      * Returns true if the values are the same value, false otherwise.
      * @param value1 The first value.
      * @param value2 The second value.
@@ -316,13 +316,12 @@ export interface ObjectConstructor {
     is(value1: any, value2: any): boolean;
 
     /**
-     * Sets the prototype of a specified object o to  object proto or null. Returns the object o.
+     * Sets the prototype of a specified object o to object proto or null. Returns the object o.
      * @param o The object to change its prototype.
      * @param proto The value of the new prototype or null.
      */
     setPrototypeOf(o: any, proto: object | null): any;
-}
-export interface ReadonlyArray<T> {
+}export interface ReadonlyArray<T> {
     /**
      * Returns the value of the first element in the array where predicate is true, and undefined
      * otherwise.
@@ -332,8 +331,8 @@ export interface ReadonlyArray<T> {
      * @param thisArg If provided, it will be used as the this value for each invocation of
      * predicate. If it is not provided, undefined is used instead.
      */
-    find<S extends T>(predicate: (this: void, value: T, index: number, obj: ReadonlyArray<T>) => value is S, thisArg?: any): S | undefined;
-    find(predicate: (value: T, index: number, obj: ReadonlyArray<T>) => boolean, thisArg?: any): T | undefined;
+    find<S extends T>(predicate: (this: void, value: T, index: number, obj: readonly T[]) => value is S, thisArg?: any): S | undefined;
+    find(predicate: (value: T, index: number, obj: readonly T[]) => unknown, thisArg?: any): T | undefined;
 
     /**
      * Returns the index of the first element in the array where predicate is true, and -1
@@ -344,9 +343,8 @@ export interface ReadonlyArray<T> {
      * @param thisArg If provided, it will be used as the this value for each invocation of
      * predicate. If it is not provided, undefined is used instead.
      */
-    findIndex(predicate: (value: T, index: number, obj: ReadonlyArray<T>) => boolean, thisArg?: any): number;
-}
-export interface RegExp {
+    findIndex(predicate: (value: T, index: number, obj: readonly T[]) => unknown, thisArg?: any): number;
+}export interface RegExp {
     /**
      * Returns a string indicating the flags of the regular expression in question. This field is read-only.
      * The characters in this string are sequenced and concatenated in the following order:
@@ -372,12 +370,10 @@ export interface RegExp {
      * expression. Default is false. Read-only.
      */
     readonly unicode: boolean;
-}
-export interface RegExpConstructor {
-    new (pattern: RegExp, flags?: string): RegExp;
-    (pattern: RegExp, flags?: string): RegExp;
-}
-export interface String {
+}export interface RegExpConstructor {
+    new (pattern: RegExp | string, flags?: string): RegExp;
+    (pattern: RegExp | string, flags?: string): RegExp;
+}export interface String {
     /**
      * Returns a nonnegative integer Number less than 1114112 (0x110000) that is the code point
      * value of the UTF-16 encoded code point starting at the string element at position pos in
@@ -477,8 +473,7 @@ export interface String {
 
     /** Returns a <sup> HTML element */
     sup(): string;
-}
-export interface StringConstructor {
+}export interface StringConstructor {
     /**
      * Return the String value whose elements are, in order, the elements in the List elements.
      * If length is 0, the empty string is returned.

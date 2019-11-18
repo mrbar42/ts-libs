@@ -20,23 +20,22 @@ export interface SymbolConstructor {
      * for-of statement.
      */
     readonly iterator: symbol;
-}
-export interface IteratorResult<T> {
-    done: boolean;
-    value: T;
-}
-export interface Iterator<T> {
-    next(value?: any): IteratorResult<T>;
-    return?(value?: any): IteratorResult<T>;
-    throw?(e?: any): IteratorResult<T>;
-}
-export interface Iterable<T> {
+}export interface IteratorYieldResult<TYield> {
+    done?: false;
+    value: TYield;
+}export interface IteratorReturnResult<TReturn> {
+    done: true;
+    value: TReturn;
+}export type IteratorResult<T, TReturn = any> = IteratorYieldResult<T> | IteratorReturnResult<TReturn>;export interface Iterator<T, TReturn = any, TNext = undefined> {
+    // NOTE: 'next' is defined using a tuple to ensure we report the correct assignability errors in all places.
+    next(...args: [] | [TNext]): IteratorResult<T, TReturn>;
+    return?(value?: TReturn): IteratorResult<T, TReturn>;
+    throw?(e?: any): IteratorResult<T, TReturn>;
+}export interface Iterable<T> {
     [Symbol.iterator](): Iterator<T>;
-}
-export interface IterableIterator<T> extends Iterator<T> {
+}export interface IterableIterator<T> extends Iterator<T> {
     [Symbol.iterator](): IterableIterator<T>;
-}
-export interface Array<T> {
+}export interface Array<T> {
     /** Iterator */
     [Symbol.iterator](): IterableIterator<T>;
 
@@ -54,8 +53,7 @@ export interface Array<T> {
      * Returns an iterable of values in the array
      */
     values(): IterableIterator<T>;
-}
-export interface ArrayConstructor {
+}export interface ArrayConstructor {
     /**
      * Creates an array from an iterable object.
      * @param iterable An iterable object to convert to an array.
@@ -69,8 +67,7 @@ export interface ArrayConstructor {
      * @param thisArg Value of 'this' used to invoke the mapfn.
      */
     from<T, U>(iterable: Iterable<T> | ArrayLike<T>, mapfn: (v: T, k: number) => U, thisArg?: any): U[];
-}
-export interface ReadonlyArray<T> {
+}export interface ReadonlyArray<T> {
     /** Iterator of values in the array. */
     [Symbol.iterator](): IterableIterator<T>;
 
@@ -88,12 +85,10 @@ export interface ReadonlyArray<T> {
      * Returns an iterable of values in the array
      */
     values(): IterableIterator<T>;
-}
-export interface IArguments {
+}export interface IArguments {
     /** Iterator */
     [Symbol.iterator](): IterableIterator<any>;
-}
-export interface Map<K, V> {
+}export interface Map<K, V> {
     /** Returns an iterable of entries in the map. */
     [Symbol.iterator](): IterableIterator<[K, V]>;
 
@@ -111,8 +106,7 @@ export interface Map<K, V> {
      * Returns an iterable of values in the map
      */
     values(): IterableIterator<V>;
-}
-export interface ReadonlyMap<K, V> {
+}export interface ReadonlyMap<K, V> {
     /** Returns an iterable of entries in the map. */
     [Symbol.iterator](): IterableIterator<[K, V]>;
 
@@ -130,15 +124,11 @@ export interface ReadonlyMap<K, V> {
      * Returns an iterable of values in the map
      */
     values(): IterableIterator<V>;
-}
-export interface MapConstructor {
-    new <K, V>(iterable: Iterable<[K, V]>): Map<K, V>;
-}
-export interface WeakMap<K extends object, V> { }
-export interface WeakMapConstructor {
+}export interface MapConstructor {
+    new <K, V>(iterable: Iterable<readonly [K, V]>): Map<K, V>;
+}export interface WeakMap<K extends object, V> { }export interface WeakMapConstructor {
     new <K extends object, V>(iterable: Iterable<[K, V]>): WeakMap<K, V>;
-}
-export interface Set<T> {
+}export interface Set<T> {
     /** Iterates over values in the set. */
     [Symbol.iterator](): IterableIterator<T>;
     /**
@@ -154,8 +144,7 @@ export interface Set<T> {
      * Returns an iterable of values in the set.
      */
     values(): IterableIterator<T>;
-}
-export interface ReadonlySet<T> {
+}export interface ReadonlySet<T> {
     /** Iterates over values in the set. */
     [Symbol.iterator](): IterableIterator<T>;
 
@@ -173,16 +162,11 @@ export interface ReadonlySet<T> {
      * Returns an iterable of values in the set.
      */
     values(): IterableIterator<T>;
-}
-export interface SetConstructor {
-    new <T>(iterable: Iterable<T>): Set<T>;
-}
-export interface WeakSet<T extends object> { }
-export interface WeakSetConstructor {
+}export interface SetConstructor {
+    new <T>(iterable?: Iterable<T> | null): Set<T>;
+}export interface WeakSet<T extends object> { }export interface WeakSetConstructor {
     new <T extends object = object>(iterable: Iterable<T>): WeakSet<T>;
-}
-export interface Promise<T> { }
-export interface PromiseConstructor {
+}export interface Promise<T> { }export interface PromiseConstructor {
     /**
      * Creates a Promise that is resolved with an array of results when all of the provided Promises
      * resolve, or rejected when any Promise is rejected.
@@ -198,15 +182,12 @@ export interface PromiseConstructor {
      * @returns A new Promise.
      */
     race<T>(values: Iterable<T | PromiseLike<T>>): Promise<T>;
-}
-export namespace Reflect {
+}export namespace Reflect {
     function enumerate(target: object): IterableIterator<any>;
-}
-export interface String {
+}export interface String {
     /** Iterator */
     [Symbol.iterator](): IterableIterator<string>;
-}
-export interface Int8Array {
+}export interface Int8Array {
     [Symbol.iterator](): IterableIterator<number>;
     /**
      * Returns an array of key, value pairs for every entry in the array
@@ -220,8 +201,7 @@ export interface Int8Array {
      * Returns an list of values in the array
      */
     values(): IterableIterator<number>;
-}
-export interface Int8ArrayConstructor {
+}export interface Int8ArrayConstructor {
     new (elements: Iterable<number>): Int8Array;
 
     /**
@@ -231,8 +211,7 @@ export interface Int8ArrayConstructor {
      * @param thisArg Value of 'this' used to invoke the mapfn.
      */
     from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Int8Array;
-}
-export interface Uint8Array {
+}export interface Uint8Array {
     [Symbol.iterator](): IterableIterator<number>;
     /**
      * Returns an array of key, value pairs for every entry in the array
@@ -246,8 +225,7 @@ export interface Uint8Array {
      * Returns an list of values in the array
      */
     values(): IterableIterator<number>;
-}
-export interface Uint8ArrayConstructor {
+}export interface Uint8ArrayConstructor {
     new (elements: Iterable<number>): Uint8Array;
 
     /**
@@ -257,8 +235,7 @@ export interface Uint8ArrayConstructor {
      * @param thisArg Value of 'this' used to invoke the mapfn.
      */
     from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Uint8Array;
-}
-export interface Uint8ClampedArray {
+}export interface Uint8ClampedArray {
     [Symbol.iterator](): IterableIterator<number>;
     /**
      * Returns an array of key, value pairs for every entry in the array
@@ -274,8 +251,7 @@ export interface Uint8ClampedArray {
      * Returns an list of values in the array
      */
     values(): IterableIterator<number>;
-}
-export interface Uint8ClampedArrayConstructor {
+}export interface Uint8ClampedArrayConstructor {
     new (elements: Iterable<number>): Uint8ClampedArray;
 
 
@@ -286,8 +262,7 @@ export interface Uint8ClampedArrayConstructor {
      * @param thisArg Value of 'this' used to invoke the mapfn.
      */
     from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Uint8ClampedArray;
-}
-export interface Int16Array {
+}export interface Int16Array {
     [Symbol.iterator](): IterableIterator<number>;
     /**
      * Returns an array of key, value pairs for every entry in the array
@@ -303,8 +278,7 @@ export interface Int16Array {
      * Returns an list of values in the array
      */
     values(): IterableIterator<number>;
-}
-export interface Int16ArrayConstructor {
+}export interface Int16ArrayConstructor {
     new (elements: Iterable<number>): Int16Array;
 
     /**
@@ -314,8 +288,7 @@ export interface Int16ArrayConstructor {
      * @param thisArg Value of 'this' used to invoke the mapfn.
      */
     from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Int16Array;
-}
-export interface Uint16Array {
+}export interface Uint16Array {
     [Symbol.iterator](): IterableIterator<number>;
     /**
      * Returns an array of key, value pairs for every entry in the array
@@ -329,8 +302,7 @@ export interface Uint16Array {
      * Returns an list of values in the array
      */
     values(): IterableIterator<number>;
-}
-export interface Uint16ArrayConstructor {
+}export interface Uint16ArrayConstructor {
     new (elements: Iterable<number>): Uint16Array;
 
     /**
@@ -340,8 +312,7 @@ export interface Uint16ArrayConstructor {
      * @param thisArg Value of 'this' used to invoke the mapfn.
      */
     from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Uint16Array;
-}
-export interface Int32Array {
+}export interface Int32Array {
     [Symbol.iterator](): IterableIterator<number>;
     /**
      * Returns an array of key, value pairs for every entry in the array
@@ -355,8 +326,7 @@ export interface Int32Array {
      * Returns an list of values in the array
      */
     values(): IterableIterator<number>;
-}
-export interface Int32ArrayConstructor {
+}export interface Int32ArrayConstructor {
     new (elements: Iterable<number>): Int32Array;
 
     /**
@@ -366,8 +336,7 @@ export interface Int32ArrayConstructor {
      * @param thisArg Value of 'this' used to invoke the mapfn.
      */
     from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Int32Array;
-}
-export interface Uint32Array {
+}export interface Uint32Array {
     [Symbol.iterator](): IterableIterator<number>;
     /**
      * Returns an array of key, value pairs for every entry in the array
@@ -381,8 +350,7 @@ export interface Uint32Array {
      * Returns an list of values in the array
      */
     values(): IterableIterator<number>;
-}
-export interface Uint32ArrayConstructor {
+}export interface Uint32ArrayConstructor {
     new (elements: Iterable<number>): Uint32Array;
 
     /**
@@ -392,8 +360,7 @@ export interface Uint32ArrayConstructor {
      * @param thisArg Value of 'this' used to invoke the mapfn.
      */
     from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Uint32Array;
-}
-export interface Float32Array {
+}export interface Float32Array {
     [Symbol.iterator](): IterableIterator<number>;
     /**
      * Returns an array of key, value pairs for every entry in the array
@@ -407,8 +374,7 @@ export interface Float32Array {
      * Returns an list of values in the array
      */
     values(): IterableIterator<number>;
-}
-export interface Float32ArrayConstructor {
+}export interface Float32ArrayConstructor {
     new (elements: Iterable<number>): Float32Array;
 
     /**
@@ -418,8 +384,7 @@ export interface Float32ArrayConstructor {
      * @param thisArg Value of 'this' used to invoke the mapfn.
      */
     from(arrayLike: Iterable<number>, mapfn?: (v: number, k: number) => number, thisArg?: any): Float32Array;
-}
-export interface Float64Array {
+}export interface Float64Array {
     [Symbol.iterator](): IterableIterator<number>;
     /**
      * Returns an array of key, value pairs for every entry in the array
@@ -433,8 +398,7 @@ export interface Float64Array {
      * Returns an list of values in the array
      */
     values(): IterableIterator<number>;
-}
-export interface Float64ArrayConstructor {
+}export interface Float64ArrayConstructor {
     new (elements: Iterable<number>): Float64Array;
 
     /**

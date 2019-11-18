@@ -16,27 +16,15 @@ and limitations under the License.
 ***************************************************************************** */
 export interface SymbolConstructor {
     /**
-     * A reference to the prototype.
+     * A regular expression method that matches the regular expression against a string. Called
+     * by the String.prototype.matchAll method.
      */
-    readonly prototype: Symbol;
-
+    readonly matchAll: symbol;
+}export interface RegExp {
     /**
-     * Returns a new unique Symbol value.
-     * @param  description Description of the new Symbol object.
+     * Matches a string with this regular expression, and returns an iterable of matches
+     * containing the results of that search.
+     * @param string A string to search within.
      */
-    (description?: string | number): symbol;
-
-    /**
-     * Returns a Symbol object from the global symbol registry matching the given key if found.
-     * Otherwise, returns a new symbol with this key.
-     * @param key key to search for.
-     */
-    for(key: string): symbol;
-
-    /**
-     * Returns a key from the global symbol registry matching the given Symbol if found.
-     * Otherwise, returns a undefined.
-     * @param sym Symbol to find the key for.
-     */
-    keyFor(sym: symbol): string | undefined;
-}export type Symbol =  SymbolConstructor;
+    [Symbol.matchAll](str: string): IterableIterator<RegExpMatchArray>;
+}

@@ -16,28 +16,20 @@ and limitations under the License.
 ***************************************************************************** */
 export interface Int8ArrayConstructor {
     new (): Int8Array;
-}
-export interface Uint8ArrayConstructor {
+}export interface Uint8ArrayConstructor {
     new (): Uint8Array;
-}
-export interface Uint8ClampedArrayConstructor {
+}export interface Uint8ClampedArrayConstructor {
     new (): Uint8ClampedArray;
-}
-export interface Int16ArrayConstructor {
+}export interface Int16ArrayConstructor {
     new (): Int16Array;
-}
-export interface Uint16ArrayConstructor {
+}export interface Uint16ArrayConstructor {
     new (): Uint16Array;
-}
-export interface Int32ArrayConstructor {
+}export interface Int32ArrayConstructor {
     new (): Int32Array;
-}
-export interface Uint32ArrayConstructor {
+}export interface Uint32ArrayConstructor {
     new (): Uint32Array;
-}
-export interface Float32ArrayConstructor {
+}export interface Float32ArrayConstructor {
     new (): Float32Array;
-}
-export interface Float64ArrayConstructor {
+}export interface Float64ArrayConstructor {
     new (): Float64Array;
 }

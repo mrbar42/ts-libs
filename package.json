@@ -1,9 +1,9 @@
 {
   "name": "ts-libs",
-  "version": "3.2.2-v2",
+  "version": "3.7.2",
   "description": "Typescript libs as scoped modules",
   "scripts": {
-    "modulify": "rm -fr lib/ && ts-node -P tools/tsconfig.json tools/modulify-libs.ts",
+    "modulify": "rm -fr lib/ && ts-node -T -P tools/tsconfig.json tools/modulify-libs.ts",
     "test": "bash tests/test.sh",
     "prepublishOnly": "npm run test && npm run modulify"
   },
@@ -13,11 +13,11 @@
     "module"
   ],
   "peerDependencies": {
-    "typescript": "3.2.2"
+    "typescript": "3.7.2"
   },
   "devDependencies": {
     "@types/node": "*",
-    "typescript": "3.2.2",
+    "typescript": "3.7.2",
     "ts-node": "*"
   },
   "files": [

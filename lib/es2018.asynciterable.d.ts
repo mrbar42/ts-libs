@@ -16,27 +16,17 @@ and limitations under the License.
 ***************************************************************************** */
 export interface SymbolConstructor {
     /**
-     * A reference to the prototype.
+     * A method that returns the default async iterator for an object. Called by the semantics of
+     * the for-await-of statement.
      */
-    readonly prototype: Symbol;
-
-    /**
-     * Returns a new unique Symbol value.
-     * @param  description Description of the new Symbol object.
-     */
-    (description?: string | number): symbol;
-
-    /**
-     * Returns a Symbol object from the global symbol registry matching the given key if found.
-     * Otherwise, returns a new symbol with this key.
-     * @param key key to search for.
-     */
-    for(key: string): symbol;
-
-    /**
-     * Returns a key from the global symbol registry matching the given Symbol if found.
-     * Otherwise, returns a undefined.
-     * @param sym Symbol to find the key for.
-     */
-    keyFor(sym: symbol): string | undefined;
-}export type Symbol =  SymbolConstructor;
+    readonly asyncIterator: symbol;
+}export interface AsyncIterator<T, TReturn = any, TNext = undefined> {
+    // NOTE: 'next' is defined using a tuple to ensure we report the correct assignability errors in all places.
+    next(...args: [] | [TNext]): Promise<IteratorResult<T, TReturn>>;
+    return?(value?: TReturn | PromiseLike<TReturn>): Promise<IteratorResult<T, TReturn>>;
+    throw?(e?: any): Promise<IteratorResult<T, TReturn>>;
+}export interface AsyncIterable<T> {
+    [Symbol.asyncIterator](): AsyncIterator<T>;
+}export interface AsyncIterableIterator<T> extends AsyncIterator<T> {
+    [Symbol.asyncIterator](): AsyncIterableIterator<T>;
+}
